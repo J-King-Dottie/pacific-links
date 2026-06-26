@@ -1,0 +1,70 @@
+.coverage-matrix {
+  --ch: 9px;
+  --row: 10px;        /* cell height + 1px grid gap */
+  --head: 26px;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shared country axis on the left — labelled once */
+.cov-axis {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.cov-axis-head { height: var(--head); }
+.cov-row-label {
+  height: var(--row);
+  line-height: var(--row);
+  font-size: 9px;
+  color: #7a6040;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 2px;
+}
+
+/* One block per metric; columns inside are the 15 years */
+.cov-block {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cov-block-head {
+  height: var(--head);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1px;
+  padding-bottom: 2px;
+}
+.cov-metric-name {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.cov-metric-years {
+  font-size: 8px;
+  color: #a8906c;
+}
+
+.cov-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-auto-rows: var(--ch);
+  gap: 1px;
+}
+.cov-cell {
+  width: 100%;
+  height: var(--ch);
+  border-radius: 1.5px;
+  border: 0.5px solid rgba(180, 150, 100, 0.35);
+  background: transparent;
+}
+.cov-cell.on {
+  opacity: 1;
+}

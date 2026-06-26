@@ -1,11 +1,12 @@
-import { useState, useEffect, useCallback } from 'react'
-import { Anchor, Globe, Download, ArrowRight } from 'lucide-react'
+import { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react'
+import { Anchor, Globe, Download, ArrowRight, ChevronDown } from 'lucide-react'
 import { loadAllData } from './data/loadData.js'
 import { getLatestData, getYearData, computeExposureScores } from './data/computeScores.js'
 import { isPacific } from './data/pacificCountries.js'
 import MapView from './components/MapView.jsx'
 import SidePanel from './components/SidePanel.jsx'
 import TopBar from './components/TopBar.jsx'
+import CoverageMatrix from './components/CoverageMatrix.jsx'
 import './App.css'
 
 const YEAR_MIN = 2010
@@ -30,6 +31,16 @@ export default function App() {
 
   const [selectedCountries, setSelectedCountries] = useState([])
   const [dataMeta, setDataMeta] = useState(null)
+
+  // Intro auto-fit: uniformly scale the collapsed intro to fit the viewport so it
+  // never scrolls; expanding "See coverage" then overflows and the pane scrolls.
+  const [coverageOpen, setCoverageOpen] = useState(false)
+  const [introScale, setIntroScale] = useState(1)
+  const [introOuterH, setIntroOuterH] = useState(null)
+  const introContentRef = useRef(null)
+  const introFitRef = useRef(null)
+  const introScaleRef = useRef(1)
+  const coverageOpenRef = useRef(false)
 
   useEffect(() => {
     loadAllData()
@@ -96,6 +107,36 @@ export default function App() {
   const appReady = !loading && mapLoaded
   const showIntro = !introDismissed
 
+  useLayoutEffect(() => {
+    if (!showIntro) return
+    const cont = introContentRef.current
+    const fit = introFitRef.current
+    if (!cont || !fit) return
+    let raf = 0
+    const recompute = () => {
+      const cs = getComputedStyle(cont)
+      const avail = cont.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom)
+      const natural = fit.offsetHeight   // unscaled layout height (transform doesn't affect it)
+      if (!natural || !avail) return
+      let s = introScaleRef.current
+      if (!coverageOpenRef.current) {
+        // Scale is set only from the collapsed content, so it always fits.
+        s = Math.min(1, (avail - 1) / natural)
+        if (Math.abs(s - introScaleRef.current) > 0.002) {
+          introScaleRef.current = s
+          setIntroScale(s)
+        }
+      }
+      setIntroOuterH(Math.ceil(natural * s))
+    }
+    recompute()
+    const ro = new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(recompute) })
+    ro.observe(fit)
+    ro.observe(cont)
+    window.addEventListener('resize', recompute)
+    return () => { ro.disconnect(); window.removeEventListener('resize', recompute); cancelAnimationFrame(raf) }
+  }, [showIntro, coverageOpen, allRows, dataMeta, appReady])
+
   if (error) return <div className="error">Error: {error}</div>
 
   return (
@@ -148,7 +189,7 @@ export default function App() {
       )}
       {showIntro && (
         <div className="intro-screen">
-          <div className="intro-content">
+          <div className="intro-content" ref={introContentRef}>
             <svg className="intro-star" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
               <g fill="none" strokeWidth="3" strokeLinecap="round">
                 <path d="M32 32 Q 25 19 33 11" stroke="#1e666d" />
@@ -164,6 +205,8 @@ export default function App() {
               <circle cx="12" cy="27" r="3.5" fill="#76516a" />
               <circle cx="32" cy="32" r="6" fill="#8a6030" />
             </svg>
+            <div className="intro-fit-outer" style={introOuterH != null ? { height: introOuterH } : undefined}>
+            <div className="intro-fit" ref={introFitRef} style={{ transform: `scale(${introScale})` }}>
             <div className="intro-section intro-section-brand">
               <a className="intro-kicker" href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">
                 <span className="intro-kicker-label">Produced by</span>
@@ -173,9 +216,6 @@ export default function App() {
               <p className="intro-subtitle">Explore the connections shaping the Pacific.</p>
             </div>
             <div className="intro-section intro-section-lead">
-              <p className="intro-lead">
-                There has been no single place to easily see how Pacific Island Countries are economically and socially connected to the rest of the world - until now.
-              </p>
               <p className="intro-lead">
                 Pacific Links brings together aid, trade, remittances, migration, and debt data for 14 Pacific Island Countries from 2010 to 2024 (where available).
               </p>
@@ -201,11 +241,20 @@ export default function App() {
             </div>
             <div className="intro-section intro-section-footer">
               <p className="intro-methodology">
-                All of this data already exists but it's spread across different sources - Lowy, CEPII, World Bank, UN, and others - each using different codes, units and years. The hard part is cleaning it and pulling it together. That's what we've done.
+                We present source data, transformed into an accessible format with a transparent methodology.
               </p>
               <p className="intro-methodology">
-                We present source data, transformed into an accessible format with a transparent methodology. Gaps exist in Pacific Islands bilateral data and for granular detail on specific countries, official publications remain the authoritative source.
+                This data already exists but it's spread across different sources using different codes, units and years. The hard part is cleaning it and pulling it together. That's what we've done.
               </p>
+              <p className="intro-methodology">
+                Gaps exist in Pacific Islands bilateral data. More recent data may exist if you check each country's official publications.
+              </p>
+              <details className="intro-coverage" open={coverageOpen} onToggle={e => { coverageOpenRef.current = e.currentTarget.open; setCoverageOpen(e.currentTarget.open) }}>
+                <summary className="intro-coverage-summary">
+                  <span className="intro-coverage-cta">See coverage <ChevronDown size={14} strokeWidth={2.5} /></span>
+                </summary>
+                <CoverageMatrix rows={allRows} />
+              </details>
               <p className="intro-goal">
                 Our goal is to make existing Pacific data more accessible for a region that is often underserved in global analysis.
               </p>
@@ -224,6 +273,8 @@ export default function App() {
                   {dataMeta?.last_refreshed && <p className="intro-inspiration intro-refreshed">Refreshed {formatRefreshed(dataMeta.last_refreshed)}.</p>}
                 </div>
               </div>
+            </div>
+            </div>
             </div>
           </div>
         </div>

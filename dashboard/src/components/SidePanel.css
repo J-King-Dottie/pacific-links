@@ -296,10 +296,10 @@
   margin: 0;
   padding: 10px 5px 12px;
   color: #3f2e18;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.25;
-  min-height: calc(0.82rem * 1.25 * 2 + 22px);
+  min-height: calc(0.95rem * 1.25 * 2 + 22px);
   display: flex;
   align-items: flex-start;
 }
@@ -559,6 +559,9 @@
 .metric-header-columns {
   flex: 0 0 auto;
   padding: 0;
+  /* Match the body rows' inter-cell gap so the column headers line up exactly
+     over the numbers in the total row and country list below. */
+  gap: 6px;
   font-size: 0.58rem;
   color: #7d6548;
   white-space: nowrap;

@@ -537,15 +537,15 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalYear, totalLabel
   const [expandedTrade, setExpandedTrade] = useState(null)
   const columns = [
     {
-      key: 'pct',
-      headerTop: pctLabel?.startsWith('%') ? '%' : '%',
-      headerBottom: pctLabel?.replace(/^%\s*/, '') || unitLabel(metric, 'exposure').replace(/^%\s*/, ''),
-      className: 'val-primary',
-    },
-    {
       key: 'value',
       headerTop: metric === 'migration' ? '' : '$',
       headerBottom: metric === 'migration' ? 'people' : 'USD',
+      className: 'val-primary',
+    },
+    {
+      key: 'pct',
+      headerTop: '%',
+      headerBottom: pctLabel?.replace(/^%\s*/, '') || unitLabel(metric, 'exposure').replace(/^%\s*/, ''),
       className: 'val-secondary',
     },
     { key: 'year', headerTop: '', headerBottom: 'yr', className: 'year-tag' },

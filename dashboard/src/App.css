@@ -57,18 +57,54 @@ html, body, #root {
   pointer-events: auto;
   width: min(620px, calc(100vw - 32px));
   height: calc(100vh - 32px);
+  overflow-y: auto;
   margin: 0;
   padding: 24px 24px 22px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 28px;
   background: linear-gradient(160deg, #f5efe0 0%, #ede4ce 60%, #e8ddc4 100%);
   border: 1px solid #c4b090;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(80,60,20,0.18), inset 0 1px 0 rgba(255,255,255,0.6);
-  overflow: hidden;
+  overflow-x: hidden;
   animation: intro-rise 520ms ease both;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(138, 92, 16, 0.45) transparent;
+}
+
+.intro-content::-webkit-scrollbar {
+  width: 8px;
+}
+.intro-content::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 6px 0;
+}
+.intro-content::-webkit-scrollbar-thumb {
+  background: rgba(138, 92, 16, 0.4);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.intro-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 92, 16, 0.6);
+  background-clip: padding-box;
+}
+
+/* Auto-fit wrappers: .intro-fit holds the column layout and is uniformly scaled
+   in JS to fit the viewport; .intro-fit-outer reserves the scaled height so the
+   pane only scrolls once the coverage chart is expanded. */
+.intro-fit-outer {
+  width: 100%;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.intro-fit {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2.1dvh, 24px);
+  transform-origin: top center;
 }
 
 .intro-section {
@@ -95,13 +131,13 @@ html, body, #root {
 .intro-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   width: fit-content;
-  padding: 4px 8px;
+  padding: 3px 7px;
   border: 1px solid rgba(180, 150, 100, 0.22);
   border-radius: 999px;
   background: rgba(255, 250, 240, 0.48);
-  font-size: 0.62rem;
+  font-size: clamp(0.46rem, 0.85vw, 0.56rem);
   font-weight: 700;
   color: #2a6b72;
   letter-spacing: 0.08em;
@@ -215,6 +251,47 @@ html, body, #root {
 
 .intro-methodology {
   margin-top: 0;
+}
+
+.intro-coverage {
+  margin: 0;
+}
+
+.intro-coverage-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.intro-coverage-summary::-webkit-details-marker {
+  display: none;
+}
+.intro-coverage-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #8a5c10;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.intro-coverage-cta svg {
+  transition: transform 0.18s ease;
+}
+.intro-coverage[open] .intro-coverage-cta svg {
+  transform: rotate(180deg);
+}
+
+.intro-section-footer .coverage-matrix {
+  margin: 6px 0 2px;
+}
+
+.intro-coverage-note {
+  margin-top: 6px;
 }
 
 .intro-goal {
@@ -381,10 +458,6 @@ html, body, #root {
     gap: 34px;
     border-radius: 12px;
   }
-
-  .intro-perspectives {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-height: 900px) {
@@ -395,8 +468,12 @@ html, body, #root {
   .intro-content {
     width: min(620px, calc(100vw - 32px));
     height: calc(100vh - 32px);
-    padding: 20px 22px 18px;
-    gap: 22px;
+    padding: 18px 22px 16px;
+    gap: 13px;
+  }
+
+  .intro-section-footer {
+    gap: 7px;
   }
 
   .intro-content h1 {
@@ -421,7 +498,7 @@ html, body, #root {
   }
 
   .intro-kicker {
-    font-size: 0.6rem;
+    font-size: clamp(0.42rem, 0.72vw, 0.5rem);
     margin-bottom: 2px;
   }
 }
@@ -440,9 +517,9 @@ html, body, #root {
   }
 
   .intro-kicker {
-    font-size: 0.64rem;
+    font-size: clamp(0.46rem, 0.8vw, 0.54rem);
     gap: 6px;
-    padding: 5px 8px;
+    padding: 4px 7px;
     margin-bottom: 0;
   }
 
@@ -501,7 +578,7 @@ html, body, #root {
   .intro-content {
     width: calc(100vw - 16px);
     height: calc(100dvh - 16px);
-    overflow: hidden;
+    overflow-y: auto;
     gap: clamp(7px, 1.6dvh, 14px);
     padding: clamp(12px, 2dvh, 16px) 14px;
   }
@@ -514,8 +591,8 @@ html, body, #root {
   }
 
   .intro-kicker {
-    font-size: clamp(0.52rem, 1.5dvh, 0.62rem);
-    padding: 4px 7px;
+    font-size: clamp(0.44rem, 1.3dvh, 0.52rem);
+    padding: 3px 7px;
     margin-bottom: 0;
   }
 
@@ -588,3 +665,4 @@ html, body, #root {
     margin-top: clamp(8px, 1.6dvh, 16px);
   }
 }
+

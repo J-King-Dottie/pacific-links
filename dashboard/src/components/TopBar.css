@@ -1,8 +1,15 @@
 .topbar {
   position: absolute;
   top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  /* Center within the band to the RIGHT of the left panel (~256px) rather than over
+     the whole viewport, so the bar never slides under the panel. margin-inline:auto
+     centers it in that band; max-width makes it shrink instead of overflowing. */
+  left: 264px;
+  right: 24px;
+  transform: none;
+  margin-inline: auto;
+  width: max-content;
+  max-width: calc(100% - 288px);
   z-index: 1100;
   display: flex;
   align-items: center;
@@ -173,6 +180,9 @@
     left: 0.5rem;
     right: 0.5rem;
     transform: none;
+    width: auto;
+    max-width: none;
+    margin-inline: 0;
     flex-direction: column;
     align-items: stretch;
     gap: 7px;

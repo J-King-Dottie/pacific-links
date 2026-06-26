@@ -290,10 +290,18 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         layout: {
           'text-field': ['get', 'name'],
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-size': 12,
+          // Scale with zoom so labels shrink at the zoomed-out (small-screen) view and
+          // grow back as the user zooms in.
+          'text-size': ['interpolate', ['linear'], ['zoom'], 1.1, 8, 2, 11, 4, 13, 6, 14],
           'text-max-width': 8,
-          'text-allow-overlap': true,
-          'text-ignore-placement': true,
+          // Let MapLibre's collision engine place each label: it tries these anchors in
+          // order around the point and uses the first that doesn't overlap; if none fit
+          // it hides that label rather than stacking it. No hand-tuned positions needed.
+          'text-variable-anchor': ['center', 'top', 'bottom', 'left', 'right', 'top-left', 'top-right', 'bottom-left', 'bottom-right'],
+          'text-radial-offset': 0.6,
+          'text-justify': 'auto',
+          'text-allow-overlap': false,
+          'text-ignore-placement': false,
         },
         paint: {
           'text-color': '#3a2010',
@@ -375,8 +383,10 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
           'text-line-height': 0.9,
           'text-anchor': ['get', 'anchor'],
           'text-offset': ['get', 'offset'],
-          'text-allow-overlap': true,
-          'text-ignore-placement': true,
+          // Collision-aware like the Pacific labels: don't overlap each other or the
+          // island names; hide if there's no room rather than stacking.
+          'text-allow-overlap': false,
+          'text-ignore-placement': false,
         },
         paint: {
           'text-color': '#3a2010',
