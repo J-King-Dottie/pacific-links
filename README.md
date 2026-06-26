@@ -102,8 +102,3 @@ under their own terms.
 
 Gaps exist in Pacific Islands bilateral data. For granular detail on specific
 countries, official national publications remain the authoritative source.
-
-Suggested citation:
-
-> Pacific Links, Dottie AI Studio (2026). Harmonised Pacific aid, trade, remittance,
-> migration and debt dataset.
