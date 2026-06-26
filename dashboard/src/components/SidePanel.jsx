@@ -259,7 +259,7 @@ function InfoIcon({ metric }) {
           </div>
           <InfoSection label="Coverage" text={info.coverage} />
           <InfoSection label="Why this source" text={info.why} />
-          <InfoSection label="What we changed" text={info.changed} />
+          <InfoSection label="What we did" text={info.changed} />
           <InfoSection label="Denominator" text={info.denominator} links={info.denominatorLinks} />
         </div>
       )}

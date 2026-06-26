@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect x="0" y="0" width="1200" height="630" fill="#f4ecdb"/>
+  <rect x="16" y="16" width="1168" height="598" fill="none" stroke="#d9c8a4" stroke-width="3"/>
+  <g fill="none" stroke-width="5" stroke-linecap="round">
+    <path d="M900 315 Q 848 219 907 160" stroke="#1e666d"/>
+    <path d="M900 315 Q 1004 248 1055 256" stroke="#8a5c10"/>
+    <path d="M900 315 Q 1011 367 1041 441" stroke="#507840"/>
+    <path d="M900 315 Q 826 396 774 448" stroke="#a0442c"/>
+    <path d="M900 315 Q 811 285 752 278" stroke="#76516a"/>
+  </g>
+  <circle cx="907" cy="160" r="11" fill="#1e666d"/>
+  <circle cx="1055" cy="256" r="11" fill="#8a5c10"/>
+  <circle cx="1041" cy="441" r="11" fill="#507840"/>
+  <circle cx="774" cy="448" r="11" fill="#a0442c"/>
+  <circle cx="752" cy="278" r="11" fill="#76516a"/>
+  <circle cx="900" cy="315" r="26" fill="#8a6030"/>
+  <text x="100" y="300" font-family="Playfair Display, Georgia, 'Liberation Serif', serif" font-size="96" font-weight="600" fill="#3a2c14">Pacific Links</text>
+  <text x="103" y="358" font-family="Playfair Display, Georgia, 'Liberation Serif', serif" font-size="34" font-style="italic" fill="#6b5230">Explore the connections shaping the Pacific.</text>
+  <text x="104" y="432" font-family="Inter, 'Liberation Sans', sans-serif" font-size="22" font-weight="600" letter-spacing="2" fill="#8a6030">AID  ·  TRADE  ·  REMITTANCES  ·  MIGRATION  ·  DEBT</text>
+</svg>

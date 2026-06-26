@@ -53,6 +53,7 @@ html, body, #root {
 }
 
 .intro-content {
+  position: relative;
   pointer-events: auto;
   width: min(620px, calc(100vw - 32px));
   height: calc(100vh - 32px);
@@ -119,6 +120,15 @@ html, body, #root {
 .intro-kicker:hover {
   color: #1f5a60;
   border-color: rgba(180, 150, 100, 0.45);
+}
+
+.intro-star {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: clamp(40px, 5vw, 56px);
+  height: clamp(40px, 5vw, 56px);
+  opacity: 0.95;
 }
 
 .intro-content h1 {

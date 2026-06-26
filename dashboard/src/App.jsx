@@ -149,6 +149,21 @@ export default function App() {
       {showIntro && (
         <div className="intro-screen">
           <div className="intro-content">
+            <svg className="intro-star" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <g fill="none" strokeWidth="3" strokeLinecap="round">
+                <path d="M32 32 Q 25 19 33 11" stroke="#1e666d" />
+                <path d="M32 32 Q 46 23 53 24" stroke="#8a5c10" />
+                <path d="M32 32 Q 47 39 51 49" stroke="#507840" />
+                <path d="M32 32 Q 22 43 15 50" stroke="#a0442c" />
+                <path d="M32 32 Q 20 28 12 27" stroke="#76516a" />
+              </g>
+              <circle cx="33" cy="11" r="3.5" fill="#1e666d" />
+              <circle cx="53" cy="24" r="3.5" fill="#8a5c10" />
+              <circle cx="51" cy="49" r="3.5" fill="#507840" />
+              <circle cx="15" cy="50" r="3.5" fill="#a0442c" />
+              <circle cx="12" cy="27" r="3.5" fill="#76516a" />
+              <circle cx="32" cy="32" r="6" fill="#8a6030" />
+            </svg>
             <div className="intro-section intro-section-brand">
               <a className="intro-kicker" href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">
                 <span className="intro-kicker-label">Produced by</span>
@@ -186,7 +201,7 @@ export default function App() {
             </div>
             <div className="intro-section intro-section-footer">
               <p className="intro-methodology">
-                All of this data already exists but it's spread across different sources - Lowy, CEPII, World Bank, UN, and others - each using different codes, currencies and years. The hard part is cleaning it and pulling it together. That's what we've done.
+                All of this data already exists but it's spread across different sources - Lowy, CEPII, World Bank, UN, and others - each using different codes, units and years. The hard part is cleaning it and pulling it together. That's what we've done.
               </p>
               <p className="intro-methodology">
                 We present source data, transformed into an accessible format with a transparent methodology. Gaps exist in Pacific Islands bilateral data and for granular detail on specific countries, official publications remain the authoritative source.
