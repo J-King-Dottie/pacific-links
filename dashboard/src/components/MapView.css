@@ -1,0 +1,81 @@
+.maplibregl-ctrl-attrib.maplibregl-compact-show {
+  display: none !important;
+}
+
+.mapview {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.map-tooltip {
+  position: absolute;
+  background: rgba(245,239,224,0.96);
+  border: 1px solid #c4b090;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  color: #2c1f0a;
+  pointer-events: none;
+  z-index: 10;
+  max-width: 200px;
+  box-shadow: 0 4px 16px rgba(80,60,20,0.18);
+}
+.map-tooltip strong { display: block; margin-bottom: 2px; color: #2a6b72; }
+
+.flow-tooltip { max-width: 300px; }
+
+.flow-tooltip-entry {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(180,150,100,0.3);
+}
+.flow-tooltip-entry:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+.flow-tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #2c1f0a;
+}
+.flow-tooltip-arrow { color: #b0987a; }
+
+.flow-tooltip-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+}
+.flow-tooltip-table th sup { font-size: 0.55rem; }
+.flow-tooltip-table th {
+  color: #9a8060;
+  font-weight: 600;
+  text-align: right;
+  padding: 0 6px 3px 0;
+  border-bottom: 1px solid rgba(180,150,100,0.3);
+  white-space: nowrap;
+}
+.flow-tooltip-table th:first-child { text-align: left; }
+.flow-tooltip-table td {
+  padding: 3px 6px 3px 0;
+  color: #3a2c1a;
+  white-space: nowrap;
+  text-align: right;
+}
+.flow-tooltip-table td:first-child { text-align: left; }
+.flow-tt-metric { color: #2c1f0a; font-weight: 500; }
+.flow-tt-value  { color: #6b5230; }
+.flow-tt-pct    { color: #2a6b72; }
+.flow-tt-year   { color: #b0987a; }
+.flow-tooltip-table tfoot td { border-top: 1px solid rgba(180,150,100,0.3); padding-top: 4px; }
+.flow-tt-total-label { color: #2c1f0a; font-weight: 600; }
+.flow-tt-total { color: #8a5c10; font-weight: 700; }
+.flow-tt-footnote { color: #9a8060; font-size: 0.6rem; padding-top: 2px; }
+.flow-tt-footnote sup { font-size: 0.55rem; }

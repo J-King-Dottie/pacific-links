@@ -1,0 +1,147 @@
+{
+  "title": "Modelled bilateral remittances received by Pacific destination and source country",
+  "source": "World Bank/KNOMAD Bilateral Remittance Matrices",
+  "retrieved_at": "2026-06-22T06:33:29+00:00",
+  "row_count": 1071,
+  "recipient_count": 13,
+  "years": [
+    2010,
+    2017,
+    2018,
+    2021
+  ],
+  "coverage": {
+    "FJ": {
+      "years": [
+        2010,
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 68
+    },
+    "FM": {
+      "years": [
+        2017,
+        2018
+      ],
+      "source_country_count": 28
+    },
+    "KI": {
+      "years": [
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 31
+    },
+    "MH": {
+      "years": [
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 26
+    },
+    "NC": {
+      "years": [
+        2010,
+        2017,
+        2018
+      ],
+      "source_country_count": 25
+    },
+    "PF": {
+      "years": [
+        2010,
+        2017,
+        2018
+      ],
+      "source_country_count": 23
+    },
+    "PG": {
+      "years": [
+        2010,
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 59
+    },
+    "PW": {
+      "years": [
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 26
+    },
+    "SB": {
+      "years": [
+        2010,
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 45
+    },
+    "TO": {
+      "years": [
+        2010,
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 46
+    },
+    "TV": {
+      "years": [
+        2017,
+        2018
+      ],
+      "source_country_count": 26
+    },
+    "VU": {
+      "years": [
+        2010,
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 45
+    },
+    "WS": {
+      "years": [
+        2010,
+        2017,
+        2018,
+        2021
+      ],
+      "source_country_count": 50
+    }
+  },
+  "unavailable_pacific_members": [
+    "AS",
+    "CK",
+    "GU",
+    "MP",
+    "NR",
+    "NU",
+    "PN",
+    "TK",
+    "WF"
+  ],
+  "notes": [
+    "All bilateral values are analytical model estimates, not observed transaction totals.",
+    "Values are converted from current USD millions to current USD.",
+    "Only published benchmark years are included; missing years are not interpolated.",
+    "Source shares are calculated separately within each recipient and benchmark year.",
+    "The 2010 and 2017 live World Bank URLs were retired; preserved official workbooks were retrieved from the Internet Archive."
+  ],
+  "source_urls": {
+    "2010": "https://web.archive.org/web/20160531235700id_/http://pubdocs.worldbank.org:80/pubdocs/publicdoc/2015/9/895701443117529385/Bilateral-Remittance-Matrix-2010.xlsx",
+    "2017": "https://web.archive.org/web/20190124090151id_/http://pubdocs.worldbank.org:80/en/705611533661084197/bilateralremittancematrix2017-Apr2018.xlsx",
+    "2018": "https://thedocs.worldbank.org/en/doc/904591573826885707-0090022019/original/Bilateralremittancematrix2018Oct2019.xlsx",
+    "2021": "https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx"
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "title": "Pacific-origin migrant stock abroad by destination country",
+  "source": "United Nations International Migrant Stock 2024: Destination and origin",
+  "retrieved_at": "2026-06-22T06:33:32+00:00",
+  "row_count": 1480,
+  "origin_count": 21,
+  "years": [
+    1990,
+    1995,
+    2000,
+    2005,
+    2010,
+    2015,
+    2020,
+    2024
+  ],
+  "coverage": {
+    "AS": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 6
+    },
+    "CK": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 6
+    },
+    "FJ": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 31
+    },
+    "FM": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 7
+    },
+    "GU": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 7
+    },
+    "KI": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 15
+    },
+    "MH": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 7
+    },
+    "MP": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 4
+    },
+    "NC": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 8
+    },
+    "NR": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 8
+    },
+    "NU": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 5
+    },
+    "PF": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 12
+    },
+    "PG": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 18
+    },
+    "PW": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 8
+    },
+    "SB": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 15
+    },
+    "TK": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 5
+    },
+    "TO": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 18
+    },
+    "TV": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 14
+    },
+    "VU": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 18
+    },
+    "WF": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 7
+    },
+    "WS": {
+      "years": [
+        1990,
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020,
+        2024
+      ],
+      "destination_country_count": 19
+    }
+  },
+  "unavailable_pacific_members": [],
+  "notes": [
+    "Values represent estimated migrant stock, not migration flows.",
+    "The source workbook provides benchmark years only: 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024.",
+    "This extract keeps Pacific countries and territories as origins and country or area destinations with positive stock values.",
+    "Destination shares are calculated separately within each origin and benchmark year."
+  ],
+  "source_url": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_ims_stock_by_sex_destination_and_origin.xlsx"
+}

@@ -1,0 +1,981 @@
+pacific_code,pacific_name,counterpart_code,counterpart_name,year,value_usd,pct_gdp
+FJ,Fiji,AS,American Samoa,2010,98935.4,0.0032
+FJ,Fiji,AU,Australia,2010,52614387.51,1.6755
+FJ,Fiji,BE,Belgium,2010,20042.77,0.0006
+FJ,Fiji,BZ,Belize,2010,1625.34,0.0001
+FJ,Fiji,BO,Bolivia,2010,957.6,0.0
+FJ,Fiji,CA,Canada,2010,25057897.57,0.798
+FJ,Fiji,KY,Cayman Islands,2010,1661.16,0.0001
+FJ,Fiji,CL,Chile,2010,11959.92,0.0004
+FJ,Fiji,CY,Cyprus,2010,4366.59,0.0001
+FJ,Fiji,CZ,Czech Republic,2010,5452.11,0.0002
+FJ,Fiji,DK,Denmark,2010,24241.04,0.0008
+FJ,Fiji,FI,Finland,2010,10454.43,0.0003
+FJ,Fiji,FR,France,2010,96786.45,0.0031
+FJ,Fiji,DE,Germany,2010,100180.72,0.0032
+FJ,Fiji,GR,Greece,2010,7924.16,0.0003
+FJ,Fiji,HU,Hungary,2010,713.34,0.0
+FJ,Fiji,IN,India,2010,101234.27,0.0032
+FJ,Fiji,IE,Ireland,2010,40313.7,0.0013
+FJ,Fiji,IT,Italy,2010,48450.94,0.0015
+FJ,Fiji,JP,Japan,2010,160453.11,0.0051
+FJ,Fiji,LU,Luxembourg,2010,3630.68,0.0001
+FJ,Fiji,MX,Mexico,2010,2058.65,0.0001
+FJ,Fiji,NL,Netherlands,2010,56826.16,0.0018
+FJ,Fiji,NZ,New Zealand,2010,33604980.47,1.0702
+FJ,Fiji,NO,Norway,2010,33789.38,0.0011
+FJ,Fiji,PA,Panama,2010,1000.38,0.0
+FJ,Fiji,PE,Peru,2010,455.82,0.0
+FJ,Fiji,PH,Philippines,2010,34189.27,0.0011
+FJ,Fiji,PL,Poland,2010,1571.87,0.0001
+FJ,Fiji,WS,Samoa,2010,146476.22,0.0047
+FJ,Fiji,SK,Slovak Republic,2010,476.61,0.0
+FJ,Fiji,SB,Solomon Islands,2010,203809.23,0.0065
+FJ,Fiji,ES,Spain,2010,44865.66,0.0014
+FJ,Fiji,SE,Sweden,2010,45536.22,0.0015
+FJ,Fiji,CH,Switzerland,2010,164641.62,0.0052
+FJ,Fiji,TO,Tonga,2010,61680.16,0.002
+FJ,Fiji,TR,Turkey,2010,1577.53,0.0001
+FJ,Fiji,GB,United Kingdom,2010,3960791.59,0.1261
+FJ,Fiji,US,United States,2010,38976860.05,1.2412
+FJ,Fiji,VU,Vanuatu,2010,17443.78,0.0006
+FJ,Fiji,AS,American Samoa,2017,166673.65,0.0031
+FJ,Fiji,AR,Argentina,2017,736.66,0.0
+FJ,Fiji,AW,Aruba,2017,395.6,0.0
+FJ,Fiji,AU,Australia,2017,28742378.73,0.5369
+FJ,Fiji,AT,Austria,2017,7399.88,0.0001
+FJ,Fiji,BM,Bermuda,2017,3265.17,0.0001
+FJ,Fiji,BG,Bulgaria,2017,734.16,0.0
+FJ,Fiji,CA,Canada,2017,11819508.69,0.2208
+FJ,Fiji,CL,Chile,2017,4159.46,0.0001
+FJ,Fiji,CN,China,2017,48549.15,0.0009
+FJ,Fiji,CO,Colombia,2017,351.97,0.0
+FJ,Fiji,CR,Costa Rica,2017,357.74,0.0
+FJ,Fiji,CY,Cyprus,2017,1986.25,0.0
+FJ,Fiji,CZ,Czech Republic,2017,1600.4,0.0
+FJ,Fiji,DK,Denmark,2017,9620.33,0.0002
+FJ,Fiji,EG,"Egypt, Arab Rep.",2017,341.89,0.0
+FJ,Fiji,FI,Finland,2017,3801.76,0.0001
+FJ,Fiji,FR,France,2017,49603.92,0.0009
+FJ,Fiji,PF,French Polynesia,2017,14977.03,0.0003
+FJ,Fiji,GR,Greece,2017,8512.18,0.0002
+FJ,Fiji,IS,Iceland,2017,440.03,0.0
+FJ,Fiji,IN,India,2017,57955.46,0.0011
+FJ,Fiji,IE,Ireland,2017,18823.51,0.0004
+FJ,Fiji,IT,Italy,2017,22241.64,0.0004
+FJ,Fiji,KE,Kenya,2017,2318.22,0.0
+FJ,Fiji,KI,Kiribati,2017,161944.12,0.003
+FJ,Fiji,LU,Luxembourg,2017,481.41,0.0
+FJ,Fiji,MH,Marshall Islands,2017,9935.22,0.0002
+FJ,Fiji,MX,Mexico,2017,727.06,0.0
+FJ,Fiji,NL,Netherlands,2017,27026.86,0.0005
+FJ,Fiji,NZ,New Zealand,2017,21688170.21,0.4051
+FJ,Fiji,NI,Nicaragua,2017,662.35,0.0
+FJ,Fiji,NO,Norway,2017,19252.89,0.0004
+FJ,Fiji,PA,Panama,2017,372.33,0.0
+FJ,Fiji,PG,Papua New Guinea,2017,52987.85,0.001
+FJ,Fiji,PE,Peru,2017,347.09,0.0
+FJ,Fiji,PH,Philippines,2017,2668.16,0.0
+FJ,Fiji,PL,Poland,2017,3866.11,0.0001
+FJ,Fiji,RU,Russian Federation,2017,752.6,0.0
+FJ,Fiji,WS,Samoa,2017,51663.15,0.001
+FJ,Fiji,SI,Slovenia,2017,798.66,0.0
+FJ,Fiji,ZA,South Africa,2017,8362.4,0.0002
+FJ,Fiji,SE,Sweden,2017,27424.28,0.0005
+FJ,Fiji,CH,Switzerland,2017,32231.69,0.0006
+FJ,Fiji,TO,Tonga,2017,227516.58,0.0042
+FJ,Fiji,TR,Turkey,2017,759.83,0.0
+FJ,Fiji,TV,Tuvalu,2017,17883.4,0.0003
+FJ,Fiji,UA,Ukraine,2017,1324.7,0.0
+FJ,Fiji,GB,United Kingdom,2017,2527664.59,0.0472
+FJ,Fiji,US,United States,2017,19775601.71,0.3694
+FJ,Fiji,UY,Uruguay,2017,372.59,0.0
+FJ,Fiji,VU,Vanuatu,2017,74514.16,0.0014
+FJ,Fiji,AS,American Samoa,2018,508827.13,0.0091
+FJ,Fiji,AR,Argentina,2018,2364.58,0.0
+FJ,Fiji,AW,Aruba,2018,1080.31,0.0
+FJ,Fiji,AU,Australia,2018,98841875.93,1.7709
+FJ,Fiji,AT,Austria,2018,33835.11,0.0006
+FJ,Fiji,BE,Belgium,2018,37400.72,0.0007
+FJ,Fiji,BM,Bermuda,2018,7562.19,0.0001
+FJ,Fiji,BG,Bulgaria,2018,2160.62,0.0
+FJ,Fiji,CA,Canada,2018,38454595.08,0.689
+FJ,Fiji,CL,Chile,2018,13375.59,0.0002
+FJ,Fiji,CN,China,2018,158922.23,0.0028
+FJ,Fiji,CO,Colombia,2018,1135.69,0.0
+FJ,Fiji,CR,Costa Rica,2018,1155.9,0.0
+FJ,Fiji,CY,Cyprus,2018,5401.56,0.0001
+FJ,Fiji,CZ,Czech Republic,2018,5224.49,0.0001
+FJ,Fiji,DK,Denmark,2018,25522.67,0.0005
+FJ,Fiji,EG,"Egypt, Arab Rep.",2018,1109.8,0.0
+FJ,Fiji,EE,Estonia,2018,1288.6,0.0
+FJ,Fiji,FI,Finland,2018,13685.26,0.0002
+FJ,Fiji,FR,France,2018,214799.46,0.0038
+FJ,Fiji,PF,French Polynesia,2018,39971.56,0.0007
+FJ,Fiji,GR,Greece,2018,27571.03,0.0005
+FJ,Fiji,GN,Guinea,2018,2160.62,0.0
+FJ,Fiji,HU,Hungary,2018,5018.0,0.0001
+FJ,Fiji,IS,Iceland,2018,1080.31,0.0
+FJ,Fiji,IN,India,2018,183653.11,0.0033
+FJ,Fiji,IE,Ireland,2018,61608.29,0.0011
+FJ,Fiji,IT,Italy,2018,52021.96,0.0009
+FJ,Fiji,KE,Kenya,2018,7562.19,0.0001
+FJ,Fiji,KI,Kiribati,2018,555280.57,0.0099
+FJ,Fiji,LU,Luxembourg,2018,1535.78,0.0
+FJ,Fiji,MH,Marshall Islands,2018,127476.86,0.0023
+FJ,Fiji,MX,Mexico,2018,5896.19,0.0001
+FJ,Fiji,NL,Netherlands,2018,93551.26,0.0017
+FJ,Fiji,NZ,New Zealand,2018,74313422.32,1.3314
+FJ,Fiji,NI,Nicaragua,2018,2160.62,0.0
+FJ,Fiji,NO,Norway,2018,64447.21,0.0012
+FJ,Fiji,PA,Panama,2018,1210.55,0.0
+FJ,Fiji,PG,Papua New Guinea,2018,172849.98,0.0031
+FJ,Fiji,PE,Peru,2018,1128.89,0.0
+FJ,Fiji,PH,Philippines,2018,8727.61,0.0002
+FJ,Fiji,PL,Poland,2018,12632.53,0.0002
+FJ,Fiji,RU,Russian Federation,2018,2463.59,0.0
+FJ,Fiji,WS,Samoa,2018,168528.73,0.003
+FJ,Fiji,SI,Slovenia,2018,1307.23,0.0
+FJ,Fiji,SB,Solomon Islands,2018,108031.24,0.0019
+FJ,Fiji,ZA,South Africa,2018,83088.83,0.0015
+FJ,Fiji,ES,Spain,2018,42371.17,0.0008
+FJ,Fiji,SE,Sweden,2018,88142.52,0.0016
+FJ,Fiji,CH,Switzerland,2018,131644.57,0.0024
+FJ,Fiji,TO,Tonga,2018,742174.61,0.0133
+FJ,Fiji,TR,Turkey,2018,2489.97,0.0
+FJ,Fiji,TV,Tuvalu,2018,58336.87,0.001
+FJ,Fiji,UA,Ukraine,2018,4321.25,0.0001
+FJ,Fiji,GB,United Kingdom,2018,8142653.92,0.1459
+FJ,Fiji,US,United States,2018,60773565.08,1.0889
+FJ,Fiji,UY,Uruguay,2018,1198.5,0.0
+FJ,Fiji,VU,Vanuatu,2018,247391.54,0.0044
+FJ,Fiji,AS,American Samoa,2021,1000000.0,0.024
+FJ,Fiji,AU,Australia,2021,170000000.0,4.0876
+FJ,Fiji,CA,Canada,2021,56000000.0,1.3465
+FJ,Fiji,DE,Germany,2021,1000000.0,0.024
+FJ,Fiji,IN,India,2021,1000000.0,0.024
+FJ,Fiji,KI,Kiribati,2021,1000000.0,0.024
+FJ,Fiji,NZ,New Zealand,2021,133000000.0,3.198
+FJ,Fiji,TO,Tonga,2021,1000000.0,0.024
+FJ,Fiji,GB,United Kingdom,2021,13000000.0,0.3126
+FJ,Fiji,US,United States,2021,105000000.0,2.5247
+FM,"Micronesia, Fed. Sts.",AU,Australia,2017,25708.91,0.0072
+FM,"Micronesia, Fed. Sts.",AT,Austria,2017,826.54,0.0002
+FM,"Micronesia, Fed. Sts.",CA,Canada,2017,44152.66,0.0123
+FM,"Micronesia, Fed. Sts.",CL,Chile,2017,659.19,0.0002
+FM,"Micronesia, Fed. Sts.",CO,Colombia,2017,1762.62,0.0005
+FM,"Micronesia, Fed. Sts.",CR,Costa Rica,2017,602.66,0.0002
+FM,"Micronesia, Fed. Sts.",EC,Ecuador,2017,1687.94,0.0005
+FM,"Micronesia, Fed. Sts.",FR,France,2017,2346.8,0.0007
+FM,"Micronesia, Fed. Sts.",GU,Guam,2017,5507557.59,1.5341
+FM,"Micronesia, Fed. Sts.",IE,Ireland,2017,864.99,0.0002
+FM,"Micronesia, Fed. Sts.",IT,Italy,2017,757.2,0.0002
+FM,"Micronesia, Fed. Sts.",KE,Kenya,2017,3841.27,0.0011
+FM,"Micronesia, Fed. Sts.",MH,Marshall Islands,2017,87348.57,0.0243
+FM,"Micronesia, Fed. Sts.",MP,Northern Mariana Islands,2017,797327.31,0.2221
+FM,"Micronesia, Fed. Sts.",PW,Palau,2017,260960.64,0.0727
+FM,"Micronesia, Fed. Sts.",PE,Peru,2017,575.28,0.0002
+FM,"Micronesia, Fed. Sts.",PR,Puerto Rico,2017,2656.25,0.0007
+FM,"Micronesia, Fed. Sts.",RU,Russian Federation,2017,653.99,0.0002
+FM,"Micronesia, Fed. Sts.",SK,Slovak Republic,2017,3522.28,0.001
+FM,"Micronesia, Fed. Sts.",SE,Sweden,2017,826.59,0.0002
+FM,"Micronesia, Fed. Sts.",US,United States,2017,17222049.9,4.7972
+FM,"Micronesia, Fed. Sts.",VU,Vanuatu,2017,4321.43,0.0012
+FM,"Micronesia, Fed. Sts.",AR,Argentina,2018,2435.95,0.0006
+FM,"Micronesia, Fed. Sts.",AU,Australia,2018,23952.13,0.0061
+FM,"Micronesia, Fed. Sts.",AT,Austria,2018,1663.48,0.0004
+FM,"Micronesia, Fed. Sts.",CA,Canada,2018,43870.98,0.0112
+FM,"Micronesia, Fed. Sts.",CL,Chile,2018,1280.97,0.0003
+FM,"Micronesia, Fed. Sts.",CO,Colombia,2018,1703.66,0.0004
+FM,"Micronesia, Fed. Sts.",CR,Costa Rica,2018,585.22,0.0001
+FM,"Micronesia, Fed. Sts.",EC,Ecuador,2018,1625.14,0.0004
+FM,"Micronesia, Fed. Sts.",FR,France,2018,2343.73,0.0006
+FM,"Micronesia, Fed. Sts.",GU,Guam,2018,4970730.96,1.268
+FM,"Micronesia, Fed. Sts.",GN,Guinea,2018,911.31,0.0002
+FM,"Micronesia, Fed. Sts.",IE,Ireland,2018,889.4,0.0002
+FM,"Micronesia, Fed. Sts.",IT,Italy,2018,11335.59,0.0029
+FM,"Micronesia, Fed. Sts.",KE,Kenya,2018,3645.23,0.0009
+FM,"Micronesia, Fed. Sts.",MH,Marshall Islands,2018,115434.44,0.0294
+FM,"Micronesia, Fed. Sts.",NL,Netherlands,2018,839.45,0.0002
+FM,"Micronesia, Fed. Sts.",MP,Northern Mariana Islands,2018,567289.4,0.1447
+FM,"Micronesia, Fed. Sts.",NO,Norway,2018,887.21,0.0002
+FM,"Micronesia, Fed. Sts.",PW,Palau,2018,264095.12,0.0674
+FM,"Micronesia, Fed. Sts.",PE,Peru,2018,562.3,0.0001
+FM,"Micronesia, Fed. Sts.",PR,Puerto Rico,2018,2624.83,0.0007
+FM,"Micronesia, Fed. Sts.",RU,Russian Federation,2018,655.6,0.0002
+FM,"Micronesia, Fed. Sts.",SK,Slovak Republic,2018,701.83,0.0002
+FM,"Micronesia, Fed. Sts.",ES,Spain,2018,89515.86,0.0228
+FM,"Micronesia, Fed. Sts.",SE,Sweden,2018,820.96,0.0002
+FM,"Micronesia, Fed. Sts.",US,United States,2018,17225498.37,4.3943
+FM,"Micronesia, Fed. Sts.",VU,Vanuatu,2018,4100.89,0.001
+KI,Kiribati,AU,Australia,2017,2974280.14,1.3345
+KI,Kiribati,BM,Bermuda,2017,24190.83,0.0109
+KI,Kiribati,BR,Brazil,2017,249787.0,0.1121
+KI,Kiribati,BG,Bulgaria,2017,15497.26,0.007
+KI,Kiribati,CZ,Czech Republic,2017,29283.8,0.0131
+KI,Kiribati,DK,Denmark,2017,4316.32,0.0019
+KI,Kiribati,EE,Estonia,2017,3513.34,0.0016
+KI,Kiribati,FR,France,2017,36145.89,0.0162
+KI,Kiribati,IE,Ireland,2017,4510.65,0.002
+KI,Kiribati,IT,Italy,2017,7733.2,0.0035
+KI,Kiribati,KE,Kenya,2017,17284.65,0.0078
+KI,Kiribati,MH,Marshall Islands,2017,479688.73,0.2152
+KI,Kiribati,NL,Netherlands,2017,8583.84,0.0039
+KI,Kiribati,NZ,New Zealand,2017,5687102.79,2.5517
+KI,Kiribati,NO,Norway,2017,14081.03,0.0063
+KI,Kiribati,PE,Peru,2017,2789.04,0.0013
+KI,Kiribati,RO,Romania,2017,6539.72,0.0029
+KI,Kiribati,RU,Russian Federation,2017,9757.52,0.0044
+KI,Kiribati,WS,Samoa,2017,41279.17,0.0185
+KI,Kiribati,SK,Slovak Republic,2017,17761.36,0.008
+KI,Kiribati,SE,Sweden,2017,17124.19,0.0077
+KI,Kiribati,CH,Switzerland,2017,42574.06,0.0191
+KI,Kiribati,TV,Tuvalu,2017,72269.01,0.0324
+KI,Kiribati,US,United States,2017,8542413.16,3.8328
+KI,Kiribati,VU,Vanuatu,2017,43211.62,0.0194
+KI,Kiribati,AU,Australia,2018,2188158.8,0.9371
+KI,Kiribati,BM,Bermuda,2018,9862.51,0.0042
+KI,Kiribati,BR,Brazil,2018,256494.43,0.1098
+KI,Kiribati,BG,Bulgaria,2018,9862.51,0.0042
+KI,Kiribati,CZ,Czech Republic,2018,24632.46,0.0105
+KI,Kiribati,DK,Denmark,2018,10608.61,0.0045
+KI,Kiribati,EE,Estonia,2018,3008.35,0.0013
+KI,Kiribati,FJ,Fiji,2018,1780704.81,0.7626
+KI,Kiribati,FR,France,2018,29665.93,0.0127
+KI,Kiribati,GN,Guinea,2018,3945.0,0.0017
+KI,Kiribati,HU,Hungary,2018,2871.89,0.0012
+KI,Kiribati,IE,Ireland,2018,3738.41,0.0016
+KI,Kiribati,IT,Italy,2018,12767.11,0.0055
+KI,Kiribati,KE,Kenya,2018,15780.01,0.0068
+KI,Kiribati,MH,Marshall Islands,2018,562311.44,0.2408
+KI,Kiribati,NL,Netherlands,2018,10602.64,0.0045
+KI,Kiribati,NZ,New Zealand,2018,4935412.14,2.1135
+KI,Kiribati,NO,Norway,2018,11188.45,0.0048
+KI,Kiribati,PE,Peru,2018,2399.5,0.001
+KI,Kiribati,RO,Romania,2018,3945.0,0.0017
+KI,Kiribati,RU,Russian Federation,2018,8346.37,0.0036
+KI,Kiribati,WS,Samoa,2018,35983.41,0.0154
+KI,Kiribati,SK,Slovak Republic,2018,20799.53,0.0089
+KI,Kiribati,SB,Solomon Islands,2018,510877.95,0.2188
+KI,Kiribati,SE,Sweden,2018,10375.91,0.0044
+KI,Kiribati,CH,Switzerland,2018,26525.21,0.0114
+KI,Kiribati,TV,Tuvalu,2018,62696.18,0.0268
+KI,Kiribati,GB,United Kingdom,2018,483535.99,0.2071
+KI,Kiribati,US,United States,2018,6883449.39,2.9478
+KI,Kiribati,VU,Vanuatu,2018,39450.04,0.0169
+KI,Kiribati,AU,Australia,2021,3000000.0,1.0517
+KI,Kiribati,FJ,Fiji,2021,2000000.0,0.7011
+KI,Kiribati,MH,Marshall Islands,2021,1000000.0,0.3506
+KI,Kiribati,NZ,New Zealand,2021,8000000.0,2.8045
+KI,Kiribati,GB,United Kingdom,2021,1000000.0,0.3506
+MH,Marshall Islands,AU,Australia,2017,122790.36,0.0575
+MH,Marshall Islands,BG,Bulgaria,2017,2296.09,0.0011
+MH,Marshall Islands,CO,Colombia,2017,4330.14,0.002
+MH,Marshall Islands,CZ,Czech Republic,2017,5196.84,0.0024
+MH,Marshall Islands,GR,Greece,2017,22286.26,0.0104
+MH,Marshall Islands,GU,Guam,2017,712817.31,0.3336
+MH,Marshall Islands,IE,Ireland,2017,3051.29,0.0014
+MH,Marshall Islands,IT,Italy,2017,13542.91,0.0063
+MH,Marshall Islands,KE,Kenya,2017,1851.15,0.0009
+MH,Marshall Islands,FM,"Micronesia, Fed. Sts.",2017,481299.16,0.2252
+MH,Marshall Islands,NL,Netherlands,2017,14675.47,0.0069
+MH,Marshall Islands,MP,Northern Mariana Islands,2017,123786.11,0.0579
+MH,Marshall Islands,NO,Norway,2017,9445.22,0.0044
+MH,Marshall Islands,PW,Palau,2017,98435.25,0.0461
+MH,Marshall Islands,PE,Peru,2017,4250.37,0.002
+MH,Marshall Islands,PH,Philippines,2017,28440.22,0.0133
+MH,Marshall Islands,RU,Russian Federation,2017,11895.48,0.0056
+MH,Marshall Islands,SE,Sweden,2017,2929.31,0.0014
+MH,Marshall Islands,CH,Switzerland,2017,6335.82,0.003
+MH,Marshall Islands,TR,Turkey,2017,2412.02,0.0011
+MH,Marshall Islands,US,United States,2017,27759975.55,12.9902
+MH,Marshall Islands,VU,Vanuatu,2017,3702.3,0.0017
+MH,Marshall Islands,AU,Australia,2018,110549.12,0.0502
+MH,Marshall Islands,AT,Austria,2018,2864.93,0.0013
+MH,Marshall Islands,BE,Belgium,2018,2789.88,0.0013
+MH,Marshall Islands,BG,Bulgaria,2018,1748.59,0.0008
+MH,Marshall Islands,CO,Colombia,2018,4118.2,0.0019
+MH,Marshall Islands,CZ,Czech Republic,2018,5100.33,0.0023
+MH,Marshall Islands,GR,Greece,2018,21529.1,0.0098
+MH,Marshall Islands,GU,Guam,2018,477364.91,0.217
+MH,Marshall Islands,GN,Guinea,2018,8742.95,0.004
+MH,Marshall Islands,IE,Ireland,2018,3039.79,0.0014
+MH,Marshall Islands,IT,Italy,2018,2633.99,0.0012
+MH,Marshall Islands,KE,Kenya,2018,1748.59,0.0008
+MH,Marshall Islands,FM,"Micronesia, Fed. Sts.",2018,454633.25,0.2067
+MH,Marshall Islands,NL,Netherlands,2018,11553.24,0.0053
+MH,Marshall Islands,MP,Northern Mariana Islands,2018,92675.24,0.0421
+MH,Marshall Islands,NO,Norway,2018,3033.18,0.0014
+MH,Marshall Islands,PW,Palau,2018,97346.8,0.0442
+MH,Marshall Islands,PE,Peru,2018,4083.44,0.0019
+MH,Marshall Islands,PH,Philippines,2018,27407.5,0.0125
+MH,Marshall Islands,RU,Russian Federation,2018,11644.61,0.0053
+MH,Marshall Islands,SE,Sweden,2018,2832.21,0.0013
+MH,Marshall Islands,CH,Switzerland,2018,3077.55,0.0014
+MH,Marshall Islands,TR,Turkey,2018,2367.75,0.0011
+MH,Marshall Islands,US,United States,2018,26983617.68,12.2653
+MH,Marshall Islands,VU,Vanuatu,2018,3497.18,0.0016
+MH,Marshall Islands,US,United States,2021,30000000.0,11.4834
+PF,French Polynesia,AU,Australia,2017,61878220.3,
+PF,French Polynesia,CA,Canada,2017,18937630.81,
+PF,French Polynesia,CL,Chile,2017,1231116.52,
+PF,French Polynesia,CO,Colombia,2017,307779.13,
+PF,French Polynesia,GR,Greece,2017,5540024.33,
+PF,French Polynesia,IE,Ireland,2017,161861.69,
+PF,French Polynesia,KE,Kenya,2017,3231680.86,
+PF,French Polynesia,MX,Mexico,2017,461668.69,
+PF,French Polynesia,NL,Netherlands,2017,2400080.54,
+PF,French Polynesia,NO,Norway,2017,1143449.94,
+PF,French Polynesia,PL,Poland,2017,769447.82,
+PF,French Polynesia,SK,Slovak Republic,2017,153889.56,
+PF,French Polynesia,SB,Solomon Islands,2017,56323580.66,
+PF,French Polynesia,TR,Turkey,2017,153889.56,
+PF,French Polynesia,UA,Ukraine,2017,1692785.21,
+PF,French Polynesia,US,United States,2017,376407989.34,
+PF,French Polynesia,UY,Uruguay,2017,307779.13,
+PF,French Polynesia,VU,Vanuatu,2017,153889.56,
+PF,French Polynesia,AU,Australia,2018,84118395.15,
+PF,French Polynesia,CA,Canada,2018,20652669.83,
+PF,French Polynesia,CL,Chile,2018,752905.13,
+PF,French Polynesia,CO,Colombia,2018,127922.74,
+PF,French Polynesia,GR,Greece,2018,3934483.64,
+PF,French Polynesia,IE,Ireland,2018,201255.41,
+PF,French Polynesia,KE,Kenya,2018,455833.61,
+PF,French Polynesia,MX,Mexico,2018,239199.3,
+PF,French Polynesia,NL,Netherlands,2018,2693259.05,
+PF,French Polynesia,NO,Norway,2018,1402140.4,
+PF,French Polynesia,PL,Poland,2018,567232.98,
+PF,French Polynesia,SK,Slovak Republic,2018,120190.71,
+PF,French Polynesia,SB,Solomon Islands,2018,5848556.38,
+PF,French Polynesia,TR,Turkey,2018,105895.07,
+PF,French Polynesia,UA,Ukraine,2018,493076.21,
+PF,French Polynesia,GB,United Kingdom,2018,10589279.97,
+PF,French Polynesia,US,United States,2018,449062887.47,
+PF,French Polynesia,UY,Uruguay,2018,174373.12,
+PF,French Polynesia,VU,Vanuatu,2018,20411.82,
+PG,Papua New Guinea,AU,Australia,2010,6655443.19,0.0467
+PG,Papua New Guinea,BE,Belgium,2010,10920.72,0.0001
+PG,Papua New Guinea,BO,Bolivia,2010,206.7,0.0
+PG,Papua New Guinea,CA,Canada,2010,115813.23,0.0008
+PG,Papua New Guinea,KY,Cayman Islands,2010,319.15,0.0
+PG,Papua New Guinea,CL,Chile,2010,1114.89,0.0
+PG,Papua New Guinea,CZ,Czech Republic,2010,379.56,0.0
+PG,Papua New Guinea,DK,Denmark,2010,2830.17,0.0
+PG,Papua New Guinea,EC,Ecuador,2010,453.55,0.0
+PG,Papua New Guinea,FJ,Fiji,2010,124498.78,0.0009
+PG,Papua New Guinea,FI,Finland,2010,1527.91,0.0
+PG,Papua New Guinea,FR,France,2010,30099.69,0.0002
+PG,Papua New Guinea,DE,Germany,2010,9034.04,0.0001
+PG,Papua New Guinea,GR,Greece,2010,559.45,0.0
+PG,Papua New Guinea,HU,Hungary,2010,341.43,0.0
+PG,Papua New Guinea,IE,Ireland,2010,487.66,0.0
+PG,Papua New Guinea,IT,Italy,2010,14242.15,0.0001
+PG,Papua New Guinea,JP,Japan,2010,16324.98,0.0001
+PG,Papua New Guinea,MX,Mexico,2010,238.83,0.0
+PG,Papua New Guinea,NL,Netherlands,2010,30145.26,0.0002
+PG,Papua New Guinea,NZ,New Zealand,2010,277563.33,0.0019
+PG,Papua New Guinea,NO,Norway,2010,10678.46,0.0001
+PG,Papua New Guinea,PE,Peru,2010,609.04,0.0
+PG,Papua New Guinea,PH,Philippines,2010,55729.12,0.0004
+PG,Papua New Guinea,PL,Poland,2010,187.69,0.0
+PG,Papua New Guinea,PT,Portugal,2010,809.07,0.0
+PG,Papua New Guinea,WS,Samoa,2010,10755.06,0.0001
+PG,Papua New Guinea,SK,Slovak Republic,2010,230.45,0.0
+PG,Papua New Guinea,SB,Solomon Islands,2010,196884.04,0.0014
+PG,Papua New Guinea,ES,Spain,2010,11936.15,0.0001
+PG,Papua New Guinea,SE,Sweden,2010,5883.23,0.0
+PG,Papua New Guinea,CH,Switzerland,2010,51890.15,0.0004
+PG,Papua New Guinea,TR,Turkey,2010,369.09,0.0
+PG,Papua New Guinea,GB,United Kingdom,2010,308203.79,0.0022
+PG,Papua New Guinea,US,United States,2010,562948.64,0.004
+PG,Papua New Guinea,VU,Vanuatu,2010,1442.78,0.0
+PG,Papua New Guinea,VE,"Venezuela, RB",2010,303.07,0.0
+PG,Papua New Guinea,AR,Argentina,2017,55.15,0.0
+PG,Papua New Guinea,AU,Australia,2017,2505218.59,0.011
+PG,Papua New Guinea,AT,Austria,2017,4501.31,0.0
+PG,Papua New Guinea,BM,Bermuda,2017,88.41,0.0
+PG,Papua New Guinea,BO,Bolivia,2017,43.01,0.0
+PG,Papua New Guinea,BG,Bulgaria,2017,164.27,0.0
+PG,Papua New Guinea,CA,Canada,2017,25034.04,0.0001
+PG,Papua New Guinea,CL,Chile,2017,291.54,0.0
+PG,Papua New Guinea,CN,China,2017,5163.82,0.0
+PG,Papua New Guinea,CO,Colombia,2017,50.16,0.0
+PG,Papua New Guinea,CU,Cuba,2017,109.34,0.0
+PG,Papua New Guinea,CZ,Czech Republic,2017,262.39,0.0
+PG,Papua New Guinea,DK,Denmark,2017,626.39,0.0
+PG,Papua New Guinea,EC,Ecuador,2017,142.13,0.0
+PG,Papua New Guinea,EG,"Egypt, Arab Rep.",2017,47.42,0.0
+PG,Papua New Guinea,EE,Estonia,2017,62.75,0.0
+PG,Papua New Guinea,FI,Finland,2017,658.67,0.0
+PG,Papua New Guinea,FR,France,2017,4566.56,0.0
+PG,Papua New Guinea,GR,Greece,2017,122.39,0.0
+PG,Papua New Guinea,HU,Hungary,2017,120.41,0.0
+PG,Papua New Guinea,IS,Iceland,2017,79.25,0.0
+PG,Papua New Guinea,IE,Ireland,2017,2051.62,0.0
+PG,Papua New Guinea,IT,Italy,2017,6541.28,0.0
+PG,Papua New Guinea,JO,Jordan,2017,90.35,0.0
+PG,Papua New Guinea,LU,Luxembourg,2017,93.63,0.0
+PG,Papua New Guinea,NL,Netherlands,2017,10506.52,0.0
+PG,Papua New Guinea,NZ,New Zealand,2017,93381.88,0.0004
+PG,Papua New Guinea,NO,Norway,2017,599.29,0.0
+PG,Papua New Guinea,PA,Panama,2017,56.43,0.0
+PG,Papua New Guinea,PE,Peru,2017,390.27,0.0
+PG,Papua New Guinea,PH,Philippines,2017,2783.38,0.0
+PG,Papua New Guinea,PT,Portugal,2017,190.7,0.0
+PG,Papua New Guinea,RU,Russian Federation,2017,115.42,0.0
+PG,Papua New Guinea,WS,Samoa,2017,2221.45,0.0
+PG,Papua New Guinea,SC,Seychelles,2017,187.04,0.0
+PG,Papua New Guinea,SK,Slovak Republic,2017,190.52,0.0
+PG,Papua New Guinea,SI,Slovenia,2017,261.36,0.0
+PG,Papua New Guinea,ZA,South Africa,2017,2850.94,0.0
+PG,Papua New Guinea,SE,Sweden,2017,2483.69,0.0
+PG,Papua New Guinea,CH,Switzerland,2017,22271.93,0.0001
+PG,Papua New Guinea,TR,Turkey,2017,117.78,0.0
+PG,Papua New Guinea,US,United States,2017,226214.4,0.001
+PG,Papua New Guinea,VU,Vanuatu,2017,2363.16,0.0
+PG,Papua New Guinea,VE,"Venezuela, RB",2017,106.23,0.0
+PG,Papua New Guinea,AR,Argentina,2018,53.97,0.0
+PG,Papua New Guinea,AU,Australia,2018,2371822.17,0.0098
+PG,Papua New Guinea,AT,Austria,2018,5751.62,0.0
+PG,Papua New Guinea,BE,Belgium,2018,2289.41,0.0
+PG,Papua New Guinea,BM,Bermuda,2018,40.35,0.0
+PG,Papua New Guinea,BO,Bolivia,2018,44.79,0.0
+PG,Papua New Guinea,BG,Bulgaria,2018,121.05,0.0
+PG,Papua New Guinea,CA,Canada,2018,33057.56,0.0001
+PG,Papua New Guinea,CL,Chile,2018,283.81,0.0
+PG,Papua New Guinea,CN,China,2018,5285.68,0.0
+PG,Papua New Guinea,CO,Colombia,2018,50.32,0.0
+PG,Papua New Guinea,CU,Cuba,2018,80.7,0.0
+PG,Papua New Guinea,CZ,Czech Republic,2018,258.17,0.0
+PG,Papua New Guinea,DK,Denmark,2018,372.33,0.0
+PG,Papua New Guinea,EC,Ecuador,2018,143.99,0.0
+PG,Papua New Guinea,EG,"Egypt, Arab Rep.",2018,48.52,0.0
+PG,Papua New Guinea,EE,Estonia,2018,189.03,0.0
+PG,Papua New Guinea,FI,Finland,2018,770.65,0.0
+PG,Papua New Guinea,FR,France,2018,4363.14,0.0
+PG,Papua New Guinea,GR,Greece,2018,179.82,0.0
+PG,Papua New Guinea,GN,Guinea,2018,605.25,0.0
+PG,Papua New Guinea,HU,Hungary,2018,240.2,0.0
+PG,Papua New Guinea,IS,Iceland,2018,40.35,0.0
+PG,Papua New Guinea,IE,Ireland,2018,1971.41,0.0
+PG,Papua New Guinea,IT,Italy,2018,2545.6,0.0
+PG,Papua New Guinea,JO,Jordan,2018,92.52,0.0
+PG,Papua New Guinea,LU,Luxembourg,2018,85.07,0.0
+PG,Papua New Guinea,NL,Netherlands,2018,9749.37,0.0
+PG,Papua New Guinea,NZ,New Zealand,2018,94508.18,0.0004
+PG,Papua New Guinea,NO,Norway,2018,707.96,0.0
+PG,Papua New Guinea,PA,Panama,2018,56.31,0.0
+PG,Papua New Guinea,PE,Peru,2018,398.59,0.0
+PG,Papua New Guinea,PH,Philippines,2018,2894.14,0.0
+PG,Papua New Guinea,PT,Portugal,2018,185.95,0.0
+PG,Papua New Guinea,RU,Russian Federation,2018,116.21,0.0
+PG,Papua New Guinea,WS,Samoa,2018,2319.08,0.0
+PG,Papua New Guinea,SC,Seychelles,2018,178.9,0.0
+PG,Papua New Guinea,SK,Slovak Republic,2018,186.62,0.0
+PG,Papua New Guinea,SI,Slovenia,2018,193.92,0.0
+PG,Papua New Guinea,SB,Solomon Islands,2018,22273.05,0.0001
+PG,Papua New Guinea,ZA,South Africa,2018,4741.79,0.0
+PG,Papua New Guinea,ES,Spain,2018,1983.75,0.0
+PG,Papua New Guinea,SE,Sweden,2018,2256.24,0.0
+PG,Papua New Guinea,CH,Switzerland,2018,20470.23,0.0001
+PG,Papua New Guinea,TR,Turkey,2018,118.46,0.0
+PG,Papua New Guinea,GB,United Kingdom,2018,67389.76,0.0003
+PG,Papua New Guinea,US,United States,2018,211099.03,0.0009
+PG,Papua New Guinea,VU,Vanuatu,2018,2622.73,0.0
+PG,Papua New Guinea,VE,"Venezuela, RB",2018,80.7,0.0
+PG,Papua New Guinea,AU,Australia,2021,2000000.0,0.0077
+PW,Palau,AU,Australia,2017,9704.02,0.0033
+PW,Palau,AT,Austria,2017,446.86,0.0002
+PW,Palau,BM,Bermuda,2017,939.49,0.0003
+PW,Palau,BR,Brazil,2017,7621.59,0.0026
+PW,Palau,CA,Canada,2017,10058.8,0.0034
+PW,Palau,CL,Chile,2017,1210.09,0.0004
+PW,Palau,CO,Colombia,2017,1902.28,0.0007
+PW,Palau,CZ,Czech Republic,2017,841.03,0.0003
+PW,Palau,EC,Ecuador,2017,1141.37,0.0004
+PW,Palau,GU,Guam,2017,609979.69,0.2088
+PW,Palau,IT,Italy,2017,7729.73,0.0026
+PW,Palau,KE,Kenya,2017,380.46,0.0001
+PW,Palau,MH,Marshall Islands,2017,17500.93,0.006
+PW,Palau,MX,Mexico,2017,390.92,0.0001
+PW,Palau,FM,"Micronesia, Fed. Sts.",2017,53263.71,0.0182
+PW,Palau,MP,Northern Mariana Islands,2017,250675.16,0.0858
+PW,Palau,PH,Philippines,2017,12935.47,0.0044
+PW,Palau,RU,Russian Federation,2017,401.88,0.0001
+PW,Palau,SE,Sweden,2017,893.74,0.0003
+PW,Palau,CH,Switzerland,2017,465.36,0.0002
+PW,Palau,US,United States,2017,1358186.12,0.4649
+PW,Palau,VN,Vietnam,2017,78754.19,0.027
+PW,Palau,AU,Australia,2018,11379.69,0.004
+PW,Palau,AT,Austria,2018,385.29,0.0001
+PW,Palau,BM,Bermuda,2018,674.67,0.0002
+PW,Palau,BR,Brazil,2018,8096.06,0.0028
+PW,Palau,CA,Canada,2018,8662.05,0.003
+PW,Palau,CL,Chile,2018,1743.37,0.0006
+PW,Palau,CO,Colombia,2018,1686.68,0.0006
+PW,Palau,CZ,Czech Republic,2018,732.8,0.0003
+PW,Palau,EC,Ecuador,2018,1012.01,0.0004
+PW,Palau,GR,Greece,2018,65558.95,0.0228
+PW,Palau,GU,Guam,2018,500943.44,0.1739
+PW,Palau,GN,Guinea,2018,2698.69,0.0009
+PW,Palau,IT,Italy,2018,1857.7,0.0006
+PW,Palau,KE,Kenya,2018,337.34,0.0001
+PW,Palau,MH,Marshall Islands,2018,15517.44,0.0054
+PW,Palau,MX,Mexico,2018,339.56,0.0001
+PW,Palau,FM,"Micronesia, Fed. Sts.",2018,95128.65,0.033
+PW,Palau,MP,Northern Mariana Islands,2018,212521.46,0.0738
+PW,Palau,NO,Norway,2018,790.14,0.0003
+PW,Palau,PH,Philippines,2018,11806.75,0.0041
+PW,Palau,RU,Russian Federation,2018,352.0,0.0001
+PW,Palau,SE,Sweden,2018,1150.11,0.0004
+PW,Palau,CH,Switzerland,2018,3181.03,0.0011
+PW,Palau,US,United States,2018,1163615.67,0.404
+PW,Palau,VN,Vietnam,2018,69828.48,0.0242
+PW,Palau,GU,Guam,2021,1000000.0,0.4323
+SB,Solomon Islands,AU,Australia,2010,784174.62,0.0873
+SB,Solomon Islands,BE,Belgium,2010,1609.87,0.0002
+SB,Solomon Islands,CA,Canada,2010,17703.28,0.002
+SB,Solomon Islands,KY,Cayman Islands,2010,537.77,0.0001
+SB,Solomon Islands,CZ,Czech Republic,2010,333.08,0.0
+SB,Solomon Islands,DK,Denmark,2010,1113.84,0.0001
+SB,Solomon Islands,FJ,Fiji,2010,17841.54,0.002
+SB,Solomon Islands,FR,France,2010,2636.11,0.0003
+SB,Solomon Islands,DE,Germany,2010,2959.22,0.0003
+SB,Solomon Islands,GR,Greece,2010,1967.83,0.0002
+SB,Solomon Islands,IE,Ireland,2010,861.1,0.0001
+SB,Solomon Islands,IT,Italy,2010,1196.14,0.0001
+SB,Solomon Islands,JP,Japan,2010,10129.99,0.0011
+SB,Solomon Islands,NL,Netherlands,2010,5382.29,0.0006
+SB,Solomon Islands,NZ,New Zealand,2010,203944.85,0.0227
+SB,Solomon Islands,NO,Norway,2010,2111.89,0.0002
+SB,Solomon Islands,WS,Samoa,2010,5230.29,0.0006
+SB,Solomon Islands,ES,Spain,2010,1169.08,0.0001
+SB,Solomon Islands,SE,Sweden,2010,1487.63,0.0002
+SB,Solomon Islands,CH,Switzerland,2010,6696.59,0.0007
+SB,Solomon Islands,TR,Turkey,2010,643.75,0.0001
+SB,Solomon Islands,GB,United Kingdom,2010,159182.04,0.0177
+SB,Solomon Islands,US,United States,2010,84382.27,0.0094
+SB,Solomon Islands,VU,Vanuatu,2010,1834.44,0.0002
+SB,Solomon Islands,AU,Australia,2017,16280083.85,1.1076
+SB,Solomon Islands,AT,Austria,2017,105894.19,0.0072
+SB,Solomon Islands,BO,Bolivia,2017,3847.76,0.0003
+SB,Solomon Islands,CA,Canada,2017,240969.12,0.0164
+SB,Solomon Islands,CO,Colombia,2017,36850.79,0.0025
+SB,Solomon Islands,CU,Cuba,2017,20360.36,0.0014
+SB,Solomon Islands,CZ,Czech Republic,2017,12533.52,0.0009
+SB,Solomon Islands,DK,Denmark,2017,22915.39,0.0016
+SB,Solomon Islands,FI,Finland,2017,35429.24,0.0024
+SB,Solomon Islands,FR,France,2017,14020.42,0.001
+SB,Solomon Islands,IS,Iceland,2017,7740.82,0.0005
+SB,Solomon Islands,IE,Ireland,2017,24136.93,0.0016
+SB,Solomon Islands,IT,Italy,2017,33486.7,0.0023
+SB,Solomon Islands,KE,Kenya,2017,6532.19,0.0004
+SB,Solomon Islands,MH,Marshall Islands,2017,54118.0,0.0037
+SB,Solomon Islands,NL,Netherlands,2017,113810.37,0.0077
+SB,Solomon Islands,NO,Norway,2017,42146.66,0.0029
+SB,Solomon Islands,PA,Panama,2017,5278.91,0.0004
+SB,Solomon Islands,PG,Papua New Guinea,2017,950042.09,0.0646
+SB,Solomon Islands,RU,Russian Federation,2017,102921.17,0.007
+SB,Solomon Islands,WS,Samoa,2017,55997.82,0.0038
+SB,Solomon Islands,SK,Slovak Republic,2017,6041.0,0.0004
+SB,Solomon Islands,SI,Slovenia,2017,24955.32,0.0017
+SB,Solomon Islands,ZA,South Africa,2017,17995.57,0.0012
+SB,Solomon Islands,SE,Sweden,2017,30258.33,0.0021
+SB,Solomon Islands,CH,Switzerland,2017,178635.32,0.0122
+SB,Solomon Islands,TR,Turkey,2017,11087.27,0.0008
+SB,Solomon Islands,TV,Tuvalu,2017,3695.88,0.0003
+SB,Solomon Islands,UA,Ukraine,2017,250894.78,0.0171
+SB,Solomon Islands,US,United States,2017,877536.21,0.0597
+SB,Solomon Islands,VU,Vanuatu,2017,386394.61,0.0263
+SB,Solomon Islands,AU,Australia,2018,12945487.44,0.8013
+SB,Solomon Islands,AT,Austria,2018,33714.73,0.0021
+SB,Solomon Islands,BE,Belgium,2018,21610.84,0.0013
+SB,Solomon Islands,BO,Bolivia,2018,2815.12,0.0002
+SB,Solomon Islands,CA,Canada,2018,176672.74,0.0109
+SB,Solomon Islands,CO,Colombia,2018,26643.32,0.0016
+SB,Solomon Islands,CU,Cuba,2018,8825.5,0.0005
+SB,Solomon Islands,CZ,Czech Republic,2018,9427.75,0.0006
+SB,Solomon Islands,DK,Denmark,2018,17072.61,0.0011
+SB,Solomon Islands,FJ,Fiji,2018,2149106.96,0.133
+SB,Solomon Islands,FI,Finland,2018,26281.76,0.0016
+SB,Solomon Islands,FR,France,2018,10354.6,0.0006
+SB,Solomon Islands,GN,Guinea,2018,24836.25,0.0015
+SB,Solomon Islands,IS,Iceland,2018,2206.38,0.0001
+SB,Solomon Islands,IE,Ireland,2018,18373.16,0.0011
+SB,Solomon Islands,IT,Italy,2018,19816.96,0.0012
+SB,Solomon Islands,KE,Kenya,2018,4794.96,0.0003
+SB,Solomon Islands,MH,Marshall Islands,2018,38994.39,0.0024
+SB,Solomon Islands,NL,Netherlands,2018,85299.12,0.0053
+SB,Solomon Islands,NO,Norway,2018,36631.48,0.0023
+SB,Solomon Islands,PA,Panama,2018,3908.37,0.0002
+SB,Solomon Islands,PG,Papua New Guinea,2018,737023.67,0.0456
+SB,Solomon Islands,RU,Russian Federation,2018,77584.73,0.0048
+SB,Solomon Islands,WS,Samoa,2018,40857.27,0.0025
+SB,Solomon Islands,SK,Slovak Republic,2018,13454.03,0.0008
+SB,Solomon Islands,SI,Slovenia,2018,18893.52,0.0012
+SB,Solomon Islands,SE,Sweden,2018,22099.0,0.0014
+SB,Solomon Islands,CH,Switzerland,2018,112205.3,0.0069
+SB,Solomon Islands,TR,Turkey,2018,8387.0,0.0005
+SB,Solomon Islands,TV,Tuvalu,2018,2675.66,0.0002
+SB,Solomon Islands,UA,Ukraine,2018,184351.95,0.0114
+SB,Solomon Islands,GB,United Kingdom,2018,1519202.91,0.094
+SB,Solomon Islands,US,United States,2018,644500.37,0.0399
+SB,Solomon Islands,VU,Vanuatu,2018,285890.17,0.0177
+SB,Solomon Islands,AU,Australia,2021,37000000.0,2.3744
+SB,Solomon Islands,FJ,Fiji,2021,5000000.0,0.3209
+SB,Solomon Islands,PG,Papua New Guinea,2021,1000000.0,0.0642
+SB,Solomon Islands,GB,United Kingdom,2021,5000000.0,0.3209
+SB,Solomon Islands,VU,Vanuatu,2021,1000000.0,0.0642
+TO,Tonga,AS,American Samoa,2010,1341892.84,0.3658
+TO,Tonga,AU,Australia,2010,14687909.13,4.0034
+TO,Tonga,BE,Belgium,2010,4211.36,0.0011
+TO,Tonga,CA,Canada,2010,208552.99,0.0568
+TO,Tonga,CL,Chile,2010,633362.95,0.1726
+TO,Tonga,CZ,Czech Republic,2010,12555.85,0.0034
+TO,Tonga,DK,Denmark,2010,28128.72,0.0077
+TO,Tonga,DO,Dominican Republic,2010,25808.78,0.007
+TO,Tonga,FJ,Fiji,2010,394534.47,0.1075
+TO,Tonga,FI,Finland,2010,2668.26,0.0007
+TO,Tonga,FR,France,2010,363403.56,0.0991
+TO,Tonga,DE,Germany,2010,132453.53,0.0361
+TO,Tonga,HU,Hungary,2010,1278.89,0.0003
+TO,Tonga,IT,Italy,2010,13615.83,0.0037
+TO,Tonga,JP,Japan,2010,184449.79,0.0503
+TO,Tonga,KI,Kiribati,2010,200303.7,0.0546
+TO,Tonga,NL,Netherlands,2010,26184.2,0.0071
+TO,Tonga,NZ,New Zealand,2010,32684207.92,8.9085
+TO,Tonga,NO,Norway,2010,13085.95,0.0036
+TO,Tonga,PE,Peru,2010,3279.94,0.0009
+TO,Tonga,PT,Portugal,2010,13799.82,0.0038
+TO,Tonga,WS,Samoa,2010,150050.4,0.0409
+TO,Tonga,ES,Spain,2010,9439.19,0.0026
+TO,Tonga,SE,Sweden,2010,44526.42,0.0121
+TO,Tonga,CH,Switzerland,2010,17494.32,0.0048
+TO,Tonga,GB,United Kingdom,2010,292169.36,0.0796
+TO,Tonga,US,United States,2010,19682701.11,5.3648
+TO,Tonga,AS,American Samoa,2017,3688520.12,0.8019
+TO,Tonga,AR,Argentina,2017,6387.3,0.0014
+TO,Tonga,AW,Aruba,2017,2345.93,0.0005
+TO,Tonga,AU,Australia,2017,27650155.66,6.0112
+TO,Tonga,AT,Austria,2017,18683.28,0.0041
+TO,Tonga,BM,Bermuda,2017,5850.61,0.0013
+TO,Tonga,BG,Bulgaria,2017,4238.81,0.0009
+TO,Tonga,CA,Canada,2017,233329.46,0.0507
+TO,Tonga,CL,Chile,2017,754519.68,0.164
+TO,Tonga,CR,Costa Rica,2017,4095.55,0.0009
+TO,Tonga,CZ,Czech Republic,2017,14293.69,0.0031
+TO,Tonga,DK,Denmark,2017,45652.53,0.0099
+TO,Tonga,DO,Dominican Republic,2017,40368.49,0.0088
+TO,Tonga,EE,Estonia,2017,2313.81,0.0005
+TO,Tonga,FI,Finland,2017,2563.73,0.0006
+TO,Tonga,FR,France,2017,206310.05,0.0449
+TO,Tonga,IS,Iceland,2017,2707.94,0.0006
+TO,Tonga,IE,Ireland,2017,36073.25,0.0078
+TO,Tonga,IT,Italy,2017,64424.31,0.014
+TO,Tonga,KE,Kenya,2017,8725.21,0.0019
+TO,Tonga,NL,Netherlands,2017,21393.64,0.0047
+TO,Tonga,NZ,New Zealand,2017,55403074.7,12.0448
+TO,Tonga,NO,Norway,2017,17153.83,0.0037
+TO,Tonga,PA,Panama,2017,4320.77,0.0009
+TO,Tonga,PE,Peru,2017,1969.9,0.0004
+TO,Tonga,RU,Russian Federation,2017,8766.81,0.0019
+TO,Tonga,WS,Samoa,2017,157899.1,0.0343
+TO,Tonga,SE,Sweden,2017,90752.68,0.0197
+TO,Tonga,CH,Switzerland,2017,54641.31,0.0119
+TO,Tonga,US,United States,2017,57284972.02,12.4539
+TO,Tonga,VU,Vanuatu,2017,50606.21,0.011
+TO,Tonga,AS,American Samoa,2018,3760514.44,0.762
+TO,Tonga,AR,Argentina,2018,7350.29,0.0015
+TO,Tonga,AW,Aruba,2018,2058.3,0.0004
+TO,Tonga,AU,Australia,2018,37436091.25,7.5854
+TO,Tonga,AT,Austria,2018,18640.57,0.0038
+TO,Tonga,BE,Belgium,2018,12138.08,0.0025
+TO,Tonga,BM,Bermuda,2018,4116.6,0.0008
+TO,Tonga,BG,Bulgaria,2018,4116.6,0.0008
+TO,Tonga,CA,Canada,2018,305442.26,0.0619
+TO,Tonga,CL,Chile,2018,870153.21,0.1763
+TO,Tonga,CR,Costa Rica,2018,4756.52,0.001
+TO,Tonga,CZ,Czech Republic,2018,16820.35,0.0034
+TO,Tonga,DK,Denmark,2018,50090.93,0.0101
+TO,Tonga,DO,Dominican Republic,2018,47701.75,0.0097
+TO,Tonga,EE,Estonia,2018,2752.55,0.0006
+TO,Tonga,FJ,Fiji,2018,2976210.65,0.603
+TO,Tonga,FI,Finland,2018,5971.15,0.0012
+TO,Tonga,FR,France,2018,284074.56,0.0576
+TO,Tonga,GN,Guinea,2018,1943035.37,0.3937
+TO,Tonga,HU,Hungary,2018,2654.19,0.0005
+TO,Tonga,IS,Iceland,2018,2058.3,0.0004
+TO,Tonga,IE,Ireland,2018,42574.35,0.0086
+TO,Tonga,IT,Italy,2018,57685.76,0.0117
+TO,Tonga,KE,Kenya,2018,10291.5,0.0021
+TO,Tonga,FM,"Micronesia, Fed. Sts.",2018,37049.4,0.0075
+TO,Tonga,NL,Netherlands,2018,25034.1,0.0051
+TO,Tonga,NZ,New Zealand,2018,68036650.73,13.7857
+TO,Tonga,NO,Norway,2018,16342.95,0.0033
+TO,Tonga,PA,Panama,2018,5058.04,0.001
+TO,Tonga,PG,Papua New Guinea,2018,57632.41,0.0117
+TO,Tonga,PE,Peru,2018,2308.0,0.0005
+TO,Tonga,RU,Russian Federation,2018,10356.97,0.0021
+TO,Tonga,WS,Samoa,2018,184144.51,0.0373
+TO,Tonga,SE,Sweden,2018,95333.57,0.0193
+TO,Tonga,CH,Switzerland,2018,62913.57,0.0127
+TO,Tonga,GB,United Kingdom,2018,714003.93,0.1447
+TO,Tonga,US,United States,2018,66116181.58,13.3966
+TO,Tonga,VU,Vanuatu,2018,59690.71,0.0121
+TO,Tonga,AS,American Samoa,2021,2000000.0,0.3851
+TO,Tonga,AU,Australia,2021,43000000.0,8.2803
+TO,Tonga,FJ,Fiji,2021,3000000.0,0.5777
+TO,Tonga,GN,Guinea,2021,2000000.0,0.3851
+TO,Tonga,NZ,New Zealand,2021,75000000.0,14.4423
+TO,Tonga,GB,United Kingdom,2021,1000000.0,0.1926
+TO,Tonga,US,United States,2021,85000000.0,16.368
+TV,Tuvalu,AU,Australia,2017,230443.06,0.509
+TV,Tuvalu,AT,Austria,2017,17589.15,0.0388
+TV,Tuvalu,BM,Bermuda,2017,1604.22,0.0035
+TV,Tuvalu,BG,Bulgaria,2017,18696.79,0.0413
+TV,Tuvalu,CZ,Czech Republic,2017,7864.62,0.0174
+TV,Tuvalu,DO,Dominican Republic,2017,4455.32,0.0098
+TV,Tuvalu,FI,Finland,2017,2817.71,0.0062
+TV,Tuvalu,FR,France,2017,2799.66,0.0062
+TV,Tuvalu,IT,Italy,2017,6812.19,0.015
+TV,Tuvalu,KE,Kenya,2017,968.27,0.0021
+TV,Tuvalu,KI,Kiribati,2017,1012813.7,2.2369
+TV,Tuvalu,MH,Marshall Islands,2017,64874.3,0.1433
+TV,Tuvalu,NZ,New Zealand,2017,1928490.06,4.2594
+TV,Tuvalu,NO,Norway,2017,4705.15,0.0104
+TV,Tuvalu,RU,Russian Federation,2017,682343.2,1.5071
+TV,Tuvalu,WS,Samoa,2017,83254.84,0.1839
+TV,Tuvalu,SK,Slovak Republic,2017,1283.55,0.0028
+TV,Tuvalu,CH,Switzerland,2017,4732.52,0.0105
+TV,Tuvalu,TR,Turkey,2017,2446.38,0.0054
+TV,Tuvalu,US,United States,2017,220663.77,0.4874
+TV,Tuvalu,VU,Vanuatu,2017,2904.82,0.0064
+TV,Tuvalu,AR,Argentina,2018,3794.71,0.0079
+TV,Tuvalu,AU,Australia,2018,223393.95,0.4653
+TV,Tuvalu,BM,Bermuda,2018,785.15,0.0016
+TV,Tuvalu,BG,Bulgaria,2018,12562.42,0.0262
+TV,Tuvalu,CZ,Czech Republic,2018,6552.12,0.0136
+TV,Tuvalu,DO,Dominican Republic,2018,3689.6,0.0077
+TV,Tuvalu,FJ,Fiji,2018,353552.18,0.7363
+TV,Tuvalu,FI,Finland,2018,1166.09,0.0024
+TV,Tuvalu,FR,France,2018,2310.66,0.0048
+TV,Tuvalu,GR,Greece,2018,10299.31,0.0215
+TV,Tuvalu,IT,Italy,2018,3374.71,0.007
+TV,Tuvalu,KE,Kenya,2018,785.15,0.0016
+TV,Tuvalu,KI,Kiribati,2018,821268.44,1.7104
+TV,Tuvalu,MH,Marshall Islands,2018,52605.15,0.1096
+TV,Tuvalu,NZ,New Zealand,2018,1678066.66,3.4949
+TV,Tuvalu,NO,Norway,2018,1281.26,0.0027
+TV,Tuvalu,RU,Russian Federation,2018,584944.1,1.2182
+TV,Tuvalu,WS,Samoa,2018,67948.37,0.1415
+TV,Tuvalu,SK,Slovak Republic,2018,1060.55,0.0022
+TV,Tuvalu,ES,Spain,2018,37851.73,0.0788
+TV,Tuvalu,CH,Switzerland,2018,6493.1,0.0135
+TV,Tuvalu,TR,Turkey,2018,2040.68,0.0043
+TV,Tuvalu,US,United States,2018,181818.45,0.3787
+TV,Tuvalu,VU,Vanuatu,2018,2355.45,0.0049
+VU,Vanuatu,AU,Australia,2010,4559196.95,0.6798
+VU,Vanuatu,BE,Belgium,2010,36232.86,0.0054
+VU,Vanuatu,CA,Canada,2010,85435.81,0.0127
+VU,Vanuatu,CO,Colombia,2010,402057.23,0.0599
+VU,Vanuatu,CZ,Czech Republic,2010,14891.74,0.0022
+VU,Vanuatu,DK,Denmark,2010,18637.98,0.0028
+VU,Vanuatu,FJ,Fiji,2010,86758.23,0.0129
+VU,Vanuatu,FR,France,2010,2213696.72,0.3301
+VU,Vanuatu,DE,Germany,2010,34984.58,0.0052
+VU,Vanuatu,GR,Greece,2010,8667.58,0.0013
+VU,Vanuatu,IE,Ireland,2010,7366.46,0.0011
+VU,Vanuatu,IT,Italy,2010,8343.01,0.0012
+VU,Vanuatu,JP,Japan,2010,16642.56,0.0025
+VU,Vanuatu,LU,Luxembourg,2010,4668.0,0.0007
+VU,Vanuatu,NL,Netherlands,2010,26308.07,0.0039
+VU,Vanuatu,NZ,New Zealand,2010,1074396.13,0.1602
+VU,Vanuatu,NO,Norway,2010,11332.47,0.0017
+VU,Vanuatu,PA,Panama,2010,7615.77,0.0011
+VU,Vanuatu,PL,Poland,2010,9001.37,0.0013
+VU,Vanuatu,WS,Samoa,2010,69182.59,0.0103
+VU,Vanuatu,SB,Solomon Islands,2010,35781.22,0.0053
+VU,Vanuatu,ES,Spain,2010,364240.77,0.0543
+VU,Vanuatu,CH,Switzerland,2010,113417.89,0.0169
+VU,Vanuatu,TR,Turkey,2010,9019.09,0.0013
+VU,Vanuatu,GB,United Kingdom,2010,592525.42,0.0883
+VU,Vanuatu,US,United States,2010,421710.37,0.0629
+VU,Vanuatu,AU,Australia,2017,3571186.22,0.4058
+VU,Vanuatu,AT,Austria,2017,18020.38,0.002
+VU,Vanuatu,BG,Bulgaria,2017,1842.57,0.0002
+VU,Vanuatu,CL,Chile,2017,1956.36,0.0002
+VU,Vanuatu,CO,Colombia,2017,342381.08,0.0389
+VU,Vanuatu,CR,Costa Rica,2017,6999.09,0.0008
+VU,Vanuatu,CZ,Czech Republic,2017,4379.86,0.0005
+VU,Vanuatu,DK,Denmark,2017,10385.68,0.0012
+VU,Vanuatu,FI,Finland,2017,2432.79,0.0003
+VU,Vanuatu,FR,France,2017,1841530.39,0.2093
+VU,Vanuatu,PF,French Polynesia,2017,562381.51,0.0639
+VU,Vanuatu,GR,Greece,2017,4097.72,0.0005
+VU,Vanuatu,IE,Ireland,2017,2716.91,0.0003
+VU,Vanuatu,IT,Italy,2017,48670.75,0.0055
+VU,Vanuatu,KE,Kenya,2017,34212.76,0.0039
+VU,Vanuatu,NL,Netherlands,2017,28394.21,0.0032
+VU,Vanuatu,RU,Russian Federation,2017,17435.52,0.002
+VU,Vanuatu,WS,Samoa,2017,27149.14,0.0031
+VU,Vanuatu,SC,Seychelles,2017,2085.79,0.0002
+VU,Vanuatu,SK,Slovak Republic,2017,2122.9,0.0002
+VU,Vanuatu,SB,Solomon Islands,2017,497858.43,0.0566
+VU,Vanuatu,SE,Sweden,2017,2574.55,0.0003
+VU,Vanuatu,CH,Switzerland,2017,59917.17,0.0068
+VU,Vanuatu,TR,Turkey,2017,7900.08,0.0009
+VU,Vanuatu,US,United States,2017,402850.92,0.0458
+VU,Vanuatu,VU,Vanuatu,2017,3762.15,0.0004
+VU,Vanuatu,AR,Argentina,2018,26121.57,0.0029
+VU,Vanuatu,AU,Australia,2018,6846521.06,0.7485
+VU,Vanuatu,AT,Austria,2018,28131.44,0.0031
+VU,Vanuatu,BE,Belgium,2018,58890.74,0.0064
+VU,Vanuatu,BG,Bulgaria,2018,49065.33,0.0054
+VU,Vanuatu,CL,Chile,2018,6930.8,0.0008
+VU,Vanuatu,CO,Colombia,2018,664172.65,0.0726
+VU,Vanuatu,CR,Costa Rica,2018,12458.63,0.0014
+VU,Vanuatu,CZ,Czech Republic,2018,8050.0,0.0009
+VU,Vanuatu,DK,Denmark,2018,4741.12,0.0005
+VU,Vanuatu,FJ,Fiji,2018,516254.19,0.0564
+VU,Vanuatu,FI,Finland,2018,4422.82,0.0005
+VU,Vanuatu,FR,France,2018,3334767.95,0.3646
+VU,Vanuatu,PF,French Polynesia,2018,559790.83,0.0612
+VU,Vanuatu,GR,Greece,2018,254860.86,0.0279
+VU,Vanuatu,HU,Hungary,2018,3701.52,0.0004
+VU,Vanuatu,IE,Ireland,2018,5058.47,0.0006
+VU,Vanuatu,IT,Italy,2018,79825.44,0.0087
+VU,Vanuatu,KE,Kenya,2018,61485.81,0.0067
+VU,Vanuatu,NL,Netherlands,2018,42641.95,0.0047
+VU,Vanuatu,NO,Norway,2018,5044.46,0.0006
+VU,Vanuatu,PG,Papua New Guinea,2018,244899.83,0.0268
+VU,Vanuatu,RU,Russian Federation,2018,32055.14,0.0035
+VU,Vanuatu,WS,Samoa,2018,48424.19,0.0053
+VU,Vanuatu,SC,Seychelles,2018,3671.58,0.0004
+VU,Vanuatu,SK,Slovak Republic,2018,3856.72,0.0004
+VU,Vanuatu,SB,Solomon Islands,2018,885406.22,0.0968
+VU,Vanuatu,SE,Sweden,2018,4619.46,0.0005
+VU,Vanuatu,CH,Switzerland,2018,56522.47,0.0062
+VU,Vanuatu,TR,Turkey,2018,14570.78,0.0016
+VU,Vanuatu,GB,United Kingdom,2018,591748.22,0.0647
+VU,Vanuatu,US,United States,2018,726725.35,0.0794
+VU,Vanuatu,VU,Vanuatu,2018,6690.73,0.0007
+VU,Vanuatu,AU,Australia,2021,92000000.0,9.6802
+VU,Vanuatu,FJ,Fiji,2021,3000000.0,0.3157
+VU,Vanuatu,FR,France,2021,20000000.0,2.1044
+VU,Vanuatu,PF,French Polynesia,2021,2000000.0,0.2104
+VU,Vanuatu,GR,Greece,2021,1000000.0,0.1052
+VU,Vanuatu,IT,Italy,2021,1000000.0,0.1052
+VU,Vanuatu,PG,Papua New Guinea,2021,1000000.0,0.1052
+VU,Vanuatu,SB,Solomon Islands,2021,1000000.0,0.1052
+VU,Vanuatu,GB,United Kingdom,2021,4000000.0,0.4209
+WS,Samoa,AS,American Samoa,2010,14262402.53,2.0966
+WS,Samoa,AU,Australia,2010,20633636.47,3.0332
+WS,Samoa,BE,Belgium,2010,4516.72,0.0007
+WS,Samoa,CA,Canada,2010,106501.8,0.0157
+WS,Samoa,KY,Cayman Islands,2010,4137.19,0.0006
+WS,Samoa,CL,Chile,2010,4539.79,0.0007
+WS,Samoa,CZ,Czech Republic,2010,1978.95,0.0003
+WS,Samoa,DK,Denmark,2010,17039.66,0.0025
+WS,Samoa,DO,Dominican Republic,2010,3617.39,0.0005
+WS,Samoa,FJ,Fiji,2010,487494.77,0.0717
+WS,Samoa,FR,France,2010,26189.06,0.0038
+WS,Samoa,DE,Germany,2010,74761.41,0.011
+WS,Samoa,GR,Greece,2010,1440.0,0.0002
+WS,Samoa,HU,Hungary,2010,904.73,0.0001
+WS,Samoa,IE,Ireland,2010,46519.96,0.0068
+WS,Samoa,IT,Italy,2010,99818.9,0.0147
+WS,Samoa,JP,Japan,2010,76336.47,0.0112
+WS,Samoa,KI,Kiribati,2010,240722.16,0.0354
+WS,Samoa,MX,Mexico,2010,9113.17,0.0013
+WS,Samoa,NL,Netherlands,2010,18442.21,0.0027
+WS,Samoa,NZ,New Zealand,2010,57406330.11,8.4389
+WS,Samoa,NO,Norway,2010,3769.11,0.0006
+WS,Samoa,PA,Panama,2010,3792.92,0.0006
+WS,Samoa,PE,Peru,2010,574.53,0.0001
+WS,Samoa,PT,Portugal,2010,4197.9,0.0006
+WS,Samoa,SK,Slovak Republic,2010,1210.09,0.0002
+WS,Samoa,ES,Spain,2010,6724.96,0.001
+WS,Samoa,SE,Sweden,2010,29087.12,0.0043
+WS,Samoa,CH,Switzerland,2010,15366.02,0.0023
+WS,Samoa,TO,Tonga,2010,35913.92,0.0053
+WS,Samoa,TR,Turkey,2010,15973.69,0.0023
+WS,Samoa,GB,United Kingdom,2010,182359.58,0.0268
+WS,Samoa,US,United States,2010,26322753.91,3.8695
+WS,Samoa,AS,American Samoa,2017,32705649.03,3.6962
+WS,Samoa,AR,Argentina,2017,1111.77,0.0001
+WS,Samoa,AU,Australia,2017,26631781.6,3.0098
+WS,Samoa,AT,Austria,2017,5517.44,0.0006
+WS,Samoa,BG,Bulgaria,2017,6641.64,0.0008
+WS,Samoa,CA,Canada,2017,143361.19,0.0162
+WS,Samoa,CO,Colombia,2017,6299.0,0.0007
+WS,Samoa,CU,Cuba,2017,4423.54,0.0005
+WS,Samoa,CZ,Czech Republic,2017,4949.64,0.0006
+WS,Samoa,DK,Denmark,2017,26361.99,0.003
+WS,Samoa,EG,"Egypt, Arab Rep.",2017,1014.52,0.0001
+WS,Samoa,FI,Finland,2017,3981.77,0.0004
+WS,Samoa,FR,France,2017,22422.9,0.0025
+WS,Samoa,GR,Greece,2017,2369.63,0.0003
+WS,Samoa,IE,Ireland,2017,42950.95,0.0049
+WS,Samoa,IT,Italy,2017,62952.69,0.0071
+WS,Samoa,KE,Kenya,2017,5561.01,0.0006
+WS,Samoa,MT,Malta,2017,13898.5,0.0016
+WS,Samoa,NL,Netherlands,2017,33165.95,0.0037
+WS,Samoa,NZ,New Zealand,2017,64929335.45,7.3379
+WS,Samoa,NO,Norway,2017,4419.85,0.0005
+WS,Samoa,PA,Panama,2017,3381.97,0.0004
+WS,Samoa,PE,Peru,2017,2064.59,0.0002
+WS,Samoa,PT,Portugal,2017,3639.57,0.0004
+WS,Samoa,RU,Russian Federation,2017,3428.65,0.0004
+WS,Samoa,SK,Slovak Republic,2017,1212.47,0.0001
+WS,Samoa,SE,Sweden,2017,35865.36,0.0041
+WS,Samoa,CH,Switzerland,2017,22224.5,0.0025
+WS,Samoa,TO,Tonga,2017,293806.69,0.0332
+WS,Samoa,TR,Turkey,2017,27770.59,0.0031
+WS,Samoa,TV,Tuvalu,2017,4634.17,0.0005
+WS,Samoa,US,United States,2017,17793988.56,2.011
+WS,Samoa,VU,Vanuatu,2017,3707.34,0.0004
+WS,Samoa,AS,American Samoa,2018,26897257.79,3.0619
+WS,Samoa,AR,Argentina,2018,1030.82,0.0001
+WS,Samoa,AU,Australia,2018,37254701.38,4.241
+WS,Samoa,AT,Austria,2018,7822.68,0.0009
+WS,Samoa,BE,Belgium,2018,10190.12,0.0012
+WS,Samoa,BG,Bulgaria,2018,6953.12,0.0008
+WS,Samoa,CA,Canada,2018,158123.82,0.018
+WS,Samoa,CO,Colombia,2018,5873.05,0.0007
+WS,Samoa,CU,Cuba,2018,3476.56,0.0004
+WS,Samoa,CZ,Czech Republic,2018,4710.88,0.0005
+WS,Samoa,DK,Denmark,2018,19705.79,0.0022
+WS,Samoa,EG,"Egypt, Arab Rep.",2018,952.53,0.0001
+WS,Samoa,FJ,Fiji,2018,278230.99,0.0317
+WS,Samoa,FI,Finland,2018,3760.29,0.0004
+WS,Samoa,FR,France,2018,21121.33,0.0024
+WS,Samoa,GR,Greece,2018,490240.68,0.0558
+WS,Samoa,GN,Guinea,2018,23466.76,0.0027
+WS,Samoa,HU,Hungary,2018,2231.4,0.0003
+WS,Samoa,IE,Ireland,2018,41209.65,0.0047
+WS,Samoa,IT,Italy,2018,70257.69,0.008
+WS,Samoa,KE,Kenya,2018,5214.84,0.0006
+WS,Samoa,MT,Malta,2018,9560.53,0.0011
+WS,Samoa,FM,"Micronesia, Fed. Sts.",2018,18251.93,0.0021
+WS,Samoa,NL,Netherlands,2018,32828.22,0.0037
+WS,Samoa,NZ,New Zealand,2018,64588923.67,7.3526
+WS,Samoa,NO,Norway,2018,5484.05,0.0006
+WS,Samoa,PA,Panama,2018,3190.96,0.0004
+WS,Samoa,PE,Peru,2018,1943.3,0.0002
+WS,Samoa,PT,Portugal,2018,3427.33,0.0004
+WS,Samoa,RU,Russian Federation,2018,3266.1,0.0004
+WS,Samoa,SK,Slovak Republic,2018,1145.52,0.0001
+WS,Samoa,SE,Sweden,2018,29686.08,0.0034
+WS,Samoa,CH,Switzerland,2018,26385.89,0.003
+WS,Samoa,TO,Tonga,2018,275517.2,0.0314
+WS,Samoa,TR,Turkey,2018,26504.64,0.003
+WS,Samoa,TV,Tuvalu,2018,13906.23,0.0016
+WS,Samoa,GB,United Kingdom,2018,234418.01,0.0267
+WS,Samoa,US,United States,2018,24883537.18,2.8327
+WS,Samoa,VU,Vanuatu,2018,3476.56,0.0004
+WS,Samoa,AS,American Samoa,2021,20000000.0,2.3263
+WS,Samoa,AU,Australia,2021,64000000.0,7.4442
+WS,Samoa,GR,Greece,2021,1000000.0,0.1163
+WS,Samoa,NZ,New Zealand,2021,105000000.0,12.2132
+WS,Samoa,GB,United Kingdom,2021,1000000.0,0.1163
+WS,Samoa,US,United States,2021,56000000.0,6.5137

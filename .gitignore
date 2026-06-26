@@ -1,0 +1,22 @@
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# --- Node / dashboard build ---
+dashboard/node_modules/
+dashboard/dist/
+node_modules/
+
+# --- Runtime / scratch ---
+runtime/
+tmp/
+
+# --- Raw source data (large third-party files; re-fetch via scripts, see DATA_PIPELINE.md) ---
+data/raw/
+data/archive/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db

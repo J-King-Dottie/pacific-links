@@ -1,0 +1,199 @@
+{
+  "title": "Pacific inward direct investment positions by immediate investor economy and year",
+  "dataset": "IMF.STA:DIP(12.0.1)",
+  "source": "IMF Direct Investment Positions by Counterpart Economy",
+  "retrieved_at": "2026-06-22T01:52:08+00:00",
+  "row_count": 12417,
+  "recipient_count": 21,
+  "investor_count": 89,
+  "year_min": 2009,
+  "year_max": 2024,
+  "coverage": {
+    "AS": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 59,
+      "official_rows": 0,
+      "mirror_rows": 618
+    },
+    "CK": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 55,
+      "official_rows": 0,
+      "mirror_rows": 509
+    },
+    "FJ": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 72,
+      "official_rows": 156,
+      "mirror_rows": 557
+    },
+    "FM": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 57,
+      "official_rows": 0,
+      "mirror_rows": 611
+    },
+    "GU": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 49,
+      "official_rows": 0,
+      "mirror_rows": 517
+    },
+    "KI": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 56,
+      "official_rows": 0,
+      "mirror_rows": 571
+    },
+    "MH": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 60,
+      "official_rows": 0,
+      "mirror_rows": 618
+    },
+    "MP": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 51,
+      "official_rows": 0,
+      "mirror_rows": 553
+    },
+    "NC": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 55,
+      "official_rows": 0,
+      "mirror_rows": 570
+    },
+    "NR": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 53,
+      "official_rows": 0,
+      "mirror_rows": 588
+    },
+    "NU": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 54,
+      "official_rows": 0,
+      "mirror_rows": 541
+    },
+    "PF": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 60,
+      "official_rows": 0,
+      "mirror_rows": 611
+    },
+    "PG": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 59,
+      "official_rows": 0,
+      "mirror_rows": 589
+    },
+    "PW": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 62,
+      "official_rows": 33,
+      "mirror_rows": 612
+    },
+    "SB": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 55,
+      "official_rows": 29,
+      "mirror_rows": 502
+    },
+    "TK": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 55,
+      "official_rows": 0,
+      "mirror_rows": 582
+    },
+    "TO": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 51,
+      "official_rows": 0,
+      "mirror_rows": 571
+    },
+    "TV": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 58,
+      "official_rows": 0,
+      "mirror_rows": 622
+    },
+    "VU": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 63,
+      "official_rows": 0,
+      "mirror_rows": 654
+    },
+    "WF": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 54,
+      "official_rows": 0,
+      "mirror_rows": 585
+    },
+    "WS": {
+      "start": 2009,
+      "end": 2024,
+      "year_count": 16,
+      "investor_count": 63,
+      "official_rows": 17,
+      "mirror_rows": 601
+    }
+  },
+  "filters": {
+    "OBS_MEASURE": "OBS_VALUE",
+    "FREQUENCY": "Annual",
+    "DI_DIRECTION": "Inward",
+    "FUNCTIONAL_CAT": "Direct investment",
+    "INSTR_ASSET": "All financial instruments",
+    "DI_ENTITY": "All entities",
+    "ACCOUNTING_ENTRY": "Net (liabilities less assets)",
+    "UNIT": "US dollar"
+  },
+  "notes": [
+    "Positions are year-end stocks, not annual FDI flows.",
+    "Values are normalized from USD millions to USD.",
+    "Reported official data take priority; counterparty-derived mirror data fill missing recipient observations.",
+    "Regional and other aggregate counterpart groups are excluded.",
+    "Negative positions are valid under the net liabilities-less-assets definition.",
+    "Missing observations are not zero."
+  ]
+}

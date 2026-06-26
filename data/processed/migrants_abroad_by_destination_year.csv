@@ -1,0 +1,758 @@
+pacific_code,pacific_name,counterpart_code,counterpart_name,year,value_people,pct_population
+AS,American Samoa,WS,Samoa,2010,1650.0,2.9876
+AS,American Samoa,ML,Mali,2010,322.0,0.583
+AS,American Samoa,AU,Australia,2010,262.0,0.4744
+AS,American Samoa,ZA,South Africa,2010,86.0,0.1557
+AS,American Samoa,FM,Micronesia (Fed. States of),2010,21.0,0.038
+AS,American Samoa,WS,Samoa,2015,1379.0,2.6079
+AS,American Samoa,AU,Australia,2015,412.0,0.7792
+AS,American Samoa,ML,Mali,2015,395.0,0.747
+AS,American Samoa,ZA,South Africa,2015,243.0,0.4595
+AS,American Samoa,FM,Micronesia (Fed. States of),2015,23.0,0.0435
+AS,American Samoa,WS,Samoa,2020,1307.0,2.6266
+AS,American Samoa,ZA,South Africa,2020,676.0,1.3585
+AS,American Samoa,AU,Australia,2020,485.0,0.9747
+AS,American Samoa,ML,Mali,2020,462.0,0.9284
+AS,American Samoa,FM,Micronesia (Fed. States of),2020,22.0,0.0442
+AS,American Samoa,WS,Samoa,2024,1250.0,2.6729
+AS,American Samoa,ZA,South Africa,2024,1054.0,2.2538
+AS,American Samoa,ML,Mali,2024,519.0,1.1098
+AS,American Samoa,AU,Australia,2024,517.0,1.1055
+AS,American Samoa,FM,Micronesia (Fed. States of),2024,22.0,0.047
+CK,Cook Islands,NZ,New Zealand,2010,13592.0,84.95
+CK,Cook Islands,AU,Australia,2010,6647.0,41.5438
+CK,Cook Islands,FJ,Fiji,2010,32.0,0.2
+CK,Cook Islands,WS,Samoa,2010,14.0,0.0875
+CK,Cook Islands,DO,Dominican Republic,2010,9.0,0.0562
+CK,Cook Islands,NZ,New Zealand,2015,12457.0,77.8563
+CK,Cook Islands,AU,Australia,2015,8049.0,50.3062
+CK,Cook Islands,FJ,Fiji,2015,33.0,0.2063
+CK,Cook Islands,WS,Samoa,2015,11.0,0.0687
+CK,Cook Islands,DO,Dominican Republic,2015,8.0,0.05
+CK,Cook Islands,NZ,New Zealand,2020,12101.0,77.3573
+CK,Cook Islands,AU,Australia,2020,7984.0,51.0388
+CK,Cook Islands,FJ,Fiji,2020,32.0,0.2046
+CK,Cook Islands,WS,Samoa,2020,9.0,0.0575
+CK,Cook Islands,DO,Dominican Republic,2020,8.0,0.0511
+CK,Cook Islands,NZ,New Zealand,2024,12403.0,87.21
+CK,Cook Islands,AU,Australia,2024,7834.0,55.0837
+CK,Cook Islands,FJ,Fiji,2024,33.0,0.232
+CK,Cook Islands,DO,Dominican Republic,2024,9.0,0.0633
+CK,Cook Islands,WS,Samoa,2024,9.0,0.0633
+FJ,Fiji,AU,Australia,2010,63911.0,7.02
+FJ,Fiji,NZ,New Zealand,2010,47256.0,5.1906
+FJ,Fiji,CA,Canada,2010,24843.0,2.7287
+FJ,Fiji,TO,Tonga,2010,582.0,0.0639
+FJ,Fiji,KI,Kiribati,2010,489.0,0.0537
+FJ,Fiji,AS,American Samoa,2010,333.0,0.0366
+FJ,Fiji,VU,Vanuatu,2010,216.0,0.0237
+FJ,Fiji,WS,Samoa,2010,142.0,0.0156
+FJ,Fiji,CK,Cook Islands,2010,138.0,0.0152
+FJ,Fiji,IN,India,2010,133.0,0.0146
+FJ,Fiji,MH,Marshall Islands,2010,111.0,0.0122
+FJ,Fiji,SB,Solomon Islands,2010,110.0,0.0121
+FJ,Fiji,PG,Papua New Guinea,2010,83.0,0.0091
+FJ,Fiji,NR,Nauru,2010,58.0,0.0064
+FJ,Fiji,TV,Tuvalu,2010,48.0,0.0053
+FJ,Fiji,NU,Niue,2010,41.0,0.0045
+FJ,Fiji,NO,Norway,2010,40.0,0.0044
+FJ,Fiji,PF,French Polynesia,2010,32.0,0.0035
+FJ,Fiji,DK,Denmark,2010,23.0,0.0025
+FJ,Fiji,FI,Finland,2010,7.0,0.0008
+FJ,Fiji,CY,Cyprus,2010,3.0,0.0003
+FJ,Fiji,BG,Bulgaria,2010,2.0,0.0002
+FJ,Fiji,CR,Costa Rica,2010,2.0,0.0002
+FJ,Fiji,IS,Iceland,2010,2.0,0.0002
+FJ,Fiji,GR,Greece,2010,1.0,0.0001
+FJ,Fiji,SI,Slovenia,2010,1.0,0.0001
+FJ,Fiji,AU,Australia,2015,72652.0,7.9092
+FJ,Fiji,NZ,New Zealand,2015,57371.0,6.2456
+FJ,Fiji,CA,Canada,2015,25117.0,2.7343
+FJ,Fiji,TO,Tonga,2015,499.0,0.0543
+FJ,Fiji,KI,Kiribati,2015,497.0,0.0541
+FJ,Fiji,CK,Cook Islands,2015,480.0,0.0523
+FJ,Fiji,AS,American Samoa,2015,332.0,0.0361
+FJ,Fiji,VU,Vanuatu,2015,230.0,0.025
+FJ,Fiji,IN,India,2015,123.0,0.0134
+FJ,Fiji,MH,Marshall Islands,2015,118.0,0.0128
+FJ,Fiji,WS,Samoa,2015,118.0,0.0128
+FJ,Fiji,SB,Solomon Islands,2015,103.0,0.0112
+FJ,Fiji,NR,Nauru,2015,91.0,0.0099
+FJ,Fiji,PG,Papua New Guinea,2015,84.0,0.0091
+FJ,Fiji,TV,Tuvalu,2015,51.0,0.0056
+FJ,Fiji,NO,Norway,2015,41.0,0.0045
+FJ,Fiji,NU,Niue,2015,40.0,0.0044
+FJ,Fiji,PF,French Polynesia,2015,30.0,0.0033
+FJ,Fiji,DK,Denmark,2015,26.0,0.0028
+FJ,Fiji,FI,Finland,2015,9.0,0.001
+FJ,Fiji,HU,Hungary,2015,4.0,0.0004
+FJ,Fiji,GN,Guinea,2015,3.0,0.0003
+FJ,Fiji,CY,Cyprus,2015,2.0,0.0002
+FJ,Fiji,BG,Bulgaria,2015,1.0,0.0001
+FJ,Fiji,CR,Costa Rica,2015,1.0,0.0001
+FJ,Fiji,EE,Estonia,2015,1.0,0.0001
+FJ,Fiji,IS,Iceland,2015,1.0,0.0001
+FJ,Fiji,SI,Slovenia,2015,1.0,0.0001
+FJ,Fiji,AU,Australia,2020,76355.0,8.3451
+FJ,Fiji,NZ,New Zealand,2020,65339.0,7.1412
+FJ,Fiji,CA,Canada,2020,24774.0,2.7077
+FJ,Fiji,KI,Kiribati,2020,531.0,0.058
+FJ,Fiji,CK,Cook Islands,2020,527.0,0.0576
+FJ,Fiji,TO,Tonga,2020,470.0,0.0514
+FJ,Fiji,AS,American Samoa,2020,332.0,0.0363
+FJ,Fiji,VU,Vanuatu,2020,235.0,0.0257
+FJ,Fiji,MH,Marshall Islands,2020,117.0,0.0128
+FJ,Fiji,IN,India,2020,115.0,0.0126
+FJ,Fiji,WS,Samoa,2020,110.0,0.012
+FJ,Fiji,NR,Nauru,2020,105.0,0.0115
+FJ,Fiji,SB,Solomon Islands,2020,100.0,0.0109
+FJ,Fiji,PG,Papua New Guinea,2020,83.0,0.0091
+FJ,Fiji,TV,Tuvalu,2020,55.0,0.006
+FJ,Fiji,NO,Norway,2020,41.0,0.0045
+FJ,Fiji,NU,Niue,2020,39.0,0.0043
+FJ,Fiji,DK,Denmark,2020,33.0,0.0036
+FJ,Fiji,PF,French Polynesia,2020,30.0,0.0033
+FJ,Fiji,FI,Finland,2020,9.0,0.001
+FJ,Fiji,HU,Hungary,2020,4.0,0.0004
+FJ,Fiji,LU,Luxembourg,2020,4.0,0.0004
+FJ,Fiji,CR,Costa Rica,2020,1.0,0.0001
+FJ,Fiji,CY,Cyprus,2020,1.0,0.0001
+FJ,Fiji,GN,Guinea,2020,1.0,0.0001
+FJ,Fiji,AU,Australia,2024,83435.0,8.9833
+FJ,Fiji,NZ,New Zealand,2024,70552.0,7.5962
+FJ,Fiji,CA,Canada,2024,24028.0,2.587
+FJ,Fiji,CK,Cook Islands,2024,568.0,0.0612
+FJ,Fiji,KI,Kiribati,2024,561.0,0.0604
+FJ,Fiji,TO,Tonga,2024,450.0,0.0485
+FJ,Fiji,AS,American Samoa,2024,333.0,0.0359
+FJ,Fiji,VU,Vanuatu,2024,239.0,0.0257
+FJ,Fiji,NR,Nauru,2024,122.0,0.0131
+FJ,Fiji,MH,Marshall Islands,2024,117.0,0.0126
+FJ,Fiji,IN,India,2024,108.0,0.0116
+FJ,Fiji,WS,Samoa,2024,105.0,0.0113
+FJ,Fiji,SB,Solomon Islands,2024,98.0,0.0106
+FJ,Fiji,PG,Papua New Guinea,2024,83.0,0.0089
+FJ,Fiji,TV,Tuvalu,2024,57.0,0.0061
+FJ,Fiji,NO,Norway,2024,46.0,0.005
+FJ,Fiji,NU,Niue,2024,39.0,0.0042
+FJ,Fiji,DK,Denmark,2024,30.0,0.0032
+FJ,Fiji,PF,French Polynesia,2024,30.0,0.0032
+FJ,Fiji,FI,Finland,2024,11.0,0.0012
+FJ,Fiji,HU,Hungary,2024,5.0,0.0005
+FJ,Fiji,LU,Luxembourg,2024,5.0,0.0005
+FJ,Fiji,CR,Costa Rica,2024,1.0,0.0001
+FJ,Fiji,CY,Cyprus,2024,1.0,0.0001
+FJ,Fiji,GN,Guinea,2024,1.0,0.0001
+FM,Micronesia (Fed. States of),GU,Guam,2010,10545.0,9.8057
+FM,Micronesia (Fed. States of),MP,Northern Mariana Islands,2010,1245.0,1.1577
+FM,Micronesia (Fed. States of),PW,Palau,2010,445.0,0.4138
+FM,Micronesia (Fed. States of),MH,Marshall Islands,2010,228.0,0.212
+FM,Micronesia (Fed. States of),NO,Norway,2010,1.0,0.0009
+FM,Micronesia (Fed. States of),GU,Guam,2015,10639.0,9.786
+FM,Micronesia (Fed. States of),MP,Northern Mariana Islands,2015,1115.0,1.0256
+FM,Micronesia (Fed. States of),PW,Palau,2015,400.0,0.3679
+FM,Micronesia (Fed. States of),MH,Marshall Islands,2015,242.0,0.2226
+FM,Micronesia (Fed. States of),GN,Guinea,2015,3.0,0.0028
+FM,Micronesia (Fed. States of),NO,Norway,2015,1.0,0.0009
+FM,Micronesia (Fed. States of),SK,Slovakia,2015,1.0,0.0009
+FM,Micronesia (Fed. States of),GU,Guam,2020,11251.0,10.1437
+FM,Micronesia (Fed. States of),MP,Northern Mariana Islands,2020,1124.0,1.0134
+FM,Micronesia (Fed. States of),PW,Palau,2020,411.0,0.3706
+FM,Micronesia (Fed. States of),MH,Marshall Islands,2020,246.0,0.2218
+FM,Micronesia (Fed. States of),GN,Guinea,2020,1.0,0.0009
+FM,Micronesia (Fed. States of),GU,Guam,2024,11767.0,10.3986
+FM,Micronesia (Fed. States of),MP,Northern Mariana Islands,2024,1132.0,1.0004
+FM,Micronesia (Fed. States of),PW,Palau,2024,421.0,0.372
+FM,Micronesia (Fed. States of),MH,Marshall Islands,2024,247.0,0.2183
+FM,Micronesia (Fed. States of),GN,Guinea,2024,1.0,0.0009
+GU,Guam,MP,Northern Mariana Islands,2010,810.0,
+GU,Guam,PW,Palau,2010,262.0,
+GU,Guam,AU,Australia,2010,97.0,
+GU,Guam,FM,Micronesia (Fed. States of),2010,39.0,
+GU,Guam,MX,Mexico,2010,14.0,
+GU,Guam,CR,Costa Rica,2010,6.0,
+GU,Guam,MP,Northern Mariana Islands,2015,726.0,
+GU,Guam,PW,Palau,2015,235.0,
+GU,Guam,AU,Australia,2015,120.0,
+GU,Guam,FM,Micronesia (Fed. States of),2015,38.0,
+GU,Guam,MX,Mexico,2015,10.0,
+GU,Guam,CR,Costa Rica,2015,5.0,
+GU,Guam,MP,Northern Mariana Islands,2020,731.0,
+GU,Guam,PW,Palau,2020,241.0,
+GU,Guam,AU,Australia,2020,130.0,
+GU,Guam,FM,Micronesia (Fed. States of),2020,37.0,
+GU,Guam,MX,Mexico,2020,10.0,
+GU,Guam,CR,Costa Rica,2020,6.0,
+GU,Guam,MP,Northern Mariana Islands,2024,736.0,
+GU,Guam,PW,Palau,2024,247.0,
+GU,Guam,AU,Australia,2024,141.0,
+GU,Guam,FM,Micronesia (Fed. States of),2024,38.0,
+GU,Guam,MX,Mexico,2024,10.0,
+GU,Guam,CR,Costa Rica,2024,7.0,
+KI,Kiribati,NZ,New Zealand,2010,1234.0,1.1352
+KI,Kiribati,FJ,Fiji,2010,753.0,0.6927
+KI,Kiribati,AU,Australia,2010,598.0,0.5501
+KI,Kiribati,SB,Solomon Islands,2010,283.0,0.2603
+KI,Kiribati,MH,Marshall Islands,2010,259.0,0.2383
+KI,Kiribati,NR,Nauru,2010,132.0,0.1214
+KI,Kiribati,TV,Tuvalu,2010,59.0,0.0543
+KI,Kiribati,WS,Samoa,2010,16.0,0.0147
+KI,Kiribati,BG,Bulgaria,2010,5.0,0.0046
+KI,Kiribati,NO,Norway,2010,2.0,0.0018
+KI,Kiribati,DK,Denmark,2010,1.0,0.0009
+KI,Kiribati,EE,Estonia,2010,1.0,0.0009
+KI,Kiribati,SK,Slovakia,2010,1.0,0.0009
+KI,Kiribati,NZ,New Zealand,2015,1822.0,1.5597
+KI,Kiribati,FJ,Fiji,2015,775.0,0.6634
+KI,Kiribati,AU,Australia,2015,645.0,0.5522
+KI,Kiribati,MH,Marshall Islands,2015,275.0,0.2354
+KI,Kiribati,SB,Solomon Islands,2015,265.0,0.2269
+KI,Kiribati,NR,Nauru,2015,209.0,0.1789
+KI,Kiribati,TV,Tuvalu,2015,61.0,0.0522
+KI,Kiribati,WS,Samoa,2015,12.0,0.0103
+KI,Kiribati,SK,Slovakia,2015,7.0,0.006
+KI,Kiribati,BG,Bulgaria,2015,4.0,0.0034
+KI,Kiribati,DK,Denmark,2015,4.0,0.0034
+KI,Kiribati,GN,Guinea,2015,3.0,0.0026
+KI,Kiribati,NO,Norway,2015,2.0,0.0017
+KI,Kiribati,EE,Estonia,2015,1.0,0.0009
+KI,Kiribati,HU,Hungary,2015,1.0,0.0009
+KI,Kiribati,NZ,New Zealand,2020,2497.0,1.9802
+KI,Kiribati,AU,Australia,2020,903.0,0.7161
+KI,Kiribati,FJ,Fiji,2020,793.0,0.6289
+KI,Kiribati,MH,Marshall Islands,2020,275.0,0.2181
+KI,Kiribati,SB,Solomon Islands,2020,258.0,0.2046
+KI,Kiribati,NR,Nauru,2020,241.0,0.1911
+KI,Kiribati,TV,Tuvalu,2020,62.0,0.0492
+KI,Kiribati,WS,Samoa,2020,10.0,0.0079
+KI,Kiribati,SK,Slovakia,2020,6.0,0.0048
+KI,Kiribati,BG,Bulgaria,2020,3.0,0.0024
+KI,Kiribati,DK,Denmark,2020,2.0,0.0016
+KI,Kiribati,NO,Norway,2020,2.0,0.0016
+KI,Kiribati,GN,Guinea,2020,1.0,0.0008
+KI,Kiribati,NZ,New Zealand,2024,3015.0,2.2413
+KI,Kiribati,AU,Australia,2024,1585.0,1.1783
+KI,Kiribati,FJ,Fiji,2024,808.0,0.6007
+KI,Kiribati,NR,Nauru,2024,279.0,0.2074
+KI,Kiribati,MH,Marshall Islands,2024,276.0,0.2052
+KI,Kiribati,SB,Solomon Islands,2024,253.0,0.1881
+KI,Kiribati,TV,Tuvalu,2024,64.0,0.0476
+KI,Kiribati,WS,Samoa,2024,10.0,0.0074
+KI,Kiribati,SK,Slovakia,2024,7.0,0.0052
+KI,Kiribati,BG,Bulgaria,2024,4.0,0.003
+KI,Kiribati,DK,Denmark,2024,2.0,0.0015
+KI,Kiribati,NO,Norway,2024,2.0,0.0015
+KI,Kiribati,GN,Guinea,2024,1.0,0.0007
+MH,Marshall Islands,GU,Guam,2010,232.0,0.4458
+MH,Marshall Islands,FM,Micronesia (Fed. States of),2010,94.0,0.1806
+MH,Marshall Islands,MP,Northern Mariana Islands,2010,52.0,0.0999
+MH,Marshall Islands,BG,Bulgaria,2010,1.0,0.0019
+MH,Marshall Islands,GU,Guam,2015,234.0,0.4795
+MH,Marshall Islands,FM,Micronesia (Fed. States of),2015,92.0,0.1885
+MH,Marshall Islands,MP,Northern Mariana Islands,2015,46.0,0.0943
+MH,Marshall Islands,GN,Guinea,2015,6.0,0.0123
+MH,Marshall Islands,BG,Bulgaria,2015,1.0,0.002
+MH,Marshall Islands,GU,Guam,2020,246.0,0.576
+MH,Marshall Islands,FM,Micronesia (Fed. States of),2020,92.0,0.2154
+MH,Marshall Islands,MP,Northern Mariana Islands,2020,45.0,0.1054
+MH,Marshall Islands,GN,Guinea,2020,4.0,0.0094
+MH,Marshall Islands,GU,Guam,2024,257.0,0.6845
+MH,Marshall Islands,FM,Micronesia (Fed. States of),2024,94.0,0.2503
+MH,Marshall Islands,MP,Northern Mariana Islands,2024,45.0,0.1198
+MH,Marshall Islands,GN,Guinea,2024,4.0,0.0107
+MP,Northern Mariana Islands,GU,Guam,2010,2197.0,
+MP,Northern Mariana Islands,PW,Palau,2010,268.0,
+MP,Northern Mariana Islands,FM,Micronesia (Fed. States of),2010,77.0,
+MP,Northern Mariana Islands,GU,Guam,2015,2216.0,
+MP,Northern Mariana Islands,PW,Palau,2015,241.0,
+MP,Northern Mariana Islands,FM,Micronesia (Fed. States of),2015,75.0,
+MP,Northern Mariana Islands,GU,Guam,2020,2342.0,
+MP,Northern Mariana Islands,PW,Palau,2020,247.0,
+MP,Northern Mariana Islands,FM,Micronesia (Fed. States of),2020,75.0,
+MP,Northern Mariana Islands,GU,Guam,2024,2449.0,
+MP,Northern Mariana Islands,PW,Palau,2024,253.0,
+MP,Northern Mariana Islands,FM,Micronesia (Fed. States of),2024,77.0,
+NR,Nauru,KI,Kiribati,2010,1446.0,14.3981
+NR,Nauru,AU,Australia,2010,630.0,6.273
+NR,Nauru,WS,Samoa,2010,8.0,0.0797
+NR,Nauru,TV,Tuvalu,2010,6.0,0.0597
+NR,Nauru,BG,Bulgaria,2010,2.0,0.0199
+NR,Nauru,KI,Kiribati,2015,1471.0,13.4289
+NR,Nauru,AU,Australia,2015,688.0,6.2808
+NR,Nauru,GN,Guinea,2015,18.0,0.1643
+NR,Nauru,WS,Samoa,2015,6.0,0.0548
+NR,Nauru,TV,Tuvalu,2015,6.0,0.0548
+NR,Nauru,HU,Hungary,2015,3.0,0.0274
+NR,Nauru,BG,Bulgaria,2015,2.0,0.0183
+NR,Nauru,DK,Denmark,2015,2.0,0.0183
+NR,Nauru,KI,Kiribati,2020,1586.0,13.6219
+NR,Nauru,AU,Australia,2020,730.0,6.2699
+NR,Nauru,GN,Guinea,2020,16.0,0.1374
+NR,Nauru,TV,Tuvalu,2020,5.0,0.0429
+NR,Nauru,WS,Samoa,2020,4.0,0.0344
+NR,Nauru,DK,Denmark,2020,3.0,0.0258
+NR,Nauru,BG,Bulgaria,2020,1.0,0.0086
+NR,Nauru,KI,Kiribati,2024,1675.0,14.0203
+NR,Nauru,AU,Australia,2024,782.0,6.5456
+NR,Nauru,GN,Guinea,2024,15.0,0.1256
+NR,Nauru,TV,Tuvalu,2024,5.0,0.0419
+NR,Nauru,WS,Samoa,2024,4.0,0.0335
+NR,Nauru,DK,Denmark,2024,2.0,0.0167
+NR,Nauru,BG,Bulgaria,2024,1.0,0.0084
+NU,Niue,NZ,New Zealand,2010,4439.0,303.0034
+NU,Niue,AU,Australia,2010,768.0,52.4232
+NU,Niue,CK,Cook Islands,2010,16.0,1.0922
+NU,Niue,WS,Samoa,2010,7.0,0.4778
+NU,Niue,BO,Bolivia (Plurinational State of),2010,1.0,0.0683
+NU,Niue,NZ,New Zealand,2015,4090.0,279.1809
+NU,Niue,AU,Australia,2015,945.0,64.5051
+NU,Niue,CK,Cook Islands,2015,16.0,1.0922
+NU,Niue,WS,Samoa,2015,6.0,0.4096
+NU,Niue,BO,Bolivia (Plurinational State of),2015,2.0,0.1365
+NU,Niue,NZ,New Zealand,2020,3966.0,253.9052
+NU,Niue,AU,Australia,2020,980.0,62.7401
+NU,Niue,CK,Cook Islands,2020,17.0,1.0883
+NU,Niue,WS,Samoa,2020,4.0,0.2561
+NU,Niue,BO,Bolivia (Plurinational State of),2020,1.0,0.064
+NU,Niue,NZ,New Zealand,2024,3957.0,241.2805
+NU,Niue,AU,Australia,2024,975.0,59.4512
+NU,Niue,CK,Cook Islands,2024,18.0,1.0976
+NU,Niue,WS,Samoa,2024,4.0,0.2439
+NU,Niue,BO,Bolivia (Plurinational State of),2024,1.0,0.061
+PF,French Polynesia,AU,Australia,2010,465.0,
+PF,French Polynesia,,New Caledonia,2010,355.0,
+PF,French Polynesia,ML,Mali,2010,278.0,
+PF,French Polynesia,CK,Cook Islands,2010,112.0,
+PF,French Polynesia,CL,Chile,2010,66.0,
+PF,French Polynesia,WF,Wallis and Futuna Islands,2010,19.0,
+PF,French Polynesia,GR,Greece,2010,10.0,
+PF,French Polynesia,NO,Norway,2010,6.0,
+PF,French Polynesia,SI,Slovenia,2010,1.0,
+PF,French Polynesia,AU,Australia,2015,535.0,
+PF,French Polynesia,,New Caledonia,2015,532.0,
+PF,French Polynesia,ML,Mali,2015,341.0,
+PF,French Polynesia,CK,Cook Islands,2015,117.0,
+PF,French Polynesia,CL,Chile,2015,110.0,
+PF,French Polynesia,WF,Wallis and Futuna Islands,2015,15.0,
+PF,French Polynesia,NO,Norway,2015,13.0,
+PF,French Polynesia,GR,Greece,2015,9.0,
+PF,French Polynesia,FI,Finland,2015,1.0,
+PF,French Polynesia,SK,Slovakia,2015,1.0,
+PF,French Polynesia,,New Caledonia,2020,563.0,
+PF,French Polynesia,AU,Australia,2020,543.0,
+PF,French Polynesia,ML,Mali,2020,398.0,
+PF,French Polynesia,CL,Chile,2020,255.0,
+PF,French Polynesia,CK,Cook Islands,2020,128.0,
+PF,French Polynesia,WF,Wallis and Futuna Islands,2020,10.0,
+PF,French Polynesia,GR,Greece,2020,7.0,
+PF,French Polynesia,NO,Norway,2020,7.0,
+PF,French Polynesia,LU,Luxembourg,2020,4.0,
+PF,French Polynesia,,New Caledonia,2024,591.0,
+PF,French Polynesia,AU,Australia,2024,521.0,
+PF,French Polynesia,ML,Mali,2024,447.0,
+PF,French Polynesia,CL,Chile,2024,281.0,
+PF,French Polynesia,CK,Cook Islands,2024,138.0,
+PF,French Polynesia,WF,Wallis and Futuna Islands,2024,10.0,
+PF,French Polynesia,NO,Norway,2024,8.0,
+PF,French Polynesia,GR,Greece,2024,7.0,
+PF,French Polynesia,LU,Luxembourg,2024,5.0,
+PG,Papua New Guinea,AU,Australia,2010,30064.0,0.3938
+PG,Papua New Guinea,SB,Solomon Islands,2010,603.0,0.0079
+PG,Papua New Guinea,VU,Vanuatu,2010,63.0,0.0008
+PG,Papua New Guinea,WS,Samoa,2010,48.0,0.0006
+PG,Papua New Guinea,CK,Cook Islands,2010,17.0,0.0002
+PG,Papua New Guinea,NO,Norway,2010,9.0,0.0001
+PG,Papua New Guinea,DK,Denmark,2010,7.0,0.0001
+PG,Papua New Guinea,FI,Finland,2010,7.0,0.0001
+PG,Papua New Guinea,GR,Greece,2010,4.0,0.0001
+PG,Papua New Guinea,BG,Bulgaria,2010,3.0,0.0
+PG,Papua New Guinea,SI,Slovenia,2010,2.0,0.0
+PG,Papua New Guinea,BO,Bolivia (Plurinational State of),2010,1.0,0.0
+PG,Papua New Guinea,EE,Estonia,2010,1.0,0.0
+PG,Papua New Guinea,HU,Hungary,2010,1.0,0.0
+PG,Papua New Guinea,AU,Australia,2015,33592.0,0.3842
+PG,Papua New Guinea,SB,Solomon Islands,2015,564.0,0.0065
+PG,Papua New Guinea,VU,Vanuatu,2015,67.0,0.0008
+PG,Papua New Guinea,WS,Samoa,2015,40.0,0.0005
+PG,Papua New Guinea,CK,Cook Islands,2015,17.0,0.0002
+PG,Papua New Guinea,GN,Guinea,2015,16.0,0.0002
+PG,Papua New Guinea,FI,Finland,2015,10.0,0.0001
+PG,Papua New Guinea,NO,Norway,2015,8.0,0.0001
+PG,Papua New Guinea,DK,Denmark,2015,6.0,0.0001
+PG,Papua New Guinea,HU,Hungary,2015,4.0,0.0
+PG,Papua New Guinea,GR,Greece,2015,3.0,0.0
+PG,Papua New Guinea,SK,Slovakia,2015,3.0,0.0
+PG,Papua New Guinea,BO,Bolivia (Plurinational State of),2015,2.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2015,2.0,0.0
+PG,Papua New Guinea,EE,Estonia,2015,2.0,0.0
+PG,Papua New Guinea,SI,Slovenia,2015,2.0,0.0
+PG,Papua New Guinea,IS,Iceland,2015,1.0,0.0
+PG,Papua New Guinea,AU,Australia,2020,33732.0,0.3437
+PG,Papua New Guinea,SB,Solomon Islands,2020,549.0,0.0056
+PG,Papua New Guinea,VU,Vanuatu,2020,68.0,0.0007
+PG,Papua New Guinea,WS,Samoa,2020,36.0,0.0004
+PG,Papua New Guinea,CK,Cook Islands,2020,18.0,0.0002
+PG,Papua New Guinea,DK,Denmark,2020,14.0,0.0001
+PG,Papua New Guinea,GN,Guinea,2020,14.0,0.0001
+PG,Papua New Guinea,NO,Norway,2020,12.0,0.0001
+PG,Papua New Guinea,FI,Finland,2020,11.0,0.0001
+PG,Papua New Guinea,HU,Hungary,2020,4.0,0.0
+PG,Papua New Guinea,LU,Luxembourg,2020,4.0,0.0
+PG,Papua New Guinea,SK,Slovakia,2020,2.0,0.0
+PG,Papua New Guinea,SI,Slovenia,2020,2.0,0.0
+PG,Papua New Guinea,BO,Bolivia (Plurinational State of),2020,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2020,1.0,0.0
+PG,Papua New Guinea,EE,Estonia,2020,1.0,0.0
+PG,Papua New Guinea,GR,Greece,2020,1.0,0.0
+PG,Papua New Guinea,IS,Iceland,2020,1.0,0.0
+PG,Papua New Guinea,AU,Australia,2024,34316.0,0.3245
+PG,Papua New Guinea,SB,Solomon Islands,2024,538.0,0.0051
+PG,Papua New Guinea,VU,Vanuatu,2024,69.0,0.0007
+PG,Papua New Guinea,WS,Samoa,2024,34.0,0.0003
+PG,Papua New Guinea,CK,Cook Islands,2024,19.0,0.0002
+PG,Papua New Guinea,DK,Denmark,2024,14.0,0.0001
+PG,Papua New Guinea,GN,Guinea,2024,14.0,0.0001
+PG,Papua New Guinea,FI,Finland,2024,13.0,0.0001
+PG,Papua New Guinea,NO,Norway,2024,13.0,0.0001
+PG,Papua New Guinea,HU,Hungary,2024,5.0,0.0
+PG,Papua New Guinea,LU,Luxembourg,2024,5.0,0.0
+PG,Papua New Guinea,IS,Iceland,2024,2.0,0.0
+PG,Papua New Guinea,SK,Slovakia,2024,2.0,0.0
+PG,Papua New Guinea,SI,Slovenia,2024,2.0,0.0
+PG,Papua New Guinea,BO,Bolivia (Plurinational State of),2024,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2024,1.0,0.0
+PG,Papua New Guinea,EE,Estonia,2024,1.0,0.0
+PG,Papua New Guinea,GR,Greece,2024,1.0,0.0
+PW,Palau,GU,Guam,2010,1437.0,7.8115
+PW,Palau,MP,Northern Mariana Islands,2010,630.0,3.4247
+PW,Palau,FM,Micronesia (Fed. States of),2010,285.0,1.5492
+PW,Palau,GR,Greece,2010,199.0,1.0818
+PW,Palau,NO,Norway,2010,2.0,0.0109
+PW,Palau,FI,Finland,2010,1.0,0.0054
+PW,Palau,GU,Guam,2015,1449.0,8.1542
+PW,Palau,MP,Northern Mariana Islands,2015,564.0,3.1739
+PW,Palau,FM,Micronesia (Fed. States of),2015,280.0,1.5757
+PW,Palau,GR,Greece,2015,186.0,1.0467
+PW,Palau,GN,Guinea,2015,9.0,0.0506
+PW,Palau,NO,Norway,2015,2.0,0.0113
+PW,Palau,GU,Guam,2020,1531.0,8.605
+PW,Palau,MP,Northern Mariana Islands,2020,568.0,3.1924
+PW,Palau,FM,Micronesia (Fed. States of),2020,286.0,1.6075
+PW,Palau,GR,Greece,2020,189.0,1.0623
+PW,Palau,GN,Guinea,2020,7.0,0.0393
+PW,Palau,NO,Norway,2020,1.0,0.0056
+PW,Palau,GU,Guam,2024,1601.0,9.0478
+PW,Palau,MP,Northern Mariana Islands,2024,572.0,3.2326
+PW,Palau,FM,Micronesia (Fed. States of),2024,292.0,1.6502
+PW,Palau,GR,Greece,2024,201.0,1.1359
+PW,Palau,GN,Guinea,2024,7.0,0.0396
+PW,Palau,NO,Norway,2024,1.0,0.0057
+SB,Solomon Islands,AU,Australia,2010,1944.0,0.3647
+SB,Solomon Islands,FJ,Fiji,2010,683.0,0.1282
+SB,Solomon Islands,PG,Papua New Guinea,2010,218.0,0.0409
+SB,Solomon Islands,VU,Vanuatu,2010,113.0,0.0212
+SB,Solomon Islands,NR,Nauru,2010,41.0,0.0077
+SB,Solomon Islands,WS,Samoa,2010,13.0,0.0024
+SB,Solomon Islands,FI,Finland,2010,4.0,0.0008
+SB,Solomon Islands,DK,Denmark,2010,3.0,0.0006
+SB,Solomon Islands,NO,Norway,2010,3.0,0.0006
+SB,Solomon Islands,BO,Bolivia (Plurinational State of),2010,1.0,0.0002
+SB,Solomon Islands,IS,Iceland,2010,1.0,0.0002
+SB,Solomon Islands,AU,Australia,2015,2295.0,0.3589
+SB,Solomon Islands,FJ,Fiji,2015,703.0,0.1099
+SB,Solomon Islands,PG,Papua New Guinea,2015,221.0,0.0346
+SB,Solomon Islands,VU,Vanuatu,2015,120.0,0.0188
+SB,Solomon Islands,NR,Nauru,2015,64.0,0.01
+SB,Solomon Islands,GN,Guinea,2015,12.0,0.0019
+SB,Solomon Islands,WS,Samoa,2015,10.0,0.0016
+SB,Solomon Islands,NO,Norway,2015,6.0,0.0009
+SB,Solomon Islands,FI,Finland,2015,5.0,0.0008
+SB,Solomon Islands,DK,Denmark,2015,4.0,0.0006
+SB,Solomon Islands,SK,Slovakia,2015,3.0,0.0005
+SB,Solomon Islands,BO,Bolivia (Plurinational State of),2015,2.0,0.0003
+SB,Solomon Islands,IS,Iceland,2015,1.0,0.0002
+SB,Solomon Islands,SI,Slovenia,2015,1.0,0.0002
+SB,Solomon Islands,AU,Australia,2020,2886.0,0.3876
+SB,Solomon Islands,FJ,Fiji,2020,718.0,0.0964
+SB,Solomon Islands,PG,Papua New Guinea,2020,220.0,0.0296
+SB,Solomon Islands,VU,Vanuatu,2020,122.0,0.0164
+SB,Solomon Islands,NR,Nauru,2020,73.0,0.0098
+SB,Solomon Islands,GN,Guinea,2020,10.0,0.0013
+SB,Solomon Islands,WS,Samoa,2020,8.0,0.0011
+SB,Solomon Islands,NO,Norway,2020,4.0,0.0005
+SB,Solomon Islands,FI,Finland,2020,2.0,0.0003
+SB,Solomon Islands,SK,Slovakia,2020,2.0,0.0003
+SB,Solomon Islands,BO,Bolivia (Plurinational State of),2020,1.0,0.0001
+SB,Solomon Islands,DK,Denmark,2020,1.0,0.0001
+SB,Solomon Islands,AU,Australia,2024,7161.0,0.8741
+SB,Solomon Islands,FJ,Fiji,2024,732.0,0.0894
+SB,Solomon Islands,PG,Papua New Guinea,2024,221.0,0.027
+SB,Solomon Islands,VU,Vanuatu,2024,124.0,0.0151
+SB,Solomon Islands,NR,Nauru,2024,85.0,0.0104
+SB,Solomon Islands,GN,Guinea,2024,10.0,0.0012
+SB,Solomon Islands,WS,Samoa,2024,8.0,0.001
+SB,Solomon Islands,NO,Norway,2024,4.0,0.0005
+SB,Solomon Islands,DK,Denmark,2024,2.0,0.0002
+SB,Solomon Islands,FI,Finland,2024,2.0,0.0002
+SB,Solomon Islands,SK,Slovakia,2024,2.0,0.0002
+SB,Solomon Islands,BO,Bolivia (Plurinational State of),2024,1.0,0.0001
+TK,Tokelau,AU,Australia,2010,570.0,23.5149
+TK,Tokelau,WS,Samoa,2010,111.0,4.5792
+TK,Tokelau,AS,American Samoa,2010,21.0,0.8663
+TK,Tokelau,BG,Bulgaria,2010,1.0,0.0413
+TK,Tokelau,AU,Australia,2015,668.0,27.5578
+TK,Tokelau,WS,Samoa,2015,91.0,3.7541
+TK,Tokelau,AS,American Samoa,2015,20.0,0.8251
+TK,Tokelau,AU,Australia,2020,610.0,25.165
+TK,Tokelau,WS,Samoa,2020,85.0,3.5066
+TK,Tokelau,AS,American Samoa,2020,19.0,0.7838
+TK,Tokelau,AU,Australia,2024,588.0,24.2574
+TK,Tokelau,WS,Samoa,2024,81.0,3.3416
+TK,Tokelau,AS,American Samoa,2024,19.0,0.7838
+TO,Tonga,NZ,New Zealand,2010,21722.0,20.2253
+TO,Tonga,AU,Australia,2010,10092.0,9.3966
+TO,Tonga,FJ,Fiji,2010,1293.0,1.2039
+TO,Tonga,AS,American Samoa,2010,1291.0,1.202
+TO,Tonga,WS,Samoa,2010,80.0,0.0745
+TO,Tonga,NU,Niue,2010,49.0,0.0456
+TO,Tonga,VU,Vanuatu,2010,29.0,0.027
+TO,Tonga,PG,Papua New Guinea,2010,27.0,0.0251
+TO,Tonga,FM,Micronesia (Fed. States of),2010,15.0,0.014
+TO,Tonga,DK,Denmark,2010,11.0,0.0102
+TO,Tonga,NO,Norway,2010,5.0,0.0047
+TO,Tonga,BG,Bulgaria,2010,2.0,0.0019
+TO,Tonga,EE,Estonia,2010,1.0,0.0009
+TO,Tonga,FI,Finland,2010,1.0,0.0009
+TO,Tonga,IS,Iceland,2010,1.0,0.0009
+TO,Tonga,NZ,New Zealand,2015,24561.0,23.15
+TO,Tonga,AU,Australia,2015,11862.0,11.1805
+TO,Tonga,FJ,Fiji,2015,1332.0,1.2555
+TO,Tonga,AS,American Samoa,2015,1288.0,1.214
+TO,Tonga,GN,Guinea,2015,972.0,0.9162
+TO,Tonga,WS,Samoa,2015,65.0,0.0613
+TO,Tonga,NU,Niue,2015,48.0,0.0452
+TO,Tonga,VU,Vanuatu,2015,30.0,0.0283
+TO,Tonga,PG,Papua New Guinea,2015,27.0,0.0254
+TO,Tonga,DK,Denmark,2015,20.0,0.0189
+TO,Tonga,FM,Micronesia (Fed. States of),2015,18.0,0.017
+TO,Tonga,NO,Norway,2015,5.0,0.0047
+TO,Tonga,FI,Finland,2015,2.0,0.0019
+TO,Tonga,BG,Bulgaria,2015,1.0,0.0009
+TO,Tonga,EE,Estonia,2015,1.0,0.0009
+TO,Tonga,IS,Iceland,2015,1.0,0.0009
+TO,Tonga,NZ,New Zealand,2020,28005.0,26.4938
+TO,Tonga,AU,Australia,2020,15295.0,14.4697
+TO,Tonga,FJ,Fiji,2020,1362.0,1.2885
+TO,Tonga,AS,American Samoa,2020,1292.0,1.2223
+TO,Tonga,GN,Guinea,2020,932.0,0.8817
+TO,Tonga,WS,Samoa,2020,60.0,0.0568
+TO,Tonga,NU,Niue,2020,47.0,0.0445
+TO,Tonga,VU,Vanuatu,2020,30.0,0.0284
+TO,Tonga,PG,Papua New Guinea,2020,26.0,0.0246
+TO,Tonga,DK,Denmark,2020,20.0,0.0189
+TO,Tonga,FM,Micronesia (Fed. States of),2020,17.0,0.0161
+TO,Tonga,NO,Norway,2020,5.0,0.0047
+TO,Tonga,HU,Hungary,2020,2.0,0.0019
+TO,Tonga,IS,Iceland,2020,1.0,0.0009
+TO,Tonga,NZ,New Zealand,2024,29981.0,28.7795
+TO,Tonga,AU,Australia,2024,19464.0,18.6839
+TO,Tonga,FJ,Fiji,2024,1389.0,1.3333
+TO,Tonga,AS,American Samoa,2024,1296.0,1.2441
+TO,Tonga,GN,Guinea,2024,901.0,0.8649
+TO,Tonga,WS,Samoa,2024,57.0,0.0547
+TO,Tonga,NU,Niue,2024,47.0,0.0451
+TO,Tonga,VU,Vanuatu,2024,31.0,0.0298
+TO,Tonga,PG,Papua New Guinea,2024,26.0,0.025
+TO,Tonga,DK,Denmark,2024,18.0,0.0173
+TO,Tonga,FM,Micronesia (Fed. States of),2024,17.0,0.0163
+TO,Tonga,NO,Norway,2024,6.0,0.0058
+TO,Tonga,HU,Hungary,2024,2.0,0.0019
+TO,Tonga,IS,Iceland,2024,2.0,0.0019
+TV,Tuvalu,FJ,Fiji,2010,399.0,3.7592
+TV,Tuvalu,KI,Kiribati,2010,288.0,2.7134
+TV,Tuvalu,AU,Australia,2010,147.0,1.385
+TV,Tuvalu,WS,Samoa,2010,76.0,0.716
+TV,Tuvalu,TK,Tokelau,2010,39.0,0.3674
+TV,Tuvalu,NU,Niue,2010,37.0,0.3486
+TV,Tuvalu,NR,Nauru,2010,21.0,0.1979
+TV,Tuvalu,BG,Bulgaria,2010,14.0,0.1319
+TV,Tuvalu,GR,Greece,2010,11.0,0.1036
+TV,Tuvalu,FI,Finland,2010,2.0,0.0188
+TV,Tuvalu,NO,Norway,2010,1.0,0.0094
+TV,Tuvalu,FJ,Fiji,2015,411.0,3.749
+TV,Tuvalu,KI,Kiribati,2015,292.0,2.6635
+TV,Tuvalu,AU,Australia,2015,195.0,1.7787
+TV,Tuvalu,WS,Samoa,2015,63.0,0.5747
+TV,Tuvalu,TK,Tokelau,2015,45.0,0.4105
+TV,Tuvalu,NU,Niue,2015,36.0,0.3284
+TV,Tuvalu,NR,Nauru,2015,33.0,0.301
+TV,Tuvalu,GR,Greece,2015,10.0,0.0912
+TV,Tuvalu,BG,Bulgaria,2015,2.0,0.0182
+TV,Tuvalu,DK,Denmark,2015,2.0,0.0182
+TV,Tuvalu,FI,Finland,2015,2.0,0.0182
+TV,Tuvalu,GN,Guinea,2015,1.0,0.0091
+TV,Tuvalu,NO,Norway,2015,1.0,0.0091
+TV,Tuvalu,SK,Slovakia,2015,1.0,0.0091
+TV,Tuvalu,FJ,Fiji,2020,420.0,4.0388
+TV,Tuvalu,KI,Kiribati,2020,311.0,2.9907
+TV,Tuvalu,AU,Australia,2020,245.0,2.356
+TV,Tuvalu,WS,Samoa,2020,58.0,0.5577
+TV,Tuvalu,TK,Tokelau,2020,47.0,0.452
+TV,Tuvalu,NR,Nauru,2020,37.0,0.3558
+TV,Tuvalu,NU,Niue,2020,35.0,0.3366
+TV,Tuvalu,GR,Greece,2020,8.0,0.0769
+TV,Tuvalu,DK,Denmark,2020,3.0,0.0288
+TV,Tuvalu,FJ,Fiji,2024,428.0,4.4371
+TV,Tuvalu,KI,Kiribati,2024,329.0,3.4107
+TV,Tuvalu,AU,Australia,2024,290.0,3.0064
+TV,Tuvalu,WS,Samoa,2024,55.0,0.5702
+TV,Tuvalu,TK,Tokelau,2024,49.0,0.508
+TV,Tuvalu,NR,Nauru,2024,43.0,0.4458
+TV,Tuvalu,NU,Niue,2024,35.0,0.3628
+TV,Tuvalu,GR,Greece,2024,8.0,0.0829
+TV,Tuvalu,DK,Denmark,2024,2.0,0.0207
+VU,Vanuatu,,New Caledonia,2010,4698.0,1.9719
+VU,Vanuatu,AU,Australia,2010,1283.0,0.5385
+VU,Vanuatu,PF,French Polynesia,2010,222.0,0.0932
+VU,Vanuatu,FJ,Fiji,2010,179.0,0.0751
+VU,Vanuatu,WF,Wallis and Futuna Islands,2010,138.0,0.0579
+VU,Vanuatu,PG,Papua New Guinea,2010,98.0,0.0411
+VU,Vanuatu,CO,Colombia,2010,88.0,0.0369
+VU,Vanuatu,GR,Greece,2010,75.0,0.0315
+VU,Vanuatu,SB,Solomon Islands,2010,71.0,0.0298
+VU,Vanuatu,ZA,South Africa,2010,22.0,0.0092
+VU,Vanuatu,WS,Samoa,2010,17.0,0.0071
+VU,Vanuatu,DK,Denmark,2010,3.0,0.0013
+VU,Vanuatu,NO,Norway,2010,2.0,0.0008
+VU,Vanuatu,BG,Bulgaria,2010,1.0,0.0004
+VU,Vanuatu,FI,Finland,2010,1.0,0.0004
+VU,Vanuatu,,New Caledonia,2015,3611.0,1.357
+VU,Vanuatu,AU,Australia,2015,1390.0,0.5224
+VU,Vanuatu,PF,French Polynesia,2015,210.0,0.0789
+VU,Vanuatu,FJ,Fiji,2015,184.0,0.0691
+VU,Vanuatu,PG,Papua New Guinea,2015,99.0,0.0372
+VU,Vanuatu,WF,Wallis and Futuna Islands,2015,72.0,0.0271
+VU,Vanuatu,GR,Greece,2015,70.0,0.0263
+VU,Vanuatu,SB,Solomon Islands,2015,66.0,0.0248
+VU,Vanuatu,ZA,South Africa,2015,59.0,0.0222
+VU,Vanuatu,CO,Colombia,2015,41.0,0.0154
+VU,Vanuatu,BG,Bulgaria,2015,15.0,0.0056
+VU,Vanuatu,WS,Samoa,2015,14.0,0.0053
+VU,Vanuatu,DK,Denmark,2015,4.0,0.0015
+VU,Vanuatu,NO,Norway,2015,2.0,0.0008
+VU,Vanuatu,FI,Finland,2015,1.0,0.0004
+VU,Vanuatu,HU,Hungary,2015,1.0,0.0004
+VU,Vanuatu,SK,Slovakia,2015,1.0,0.0004
+VU,Vanuatu,,New Caledonia,2020,3833.0,1.2825
+VU,Vanuatu,AU,Australia,2020,3750.0,1.2548
+VU,Vanuatu,PF,French Polynesia,2020,210.0,0.0703
+VU,Vanuatu,FJ,Fiji,2020,186.0,0.0622
+VU,Vanuatu,ZA,South Africa,2020,151.0,0.0505
+VU,Vanuatu,PG,Papua New Guinea,2020,98.0,0.0328
+VU,Vanuatu,GR,Greece,2020,70.0,0.0234
+VU,Vanuatu,WF,Wallis and Futuna Islands,2020,67.0,0.0224
+VU,Vanuatu,SB,Solomon Islands,2020,64.0,0.0214
+VU,Vanuatu,BG,Bulgaria,2020,15.0,0.005
+VU,Vanuatu,WS,Samoa,2020,12.0,0.004
+VU,Vanuatu,DK,Denmark,2020,5.0,0.0017
+VU,Vanuatu,CO,Colombia,2020,4.0,0.0013
+VU,Vanuatu,AU,Australia,2024,10208.0,3.1143
+VU,Vanuatu,,New Caledonia,2024,4021.0,1.2267
+VU,Vanuatu,ZA,South Africa,2024,230.0,0.0702
+VU,Vanuatu,PF,French Polynesia,2024,210.0,0.0641
+VU,Vanuatu,FJ,Fiji,2024,190.0,0.058
+VU,Vanuatu,PG,Papua New Guinea,2024,98.0,0.0299
+VU,Vanuatu,GR,Greece,2024,74.0,0.0226
+VU,Vanuatu,WF,Wallis and Futuna Islands,2024,67.0,0.0204
+VU,Vanuatu,SB,Solomon Islands,2024,63.0,0.0192
+VU,Vanuatu,BG,Bulgaria,2024,21.0,0.0064
+VU,Vanuatu,WS,Samoa,2024,11.0,0.0034
+VU,Vanuatu,DK,Denmark,2024,5.0,0.0015
+VU,Vanuatu,CO,Colombia,2024,4.0,0.0012
+WF,Wallis and Futuna Islands,,New Caledonia,2010,7413.0,66.4783
+WF,Wallis and Futuna Islands,ZA,South Africa,2010,263.0,2.3585
+WF,Wallis and Futuna Islands,PF,French Polynesia,2010,35.0,0.3139
+WF,Wallis and Futuna Islands,DO,Dominican Republic,2010,12.0,0.1076
+WF,Wallis and Futuna Islands,GR,Greece,2010,1.0,0.009
+WF,Wallis and Futuna Islands,,New Caledonia,2015,11177.0,100.2332
+WF,Wallis and Futuna Islands,ZA,South Africa,2015,302.0,2.7083
+WF,Wallis and Futuna Islands,PF,French Polynesia,2015,35.0,0.3139
+WF,Wallis and Futuna Islands,DO,Dominican Republic,2015,11.0,0.0986
+WF,Wallis and Futuna Islands,BG,Bulgaria,2015,1.0,0.009
+WF,Wallis and Futuna Islands,SI,Slovenia,2015,1.0,0.009
+WF,Wallis and Futuna Islands,,New Caledonia,2020,11867.0,106.4209
+WF,Wallis and Futuna Islands,ZA,South Africa,2020,318.0,2.8518
+WF,Wallis and Futuna Islands,PF,French Polynesia,2020,35.0,0.3139
+WF,Wallis and Futuna Islands,DO,Dominican Republic,2020,11.0,0.0986
+WF,Wallis and Futuna Islands,,New Caledonia,2024,12450.0,111.6492
+WF,Wallis and Futuna Islands,ZA,South Africa,2024,325.0,2.9145
+WF,Wallis and Futuna Islands,PF,French Polynesia,2024,35.0,0.3139
+WF,Wallis and Futuna Islands,DO,Dominican Republic,2024,12.0,0.1076
+WS,Samoa,NZ,New Zealand,2010,50657.0,26.244
+WS,Samoa,AU,Australia,2010,20554.0,10.6485
+WS,Samoa,AS,American Samoa,2010,15842.0,8.2073
+WS,Samoa,GR,Greece,2010,476.0,0.2466
+WS,Samoa,FJ,Fiji,2010,287.0,0.1487
+WS,Samoa,TO,Tonga,2010,268.0,0.1388
+WS,Samoa,TK,Tokelau,2010,165.0,0.0855
+WS,Samoa,NU,Niue,2010,46.0,0.0238
+WS,Samoa,FM,Micronesia (Fed. States of),2010,22.0,0.0114
+WS,Samoa,DK,Denmark,2010,18.0,0.0093
+WS,Samoa,CK,Cook Islands,2010,9.0,0.0047
+WS,Samoa,BG,Bulgaria,2010,6.0,0.0031
+WS,Samoa,FI,Finland,2010,3.0,0.0016
+WS,Samoa,NO,Norway,2010,3.0,0.0016
+WS,Samoa,TV,Tuvalu,2010,3.0,0.0016
+WS,Samoa,NZ,New Zealand,2015,53004.0,26.268
+WS,Samoa,AU,Australia,2015,27802.0,13.7782
+WS,Samoa,AS,American Samoa,2015,15813.0,7.8367
+WS,Samoa,GR,Greece,2015,447.0,0.2215
+WS,Samoa,FJ,Fiji,2015,296.0,0.1467
+WS,Samoa,TO,Tonga,2015,230.0,0.114
+WS,Samoa,TK,Tokelau,2015,187.0,0.0927
+WS,Samoa,NU,Niue,2015,45.0,0.0223
+WS,Samoa,GN,Guinea,2015,28.0,0.0139
+WS,Samoa,FM,Micronesia (Fed. States of),2015,21.0,0.0104
+WS,Samoa,DK,Denmark,2015,20.0,0.0099
+WS,Samoa,CK,Cook Islands,2015,9.0,0.0045
+WS,Samoa,NO,Norway,2015,6.0,0.003
+WS,Samoa,BG,Bulgaria,2015,5.0,0.0025
+WS,Samoa,FI,Finland,2015,3.0,0.0015
+WS,Samoa,TV,Tuvalu,2015,3.0,0.0015
+WS,Samoa,HU,Hungary,2015,2.0,0.001
+WS,Samoa,LT,Lithuania,2015,1.0,0.0005
+WS,Samoa,SK,Slovakia,2015,1.0,0.0005
+WS,Samoa,NZ,New Zealand,2020,58292.0,27.5035
+WS,Samoa,AU,Australia,2020,33647.0,15.8754
+WS,Samoa,AS,American Samoa,2020,15880.0,7.4925
+WS,Samoa,GR,Greece,2020,455.0,0.2147
+WS,Samoa,FJ,Fiji,2020,302.0,0.1425
+WS,Samoa,TO,Tonga,2020,217.0,0.1024
+WS,Samoa,TK,Tokelau,2020,195.0,0.092
+WS,Samoa,NU,Niue,2020,44.0,0.0208
+WS,Samoa,DK,Denmark,2020,25.0,0.0118
+WS,Samoa,GN,Guinea,2020,25.0,0.0118
+WS,Samoa,FM,Micronesia (Fed. States of),2020,20.0,0.0094
+WS,Samoa,CK,Cook Islands,2020,9.0,0.0042
+WS,Samoa,BG,Bulgaria,2020,5.0,0.0024
+WS,Samoa,NO,Norway,2020,3.0,0.0014
+WS,Samoa,FI,Finland,2020,2.0,0.0009
+WS,Samoa,TV,Tuvalu,2020,2.0,0.0009
+WS,Samoa,HU,Hungary,2020,1.0,0.0005
+WS,Samoa,NZ,New Zealand,2024,63075.0,28.931
+WS,Samoa,AU,Australia,2024,38964.0,17.8718
+WS,Samoa,AS,American Samoa,2024,15931.0,7.3072
+WS,Samoa,GR,Greece,2024,483.0,0.2215
+WS,Samoa,FJ,Fiji,2024,308.0,0.1413
+WS,Samoa,TO,Tonga,2024,208.0,0.0954
+WS,Samoa,TK,Tokelau,2024,202.0,0.0927
+WS,Samoa,NU,Niue,2024,44.0,0.0202
+WS,Samoa,DK,Denmark,2024,29.0,0.0133
+WS,Samoa,GN,Guinea,2024,24.0,0.011
+WS,Samoa,FM,Micronesia (Fed. States of),2024,20.0,0.0092
+WS,Samoa,CK,Cook Islands,2024,10.0,0.0046
+WS,Samoa,BG,Bulgaria,2024,7.0,0.0032
+WS,Samoa,NO,Norway,2024,3.0,0.0014
+WS,Samoa,FI,Finland,2024,2.0,0.0009
+WS,Samoa,TV,Tuvalu,2024,2.0,0.0009
+WS,Samoa,HU,Hungary,2024,1.0,0.0005

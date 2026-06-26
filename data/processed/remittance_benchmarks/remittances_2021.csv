@@ -1,0 +1,47 @@
+recipient_code,recipient_name,source_code,source_name,year,remittance_estimate_usd,source_share_pct,source_workbook,source_url
+FJ,Fiji,ASM,American Samoa,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+WS,Samoa,ASM,American Samoa,2021,20000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,ASM,American Samoa,2021,2000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,AUS,Australia,2021,170000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+KI,Kiribati,AUS,Australia,2021,3000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+PG,Papua New Guinea,AUS,Australia,2021,2000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+WS,Samoa,AUS,Australia,2021,64000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+SB,Solomon Islands,AUS,Australia,2021,37000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,AUS,Australia,2021,43000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,AUS,Australia,2021,92000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,CAN,Canada,2021,56000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,DEU,Germany,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+KI,Kiribati,FJI,Fiji,2021,2000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+SB,Solomon Islands,FJI,Fiji,2021,5000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,FJI,Fiji,2021,3000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,FJI,Fiji,2021,3000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,FRA,France,2021,20000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,GBR,United Kingdom,2021,13000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+KI,Kiribati,GBR,United Kingdom,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+WS,Samoa,GBR,United Kingdom,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+SB,Solomon Islands,GBR,United Kingdom,2021,5000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,GBR,United Kingdom,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,GBR,United Kingdom,2021,4000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,GIN,Guinea,2021,2000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+WS,Samoa,GRC,Greece,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,GRC,Greece,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+PW,Palau,GUM,Guam,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,IND,India,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,ITA,Italy,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,KIR,Kiribati,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+KI,Kiribati,MHL,Marshall Islands,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,NCL,New Caledonia,2021,42000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,NZL,New Zealand,2021,133000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+KI,Kiribati,NZL,New Zealand,2021,8000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+WS,Samoa,NZL,New Zealand,2021,105000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,NZL,New Zealand,2021,75000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+SB,Solomon Islands,PNG,Papua New Guinea,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,PNG,Papua New Guinea,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,PYF,French Polynesia,2021,2000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+VU,Vanuatu,SLB,Solomon Islands,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,TON,Tonga,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+FJ,Fiji,USA,United States,2021,105000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+MH,Marshall Islands,USA,United States,2021,30000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+WS,Samoa,USA,United States,2021,56000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+TO,Tonga,USA,United States,2021,85000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx
+SB,Solomon Islands,VUT,Vanuatu,2021,1000000.0,,world_bank_knomad.xlsx,https://thedocs.worldbank.org/en/doc/cf8eee7ff5029398f75e897b342e7320-0050122023/related/WB-KNOMAD.xlsx

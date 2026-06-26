@@ -1,0 +1,35 @@
+{
+  "title": "Pacific aid spent and committed by recipient, donor, and year",
+  "dataflow": "SPC:DF_PAM(1.0)",
+  "source_dataset": "Pacific aid and development finance data from the Lowy Institute",
+  "source_url": "https://stats-sdmx-disseminate.pacificdata.org/rest/data/SPC,DF_PAM,1.0/.....?dimensionAtObservation=AllDimensions&format=csvfile",
+  "retrieved_at": "2026-06-24T01:17:30+00:00",
+  "row_count": 4793,
+  "rows_with_spent": 4607,
+  "rows_with_committed": 3707,
+  "recipient_count": 14,
+  "donor_count": 76,
+  "year_min": 1981,
+  "year_max": 2026,
+  "filters": {
+    "FREQ": "A (annual)",
+    "INDICATOR": "TRVAL (value of transactions)",
+    "COMMITTED_SPENT": "SPE (spent) and COM (committed), stored separately",
+    "FLOW_TYPE": "_T (all flow types)"
+  },
+  "excluded_donor_aggregates": [
+    "DONOR_BIL",
+    "DONOR_CSP",
+    "DONOR_MUL",
+    "DONOR_PCS",
+    "_T"
+  ],
+  "notes": [
+    "Values are reported in USD by the source dataset.",
+    "Spent and committed values are separate measures and must never be added together.",
+    "Share columns are each donor's percentage of named donor-source totals for that recipient and calendar year.",
+    "Multilateral institutions and other named non-country funders are retained as donor sources.",
+    "The latest year may be partial and coverage differs by recipient and donor.",
+    "Missing rows are not zero and must not be imputed as zero."
+  ]
+}

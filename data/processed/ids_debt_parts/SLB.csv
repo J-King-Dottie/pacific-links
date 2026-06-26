@@ -1,0 +1,39 @@
+recipient_code,recipient_name,creditor_code,creditor_name,ids_debtor_code,ids_creditor_code,year,value_usd,pct_gdp
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2010,54867000.0,6.109
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2011,52722000.0,4.9555
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2012,48385000.0,4.0824
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2013,42625899.0,3.3149
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2014,37489000.0,2.807
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2015,33968000.0,2.5971
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2016,39588000.0,2.8698
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2017,46230000.0,3.1453
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2018,46287000.0,2.8652
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2019,47789000.0,2.9515
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2020,65535000.0,4.2662
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2021,63085000.0,4.0483
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2022,70213000.0,4.7872
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2023,79989000.0,5.3109
+SB,Solomon Islands,IDS_915,Asian Dev. Bank,SLB,915,2024,116650000.0,7.3644
+SB,Solomon Islands,CN,China,SLB,730,2023,14562825.5,0.9669
+SB,Solomon Islands,CN,China,SLB,730,2024,17988957.7,1.1357
+SB,Solomon Islands,IDS_919,European Investment Bank,SLB,919,2010,467135.5,0.052
+SB,Solomon Islands,JP,Japan,SLB,701,2021,21889501.8,1.4047
+SB,Solomon Islands,JP,Japan,SLB,701,2022,18846588.8,1.285
+SB,Solomon Islands,JP,Japan,SLB,701,2023,17616799.4,1.1697
+SB,Solomon Islands,JP,Japan,SLB,701,2024,15959144.6,1.0075
+SB,Solomon Islands,NZ,New Zealand,SLB,820,2010,58665.9,0.0065
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2010,41723000.0,4.6455
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2011,40368000.0,3.7943
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2012,39185000.0,3.3061
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2013,37848000.0,2.9433
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2014,34101000.0,2.5533
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2015,31175000.0,2.3836
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2016,33611000.0,2.4365
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2017,36110000.0,2.4568
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2018,36628000.0,2.2673
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2019,38543000.0,2.3804
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2020,47831000.0,3.1137
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2021,46659000.0,2.9942
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2022,58017000.0,3.9557
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2023,78991000.0,5.2447
+SB,Solomon Islands,IDS_905,World Bank-IDA,SLB,905,2024,124634000.0,7.8685

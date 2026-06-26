@@ -1,0 +1,54 @@
+.bottombar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 16px;
+  background: #0d1f35;
+  border-top: 1px solid #1e3a5c;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  color: #4a6080;
+  min-height: 36px;
+}
+
+.legend { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.legend-scale { display: flex; align-items: center; gap: 6px; }
+.legend-gradient {
+  width: 80px;
+  height: 10px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgb(30,100,180), rgb(180,50,20));
+}
+
+.data-note {
+  color: #64748b;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.note-detail { color: #4a6080; }
+
+.sources {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.source-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-aid { background: #fbbf24; }
+.dot-trade { background: #3b82f6; }
+.dot-fdi { background: #10b981; }
+.dot-remittances { background: #ef4444; }
+.dot-migration { background: #a855f7; }
