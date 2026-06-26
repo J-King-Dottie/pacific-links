@@ -63,6 +63,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 34px;
   background: linear-gradient(160deg, #f5efe0 0%, #ede4ce 60%, #e8ddc4 100%);
   border: 1px solid #c4b090;
   border-radius: 16px;
@@ -92,40 +93,34 @@ html, body, #root {
   background-clip: padding-box;
 }
 
-/* Auto-fit wrappers: .intro-fit holds the column layout and is uniformly scaled
-   in JS to fit the viewport; .intro-fit-outer reserves the scaled height so the
-   pane only scrolls once the coverage chart is expanded. */
-.intro-fit-outer {
-  width: 100%;
-  overflow: hidden;
-  flex: 0 0 auto;
-}
-.intro-fit {
+/* Zones: hero (pitch + primary action), perspectives, about (detail), credits.
+   Tighter rhythm within a zone, the larger .intro-content gap between zones. */
+.intro-hero {
   display: flex;
   flex-direction: column;
-  gap: clamp(10px, 2.1dvh, 24px);
-  transform-origin: top center;
+  gap: 13px;
 }
 
-.intro-section {
+.intro-block {
   display: flex;
   flex-direction: column;
+  gap: 13px;
 }
 
-.intro-section-brand {
-  gap: 10px;
+/* The "about / methodology" detail block is quieter and set apart with a rule. */
+.intro-about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(180, 150, 100, 0.3);
 }
 
-.intro-section-footer {
-  gap: 10px;
-}
-
-.intro-section-lead {
-  gap: 0;
-}
-
-.intro-section-perspectives {
-  gap: 14px;
+.intro-creditbar {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 2px;
 }
 
 .intro-kicker {
@@ -142,7 +137,7 @@ html, body, #root {
   color: #2a6b72;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .intro-kicker-label {
@@ -190,9 +185,9 @@ html, body, #root {
 }
 
 .intro-lead {
-  margin-bottom: 0.8em !important;
+  margin-bottom: 0 !important;
+  margin-top: 2px;
 }
-.intro-lead:last-child { margin-bottom: 0 !important; }
 
 .intro-section-label {
   margin: 0;
@@ -253,45 +248,15 @@ html, body, #root {
   margin-top: 0;
 }
 
-.intro-coverage {
-  margin: 0;
+/* About block: smaller, softer than the hero lead so it reads as supporting detail. */
+.intro-about .intro-methodology {
+  font-size: clamp(0.8rem, 0.9vw, 0.875rem);
+  line-height: 1.58;
+  color: #6f5634;
 }
 
-.intro-coverage-summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.intro-coverage-summary::-webkit-details-marker {
-  display: none;
-}
-.intro-coverage-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-  color: #8a5c10;
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-.intro-coverage-cta svg {
-  transition: transform 0.18s ease;
-}
-.intro-coverage[open] .intro-coverage-cta svg {
-  transform: rotate(180deg);
-}
-
-.intro-section-footer .coverage-matrix {
-  margin: 6px 0 2px;
-}
-
-.intro-coverage-note {
-  margin-top: 6px;
+.intro-about .coverage-matrix {
+  margin: 12px 0;
 }
 
 .intro-goal {
@@ -348,18 +313,12 @@ html, body, #root {
 }
 .intro-inspiration a:hover { color: #5a3e1b; }
 
-.intro-cta-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.intro-cta-buttons {
+.intro-actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
+  margin-top: 6px;
 }
 
 .intro-download-link {
@@ -455,7 +414,7 @@ html, body, #root {
     width: min(620px, calc(100vw - 24px));
     height: calc(100vh - 24px);
     padding: 18px 18px 16px;
-    gap: 34px;
+    gap: 24px;
     border-radius: 12px;
   }
 }
@@ -469,11 +428,11 @@ html, body, #root {
     width: min(620px, calc(100vw - 32px));
     height: calc(100vh - 32px);
     padding: 18px 22px 16px;
-    gap: 13px;
+    gap: 18px;
   }
 
   .intro-section-footer {
-    gap: 7px;
+    gap: 10px;
   }
 
   .intro-content h1 {
@@ -494,7 +453,7 @@ html, body, #root {
   }
 
   .intro-cta-row {
-    margin-top: 22px;
+    margin-top: 0;
   }
 
   .intro-kicker {
@@ -562,7 +521,7 @@ html, body, #root {
 
   .intro-cta-row {
     gap: 10px;
-    margin-top: 18px;
+    margin-top: 0;
   }
 }
 
@@ -662,7 +621,7 @@ html, body, #root {
   }
 
   .intro-cta-row {
-    margin-top: clamp(8px, 1.6dvh, 16px);
+    margin-top: 0;
   }
 }
 

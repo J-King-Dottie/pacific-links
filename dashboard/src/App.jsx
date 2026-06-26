@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react'
-import { Anchor, Globe, Download, ArrowRight, ChevronDown } from 'lucide-react'
+import { useState, useEffect, useCallback } from 'react'
+import { Anchor, Globe, Download, ArrowRight } from 'lucide-react'
 import { loadAllData } from './data/loadData.js'
 import { getLatestData, getYearData, computeExposureScores } from './data/computeScores.js'
 import { isPacific } from './data/pacificCountries.js'
@@ -31,16 +31,6 @@ export default function App() {
 
   const [selectedCountries, setSelectedCountries] = useState([])
   const [dataMeta, setDataMeta] = useState(null)
-
-  // Intro auto-fit: uniformly scale the collapsed intro to fit the viewport so it
-  // never scrolls; expanding "See coverage" then overflows and the pane scrolls.
-  const [coverageOpen, setCoverageOpen] = useState(false)
-  const [introScale, setIntroScale] = useState(1)
-  const [introOuterH, setIntroOuterH] = useState(null)
-  const introContentRef = useRef(null)
-  const introFitRef = useRef(null)
-  const introScaleRef = useRef(1)
-  const coverageOpenRef = useRef(false)
 
   useEffect(() => {
     loadAllData()
@@ -107,36 +97,6 @@ export default function App() {
   const appReady = !loading && mapLoaded
   const showIntro = !introDismissed
 
-  useLayoutEffect(() => {
-    if (!showIntro) return
-    const cont = introContentRef.current
-    const fit = introFitRef.current
-    if (!cont || !fit) return
-    let raf = 0
-    const recompute = () => {
-      const cs = getComputedStyle(cont)
-      const avail = cont.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom)
-      const natural = fit.offsetHeight   // unscaled layout height (transform doesn't affect it)
-      if (!natural || !avail) return
-      let s = introScaleRef.current
-      if (!coverageOpenRef.current) {
-        // Scale is set only from the collapsed content, so it always fits.
-        s = Math.min(1, (avail - 1) / natural)
-        if (Math.abs(s - introScaleRef.current) > 0.002) {
-          introScaleRef.current = s
-          setIntroScale(s)
-        }
-      }
-      setIntroOuterH(Math.ceil(natural * s))
-    }
-    recompute()
-    const ro = new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(recompute) })
-    ro.observe(fit)
-    ro.observe(cont)
-    window.addEventListener('resize', recompute)
-    return () => { ro.disconnect(); window.removeEventListener('resize', recompute); cancelAnimationFrame(raf) }
-  }, [showIntro, coverageOpen, allRows, dataMeta, appReady])
-
   if (error) return <div className="error">Error: {error}</div>
 
   return (
@@ -189,7 +149,7 @@ export default function App() {
       )}
       {showIntro && (
         <div className="intro-screen">
-          <div className="intro-content" ref={introContentRef}>
+          <div className="intro-content">
             <svg className="intro-star" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
               <g fill="none" strokeWidth="3" strokeLinecap="round">
                 <path d="M32 32 Q 25 19 33 11" stroke="#1e666d" />
@@ -205,23 +165,20 @@ export default function App() {
               <circle cx="12" cy="27" r="3.5" fill="#76516a" />
               <circle cx="32" cy="32" r="6" fill="#8a6030" />
             </svg>
-            <div className="intro-fit-outer" style={introOuterH != null ? { height: introOuterH } : undefined}>
-            <div className="intro-fit" ref={introFitRef} style={{ transform: `scale(${introScale})` }}>
-            <div className="intro-section intro-section-brand">
+            <header className="intro-hero">
               <a className="intro-kicker" href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">
                 <span className="intro-kicker-label">Produced by</span>
                 <span>Dottie AI Studio</span>
               </a>
               <h1>Pacific Links</h1>
               <p className="intro-subtitle">Explore the connections shaping the Pacific.</p>
-            </div>
-            <div className="intro-section intro-section-lead">
               <p className="intro-lead">
                 Pacific Links brings together aid, trade, remittances, migration, and debt data for 14 Pacific Island Countries from 2010 to 2024 (where available).
               </p>
-            </div>
-            <div className="intro-section intro-section-perspectives">
-              <div className="intro-section-label">See the Pacific from both sides</div>
+            </header>
+
+            <section className="intro-block intro-block-perspectives">
+              <h2 className="intro-section-label">See the Pacific from both sides</h2>
               <div className="intro-perspectives">
                 <div className="intro-perspective">
                   <div className="intro-perspective-title">
@@ -238,44 +195,35 @@ export default function App() {
                   <p>Click an external country to see its footprint across the Pacific.</p>
                 </div>
               </div>
+            </section>
+
+            <div className="intro-actions">
+              <button className="intro-button" disabled={!appReady} onClick={() => setIntroDismissed(true)}>
+                {appReady ? <>{`Explore the map`}<ArrowRight size={14} strokeWidth={2.5} /></> : loading ? 'Loading data…' : 'Preparing map…'}
+              </button>
+              <a className="intro-download-link" href="/data/pacific_links_data.xlsx" download><Download size={12} strokeWidth={2.5} />Download all data (.xlsx)</a>
+              {!appReady && <div className="loading-bar"><span /></div>}
             </div>
-            <div className="intro-section intro-section-footer">
+
+            <section className="intro-block intro-about">
               <p className="intro-methodology">
-                We present source data, transformed into an accessible format with a transparent methodology.
+                This data all already existed. It's just scattered with each source speaking a slightly different language of codes, units and years. The hard part was never finding it, it was cleaning it and bringing it together. That's what we've done, with an open methodology.
               </p>
               <p className="intro-methodology">
-                This data already exists but it's spread across different sources using different codes, units and years. The hard part is cleaning it and pulling it together. That's what we've done.
+                It isn't perfect. Gaps remain in Pacific bilateral data, and the most recent numbers may live in each country's official publications.
               </p>
-              <p className="intro-methodology">
-                Gaps exist in Pacific Islands bilateral data. More recent data may exist if you check each country's official publications.
+              <CoverageMatrix rows={allRows} />
+              <p className="intro-methodology intro-goal">
+                We built this to make existing Pacific data more accessible for a region that's often underserved in global analysis.
               </p>
-              <details className="intro-coverage" open={coverageOpen} onToggle={e => { coverageOpenRef.current = e.currentTarget.open; setCoverageOpen(e.currentTarget.open) }}>
-                <summary className="intro-coverage-summary">
-                  <span className="intro-coverage-cta">See coverage <ChevronDown size={14} strokeWidth={2.5} /></span>
-                </summary>
-                <CoverageMatrix rows={allRows} />
-              </details>
-              <p className="intro-goal">
-                Our goal is to make existing Pacific data more accessible for a region that is often underserved in global analysis.
+            </section>
+
+            <footer className="intro-creditbar">
+              <p className="intro-inspiration">
+                Inspired by the <a href="https://pacificaidmap.lowyinstitute.org" target="_blank" rel="noreferrer">Lowy Pacific Aid Map</a>.
               </p>
-              <div className="intro-cta-row">
-                {!appReady && <div className="loading-bar"><span /></div>}
-                <div className="intro-cta-buttons">
-                  <button className="intro-button" disabled={!appReady} onClick={() => setIntroDismissed(true)}>
-                    {appReady ? <>{`Explore the map`}<ArrowRight size={14} strokeWidth={2.5} /></> : loading ? 'Loading data…' : 'Preparing map…'}
-                  </button>
-                  <a className="intro-download-link" href="/data/pacific_links_data.xlsx" download><Download size={11} strokeWidth={2.5} />Download all data (.xlsx)</a>
-                </div>
-                <div className="intro-credits">
-                  <p className="intro-inspiration">
-                    Inspired by the <a href="https://pacificaidmap.lowyinstitute.org" target="_blank" rel="noreferrer">Lowy Pacific Aid Map</a>.
-                  </p>
-                  {dataMeta?.last_refreshed && <p className="intro-inspiration intro-refreshed">Refreshed {formatRefreshed(dataMeta.last_refreshed)}.</p>}
-                </div>
-              </div>
-            </div>
-            </div>
-            </div>
+              {dataMeta?.last_refreshed && <p className="intro-inspiration intro-refreshed">Refreshed {formatRefreshed(dataMeta.last_refreshed)}.</p>}
+            </footer>
           </div>
         </div>
       )}
