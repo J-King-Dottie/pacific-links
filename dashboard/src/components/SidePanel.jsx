@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useLayoutEffect } from 'react'
 import { ArrowLeft, ChevronDown, ChevronUp, Info, Pause, Play, X } from 'lucide-react'
 import { PACIFIC_LIST } from '../data/pacificCountries.js'
 import { METRICS } from '../data/computeScores.js'
@@ -860,40 +860,59 @@ export default function SidePanel({
   const extraCols = Math.max(0, selectedCountries.length - 2)
   const tablesWidth = isComparison ? 310 + extraCols * 58 : 310
 
-  // --- Mobile bottom-sheet drag/snap ---
+  // --- Mobile bottom-sheet: free drag ---
+  // Starts collapsed showing the title, question and selected-country pill, but
+  // NOT the table. The collapsed height is measured to the bottom of the pill so
+  // it fits exactly. The user drags the handle to any height and it stays there
+  // - no snapping, no auto-expand on selection.
   const isMobile = useIsMobile()
-  const [snap, setSnap] = useState('half')
-  const [dragHeight, setDragHeight] = useState(null)  // px while dragging, else null
+  const panelRef = useRef(null)
+  const [sheetHeight, setSheetHeight] = useState(null)  // px, null until set
+  const [collapsedH, setCollapsedH] = useState(null)    // measured pill-bottom
+  const [dragging, setDragging] = useState(false)
   const dragRef = useRef(null)
+  const userDraggedRef = useRef(false)
 
-  const snapPx = key => Math.round(window.innerHeight * SHEET_SNAPS[key])
-  const sheetHeight = dragHeight != null ? dragHeight : (isMobile ? snapPx(snap) : null)
+  const minSheet = () => collapsedH ?? Math.round(window.innerHeight * SHEET_SNAPS.peek)
+  const maxSheet = () => Math.round(window.innerHeight * SHEET_SNAPS.full)
 
-  // Raise the sheet to at least half when a country is selected.
+  // Measure from the top of the sheet to the bottom of the pill, so collapsed
+  // shows the pill but stops before the table. Re-measures when the selection or
+  // metric changes (question length / pill text differ).
+  useLayoutEffect(() => {
+    if (!isMobile) return
+    const panel = panelRef.current
+    if (!panel) return
+    const anchor = panel.querySelector('.comparison-chips') || panel.querySelector('.interpretation-note')
+    if (!anchor) return
+    const top = panel.getBoundingClientRect().top
+    setCollapsedH(Math.ceil(anchor.getBoundingClientRect().bottom - top + 6))
+  }, [isMobile, selectedCountries, selectedMetric, isEmpty, isComparison])
+
+  // Until the user drags, keep the sheet pinned to the measured collapsed height.
   useEffect(() => {
-    if (isMobile && !isEmpty && snap === 'peek') setSnap('half')
-  }, [isMobile, isEmpty]) // eslint-disable-line react-hooks/exhaustive-deps
+    if (isMobile && collapsedH != null && !userDraggedRef.current) {
+      setSheetHeight(collapsedH)
+    }
+  }, [isMobile, collapsedH])
 
   const onHandlePointerDown = e => {
     if (!isMobile) return
     e.currentTarget.setPointerCapture(e.pointerId)
-    dragRef.current = { startY: e.clientY, startH: snapPx(snap) }
+    userDraggedRef.current = true
+    dragRef.current = { startY: e.clientY, startH: sheetHeight ?? minSheet() }
+    setDragging(true)
   }
   const onHandlePointerMove = e => {
     if (!dragRef.current) return
     const dy = dragRef.current.startY - e.clientY
-    const h = Math.max(snapPx('peek') - 20, Math.min(snapPx('full'), dragRef.current.startH + dy))
-    setDragHeight(h)
+    const h = Math.max(minSheet(), Math.min(maxSheet(), dragRef.current.startH + dy))
+    setSheetHeight(h)
   }
   const onHandlePointerUp = () => {
     if (!dragRef.current) return
-    const h = dragHeight ?? snapPx(snap)
-    // snap to nearest of peek/half/full
-    const nearest = ['peek', 'half', 'full'].reduce((best, k) =>
-      Math.abs(snapPx(k) - h) < Math.abs(snapPx(best) - h) ? k : best, 'half')
     dragRef.current = null
-    setDragHeight(null)
-    setSnap(nearest)
+    setDragging(false)
   }
   const handleMetricCountryClick = (metric, code, name) => {
     onSelectMetric(metric)
@@ -916,8 +935,9 @@ export default function SidePanel({
 
   return (
     <div
-      className={`side-panel${isMobile ? ` is-mobile snap-${snap}${dragHeight != null ? ' dragging' : ''}` : ''}`}
-      style={isMobile ? { height: sheetHeight } : undefined}
+      ref={panelRef}
+      className={`side-panel${isMobile ? ` is-mobile${dragging ? ' dragging' : ''}` : ''}`}
+      style={isMobile ? { height: sheetHeight ?? minSheet() } : undefined}
     >
       {isMobile && (
         <div
@@ -925,7 +945,6 @@ export default function SidePanel({
           onPointerDown={onHandlePointerDown}
           onPointerMove={onHandlePointerMove}
           onPointerUp={onHandlePointerUp}
-          onClick={() => setSnap(snap === 'full' ? 'half' : 'full')}
         >
           <span className="sheet-grabber" />
         </div>

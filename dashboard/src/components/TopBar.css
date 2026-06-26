@@ -166,10 +166,10 @@
   }
 }
 
-/* Phone: full-width top card, metrics scroll horizontally, year control below */
+/* Phone: full-width top card, metrics wrap to fit, year control below */
 @media (max-width: 640px) {
   .topbar {
-    top: 0.5rem;
+    top: calc(0.5rem + env(safe-area-inset-top, 0px));
     left: 0.5rem;
     right: 0.5rem;
     transform: none;
@@ -180,18 +180,17 @@
     border-radius: 12px;
   }
 
+  /* Wrap the metric buttons so all five are visible (none clipped off-edge). */
   .topbar-metrics {
-    overflow-x: auto;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 4px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
   }
-  .topbar-metrics::-webkit-scrollbar { display: none; }
 
   .topbar-metric {
-    flex-shrink: 0;
-    padding: 8px 12px;
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    font-size: 0.62rem;
   }
 
   .topbar-time {

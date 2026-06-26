@@ -141,12 +141,15 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
   }, [interactive])
 
   useEffect(() => {
+    // Phones start more zoomed out so the whole Pacific is in frame above the
+    // bottom sheet.
+    const isMobileViewport = typeof window !== 'undefined' && window.innerWidth <= 640
     const map = new maplibregl.Map({
       container: mapContainer.current,
       style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
       center: [150, 3],
-      zoom: 2.0,
-      minZoom: 1.5,
+      zoom: isMobileViewport ? 1.3 : 2.0,
+      minZoom: 1.1,
       maxZoom: 8,
       renderWorldCopies: true,
       attributionControl: { compact: true },
