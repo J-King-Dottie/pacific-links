@@ -66,6 +66,7 @@
 }
 .metric-tag.metric-aid { background: #78350f33; color: #fbbf24; }
 .metric-tag.metric-trade { background: #1e3a8a33; color: #60a5fa; }
+.metric-tag.metric-exports { background: #14532d33; color: #86efac; }
 .metric-tag.metric-fdi { background: #06402833; color: #34d399; }
 .metric-tag.metric-remittances { background: #7f1d1d33; color: #f87171; }
 .metric-tag.metric-migration { background: #4c1d9533; color: #c084fc; }

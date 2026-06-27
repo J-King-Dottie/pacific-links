@@ -14,10 +14,11 @@ Usage:
 Automatable (pulled fresh every run):
   - Aid    — Lowy Pacific Aid Map, live SDMX API
   - Debt   — World Bank IDS, live API
-  - Imports— CEPII BACI (downloads the published version ZIP)
+  - Trade  — CEPII BACI (downloads the published version ZIP)
 
 Manual (update rarely; download the workbook then re-run normalize):
   - Remittances — World Bank/KNOMAD bilateral matrices (benchmark years)
+  - FDI         — IMF Direct Investment Positions bulk export
   - Migration   — UN International Migrant Stock (benchmark years)
   See DATA_PIPELINE.md for the exact files and URLs.
 """
@@ -62,6 +63,7 @@ def main():
         print("\n" + "-"*70)
         print("  MANUAL sources (benchmark years, update rarely):")
         print("    Remittances — World Bank/KNOMAD bilateral matrices")
+        print("    FDI         — IMF Direct Investment Positions bulk export")
         print("    Migration   — UN International Migrant Stock workbook")
         print("    If a newer benchmark exists, download per DATA_PIPELINE.md, then re-run")
         print("    the matching build script before this normalize step.")

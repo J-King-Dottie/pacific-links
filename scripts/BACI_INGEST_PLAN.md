@@ -29,14 +29,9 @@ PF=258, WF=876, TK=772, AS=16, KI=296, FM=583, MH=584, PW=585, NR=520, GU=316, M
 
 ### Step 2 — Extract & filter to Pacific islands (phase 2)
 
-Before HS1 aggregation, exclude HS92 `8901xx` commercial transport vessels.
-These transactions are commonly attributed to a vessel's flag registry rather
-than the domestic economy. Each removed HS6 flow is preserved in
-`data/raw/baci/excluded_{year}.csv` with its value and exclusion reason.
-
-Marshall Islands HS92 `271000` refined petroleum is also excluded because its
-open ship registry causes international bunker fuel to overwhelm measured
-domestic imports. This adjustment is not applied to other Pacific economies.
+The output preserves BACI's reconciled merchandise trade flows, including
+re-exports, bunkering, vessel-registration effects, and other reporting-
+convention artefacts where they are present in the source data.
 - Stream-extract ZIP entry by entry (each file = one year, e.g. BACI_HS92_Y2023_V202601.csv)
 - For each year file, read rows where `j` is in our Pacific M49 set
 - Aggregate: sum `v` (×1000 for USD) grouped by (j, i, t) — total imports from each exporter

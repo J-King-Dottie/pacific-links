@@ -8,7 +8,23 @@ import './SidePanel.css'
 // Bottom-sheet snap points on phones, as fractions of viewport height.
 const SHEET_SNAPS = { peek: 0.12, half: 0.5, full: 0.9 }
 
-const METRIC_LABELS = { aid: 'Aid', trade: 'Imports', remittances: 'Remittances', migration: 'Migration', debt: 'Debt' }
+const METRIC_LABELS = { aid: 'Aid', aid_committed: 'Aid', trade: 'Trade', exports: 'Trade', remittances: 'Remittances', fdi: 'FDI', migration: 'Migration', debt: 'Debt' }
+const AID_MODE_LABELS = { aid: 'Spent', aid_committed: 'Committed' }
+const TRADE_MODE_LABELS = { trade: 'Imports', exports: 'Exports' }
+
+function isAidMetric(metric) {
+  return ['aid', 'aid_committed'].includes(metric)
+}
+
+function isTradeMetric(metric) {
+  return ['trade', 'exports'].includes(metric)
+}
+
+function isMetricActive(metric, selectedMetric) {
+  if (metric === 'aid') return isAidMetric(selectedMetric)
+  if (metric === 'trade') return isTradeMetric(selectedMetric)
+  return selectedMetric === metric
+}
 
 const DENOMINATOR_SOURCES = {
   gdp: [
@@ -29,7 +45,16 @@ const METRIC_INFO = {
     sourceUrl: 'https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. Figures are aid and development finance actually disbursed (spent), in current US dollars, by donor. The most recent year is partial and rises as donors finish reporting.',
     why: 'Lowy is the most complete public source for Pacific aid and development finance. We use it because this dashboard is trying to show who is actually funding Pacific countries, not just who announced support. Lowy brings donor-level aid flows into one consistent public dataset, which makes it the best fit for comparing aid relationships across the region.',
-    changed: 'We show spent/disbursed aid only, not commitments, because it is the money that actually flowed. Aggregate donor categories are removed, so the table shows direct donor relationships only. The dollar figures are Lowy\'s.',
+    changed: 'The Aid table can be toggled between spent/disbursed aid and committed aid. These are separate views and should not be added together. Aggregate donor categories are removed, so the table shows direct donor relationships only. The dollar figures are Lowy\'s.',
+    denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
+    denominatorLinks: DENOMINATOR_SOURCES.gdp,
+  },
+  aid_committed: {
+    source: 'Lowy Institute Pacific Aid Map via Pacific Data Hub',
+    sourceUrl: 'https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. Figures are aid and development finance committed, in current US dollars, by donor. Commitments can be announced before money is actually spent.',
+    why: 'Lowy is the most complete public source for Pacific aid and development finance. We use it because this dashboard is trying to show both actual funding flows and the forward-looking aid relationships implied by commitments. Lowy brings donor-level aid flows into one consistent public dataset, which makes it the best fit for comparing aid relationships across the region.',
+    changed: 'The Aid table can be toggled between spent/disbursed aid and committed aid. These are separate views and should not be added together. Aggregate donor categories are removed, so the table shows direct donor relationships only. The dollar figures are Lowy\'s.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -37,8 +62,17 @@ const METRIC_INFO = {
     source: 'CEPII BACI reconciled bilateral trade data',
     sourceUrl: 'https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. Figures are annual merchandise (goods) imports in current US dollars, by supplier country; services are not included.',
-    why: 'No trade dataset is perfect, and different sources can be correct while answering different questions. Pacific Data Hub and UN Comtrade are useful sources for reported trade, but reported imports and reported exports often do not match: imports usually include freight and insurance, exports usually do not, and countries can disagree on partner, destination, or product classification. For this dashboard, we want the best country-to-country view of where Pacific imports come from. BACI starts from UN Comtrade and reconciles importer and exporter reports into one flow, which makes it the better fit for comparing external trade relationships.',
-    changed: 'We group the import values by supplier country and remove a small set of flows that appear to reflect ships, bunkering fuel, or flag-registry effects rather than goods imported for the local economy. This matters because countries such as the Marshall Islands register many foreign-owned vessels; trade records can then show large ship or fuel transactions tied to the flag on the vessel, even when the activity is not a normal domestic import. We remove commercial vessels (HS 8901), Marshall Islands refined petroleum/bunkering fuel (HS 271000), and Marshall Islands vessel flows (HS 89). Marshall Islands and other Pacific islands trade data may still be distorted by this issue.',
+    why: 'Pacific Data Hub IMTS is useful for seeing reported Pacific trade, and UN Comtrade is the global source behind much of the world\'s reported merchandise trade data. But reported imports and reported exports often do not line up: countries can disagree on partner, destination, value, freight, product classification, re-exports, and timing. This app is trying to show comparable bilateral relationships across many Pacific countries and partners, so we use BACI because it starts from Comtrade and reconciles importer and exporter reports into one bilateral flow. The trade figures can still look strange for small island economies. Marshall Islands is the clearest example: its ship registry and fuel-related activity can make recorded imports look enormous, even though much of that activity is tied to vessels, bunkering, or registration rather than ordinary household and business consumption on the islands. Read these as recorded merchandise trade flows, not a perfect measure of domestic economic exposure.',
+    changed: 'We group BACI import values by supplier country and HS1 product group.',
+    denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
+    denominatorLinks: DENOMINATOR_SOURCES.gdp,
+  },
+  exports: {
+    source: 'CEPII BACI reconciled bilateral trade data',
+    sourceUrl: 'https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. Figures are annual merchandise (goods) exports in current US dollars, by destination country; services are not included.',
+    why: 'Pacific Data Hub IMTS is useful for seeing reported Pacific trade, and UN Comtrade is the global source behind much of the world\'s reported merchandise trade data. But reported imports and reported exports often do not line up: countries can disagree on partner, destination, value, freight, product classification, re-exports, and timing. This app is trying to show comparable bilateral relationships across many Pacific countries and partners, so we use BACI because it starts from Comtrade and reconciles importer and exporter reports into one bilateral flow. The trade figures can still look strange for small island economies. Marshall Islands is the clearest example: its ship registry and fuel-related activity can make recorded trade look enormous, even though much of that activity is tied to vessels, bunkering, or registration rather than goods produced or consumed on the islands. Read these as recorded merchandise trade flows, not a perfect measure of domestic production.',
+    changed: 'We group BACI export values by destination country and HS1 product group.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -57,12 +91,21 @@ const METRIC_INFO = {
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
+  fdi: {
+    source: 'IMF Direct Investment Positions by Counterpart Economy',
+    sourceUrl: 'https://data.imf.org/en/datasets/IMF.STA:DIP',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. Figures are inward FDI stock: the estimated value of foreign direct investment still held in the country at the end of each year, in current US dollars, by immediate investor economy.',
+    why: 'FDI is an official estimate of some foreign-owned business and investment stakes in a country. We show stock rather than flow because this app is about relationships: stock shows the investment position that has built up and is still there, while flow only shows new investment entering or leaving in a single year. It tends to capture larger, more formal, or better-reported investments, but it can miss many real businesses on the ground. Missing data does not mean there are no businesses from that country. It means this source does not report an FDI value for that country pair and year. Some figures can also be warped by legal and financial structures. Marshall Islands is the clearest example: its ship registry and corporate structures can create very large recorded investment values that are much bigger than the domestic economy, without meaning that ordinary business activity on the islands is that large.',
+    changed: 'We keep country-to-country inward FDI stock records for the 14 Pacific countries, convert counterpart codes to the app country codes, remove zero-value rows, calculate stock values as a share of GDP, and clip the data to 2010-2024. Negative positions are retained in the CSV/Excel download, but the dashboard map and table rank positive inward positions only.',
+    denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
+    denominatorLinks: DENOMINATOR_SOURCES.gdp,
+  },
   migration: {
     source: 'UN International Migrant Stock 2024',
     sourceUrl: 'https://www.un.org/development/desa/pd/content/international-migrant-stock',
     coverage: 'The dashboard covers 14 Pacific island countries. Figures are migrant stock — the number of people born in the Pacific country living in each destination, counted as people, not yearly movement — for benchmark years only: 2010, 2015, 2020 and 2024.',
     why: 'The UN migrant stock data is the standard public source for where people born in one country are living. We use migrant stock, not annual migration flows, because this dashboard is about long-running external connections: where Pacific communities have built up overseas over time, and where family, labour, education, and remittance links are likely to be strongest. In some small islands, more people can live overseas than currently live in the country, so percentages can be over 100%.',
-    changed: 'We remove regional and aggregate destination rows so the table shows country-to-country destinations only. The headcounts shown are the UN migrant stock values.',
+    changed: 'We remove regional and aggregate destination rows so the table shows country-to-country destinations only. Missing country-pair rows mean the UN matrix does not report a value, not that the true relationship is definitely zero. For example, the UN matrix is blank for Vanuatu-born people in New Zealand even though New Zealand census data records that community.',
     denominator: 'Population uses [World Bank] where available; [UN SNAAMA] / implied resident population for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.population,
   },
@@ -79,7 +122,7 @@ const METRIC_INFO = {
 const PAC_NAMES = Object.fromEntries(PACIFIC_LIST.map(c => [c.code, c.name]))
 
 const METRIC_PCT_LABEL = {
-  aid: '% of GDP', trade: '% of GDP', remittances: '% of GDP', migration: '% of pop', debt: '% of GDP',
+  aid: '% of GDP', aid_committed: '% of GDP', trade: '% of GDP', exports: '% of GDP', remittances: '% of GDP', fdi: '% of GDP', migration: '% of pop', debt: '% of GDP',
 }
 
 const DEFAULT_ROW_LIMIT = 10
@@ -90,36 +133,51 @@ const COUNTRY_COLORS = ['#b47828', '#2a6b72', '#a0442c', '#7a5a6e', '#507840', '
 const INTERPRETATION_COPY = {
   default: {
     aid: 'How important is outside aid to each Pacific economy?',
+    aid_committed: 'How large are aid commitments to each Pacific economy?',
     trade: 'How much does each Pacific economy rely on goods from overseas?',
+    exports: 'How large are each Pacific economy\'s goods exports?',
     remittances: 'How important is money sent from overseas to each Pacific economy?',
+    fdi: 'How large is inward FDI in each Pacific economy?',
     migration: 'What share of each Pacific country\'s people live overseas?',
     debt: 'How large is each Pacific country\'s external public debt burden?',
   },
   pacific: {
     aid: 'Who does the selected Pacific country rely on most for aid?',
+    aid_committed: 'Who has committed aid to the selected Pacific country?',
     trade: 'Where does the selected Pacific country buy most of its imported goods?',
+    exports: 'Where does the selected Pacific country export its goods?',
     remittances: 'Where does money sent home to the selected Pacific country come from?',
+    fdi: 'Which economies hold direct investment positions in the selected Pacific country?',
     migration: 'Where do people from the selected Pacific country live overseas?',
     debt: 'Who does the selected Pacific country owe external public debt to?',
   },
   influencer: {
     aid: 'Where does the selected outside partner send its Pacific aid?',
+    aid_committed: 'Where has the selected outside partner committed Pacific aid?',
     trade: 'Which Pacific countries buy goods from the selected outside partner?',
+    exports: 'Which Pacific countries export goods to the selected outside partner?',
     remittances: 'Which Pacific countries receive money from people in the selected outside partner?',
+    fdi: 'Where does the selected outside partner hold Pacific direct investment positions?',
     migration: 'Which Pacific communities live in the selected outside partner?',
     debt: 'Which Pacific countries owe debt to the selected outside partner?',
   },
   pacificComparison: {
     aid: 'Who do the selected Pacific countries rely on most for aid?',
+    aid_committed: 'Who has committed aid to the selected Pacific countries?',
     trade: 'Where do the selected Pacific countries buy most of their imported goods?',
+    exports: 'Where do the selected Pacific countries export their goods?',
     remittances: 'Where does money sent home to the selected Pacific countries come from?',
+    fdi: 'Which economies hold direct investment positions in the selected Pacific countries?',
     migration: 'Where do people from the selected Pacific countries live overseas?',
     debt: 'Who do the selected Pacific countries owe external public debt to?',
   },
   influencerComparison: {
     aid: 'Where do the selected outside partners send their Pacific aid?',
+    aid_committed: 'Where have the selected outside partners committed Pacific aid?',
     trade: 'Which Pacific countries buy goods from the selected outside partners?',
+    exports: 'Which Pacific countries export goods to the selected outside partners?',
     remittances: 'Which Pacific countries receive money from people in the selected outside partners?',
+    fdi: 'Where do the selected outside partners hold Pacific direct investment positions?',
     migration: 'Which Pacific communities live in the selected outside partners?',
     debt: 'Which Pacific countries owe debt to the selected outside partners?',
   },
@@ -140,8 +198,11 @@ function selectedInterpretation(metric, mode, countries = []) {
   if (mode === 'pacific') {
     return {
       aid: `Who does ${names} rely on most for aid?`,
+      aid_committed: `Who has committed aid to ${names}?`,
       trade: `Where does ${names} buy most of its imported goods?`,
+      exports: `Where does ${names} export its goods?`,
       remittances: `Where does money sent home to ${names} come from?`,
+      fdi: `Which economies hold direct investment positions in ${names}?`,
       migration: `Where do people from ${names} live overseas?`,
       debt: `Who does ${names} owe external public debt to?`,
     }[metric]
@@ -150,8 +211,11 @@ function selectedInterpretation(metric, mode, countries = []) {
   if (mode === 'influencer') {
     return {
       aid: `Where does ${names} send its Pacific aid?`,
+      aid_committed: `Where has ${names} committed Pacific aid?`,
       trade: `Which Pacific countries buy goods from ${names}?`,
+      exports: `Which Pacific countries export goods to ${names}?`,
       remittances: `Which Pacific countries receive money from people in ${names}?`,
+      fdi: `Where does ${names} hold Pacific direct investment positions?`,
       migration: `Which Pacific communities live in ${names}?`,
       debt: `Which Pacific countries owe debt to ${names}?`,
     }[metric]
@@ -160,8 +224,11 @@ function selectedInterpretation(metric, mode, countries = []) {
   if (mode === 'pacificComparison') {
     return {
       aid: `Who do ${names} rely on most for aid?`,
+      aid_committed: `Who has committed aid to ${names}?`,
       trade: `Where do ${names} buy most of their imported goods?`,
+      exports: `Where do ${names} export their goods?`,
       remittances: `Where does money sent home to ${names} come from?`,
+      fdi: `Which economies hold direct investment positions in ${names}?`,
       migration: `Where do people from ${names} live overseas?`,
       debt: `Who do ${names} owe external public debt to?`,
     }[metric]
@@ -170,8 +237,11 @@ function selectedInterpretation(metric, mode, countries = []) {
   if (mode === 'influencerComparison') {
     return {
       aid: `Where do ${names} send their Pacific aid?`,
+      aid_committed: `Where have ${names} committed Pacific aid?`,
       trade: `Which Pacific countries buy goods from ${names}?`,
+      exports: `Which Pacific countries export goods to ${names}?`,
       remittances: `Which Pacific countries receive money from people in ${names}?`,
+      fdi: `Where do ${names} hold Pacific direct investment positions?`,
       migration: `Which Pacific communities live in ${names}?`,
       debt: `Which Pacific countries owe debt to ${names}?`,
     }[metric]
@@ -345,7 +415,37 @@ function outflowShareRows(rows) {
   return rows.map(row => ({
     ...row,
     pct: totalValue > 0 && Number.isFinite(row.value) ? (row.value / totalValue) * 100 : null,
+    hs1Breakdown: row.hs1Breakdown?.map(item => ({
+      ...item,
+      pct: totalValue > 0 && Number.isFinite(item.value) ? (item.value / totalValue) * 100 : null,
+    })),
   }))
+}
+
+function aggregateHs1Breakdown(rows) {
+  const groups = new Map()
+  rows.forEach(row => {
+    row.hs1Breakdown?.forEach(item => {
+      if (!groups.has(item.hs1Code)) {
+        groups.set(item.hs1Code, {
+          hs1Code: item.hs1Code,
+          hs1Name: item.hs1Name,
+          value: 0,
+          pct: 0,
+        })
+      }
+      const group = groups.get(item.hs1Code)
+      group.value += Number.isFinite(item.value) ? item.value : 0
+      group.pct += Number.isFinite(item.pct) ? item.pct : 0
+    })
+  })
+  return [...groups.values()]
+    .map(item => ({
+      ...item,
+      value: Math.round(item.value * 100) / 100,
+      pct: item.pct ? Math.round(item.pct * 10000) / 10000 : null,
+    }))
+    .sort((a, b) => b.value - a.value)
 }
 
 function aggregatePacificMetric(dataIndex, metric) {
@@ -412,9 +512,51 @@ function TradeBreakdownRow({ row }) {
         <div key={`${row.code}-${item.hs1Code}`} className="metric-row trade-breakdown-row">
           <span className="rank"></span>
           <span className="row-name trade-breakdown-name" title={item.hs1Name}>{item.hs1Name}</span>
-          <span className="val-primary">{fmtPct(item.pct, true)}</span>
-          <span className="val-secondary">{fmtValue(item.value, 'trade', true)}</span>
+          <span className="val-primary">{fmtValue(item.value, 'trade', true)}</span>
+          <span className="val-secondary">{fmtPct(item.pct, true)}</span>
           <span className="year-tag"></span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function TradeComparisonBreakdownRow({ row, columns, isPacificComparison, metric }) {
+  const groups = new Map()
+  row.vals.forEach((val, i) => {
+    val?.hs1Breakdown?.forEach(item => {
+      if (!groups.has(item.hs1Code)) {
+        groups.set(item.hs1Code, {
+          hs1Code: item.hs1Code,
+          hs1Name: item.hs1Name,
+          vals: Array(row.vals.length).fill(null),
+          sortValue: 0,
+        })
+      }
+      const group = groups.get(item.hs1Code)
+      group.vals[i] = item
+      group.sortValue += isPacificComparison ? (item.pct ?? 0) : (item.value ?? 0)
+    })
+  })
+
+  const breakdown = [...groups.values()].sort((a, b) => b.sortValue - a.sortValue)
+  if (!breakdown.length) return null
+
+  return (
+    <div className="trade-breakdown">
+      {breakdown.slice(0, 10).map(item => (
+        <div key={`${row.code}-${item.hs1Code}`} className="metric-row trade-breakdown-row">
+          <span className="rank"></span>
+          <span className="row-name trade-breakdown-name" title={item.hs1Name}>{item.hs1Name}</span>
+          {columns.map((column, i) => (
+            <span key={column.key} className={column.className} style={column.style} title={column.title}>
+              {item.vals[i]
+                ? isPacificComparison
+                  ? fmtPct(item.vals[i].pct, true)
+                  : fmtValue(item.vals[i].value, metric, true)
+                : '-'}
+            </span>
+          ))}
         </div>
       ))}
     </div>
@@ -427,10 +569,10 @@ function MetricSelector({ selectedMetric, onSelectMetric }) {
       {METRICS.map(metric => (
         <button
           key={metric}
-          className={`metric-tab metric-${metric} ${selectedMetric === metric ? 'active' : ''}`}
+          className={`metric-tab metric-${metric} ${isMetricActive(metric, selectedMetric) ? 'active' : ''}`}
           onClick={() => onSelectMetric(metric)}
           role="tab"
-          aria-selected={selectedMetric === metric}
+          aria-selected={isMetricActive(metric, selectedMetric)}
         >
           {METRIC_LABELS[metric]}
         </button>
@@ -474,10 +616,11 @@ function MetricTableCard({
   const [expandedRows, setExpandedRows] = useState(false)
   const visibleRows = !limitRows || expandedRows ? rows : rows.slice(0, DEFAULT_ROW_LIMIT)
   const hiddenCount = limitRows ? Math.max(0, rows.length - DEFAULT_ROW_LIMIT) : 0
+  const metricClass = isAidMetric(metric) ? 'aid' : isTradeMetric(metric) ? 'trade' : metric
 
   return (
     <div className="metric-table-shell">
-      <div className={`single-table-header metric-${metric}`}>
+      <div className={`single-table-header metric-${metricClass}`}>
         <div className="metric-header-title-group">
           <span className="metric-header-label">{METRIC_LABELS[metric]}</span>
           <InfoIcon metric={metric} />
@@ -533,7 +676,7 @@ function MetricTableCard({
   )
 }
 
-function MetricTable({ metric, rows, totalPct, totalValue, totalYear, totalLabel, onMetricCountryClick, isPacific, pctLabel, limitRows = true }) {
+function MetricTable({ metric, rows, totalPct, totalValue, totalYear, totalLabel, onMetricCountryClick, isPacific, pctLabel, limitRows = true, onAidModeChange, onTradeModeChange }) {
   const [expandedTrade, setExpandedTrade] = useState(null)
   const columns = [
     {
@@ -553,7 +696,7 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalYear, totalLabel
   const tableRows = rows.map((r, i) => ({
     ...r,
     key: `${r.code}-${r.year ?? i}`,
-    expandable: metric === 'trade' && isPacific && (r.hs1Breakdown?.length ?? 0) > 0,
+    expandable: isTradeMetric(metric) && (r.hs1Breakdown?.length ?? 0) > 0,
     cells: {
       pct: fmtPct(r.pct, true),
       value: fmtValue(r.value, metric, true),
@@ -562,26 +705,58 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalYear, totalLabel
   }))
 
   return (
-    <MetricTableCard
-      metric={metric}
-      columns={columns}
-      rows={tableRows}
-      summaryLabel={totalLabel}
-      summaryCells={{
-        pct: fmtPct(totalPct, true),
-        value: fmtValue(totalValue, metric, true),
-        year: '',
-      }}
-      limitRows={limitRows}
-      onRowClick={(row) => {
-        if (row.expandable) {
-          setExpandedTrade(expandedTrade === row.key ? null : row.key)
-          return
-        }
-        onMetricCountryClick(metric, row.code, row.name)
-      }}
-      renderRowExtra={(row) => row.expandable && expandedTrade === row.key ? <TradeBreakdownRow row={row} /> : null}
-    />
+    <>
+      {isAidMetric(metric) && onAidModeChange && (
+        <div className="metric-mode-toggle aid-mode-toggle" role="group" aria-label="Aid value type">
+          {Object.entries(AID_MODE_LABELS).map(([mode, label]) => (
+            <button
+              key={mode}
+              type="button"
+              className={`metric-mode-btn aid-mode-btn ${metric === mode ? 'active' : ''}`}
+              onClick={() => onAidModeChange(mode)}
+              aria-pressed={metric === mode}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+      {isTradeMetric(metric) && onTradeModeChange && (
+        <div className="metric-mode-toggle trade-mode-toggle" role="group" aria-label="Trade direction">
+          {Object.entries(TRADE_MODE_LABELS).map(([mode, label]) => (
+            <button
+              key={mode}
+              type="button"
+              className={`metric-mode-btn trade-mode-btn ${metric === mode ? 'active' : ''}`}
+              onClick={() => onTradeModeChange(mode)}
+              aria-pressed={metric === mode}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+      <MetricTableCard
+        metric={metric}
+        columns={columns}
+        rows={tableRows}
+        summaryLabel={totalLabel}
+        summaryCells={{
+          pct: fmtPct(totalPct, true),
+          value: fmtValue(totalValue, metric, true),
+          year: '',
+        }}
+        limitRows={limitRows}
+        onRowClick={(row) => {
+          if (row.expandable) {
+            setExpandedTrade(expandedTrade === row.key ? null : row.key)
+            return
+          }
+          onMetricCountryClick(metric, row.code, row.name)
+        }}
+        renderRowExtra={(row) => row.expandable && expandedTrade === row.key ? <TradeBreakdownRow row={row} /> : null}
+      />
+    </>
   )
 }
 
@@ -607,7 +782,7 @@ function YearControl({ selectedYear, yearMin, yearMax, playing, onYearChange, on
 }
 
 // Default view: one metric table ranked across Pacific recipients.
-function PacificRankingView({ exposureScores, dataIndex, selectedMetric, onMetricCountryClick, onSelectMetric, yearControl, selectedYear }) {
+function PacificRankingView({ exposureScores, dataIndex, selectedMetric, onMetricCountryClick, onSelectMetric, yearControl, selectedYear, onAidModeChange, onTradeModeChange }) {
   const metric = selectedMetric
   const rows = PACIFIC_LIST
     .map(c => {
@@ -615,7 +790,8 @@ function PacificRankingView({ exposureScores, dataIndex, selectedMetric, onMetri
       const pct = exposureScores[c.code]?.metricScores?.[metric] ?? null
       const value = metricValueTotal(counterparts)
       const year = metricLatestYear(counterparts)
-      return { code: c.code, name: c.name, pct, value, year }
+      const hs1Breakdown = isTradeMetric(metric) ? aggregateHs1Breakdown(counterparts) : null
+      return { code: c.code, name: c.name, pct, value, year, hs1Breakdown }
     })
     .filter(r => r.pct != null)
     .sort((a, b) => b.pct - a.pct)
@@ -636,6 +812,8 @@ function PacificRankingView({ exposureScores, dataIndex, selectedMetric, onMetri
           onMetricCountryClick={onMetricCountryClick}
           isPacific={false}
           limitRows={false}
+          onAidModeChange={onAidModeChange}
+          onTradeModeChange={onTradeModeChange}
         />
       </div>
     </>
@@ -643,7 +821,7 @@ function PacificRankingView({ exposureScores, dataIndex, selectedMetric, onMetri
 }
 
 // Single country view (Pacific recipient or one external influencer)
-function SingleCountryView({ country, dataIndex, selectedMetric, onMetricCountryClick, onSelectMetric, yearControl, selectedYear, onRemoveCountry }) {
+function SingleCountryView({ country, dataIndex, selectedMetric, onMetricCountryClick, onSelectMetric, yearControl, selectedYear, onRemoveCountry, onAidModeChange, onTradeModeChange }) {
   const { code, isPacific } = country
 
   function pacificMetricRows(metric) {
@@ -666,7 +844,7 @@ function SingleCountryView({ country, dataIndex, selectedMetric, onMetricCountry
     for (const [pacCode, entry] of Object.entries(dataIndex)) {
       const cp = entry[metric]?.[code]
       if (!cp) continue
-      rows.push({ code: pacCode, name: PAC_NAMES[pacCode] ?? pacCode, value: cp.value, pct: cp.pct, year: cp.year })
+      rows.push({ code: pacCode, name: PAC_NAMES[pacCode] ?? pacCode, value: cp.value, pct: cp.pct, year: cp.year, hs1Breakdown: cp.hs1Breakdown })
     }
     return rows
   }
@@ -691,6 +869,8 @@ return (
           isPacific={isPacific}
           pctLabel={isPacific ? undefined : '% of total'}
           limitRows={isPacific}
+          onAidModeChange={onAidModeChange}
+          onTradeModeChange={onTradeModeChange}
         />
       </div>
     </>
@@ -698,7 +878,7 @@ return (
 }
 
 // Multi-select comparison view
-function ComparisonView({ countries, dataIndex, selectedMetric, onMetricCountryClick, onSelectMetric, yearControl, onRemoveCountry }) {
+function ComparisonView({ countries, dataIndex, selectedMetric, onMetricCountryClick, onSelectMetric, yearControl, onRemoveCountry, onAidModeChange, onTradeModeChange }) {
   const isPacificComparison = countries.every(c => c.isPacific)
   return (
     <>
@@ -711,6 +891,8 @@ function ComparisonView({ countries, dataIndex, selectedMetric, onMetricCountryC
           dataIndex={dataIndex}
           onMetricCountryClick={onMetricCountryClick}
           isPacificComparison={isPacificComparison}
+          onAidModeChange={onAidModeChange}
+          onTradeModeChange={onTradeModeChange}
         />
       </div>
     </>
@@ -761,7 +943,7 @@ function comparisonRowsForPacific(metric, countries, dataIndex) {
       ...row,
       vals: countries.map(c => {
         const d = dataIndex[c.code]?.[metric]?.[row.code]
-        return d ? { pct: d.pct, value: d.value, year: d.year } : null
+        return d ? { pct: d.pct, value: d.value, year: d.year, hs1Breakdown: d.hs1Breakdown } : null
       }),
     }))
     .sort((a, b) => Math.max(...b.vals.map(v => v?.pct ?? -Infinity)) - Math.max(...a.vals.map(v => v?.pct ?? -Infinity)))
@@ -789,20 +971,21 @@ function comparisonRowsForExternal(metric, countries, dataIndex) {
       ...row,
       vals: countries.map(c => {
         const d = dataIndex[row.code]?.[metric]?.[c.code]
-        return d ? { pct: d.pct, value: d.value, year: d.year } : null
+        return d ? { pct: d.pct, value: d.value, year: d.year, hs1Breakdown: d.hs1Breakdown } : null
       }),
     }))
     .sort((a, b) => Math.max(...b.vals.map(v => v?.value ?? -Infinity)) - Math.max(...a.vals.map(v => v?.value ?? -Infinity)))
 }
 
-function CompareMetricTable({ metric, countries, dataIndex, onMetricCountryClick, isPacificComparison }) {
+function CompareMetricTable({ metric, countries, dataIndex, onMetricCountryClick, isPacificComparison, onAidModeChange, onTradeModeChange }) {
+  const [expandedTrade, setExpandedTrade] = useState(null)
   const rows = isPacificComparison
     ? comparisonRowsForPacific(metric, countries, dataIndex)
     : comparisonRowsForExternal(metric, countries, dataIndex)
   const limitRows = isPacificComparison
   const comparisonKind = isPacificComparison ? 'exposure' : 'value'
   const comparisonUnit = unitLabel(metric, comparisonKind)
-  const totalLabel = isPacificComparison ? 'Highest exposure' : 'Largest value'
+  const totalLabel = isPacificComparison ? 'Highest exposure' : 'Pacific total'
   const comparisonCellClass = (i) => i < 2 ? 'comparison-val' : 'col-compare comparison-val'
   const columns = countries.map((country, i) => ({
     key: country.code,
@@ -818,36 +1001,80 @@ function CompareMetricTable({ metric, countries, dataIndex, onMetricCountryClick
   const tableRows = rows.map(row => ({
     ...row,
     key: row.code,
+    expandable: isTradeMetric(metric) && row.vals.some(v => (v?.hs1Breakdown?.length ?? 0) > 0),
     cells: Object.fromEntries(countries.map((country, i) => [country.code, cellValue(row.vals[i])])),
   }))
   const summaryCells = Object.fromEntries(countries.map((country, i) => {
+    if (!isPacificComparison) {
+      const vals = Object.values(dataIndex)
+        .map(entry => entry[metric]?.[country.code])
+        .filter(Boolean)
+      return [country.code, fmtValue(metricValueTotal(vals), metric, true)]
+    }
+
     const vals = rows.map(row => row.vals[i]).filter(Boolean)
-    const maxVal = vals.length
-      ? isPacificComparison
-        ? Math.max(...vals.map(v => v.pct ?? 0))
-        : Math.max(...vals.map(v => v.value ?? 0))
-      : null
-    return [
-      country.code,
-      isPacificComparison ? fmtPct(maxVal, true) : fmtValue(maxVal, metric, true),
-    ]
+    const maxVal = vals.length ? Math.max(...vals.map(v => v.pct ?? 0)) : null
+    return [country.code, fmtPct(maxVal, true)]
   }))
 
   return (
-    <MetricTableCard
-      metric={metric}
-      columns={columns}
-      rows={tableRows}
-      summaryLabel={totalLabel}
-      summaryCells={summaryCells}
-      limitRows={limitRows}
-      onRowClick={(row) => onMetricCountryClick(metric, row.code, row.name)}
-    />
+    <>
+      {isAidMetric(metric) && onAidModeChange && (
+        <div className="metric-mode-toggle aid-mode-toggle" role="group" aria-label="Aid value type">
+          {Object.entries(AID_MODE_LABELS).map(([mode, label]) => (
+            <button
+              key={mode}
+              type="button"
+              className={`metric-mode-btn aid-mode-btn ${metric === mode ? 'active' : ''}`}
+              onClick={() => onAidModeChange(mode)}
+              aria-pressed={metric === mode}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+      {isTradeMetric(metric) && onTradeModeChange && (
+        <div className="metric-mode-toggle trade-mode-toggle" role="group" aria-label="Trade direction">
+          {Object.entries(TRADE_MODE_LABELS).map(([mode, label]) => (
+            <button
+              key={mode}
+              type="button"
+              className={`metric-mode-btn trade-mode-btn ${metric === mode ? 'active' : ''}`}
+              onClick={() => onTradeModeChange(mode)}
+              aria-pressed={metric === mode}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+      <MetricTableCard
+        metric={metric}
+        columns={columns}
+        rows={tableRows}
+        summaryLabel={totalLabel}
+        summaryCells={summaryCells}
+        limitRows={limitRows}
+        onRowClick={(row) => {
+          if (row.expandable) {
+            setExpandedTrade(expandedTrade === row.key ? null : row.key)
+            return
+          }
+          onMetricCountryClick(metric, row.code, row.name)
+        }}
+        renderRowExtra={(row) => row.expandable && expandedTrade === row.key
+          ? <TradeComparisonBreakdownRow row={row} columns={columns} isPacificComparison={isPacificComparison} metric={metric} />
+          : null}
+      />
+    </>
   )
 }
 
 export default function SidePanel({
   selectedCountries, dataIndex, exposureScores, activeMetrics,
+  onAidModeChange,
+  onTradeModeChange,
   onCountryClick, onSelectMetric,
   onBackToIntro,
   selectedYear, yearMin, yearMax, playing, onYearChange, onPlayToggle, onYearReset,
@@ -960,11 +1187,11 @@ export default function SidePanel({
 
         <div className="panel-content">
           {isEmpty ? (
-            <PacificRankingView exposureScores={exposureScores} dataIndex={dataIndex} selectedMetric={selectedMetric} onMetricCountryClick={handleMetricCountryClick} onSelectMetric={onSelectMetric} yearControl={yearControl} selectedYear={selectedYear} />
+            <PacificRankingView exposureScores={exposureScores} dataIndex={dataIndex} selectedMetric={selectedMetric} onMetricCountryClick={handleMetricCountryClick} onSelectMetric={onSelectMetric} yearControl={yearControl} selectedYear={selectedYear} onAidModeChange={onAidModeChange} onTradeModeChange={onTradeModeChange} />
           ) : isComparison ? (
-            <ComparisonView countries={selectedCountries} dataIndex={dataIndex} selectedMetric={selectedMetric} onMetricCountryClick={handleMetricCountryClick} onSelectMetric={onSelectMetric} yearControl={yearControl} onRemoveCountry={handleRemoveCountry} />
+            <ComparisonView countries={selectedCountries} dataIndex={dataIndex} selectedMetric={selectedMetric} onMetricCountryClick={handleMetricCountryClick} onSelectMetric={onSelectMetric} yearControl={yearControl} onRemoveCountry={handleRemoveCountry} onAidModeChange={onAidModeChange} onTradeModeChange={onTradeModeChange} />
           ) : (
-            <SingleCountryView country={selectedCountries[0]} dataIndex={dataIndex} selectedMetric={selectedMetric} onMetricCountryClick={handleMetricCountryClick} onSelectMetric={onSelectMetric} yearControl={yearControl} selectedYear={selectedYear} onRemoveCountry={handleRemoveCountry} />
+            <SingleCountryView country={selectedCountries[0]} dataIndex={dataIndex} selectedMetric={selectedMetric} onMetricCountryClick={handleMetricCountryClick} onSelectMetric={onSelectMetric} yearControl={yearControl} selectedYear={selectedYear} onRemoveCountry={handleRemoveCountry} onAidModeChange={onAidModeChange} onTradeModeChange={onTradeModeChange} />
           )}
         </div>
       </div>

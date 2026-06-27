@@ -1,8 +1,8 @@
 import { getTopCounterparts, getInfluencerFootprint } from '../data/computeScores.js'
 import './LeftPanel.css'
 
-const METRIC_LABELS = { aid: 'Aid', trade: 'Trade', remittances: 'Remit', migration: 'Migr' }
-const METRIC_UNITS  = { aid: 'USD', trade: 'USD', remittances: 'USD', migration: 'people' }
+const METRIC_LABELS = { aid: 'Aid', trade: 'Imports', exports: 'Exports', remittances: 'Remit', migration: 'Migr', debt: 'Debt' }
+const METRIC_UNITS  = { aid: 'USD', trade: 'USD', exports: 'USD', remittances: 'USD', migration: 'people', debt: 'USD' }
 
 function fmtValue(value, metric) {
   if (value == null) return '—'

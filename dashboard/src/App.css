@@ -63,7 +63,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 34px;
+  gap: 32px;
   background: linear-gradient(160deg, #f5efe0 0%, #ede4ce 60%, #e8ddc4 100%);
   border: 1px solid #c4b090;
   border-radius: 16px;
@@ -98,21 +98,22 @@ html, body, #root {
 .intro-hero {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 12px;
 }
 
 .intro-block {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 11px;
 }
 
 /* The "about / methodology" detail block is quieter and set apart with a rule. */
 .intro-about {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding-top: 32px;
+  gap: 11px;
+  margin-top: 16px;
+  padding-top: 30px;
   border-top: 1px solid rgba(180, 150, 100, 0.3);
 }
 
@@ -255,12 +256,18 @@ html, body, #root {
   color: #6f5634;
 }
 
-.intro-about .coverage-matrix {
-  margin: 12px 0;
+.intro-chart-title {
+  margin: 10px 0 -2px;
+  color: #5a3e1b;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-.intro-goal {
-  margin-top: 0;
+.intro-about .coverage-matrix {
+  margin: 8px 0 6px;
 }
 
 .intro-sources {
@@ -318,7 +325,7 @@ html, body, #root {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 6px;
+  margin-top: 0;
 }
 
 .intro-download-link {
@@ -414,8 +421,13 @@ html, body, #root {
     width: min(620px, calc(100vw - 24px));
     height: calc(100vh - 24px);
     padding: 18px 18px 16px;
-    gap: 24px;
+    gap: 26px;
     border-radius: 12px;
+  }
+
+  .intro-about {
+    margin-top: 12px;
+    padding-top: 26px;
   }
 }
 
@@ -428,7 +440,12 @@ html, body, #root {
     width: min(620px, calc(100vw - 32px));
     height: calc(100vh - 32px);
     padding: 18px 22px 16px;
-    gap: 18px;
+    gap: 22px;
+  }
+
+  .intro-about {
+    margin-top: 10px;
+    padding-top: 24px;
   }
 
   .intro-section-footer {
@@ -471,8 +488,14 @@ html, body, #root {
     width: min(580px, calc(100vw - 32px));
     height: calc(100vh - 32px);
     padding: 18px 20px 16px;
-    gap: 24px;
+    gap: 22px;
     border-radius: 16px;
+  }
+
+  .intro-about {
+    gap: 10px;
+    margin-top: 8px;
+    padding-top: 22px;
   }
 
   .intro-kicker {
@@ -538,8 +561,18 @@ html, body, #root {
     width: calc(100vw - 16px);
     height: calc(100dvh - 16px);
     overflow-y: auto;
-    gap: clamp(7px, 1.6dvh, 14px);
+    gap: clamp(12px, 2dvh, 18px);
     padding: clamp(12px, 2dvh, 16px) 14px;
+  }
+
+  .intro-about {
+    gap: clamp(7px, 1.2dvh, 10px);
+    margin-top: clamp(6px, 1.2dvh, 10px);
+    padding-top: clamp(16px, 2.6dvh, 22px);
+  }
+
+  .intro-about .coverage-matrix {
+    margin: clamp(4px, 1dvh, 8px) 0;
   }
 
   .intro-star {
@@ -602,11 +635,6 @@ html, body, #root {
     line-height: 1.3;
   }
 
-  .intro-goal {
-    font-size: clamp(0.68rem, 1.9dvh, 0.8rem);
-    line-height: 1.3;
-  }
-
   .intro-button {
     height: clamp(32px, 5dvh, 40px);
     font-size: clamp(0.76rem, 2.1dvh, 0.85rem);
@@ -624,4 +652,3 @@ html, body, #root {
     margin-top: 0;
   }
 }
-

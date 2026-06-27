@@ -1,6 +1,6 @@
 import { PACIFIC_LIST } from './pacificCountries.js'
 
-export const METRICS = ['aid', 'trade', 'remittances', 'migration', 'debt']
+export const METRICS = ['aid', 'trade', 'remittances', 'migration', 'debt', 'fdi']
 const FRESHNESS_WINDOW_YEARS = 3
 
 function buildFreshDataIndex(rows, activeMetrics, targetYear, windowYears = FRESHNESS_WINDOW_YEARS) {

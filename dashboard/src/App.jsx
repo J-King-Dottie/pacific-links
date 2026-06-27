@@ -26,6 +26,8 @@ export default function App() {
   const [error, setError] = useState(null)
 
   const [activeMetrics, setActiveMetrics] = useState(['aid'])
+  const [aidMode, setAidMode] = useState('aid')
+  const [tradeMode, setTradeMode] = useState('trade')
   const [selectedYear, setSelectedYear] = useState(null)
   const [playing, setPlaying] = useState(false)
 
@@ -84,8 +86,20 @@ export default function App() {
     })
   }, [])
 
-  const toggleMetric = useCallback((metric) => { setActiveMetrics([metric]) }, [])
-  const selectMetric = useCallback((metric) => { setActiveMetrics([metric]) }, [])
+  const selectMetric = useCallback((metric) => {
+    if (metric === 'aid') setActiveMetrics([aidMode])
+    else if (metric === 'trade') setActiveMetrics([tradeMode])
+    else setActiveMetrics([metric])
+  }, [aidMode, tradeMode])
+  const toggleMetric = selectMetric
+  const handleAidModeChange = useCallback((mode) => {
+    setAidMode(mode)
+    setActiveMetrics(prev => ['aid', 'aid_committed'].includes(prev[0]) ? [mode] : prev)
+  }, [])
+  const handleTradeModeChange = useCallback((mode) => {
+    setTradeMode(mode)
+    setActiveMetrics(prev => ['trade', 'exports'].includes(prev[0]) ? [mode] : prev)
+  }, [])
 
   const handleYearChange = useCallback((year) => { setSelectedYear(year); setPlaying(false) }, [])
   const handlePlayToggle = useCallback(() => {
@@ -132,6 +146,8 @@ export default function App() {
               dataIndex={dataIndex}
               exposureScores={exposureScores}
               activeMetrics={activeMetrics}
+              onAidModeChange={handleAidModeChange}
+              onTradeModeChange={handleTradeModeChange}
               onCountryClick={handleCountryClick}
               onToggleMetric={toggleMetric}
               onSelectMetric={selectMetric}
@@ -171,9 +187,9 @@ export default function App() {
                 <span>Dottie AI Studio</span>
               </a>
               <h1>Pacific Links</h1>
-              <p className="intro-subtitle">Explore the connections shaping the Pacific.</p>
+              <p className="intro-subtitle">Turning fragmented bilateral datasets into a relationship map.</p>
               <p className="intro-lead">
-                Pacific Links brings together aid, trade, remittances, migration, and debt data for 14 Pacific Island Countries from 2010 to 2024 (where available).
+                Pacific Links brings together aid, trade, remittances, investment, migration, and debt data for 14 Pacific Island Countries from 2010 to 2024 (where available).
               </p>
             </header>
 
@@ -201,24 +217,28 @@ export default function App() {
               <button className="intro-button" disabled={!appReady} onClick={() => setIntroDismissed(true)}>
                 {appReady ? <>{`Explore the map`}<ArrowRight size={14} strokeWidth={2.5} /></> : loading ? 'Loading data…' : 'Preparing map…'}
               </button>
-              <a className="intro-download-link" href="/data/pacific_links_data.xlsx" download><Download size={12} strokeWidth={2.5} />Download all data (.xlsx)</a>
+              <a className="intro-download-link" href="/data/pacific_links_data.xlsx" download><Download size={12} strokeWidth={2.5} />Download the data</a>
               {!appReady && <div className="loading-bar"><span /></div>}
             </div>
 
             <section className="intro-block intro-about">
               <p className="intro-methodology">
-                This data all already existed. It's just scattered with each source speaking a slightly different language of codes, units and years. The hard part was never finding it, it was cleaning it and bringing it together. That's what we've done, with an open methodology.
+                This data all already existed. It was just scattered, with each source speaking a slightly different language of codes, units and years.
+              </p>
+              <p className="intro-methodology">
+                The hard part was never finding it, it was cleaning it and bringing it together. That's what we've done, with an open methodology.
               </p>
               <p className="intro-methodology">
                 It isn't perfect. Gaps remain in Pacific bilateral data, and the most recent numbers may live in each country's official publications.
               </p>
+              <h3 className="intro-chart-title">Data coverage</h3>
               <CoverageMatrix rows={allRows} />
-              <p className="intro-methodology intro-goal">
-                We built this to make existing Pacific data more accessible for a region that's often underserved in global analysis.
-              </p>
             </section>
 
             <footer className="intro-creditbar">
+              <p className="intro-inspiration intro-goal">
+                We built this to make existing Pacific data more accessible.
+              </p>
               <p className="intro-inspiration">
                 Inspired by the <a href="https://pacificaidmap.lowyinstitute.org" target="_blank" rel="noreferrer">Lowy Pacific Aid Map</a>.
               </p>

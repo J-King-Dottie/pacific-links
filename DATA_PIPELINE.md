@@ -13,16 +13,17 @@ python3 scripts/refresh_all.py --only-normalize  # just re-harmonize existing CS
 ```
 
 `refresh_all.py` runs every source that can be pulled automatically (aid, debt,
-imports), then runs `normalize_for_dashboard.py` to harmonize and rebuild the
+trade), then runs `normalize_for_dashboard.py` to harmonize and rebuild the
 download. It prints a reminder for the two manual benchmark sources.
 
 **Automatable (pulled fresh every run):**
 - **Aid** — Lowy Pacific Aid Map, live SDMX API
 - **Debt** — World Bank IDS, live API
-- **Imports** — CEPII BACI (downloads the published version ZIP)
+- **Trade** — CEPII BACI (downloads the published version ZIP)
 
 **Manual (benchmark years, update rarely):**
 - **Remittances** — World Bank/KNOMAD bilateral matrices
+- **FDI** — IMF Direct Investment Positions bulk export
 - **Migration** — UN International Migrant Stock workbook
 
 For a manual source, download the new workbook (see its section below), re-run its
@@ -38,10 +39,11 @@ build script, then run `python3 scripts/refresh_all.py --only-normalize`.
 1. python3 scripts/build_aid_timeseries.py
 2. python3 scripts/fetch_baci_trade.py              (download + extract + combine)
 3. python3 scripts/build_remittance_timeseries.py   (run per-year first, then combined)
-4. python3 scripts/build_migration_timeseries.py
-5. python3 scripts/fetch_ids_debt.py
-6. python3 scripts/merge_ids_debt_parts.py
-7. python3 scripts/normalize_for_dashboard.py
+4. python3 scripts/build_fdi_positions.py
+5. python3 scripts/build_migration_timeseries.py
+6. python3 scripts/fetch_ids_debt.py
+7. python3 scripts/merge_ids_debt_parts.py
+8. python3 scripts/normalize_for_dashboard.py
 ```
 
 The normalization step must always run last. It harmonizes every dataset to one
@@ -57,7 +59,7 @@ Every dashboard CSV shares these columns:
 - **Imports** also carries `hs1_code, hs1_name` (one row per HS1 category).
 - **Migration** uses `value_people` and `pct_population` instead of `value_usd`/`pct_gdp`.
 
-Aid dashboard rule: use spent/disbursed aid only. Do not fall back to committed aid where spent aid is missing.
+Aid dashboard rule: spent/disbursed aid is the default view; committed aid is a separate in-card view. Never add spent and committed values together.
 
 ---
 
@@ -77,14 +79,14 @@ Aid dashboard rule: use spent/disbursed aid only. Do not fall back to committed 
 - Computes `spent_share_pct` and `committed_share_pct` separately (each as share of that recipient-year's total for that basis)
 - Fetches donor and recipient name codelists from the PDH API
 
-**Outputs:** `data/processed/aid_by_donor_year.csv`, `aid_by_donor_year.metadata.json`
+**Outputs:** `data/processed/aid_by_donor_year.csv`, `data/processed/aid_committed_by_donor_year.csv`, `aid_by_donor_year.metadata.json`
 
 **Key notes:**
 - Spent and committed are independent measures — never add them
 - Some donors only report committed (multilaterals like GCF, GEF); others only spent
 - Latest year is often partial
 
-**Dashboard normalization adds:** spent-only `value_usd`, `pct_gdp`, and the harmonized column names. Committed values and aggregate donors are dropped.
+**Dashboard normalization adds:** harmonized column names plus `pct_gdp` for both aid views. The default `aid_by_donor_year.csv` is spent/disbursed aid; `aid_committed_by_donor_year.csv` is committed aid. The dashboard exposes them under one Aid metric with an in-card Spent/Committed toggle.
 
 ---
 
@@ -101,16 +103,13 @@ Aid dashboard rule: use spent/disbursed aid only. Do not fall back to committed 
 - Extracts each year, keeps flows where the **importer** (`j`) is one of the 20 Pacific economies.
 - BACI values are in thousands of USD; multiplied by 1000 to current USD.
 - Aggregates HS6 → HS1 (first digit) per importer-supplier-year.
-- Removes intentional exclusions (logged to `excluded_<year>.csv`):
-  - commercial vessels (HS 8901)
-  - Marshall Islands bunker fuel (HS 271000) and vessel flows (HS 89)
-  - anomalous Nigeria→Tokelau petroleum
 - Maps numeric M49 codes to ISO2 using BACI's own country-code table.
 
 **Outputs:** `data/raw/baci_imports.csv` → normalized to `data/processed/imports_by_supplier_year.csv`
 
 **Key notes:**
 - One row per supplier **per HS1 category** per year. The dashboard and the Excel sum these to a supplier total; the raw CSV keeps the HS1 breakdown.
+- BACI trade flows may include re-exports, bunkering, vessel-registration effects, and other reporting-convention artefacts where recorded in the source data.
 - The latest year present depends on the BACI release (V202601 covers through 2023; 2024 fills in with newer releases).
 - To pull a newer release: bump `BACI_VERSION` in `scripts/fetch_baci_trade.py` and the matching constant in `scripts/normalize_for_dashboard.py`.
 
@@ -143,9 +142,12 @@ Aid dashboard rule: use spent/disbursed aid only. Do not fall back to committed 
 
 **To refresh:** Re-download the full DIP dataset from IMF and replace `data/raw/imf_dip.csv`. The IMF does not have a public REST API for this dataset — it requires a manual bulk export.
 
-**Dashboard normalization (step 6) adds:**
-- `investor_iso2` — ISO3 to ISO2 mapping (89 investor countries, all resolved)
-- `fdi_share_pct` — each investor's share of total positive FDI position for that recipient-year
+**Dashboard normalization adds:**
+- `counterpart_code` — investor ISO3 mapped to ISO2
+- `value_usd` — year-end inward direct investment position
+- `pct_gdp` — position as a share of recipient GDP
+
+Negative positions are retained in the CSV/Excel download. The dashboard loader shows positive inward positions only for map/table ranking.
 
 ---
 
@@ -219,6 +221,7 @@ python3 scripts/build_remittance_timeseries.py
 - Values are migrant stock (people living abroad), not annual migration flows
 - Benchmark years only — no annual series
 - Destination codes are UN M49 numeric; ISO2 is added in step 6
+- Blank country-pair cells are treated as unreported source values, not confirmed zeroes. For example, the UN matrix is blank for Vanuatu-born people in New Zealand, although New Zealand census data records that community.
 
 **To refresh:** Download the new UN migrant stock bilateral workbook and replace `data/raw/un_migrant_stock_bilateral_2024.xlsx`. Check that column positions for year data (`YEAR_COLUMNS` dict in the script) still match the new workbook layout — the UN occasionally shifts columns between releases.
 

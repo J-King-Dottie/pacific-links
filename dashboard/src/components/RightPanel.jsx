@@ -2,8 +2,8 @@ import { Fragment, useState } from 'react'
 import { getTopCounterparts, getInfluencerFootprint } from '../data/computeScores.js'
 import './RightPanel.css'
 
-const METRIC_LABELS = { aid: 'Aid', trade: 'Trade', remittances: 'Remittances', migration: 'Migration' }
-const METRIC_UNITS  = { aid: 'USD', trade: 'USD', remittances: 'USD', migration: 'people' }
+const METRIC_LABELS = { aid: 'Aid', trade: 'Imports', exports: 'Exports', remittances: 'Remittances', migration: 'Migration', debt: 'Debt' }
+const METRIC_UNITS  = { aid: 'USD', trade: 'USD', exports: 'USD', remittances: 'USD', migration: 'people', debt: 'USD' }
 
 function fmtValue(value, metric) {
   if (value == null) return '—'
@@ -63,7 +63,7 @@ function MetricTable({ metric, rows, onCountryClick }) {
         <tbody>
           {rows.map((r, i) => {
             const tradeKey = `${r.code}-${r.year}`
-            const hasBreakdown = metric === 'trade' && (r.hs1Breakdown?.length ?? 0) > 0
+            const hasBreakdown = ['trade', 'exports'].includes(metric) && (r.hs1Breakdown?.length ?? 0) > 0
             const isExpanded = expandedTrade === tradeKey
             return (
               <Fragment key={tradeKey}>

@@ -4,10 +4,17 @@ import './TopBar.css'
 
 const METRIC_LABELS = {
   aid: 'Aid',
-  trade: 'Imports',
+  trade: 'Trade',
   remittances: 'Remittances',
   migration: 'Migration',
   debt: 'Debt',
+  fdi: 'FDI',
+}
+
+function isMetricActive(metric, selectedMetric) {
+  if (metric === 'aid') return ['aid', 'aid_committed'].includes(selectedMetric)
+  if (metric === 'trade') return ['trade', 'exports'].includes(selectedMetric)
+  return selectedMetric === metric
 }
 
 export default function TopBar({
@@ -34,10 +41,10 @@ export default function TopBar({
         {Object.entries(METRIC_LABELS).map(([metric, label]) => (
           <button
             key={metric}
-            className={`topbar-metric topbar-metric-${metric} ${selectedMetric === metric ? 'active' : ''}`}
+            className={`topbar-metric topbar-metric-${metric} ${isMetricActive(metric, selectedMetric) ? 'active' : ''}`}
             onClick={() => onSelectMetric(metric)}
             role="tab"
-            aria-selected={selectedMetric === metric}
+            aria-selected={isMetricActive(metric, selectedMetric)}
           >
             {label}
           </button>

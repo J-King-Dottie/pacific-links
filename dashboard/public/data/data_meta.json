@@ -1,15 +1,25 @@
 {
-  "last_refreshed": "2026-06-25",
+  "last_refreshed": "2026-06-27",
   "year_min": 2010,
   "year_max": 2024,
   "sources": [
     {
       "metric": "Aid",
       "release": "Lowy Pacific Aid Map (live SDMX)",
-      "retrieved": "2026-06-24"
+      "retrieved": "2026-06-27"
+    },
+    {
+      "metric": "Aid committed",
+      "release": "Lowy Pacific Aid Map (live SDMX)",
+      "retrieved": "2026-06-27"
     },
     {
       "metric": "Imports",
+      "release": "CEPII BACI HS92 V202601",
+      "retrieved": "2026-06-22"
+    },
+    {
+      "metric": "Exports",
       "release": "CEPII BACI HS92 V202601",
       "retrieved": "2026-06-22"
     },
@@ -19,14 +29,19 @@
       "retrieved": "2026-06-22"
     },
     {
+      "metric": "FDI",
+      "release": "IMF Direct Investment Positions by Counterpart Economy",
+      "retrieved": "2026-06-27"
+    },
+    {
       "metric": "Migration",
       "release": "UN International Migrant Stock 2024",
-      "retrieved": "2026-06-22"
+      "retrieved": "2026-06-27"
     },
     {
       "metric": "Debt",
       "release": "World Bank IDS (live API)",
-      "retrieved": "2026-06-25"
+      "retrieved": "2026-06-27"
     }
   ]
 }

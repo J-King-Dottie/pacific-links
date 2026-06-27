@@ -3,7 +3,7 @@
   "dataflow": "SPC:DF_PAM(1.0)",
   "source_dataset": "Pacific aid and development finance data from the Lowy Institute",
   "source_url": "https://stats-sdmx-disseminate.pacificdata.org/rest/data/SPC,DF_PAM,1.0/.....?dimensionAtObservation=AllDimensions&format=csvfile",
-  "retrieved_at": "2026-06-24T01:17:30+00:00",
+  "retrieved_at": "2026-06-27T01:42:15+00:00",
   "row_count": 4793,
   "rows_with_spent": 4607,
   "rows_with_committed": 3707,

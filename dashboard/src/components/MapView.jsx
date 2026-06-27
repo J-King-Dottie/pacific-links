@@ -15,7 +15,17 @@ const CENTROIDS = {
   KR: [127.77, 35.91], SG: [103.82, 1.35], PH: [121.77, 12.88],
   ID: [113.92, -0.79], MY: [109.70, 4.21], TW: [120.96, 23.70],
   HK: [114.17, 22.32], CA: [-96.80, 56.13], BR: [-51.93, -14.24],
-  ZA: [25.08, -29.00], AE: [53.85, 23.42], FJ: [178.07, -17.71],
+  ZA: [25.08, -29.00], AE: [53.85, 23.42], NL: [5.29, 52.13],
+  IT: [12.57, 41.87], CH: [8.23, 46.82], BE: [4.47, 50.50],
+  DK: [9.50, 56.26], ES: [-3.75, 40.46], FI: [25.75, 61.92],
+  IE: [-8.24, 53.41], GR: [21.82, 39.07], PL: [19.15, 51.92],
+  LU: [6.13, 49.81], MT: [14.38, 35.94], HR: [15.20, 45.10],
+  BG: [25.49, 42.73], CY: [33.43, 35.13], TR: [35.24, 38.96],
+  RU: [105.32, 61.52], RS: [21.01, 44.02], SI: [14.99, 46.15],
+  KZ: [66.92, 48.02], KW: [47.48, 29.31], PK: [69.35, 30.38],
+  LK: [80.77, 7.87], TH: [100.99, 15.87], MU: [57.55, -20.35],
+  BM: [-64.75, 32.31], KY: [-80.57, 19.31], VG: [-64.64, 18.42],
+  VI: [-64.90, 18.34], CL: [-71.54, -35.68], FJ: [178.07, -17.71],
   PG: [143.96, -6.31], WS: [-172.10, -13.76], TO: [-175.20, -21.13],
   VU: [166.96, -15.38], SB: [160.16, -9.64], KI: [-168.73, 1.87],
   FM: [158.26, 6.92], MH: [171.18, 7.10], PW: [134.58, 7.51],
@@ -996,7 +1006,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     ? (tooltipIsPacific ? '% of pop' : '% of total')
     : (tooltipIsPacific ? '% of GDP' : '% of total')
   const tooltipValueHeader = selectedMetric === 'migration' ? 'people' : '$USD'
-  const METRIC_LABELS = { aid: 'Aid', trade: 'Imports', remittances: 'Remittances', migration: 'Migration', debt: 'Debt' }
+  const METRIC_LABELS = { aid: 'Aid', aid_committed: 'Aid committed', trade: 'Imports', exports: 'Exports', remittances: 'Remittances', fdi: 'FDI', migration: 'Migration', debt: 'Debt' }
   const tooltipMetricLabel = METRIC_LABELS[selectedMetric]
   const tooltipPctValue = tooltipIsPacific
     ? tooltipScore?.metricScores?.[selectedMetric] ?? null

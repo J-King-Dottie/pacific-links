@@ -8,11 +8,12 @@ const YEARS = Array.from({ length: YEAR_MAX - YEAR_MIN + 1 }, (_, i) => YEAR_MIN
 
 // Metric blocks, in display order, with the brand colours used across the app.
 const METRICS = [
-  { key: 'aid', label: 'Aid', color: '#8a5c10' },
-  { key: 'trade', label: 'Imports', color: '#1e666d' },
+  { key: 'aid', label: 'Aid', color: '#8a5c10', includes: ['aid', 'aid_committed'] },
+  { key: 'trade', label: 'Trade', color: '#1e666d', includes: ['trade', 'exports'] },
   { key: 'remittances', label: 'Remittances', color: '#a0442c' },
   { key: 'migration', label: 'Migration', color: '#76516a' },
   { key: 'debt', label: 'Debt', color: '#507840' },
+  { key: 'fdi', label: 'FDI', color: '#2f5fb3' },
 ]
 
 // Short row labels so the shared country axis stays narrow.
@@ -22,11 +23,16 @@ const SHORT_NAME = {
   FM: 'Micronesia', KI: 'Kiribati', MH: 'Marshall Is.', NR: 'Nauru', PW: 'Palau',
 }
 
+const SORTED_PACIFIC_LIST = [...PACIFIC_LIST].sort((a, b) =>
+  (SHORT_NAME[a.code] ?? a.name).localeCompare(SHORT_NAME[b.code] ?? b.name)
+)
+
 // Build, per metric, the set of "pacificCode|year" cells that have data.
 function buildPresence(rows) {
   const sets = Object.fromEntries(METRICS.map(m => [m.key, new Set()]))
   for (const r of rows) {
-    const set = sets[r.metric]
+    const metric = METRICS.find(m => (m.includes ?? [m.key]).includes(r.metric))
+    const set = metric ? sets[metric.key] : null
     if (set) set.add(`${r.pacificCode}|${r.year}`)
   }
   return sets
@@ -37,10 +43,10 @@ export default function CoverageMatrix({ rows }) {
 
   return (
     <div className="coverage-matrix" role="img"
-      aria-label="Data coverage grid: 14 Pacific countries down the side, five metrics across the top, each metric showing years 2010 to 2024. Filled cells mark where bilateral data exists.">
+      aria-label="Data coverage grid: 14 Pacific countries down the side, six metrics across the top, each metric showing years 2010 to 2024. Filled cells mark where bilateral data exists.">
       <div className="cov-axis">
         <div className="cov-axis-head" />
-        {PACIFIC_LIST.map(c => (
+        {SORTED_PACIFIC_LIST.map(c => (
           <div key={c.code} className="cov-row-label" title={c.name}>
             {SHORT_NAME[c.code] ?? c.name}
           </div>
@@ -54,7 +60,7 @@ export default function CoverageMatrix({ rows }) {
             <span className="cov-metric-years">'10–'24</span>
           </div>
           <div className="cov-grid">
-            {PACIFIC_LIST.map(c => (
+            {SORTED_PACIFIC_LIST.map(c => (
               YEARS.map(y => {
                 const on = presence[m.key].has(`${c.code}|${y}`)
                 return (

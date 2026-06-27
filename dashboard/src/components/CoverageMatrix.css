@@ -5,6 +5,8 @@
   display: flex;
   gap: 5px;
   width: 100%;
+  max-width: 600px;
+  align-self: flex-start;
   font-variant-numeric: tabular-nums;
 }
 

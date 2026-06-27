@@ -1,1 +1,1150 @@
-recipient_code,recipient_name,investor_code,investor_iso2,investor_name,year,value_usd,data_type
+pacific_code,pacific_name,counterpart_code,counterpart_name,year,value_usd,pct_gdp
+CK,Cook Islands,HK,"Hong Kong Special Administrative Region, People's Republic of China",2010,1768859733.74,704.4331
+CK,Cook Islands,IT,Italy,2010,960726.46,0.3826
+CK,Cook Islands,NZ,New Zealand,2010,17870214.0,7.1167
+CK,Cook Islands,HK,"Hong Kong Special Administrative Region, People's Republic of China",2011,1772583864.53,644.0701
+CK,Cook Islands,IT,Italy,2011,932729.81,0.3389
+CK,Cook Islands,NZ,New Zealand,2011,18511090.02,6.726
+CK,Cook Islands,IT,Italy,2012,951111.92,0.3228
+CK,Cook Islands,AU,Australia,2013,53190000.0,18.514
+CK,Cook Islands,ES,Spain,2013,1379100.0,0.48
+CK,Cook Islands,IT,Italy,2013,994147.68,0.346
+CK,Cook Islands,ES,Spain,2014,1214100.0,0.3786
+CK,Cook Islands,WS,Samoa,2014,3299123.8,1.0287
+CK,Cook Islands,AU,Australia,2015,21187400.0,7.2274
+CK,Cook Islands,ES,Spain,2015,1088700.0,0.3714
+CK,Cook Islands,MU,Mauritius,2015,3000000.0,1.0234
+CK,Cook Islands,NL,"Netherlands, The",2015,75120300.0,25.625
+CK,Cook Islands,AU,Australia,2016,28944000.0,9.8353
+CK,Cook Islands,ES,Spain,2016,1054100.0,0.3582
+CK,Cook Islands,MU,Mauritius,2016,7500000.0,2.5485
+CK,Cook Islands,ES,Spain,2017,1199300.0,0.3581
+CK,Cook Islands,MU,Mauritius,2017,7500000.0,2.2395
+CK,Cook Islands,CN,"China, People's Republic of",2018,68200.0,0.0179
+CK,Cook Islands,ES,Spain,2018,1145000.0,0.3009
+CK,Cook Islands,MU,Mauritius,2018,7000000.0,1.8398
+CK,Cook Islands,CN,"China, People's Republic of",2019,69000.0,0.0176
+CK,Cook Islands,ES,Spain,2019,1123400.0,0.2873
+CK,Cook Islands,MU,Mauritius,2019,1000000.0,0.2557
+CK,Cook Islands,CN,"China, People's Republic of",2020,69000.0,0.0258
+CK,Cook Islands,ES,Spain,2020,1227100.0,0.4582
+CK,Cook Islands,MU,Mauritius,2020,1000000.0,0.3734
+CK,Cook Islands,CN,"China, People's Republic of",2021,70000.0,0.0273
+CK,Cook Islands,ES,Spain,2021,1132600.0,0.4424
+CK,Cook Islands,KR,"Korea, Republic of",2021,-32.8,-0.0
+CK,Cook Islands,MU,Mauritius,2021,1000000.0,0.3906
+CK,Cook Islands,CN,"China, People's Republic of",2022,70000.0,0.0242
+CK,Cook Islands,ES,Spain,2022,1066600.0,0.3686
+CK,Cook Islands,KR,"Korea, Republic of",2022,-11.71,-0.0
+CK,Cook Islands,MU,Mauritius,2022,1000000.0,0.3456
+CK,Cook Islands,CN,"China, People's Republic of",2023,70000.0,0.0191
+CK,Cook Islands,ES,Spain,2023,1105000.0,0.3017
+CK,Cook Islands,MU,Mauritius,2023,1000000.0,0.2731
+CK,Cook Islands,ES,Spain,2024,1038900.0,0.2509
+CK,Cook Islands,MU,Mauritius,2024,1000000.0,0.2415
+FJ,Fiji,AU,Australia,2010,754094600.0,24.0145
+FJ,Fiji,IT,Italy,2010,3824.2,0.0001
+FJ,Fiji,KR,"Korea, Republic of",2010,4082852.0,0.13
+FJ,Fiji,NZ,New Zealand,2010,65895589.54,2.0985
+FJ,Fiji,US,United States,2010,20000000.0,0.6369
+FJ,Fiji,AU,Australia,2011,1055208400.0,27.9199
+FJ,Fiji,IT,Italy,2011,322.18,0.0
+FJ,Fiji,KR,"Korea, Republic of",2011,4559154.0,0.1206
+FJ,Fiji,NZ,New Zealand,2011,28904984.23,0.7648
+FJ,Fiji,US,United States,2011,-12000000.0,-0.3175
+FJ,Fiji,AU,Australia,2012,484873000.0,12.2072
+FJ,Fiji,IT,Italy,2012,511.93,0.0
+FJ,Fiji,KR,"Korea, Republic of",2012,4571654.0,0.1151
+FJ,Fiji,LU,Luxembourg,2012,86976361.35,2.1897
+FJ,Fiji,MU,Mauritius,2012,820000.0,0.0206
+FJ,Fiji,NZ,New Zealand,2012,18321924.25,0.4613
+FJ,Fiji,AU,Australia,2013,481369500.0,11.4886
+FJ,Fiji,FR,France,2013,42158400.04,1.0062
+FJ,Fiji,IT,Italy,2013,310.3,0.0
+FJ,Fiji,KR,"Korea, Republic of",2013,4787984.0,0.1143
+FJ,Fiji,LU,Luxembourg,2013,93060952.25,2.221
+FJ,Fiji,MU,Mauritius,2013,1040000.0,0.0248
+FJ,Fiji,NZ,New Zealand,2013,12875499.6,0.3073
+FJ,Fiji,US,United States,2013,-40000000.0,-0.9547
+FJ,Fiji,AU,Australia,2014,2037228958.09,41.9433
+FJ,Fiji,BM,Bermuda,2014,123610202.75,2.5449
+FJ,Fiji,CA,Canada,2014,46234341.2,0.9519
+FJ,Fiji,CH,Switzerland,2014,55239724.3,1.1373
+FJ,Fiji,CN,"China, People's Republic of",2014,83060824.07,1.7101
+FJ,Fiji,FR,France,2014,193540272.68,3.9847
+FJ,Fiji,GB,United Kingdom,2014,276852643.76,5.7
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2014,14287870.4,0.2942
+FJ,Fiji,IN,India,2014,70181616.94,1.4449
+FJ,Fiji,IT,Italy,2014,293836.48,0.006
+FJ,Fiji,JP,Japan,2014,31292448.56,0.6443
+FJ,Fiji,KR,"Korea, Republic of",2014,10003985.98,0.206
+FJ,Fiji,LK,Sri Lanka,2014,2767017.16,0.057
+FJ,Fiji,LU,Luxembourg,2014,38386074.36,0.7903
+FJ,Fiji,MU,Mauritius,2014,4326608.64,0.0891
+FJ,Fiji,NL,"Netherlands, The",2014,65050057.86,1.3393
+FJ,Fiji,NZ,New Zealand,2014,132967751.67,2.7376
+FJ,Fiji,PG,Papua New Guinea,2014,36876792.27,0.7592
+FJ,Fiji,SG,Singapore,2014,234190270.16,4.8216
+FJ,Fiji,US,United States,2014,73904512.75,1.5216
+FJ,Fiji,VU,Vanuatu,2014,27871409.17,0.5738
+FJ,Fiji,AU,Australia,2015,2041180895.07,43.5919
+FJ,Fiji,BM,Bermuda,2015,113717562.99,2.4286
+FJ,Fiji,CA,Canada,2015,45411808.95,0.9698
+FJ,Fiji,CH,Switzerland,2015,94960511.47,2.028
+FJ,Fiji,CN,"China, People's Republic of",2015,94490409.93,2.018
+FJ,Fiji,FR,France,2015,187429484.77,4.0028
+FJ,Fiji,GB,United Kingdom,2015,243230537.8,5.1945
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2015,12504701.02,0.2671
+FJ,Fiji,IN,India,2015,70092139.9,1.4969
+FJ,Fiji,IT,Italy,2015,124588.65,0.0027
+FJ,Fiji,JP,Japan,2015,26184655.89,0.5592
+FJ,Fiji,KR,"Korea, Republic of",2015,17958825.0,0.3835
+FJ,Fiji,LK,Sri Lanka,2015,2585558.48,0.0552
+FJ,Fiji,LU,Luxembourg,2015,35680707.03,0.762
+FJ,Fiji,MU,Mauritius,2015,4889056.04,0.1044
+FJ,Fiji,NL,"Netherlands, The",2015,56459195.19,1.2058
+FJ,Fiji,NZ,New Zealand,2015,118042497.18,2.5209
+FJ,Fiji,PG,Papua New Guinea,2015,43155321.55,0.9216
+FJ,Fiji,RU,Russian Federation,2015,6900.0,0.0001
+FJ,Fiji,SG,Singapore,2015,255641218.5,5.4595
+FJ,Fiji,US,United States,2015,70797292.22,1.512
+FJ,Fiji,VU,Vanuatu,2015,24398270.03,0.5211
+FJ,Fiji,AU,Australia,2016,2233344288.46,45.2991
+FJ,Fiji,BM,Bermuda,2016,101976618.62,2.0684
+FJ,Fiji,CA,Canada,2016,46199352.08,0.9371
+FJ,Fiji,CH,Switzerland,2016,107328982.58,2.177
+FJ,Fiji,CN,"China, People's Republic of",2016,108033241.0,2.1912
+FJ,Fiji,FR,France,2016,163951359.22,3.3254
+FJ,Fiji,GB,United Kingdom,2016,270810836.19,5.4929
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2016,11878491.95,0.2409
+FJ,Fiji,IN,India,2016,65542983.24,1.3294
+FJ,Fiji,IT,Italy,2016,120630.15,0.0024
+FJ,Fiji,JP,Japan,2016,29578853.47,0.6
+FJ,Fiji,KR,"Korea, Republic of",2016,23343175.0,0.4735
+FJ,Fiji,LK,Sri Lanka,2016,9624865.02,0.1952
+FJ,Fiji,LU,Luxembourg,2016,34039156.77,0.6904
+FJ,Fiji,MU,Mauritius,2016,5352363.96,0.1086
+FJ,Fiji,NL,"Netherlands, The",2016,53476689.05,1.0847
+FJ,Fiji,NZ,New Zealand,2016,115592281.33,2.3446
+FJ,Fiji,PG,Papua New Guinea,2016,160852622.19,3.2626
+FJ,Fiji,RU,Russian Federation,2016,10900.0,0.0002
+FJ,Fiji,SG,Singapore,2016,309638950.19,6.2804
+FJ,Fiji,US,United States,2016,76764167.33,1.557
+FJ,Fiji,VU,Vanuatu,2016,23052725.48,0.4676
+FJ,Fiji,AU,Australia,2017,2434615197.15,45.4773
+FJ,Fiji,BM,Bermuda,2017,98259979.53,1.8354
+FJ,Fiji,CA,Canada,2017,25393576.06,0.4743
+FJ,Fiji,CH,Switzerland,2017,114392942.44,2.1368
+FJ,Fiji,CN,"China, People's Republic of",2017,102159185.07,1.9083
+FJ,Fiji,DE,Germany,2017,1319230.0,0.0246
+FJ,Fiji,FR,France,2017,167227177.46,3.1237
+FJ,Fiji,GB,United Kingdom,2017,288102549.11,5.3816
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2017,11258955.99,0.2103
+FJ,Fiji,IN,India,2017,71794121.95,1.3411
+FJ,Fiji,IT,Italy,2017,143916.0,0.0027
+FJ,Fiji,JP,Japan,2017,30657503.53,0.5727
+FJ,Fiji,KR,"Korea, Republic of",2017,23982025.0,0.448
+FJ,Fiji,LK,Sri Lanka,2017,7116050.1,0.1329
+FJ,Fiji,LU,Luxembourg,2017,33874348.1,0.6328
+FJ,Fiji,MU,Mauritius,2017,6482429.21,0.1211
+FJ,Fiji,NL,"Netherlands, The",2017,50543451.77,0.9441
+FJ,Fiji,NZ,New Zealand,2017,99332261.05,1.8555
+FJ,Fiji,PG,Papua New Guinea,2017,329921528.49,6.1628
+FJ,Fiji,RU,Russian Federation,2017,10900.0,0.0002
+FJ,Fiji,SG,Singapore,2017,490325096.26,9.159
+FJ,Fiji,US,United States,2017,78179071.01,1.4603
+FJ,Fiji,VU,Vanuatu,2017,21981771.21,0.4106
+FJ,Fiji,AU,Australia,2018,2421374544.78,43.3827
+FJ,Fiji,BM,Bermuda,2018,91885330.1,1.6463
+FJ,Fiji,CA,Canada,2018,31982444.67,0.573
+FJ,Fiji,CH,Switzerland,2018,106265757.77,1.9039
+FJ,Fiji,CN,"China, People's Republic of",2018,111448314.5,1.9968
+FJ,Fiji,DE,Germany,2018,1259500.0,0.0226
+FJ,Fiji,FR,France,2018,222616490.8,3.9885
+FJ,Fiji,GB,United Kingdom,2018,267205154.54,4.7874
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2018,10271734.06,0.184
+FJ,Fiji,IN,India,2018,67980203.57,1.218
+FJ,Fiji,JP,Japan,2018,28060509.85,0.5027
+FJ,Fiji,KR,"Korea, Republic of",2018,18563368.0,0.3326
+FJ,Fiji,LK,Sri Lanka,2018,6816696.24,0.1221
+FJ,Fiji,LU,Luxembourg,2018,40479970.12,0.7253
+FJ,Fiji,MU,Mauritius,2018,6443178.63,0.1154
+FJ,Fiji,NL,"Netherlands, The",2018,45755906.25,0.8198
+FJ,Fiji,NZ,New Zealand,2018,95060229.71,1.7032
+FJ,Fiji,PG,Papua New Guinea,2018,474787561.86,8.5066
+FJ,Fiji,RU,Russian Federation,2018,10900.0,0.0002
+FJ,Fiji,SG,Singapore,2018,532215893.17,9.5355
+FJ,Fiji,US,United States,2018,81847044.54,1.4664
+FJ,Fiji,VU,Vanuatu,2018,19936502.01,0.3572
+FJ,Fiji,AU,Australia,2019,2515504779.67,47.0636
+FJ,Fiji,BM,Bermuda,2019,13709489.39,0.2565
+FJ,Fiji,CA,Canada,2019,30589881.09,0.5723
+FJ,Fiji,CH,Switzerland,2019,178036838.42,3.331
+FJ,Fiji,CN,"China, People's Republic of",2019,111960830.03,2.0947
+FJ,Fiji,DE,Germany,2019,1235740.0,0.0231
+FJ,Fiji,FR,France,2019,376404756.35,7.0423
+FJ,Fiji,GB,United Kingdom,2019,246864070.88,4.6187
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2019,9652599.67,0.1806
+FJ,Fiji,IN,India,2019,68221030.54,1.2764
+FJ,Fiji,IE,Ireland,2019,11234.0,0.0002
+FJ,Fiji,JP,Japan,2019,26719515.04,0.4999
+FJ,Fiji,KR,"Korea, Republic of",2019,32920781.0,0.6159
+FJ,Fiji,LK,Sri Lanka,2019,10165539.75,0.1902
+FJ,Fiji,LU,Luxembourg,2019,90650501.28,1.696
+FJ,Fiji,MU,Mauritius,2019,6341804.62,0.1187
+FJ,Fiji,NL,"Netherlands, The",2019,42480764.75,0.7948
+FJ,Fiji,NZ,New Zealand,2019,86593611.56,1.6201
+FJ,Fiji,PG,Papua New Guinea,2019,533224527.86,9.9763
+FJ,Fiji,SG,Singapore,2019,544509209.61,10.1874
+FJ,Fiji,US,United States,2019,107437631.15,2.0101
+FJ,Fiji,VU,Vanuatu,2019,18605735.6,0.3481
+FJ,Fiji,AU,Australia,2020,2828511180.86,66.9039
+FJ,Fiji,BM,Bermuda,2020,84395841.51,1.9962
+FJ,Fiji,CA,Canada,2020,32120439.39,0.7598
+FJ,Fiji,CH,Switzerland,2020,127451941.94,3.0147
+FJ,Fiji,CN,"China, People's Republic of",2020,140839544.92,3.3313
+FJ,Fiji,DE,Germany,2020,1227100.0,0.029
+FJ,Fiji,FR,France,2020,391280894.47,9.2551
+FJ,Fiji,GB,United Kingdom,2020,243134562.57,5.751
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2020,9905845.43,0.2343
+FJ,Fiji,IN,India,2020,77579442.92,1.835
+FJ,Fiji,IE,Ireland,2020,-49084.0,-0.0012
+FJ,Fiji,IT,Italy,2020,6135.5,0.0001
+FJ,Fiji,JP,Japan,2020,27412710.87,0.6484
+FJ,Fiji,KR,"Korea, Republic of",2020,17906118.0,0.4235
+FJ,Fiji,LK,Sri Lanka,2020,14466457.43,0.3422
+FJ,Fiji,LU,Luxembourg,2020,146479011.38,3.4647
+FJ,Fiji,MU,Mauritius,2020,5835621.81,0.138
+FJ,Fiji,NL,"Netherlands, The",2020,43252255.79,1.0231
+FJ,Fiji,NZ,New Zealand,2020,99744998.04,2.3593
+FJ,Fiji,PG,Papua New Guinea,2020,549676343.66,13.0017
+FJ,Fiji,SG,Singapore,2020,590672812.87,13.9714
+FJ,Fiji,US,United States,2020,127157708.91,3.0077
+FJ,Fiji,VG,British Virgin Islands,2020,49038.84,0.0012
+FJ,Fiji,VU,Vanuatu,2020,19125147.12,0.4524
+FJ,Fiji,AU,Australia,2021,2772158473.82,66.6565
+FJ,Fiji,BM,Bermuda,2021,96425367.14,2.3185
+FJ,Fiji,CA,Canada,2021,46465505.03,1.1173
+FJ,Fiji,CH,Switzerland,2021,103839070.69,2.4968
+FJ,Fiji,CN,"China, People's Republic of",2021,80795202.34,1.9427
+FJ,Fiji,DE,Germany,2021,1132600.0,0.0272
+FJ,Fiji,DK,Denmark,2021,152411.14,0.0037
+FJ,Fiji,FR,France,2021,507437314.07,12.2013
+FJ,Fiji,GB,United Kingdom,2021,250979836.62,6.0348
+FJ,Fiji,HK,"Hong Kong Special Administrative Region, People's Republic of China",2021,9302545.21,0.2237
+FJ,Fiji,IN,India,2021,81645181.09,1.9632
+FJ,Fiji,IE,Ireland,2021,-135912.0,-0.0033
+FJ,Fiji,JP,Japan,2021,234263587.85,5.6329
+FJ,Fiji,KR,"Korea, Republic of",2021,21337995.76,0.5131
+FJ,Fiji,LK,Sri Lanka,2021,22477215.85,0.5405
+FJ,Fiji,LU,Luxembourg,2021,150965670.3,3.63
+FJ,Fiji,MU,Mauritius,2021,5383198.75,0.1294
+FJ,Fiji,NL,"Netherlands, The",2021,40468432.73,0.9731
+FJ,Fiji,NZ,New Zealand,2021,91136610.47,2.1914
+FJ,Fiji,PG,Papua New Guinea,2021,532795013.46,12.811
+FJ,Fiji,SG,Singapore,2021,562780374.94,13.532
+FJ,Fiji,US,United States,2021,147896302.59,3.5562
+FJ,Fiji,VG,British Virgin Islands,2021,47221.04,0.0011
+FJ,Fiji,VU,Vanuatu,2021,18085658.97,0.4349
+FJ,Fiji,AU,Australia,2022,584005000.0,11.732
+FJ,Fiji,CN,"China, People's Republic of",2022,172974400.0,3.4749
+FJ,Fiji,FR,France,2022,102089953.96,2.0509
+FJ,Fiji,KR,"Korea, Republic of",2022,24838720.27,0.499
+FJ,Fiji,LK,Sri Lanka,2022,44499561.79,0.8939
+FJ,Fiji,AU,Australia,2023,547200000.0,9.9915
+FJ,Fiji,CN,"China, People's Republic of",2023,130375200.0,2.3806
+FJ,Fiji,DK,Denmark,2023,-444793.69,-0.0081
+FJ,Fiji,FR,France,2023,100756518.82,1.8397
+FJ,Fiji,KR,"Korea, Republic of",2023,20370014.96,0.3719
+FJ,Fiji,LK,Sri Lanka,2023,44499561.79,0.8125
+FJ,Fiji,AU,Australia,2024,574450800.0,9.6253
+FJ,Fiji,CN,"China, People's Republic of",2024,160275100.0,2.6855
+FJ,Fiji,IE,Ireland,2024,-218169.0,-0.0037
+FJ,Fiji,KR,"Korea, Republic of",2024,26627842.74,0.4462
+FJ,Fiji,LK,Sri Lanka,2024,44499561.79,0.7456
+FJ,Fiji,LU,Luxembourg,2024,1.04,0.0
+FM,"Micronesia, Federated States of",IT,Italy,2010,36077.4,0.0124
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2010,947677.0,0.3261
+FM,"Micronesia, Federated States of",US,United States,2010,27000000.0,9.2899
+FM,"Micronesia, Federated States of",IT,Italy,2011,34935.3,0.0114
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2011,947677.0,0.3089
+FM,"Micronesia, Federated States of",US,United States,2011,29000000.0,9.4524
+FM,"Micronesia, Federated States of",IT,Italy,2012,35623.8,0.011
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2012,1217677.0,0.3772
+FM,"Micronesia, Federated States of",US,United States,2012,30000000.0,9.2926
+FM,"Micronesia, Federated States of",IT,Italy,2013,37235.7,0.0119
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2013,647677.0,0.2071
+FM,"Micronesia, Federated States of",IT,Italy,2014,267103.21,0.0851
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2014,346100.0,0.1102
+FM,"Micronesia, Federated States of",IT,Italy,2015,455274.74,0.1468
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2015,647677.0,0.2088
+FM,"Micronesia, Federated States of",IT,Italy,2016,335395.65,0.1032
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2016,447677.0,0.1377
+FM,"Micronesia, Federated States of",IT,Italy,2017,401765.5,0.1119
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2017,447677.0,0.1247
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2018,9790000.0,2.4974
+FM,"Micronesia, Federated States of",IT,Italy,2018,226710.0,0.0578
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2018,447677.0,0.1142
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2019,9361800.0,2.3761
+FM,"Micronesia, Federated States of",IT,Italy,2019,237037.4,0.0602
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2019,447677.0,0.1136
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2020,13481300.0,3.6152
+FM,"Micronesia, Federated States of",IT,Italy,2020,242965.8,0.0652
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2020,447677.0,0.1201
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2021,13231600.0,3.3788
+FM,"Micronesia, Federated States of",GB,United Kingdom,2021,235095000.0,60.0342
+FM,"Micronesia, Federated States of",IT,Italy,2021,224254.8,0.0573
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2021,389592.09,0.0995
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2022,18007000.0,4.3291
+FM,"Micronesia, Federated States of",GB,United Kingdom,2022,211190000.0,50.7721
+FM,"Micronesia, Federated States of",IT,Italy,2022,211186.8,0.0508
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2022,377254.82,0.0907
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2023,18886700.0,4.2781
+FM,"Micronesia, Federated States of",GB,United Kingdom,2023,222871250.0,50.484
+FM,"Micronesia, Federated States of",IT,Italy,2023,214370.0,0.0486
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2023,346100.0,0.0784
+FM,"Micronesia, Federated States of",LU,Luxembourg,2023,8840000.0,2.0024
+FM,"Micronesia, Federated States of",CN,"China, People's Republic of",2024,11653800.0,2.472
+FM,"Micronesia, Federated States of",IT,Italy,2024,208818.9,0.0443
+FM,"Micronesia, Federated States of",KR,"Korea, Republic of",2024,345002.1,0.0732
+FM,"Micronesia, Federated States of",LU,Luxembourg,2024,8207310.0,1.741
+KI,Kiribati,KR,"Korea, Republic of",2011,103760.0,0.0529
+KI,Kiribati,KR,"Korea, Republic of",2012,1998920.0,0.9657
+KI,Kiribati,KR,"Korea, Republic of",2013,2133145.0,1.0574
+KI,Kiribati,KR,"Korea, Republic of",2014,9803642.0,4.8948
+KI,Kiribati,KR,"Korea, Republic of",2015,534452.0,0.279
+KI,Kiribati,KR,"Korea, Republic of",2016,-2513558.0,-1.2174
+KI,Kiribati,KR,"Korea, Republic of",2017,7451072.0,3.3432
+KI,Kiribati,MU,Mauritius,2017,300000.0,0.1346
+KI,Kiribati,CN,"China, People's Republic of",2018,2930000.0,1.2547
+KI,Kiribati,IT,Italy,2018,234725.0,0.1005
+KI,Kiribati,KR,"Korea, Republic of",2018,21114497.0,9.042
+KI,Kiribati,AU,Australia,2019,8407200.0,3.8745
+KI,Kiribati,CN,"China, People's Republic of",2019,4360000.0,2.0094
+KI,Kiribati,IT,Italy,2019,243777.8,0.1123
+KI,Kiribati,KR,"Korea, Republic of",2019,29081712.0,13.4026
+KI,Kiribati,CN,"China, People's Republic of",2020,36394500.0,16.4757
+KI,Kiribati,KR,"Korea, Republic of",2020,19855860.0,8.9887
+KI,Kiribati,NO,Norway,2020,-234466.59,-0.1061
+KI,Kiribati,CN,"China, People's Republic of",2021,65938300.0,23.1152
+KI,Kiribati,GB,United Kingdom,2021,210913800.0,73.9374
+KI,Kiribati,KR,"Korea, Republic of",2021,19510799.81,6.8397
+KI,Kiribati,MU,Mauritius,2021,70000000.0,24.539
+KI,Kiribati,CN,"China, People's Republic of",2022,392324226.35,145.2835
+KI,Kiribati,GB,United Kingdom,2022,269116400.0,99.6578
+KI,Kiribati,KR,"Korea, Republic of",2022,35300185.79,13.0722
+KI,Kiribati,MU,Mauritius,2022,87000000.0,32.2174
+KI,Kiribati,CN,"China, People's Republic of",2023,95859500.0,33.2141
+KI,Kiribati,KR,"Korea, Republic of",2023,1222390.0,0.4235
+KI,Kiribati,MU,Mauritius,2023,96000000.0,33.2628
+KI,Kiribati,CN,"China, People's Republic of",2024,450345662.91,146.2814
+KI,Kiribati,KR,"Korea, Republic of",2024,32898704.26,10.6862
+KI,Kiribati,MU,Mauritius,2024,96000000.0,31.1827
+MH,Marshall Islands,BR,Brazil,2010,1697342.46,1.0536
+MH,Marshall Islands,DK,Denmark,2010,71259330.52,44.233
+MH,Marshall Islands,HR,"Croatia, Republic of",2010,364403567.2,226.1971
+MH,Marshall Islands,KR,"Korea, Republic of",2010,359009238.0,222.8487
+MH,Marshall Islands,PL,"Poland, Republic of",2010,4352079.89,2.7015
+MH,Marshall Islands,SI,"Slovenia, Republic of",2010,29728.99,0.0185
+MH,Marshall Islands,TR,"Türkiye, Republic of",2010,68000000.0,42.2098
+MH,Marshall Islands,BE,Belgium,2011,11774490.0,6.8337
+MH,Marshall Islands,BR,Brazil,2011,19121844.12,11.098
+MH,Marshall Islands,DK,Denmark,2011,52213868.0,30.304
+MH,Marshall Islands,HR,"Croatia, Republic of",2011,370005270.25,214.7448
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2011,103500000.0,60.0696
+MH,Marshall Islands,KR,"Korea, Republic of",2011,434937238.0,252.4302
+MH,Marshall Islands,PL,"Poland, Republic of",2011,4389301.81,2.5475
+MH,Marshall Islands,SI,"Slovenia, Republic of",2011,51109.0,0.0297
+MH,Marshall Islands,TR,"Türkiye, Republic of",2011,56000000.0,32.5015
+MH,Marshall Islands,BE,Belgium,2012,12402360.0,6.8635
+MH,Marshall Islands,BR,Brazil,2012,40032498.49,22.1541
+MH,Marshall Islands,DE,Germany,2012,55414800.0,30.6667
+MH,Marshall Islands,DK,Denmark,2012,424095704.26,234.696
+MH,Marshall Islands,HR,"Croatia, Republic of",2012,372736308.73,206.2736
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2012,97464000.0,53.9369
+MH,Marshall Islands,KR,"Korea, Republic of",2012,562078213.0,311.056
+MH,Marshall Islands,LU,Luxembourg,2012,69363048.2,38.3857
+MH,Marshall Islands,MU,Mauritius,2012,2090000.0,1.1566
+MH,Marshall Islands,PL,"Poland, Republic of",2012,4516711.83,2.4996
+MH,Marshall Islands,SI,"Slovenia, Republic of",2012,91413.84,0.0506
+MH,Marshall Islands,TR,"Türkiye, Republic of",2012,255000000.0,141.1179
+MH,Marshall Islands,US,United States,2012,2138000000.0,1183.1765
+MH,Marshall Islands,BR,Brazil,2013,44579390.62,23.916
+MH,Marshall Islands,CA,Canada,2013,63656722.45,34.1506
+MH,Marshall Islands,DE,Germany,2013,30616020.0,16.4249
+MH,Marshall Islands,DK,Denmark,2013,80551296.03,43.2142
+MH,Marshall Islands,ES,Spain,2013,5516400.0,2.9594
+MH,Marshall Islands,HR,"Croatia, Republic of",2013,369496154.17,198.2276
+MH,Marshall Islands,IE,Ireland,2013,8274600.0,4.4392
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2013,93161000.0,49.9791
+MH,Marshall Islands,KR,"Korea, Republic of",2013,784296742.0,420.7601
+MH,Marshall Islands,LU,Luxembourg,2013,46702467.13,25.055
+MH,Marshall Islands,MU,Mauritius,2013,9080000.0,4.8712
+MH,Marshall Islands,PL,"Poland, Republic of",2013,4648074.37,2.4936
+MH,Marshall Islands,RU,Russian Federation,2013,-72134792.4,-38.6989
+MH,Marshall Islands,SI,"Slovenia, Republic of",2013,26202.9,0.0141
+MH,Marshall Islands,TR,"Türkiye, Republic of",2013,244000000.0,130.9013
+MH,Marshall Islands,US,United States,2013,1937000000.0,1039.1631
+MH,Marshall Islands,BR,Brazil,2014,67260847.77,36.1617
+MH,Marshall Islands,DE,Germany,2014,67746780.0,36.423
+MH,Marshall Islands,DK,Denmark,2014,1470251.9,0.7905
+MH,Marshall Islands,ES,Spain,2014,-3642300.0,-1.9582
+MH,Marshall Islands,FR,France,2014,-557725.3,-0.2999
+MH,Marshall Islands,HR,"Croatia, Republic of",2014,199892025.19,107.4688
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2014,95505000.0,51.3468
+MH,Marshall Islands,KR,"Korea, Republic of",2014,523145446.0,281.261
+MH,Marshall Islands,LU,Luxembourg,2014,367399326.71,197.5265
+MH,Marshall Islands,MU,Mauritius,2014,42334717.0,22.7606
+MH,Marshall Islands,RU,Russian Federation,2014,-60974275.62,-32.7819
+MH,Marshall Islands,SI,"Slovenia, Republic of",2014,26710.2,0.0144
+MH,Marshall Islands,TR,"Türkiye, Republic of",2014,297000000.0,159.6774
+MH,Marshall Islands,US,United States,2014,3187000000.0,1713.4409
+MH,Marshall Islands,BG,Bulgaria,2015,210625104.74,114.6571
+MH,Marshall Islands,BR,Brazil,2015,74543313.65,40.5788
+MH,Marshall Islands,CA,Canada,2015,20070325.14,10.9256
+MH,Marshall Islands,DE,Germany,2015,43330260.0,23.5875
+MH,Marshall Islands,DK,Denmark,2015,-97510980.97,-53.0816
+MH,Marshall Islands,HR,"Croatia, Republic of",2015,163488937.12,88.9978
+MH,Marshall Islands,IN,India,2015,15288122.3,8.3223
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2015,88064500.0,47.9393
+MH,Marshall Islands,KR,"Korea, Republic of",2015,1068207044.0,581.4954
+MH,Marshall Islands,LU,Luxembourg,2015,371992828.57,202.5002
+MH,Marshall Islands,MU,Mauritius,2015,74000000.0,40.2831
+MH,Marshall Islands,NL,"Netherlands, The",2015,1120272300.0,609.8379
+MH,Marshall Islands,RU,Russian Federation,2015,-63576307.89,-34.6088
+MH,Marshall Islands,SI,"Slovenia, Republic of",2015,14153.1,0.0077
+MH,Marshall Islands,TR,"Türkiye, Republic of",2015,266000000.0,144.8013
+MH,Marshall Islands,US,United States,2015,3160000000.0,1720.196
+MH,Marshall Islands,BG,Bulgaria,2016,267539746.7,132.5767
+MH,Marshall Islands,BR,Brazil,2016,69020113.45,34.2022
+MH,Marshall Islands,DE,Germany,2016,29303980.0,14.5213
+MH,Marshall Islands,DK,Denmark,2016,-149585980.04,-74.1259
+MH,Marshall Islands,ES,Spain,2016,1054100.0,0.5223
+MH,Marshall Islands,GB,United Kingdom,2016,2460400.0,1.2192
+MH,Marshall Islands,HR,"Croatia, Republic of",2016,259560208.33,128.6225
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2016,77428000.0,38.3687
+MH,Marshall Islands,KR,"Korea, Republic of",2016,1073893820.0,532.1575
+MH,Marshall Islands,KW,Kuwait,2016,1237955.25,0.6135
+MH,Marshall Islands,LU,Luxembourg,2016,403169335.63,199.7866
+MH,Marshall Islands,MU,Mauritius,2016,20000000.0,9.9108
+MH,Marshall Islands,NL,"Netherlands, The",2016,1106805000.0,548.4663
+MH,Marshall Islands,RU,Russian Federation,2016,-63878800.45,-31.6545
+MH,Marshall Islands,SI,"Slovenia, Republic of",2016,8432.8,0.0042
+MH,Marshall Islands,TR,"Türkiye, Republic of",2016,196000000.0,97.1259
+MH,Marshall Islands,US,United States,2016,3761000000.0,1863.7265
+MH,Marshall Islands,BE,Belgium,2017,339641760.0,158.9339
+MH,Marshall Islands,BG,Bulgaria,2017,336442236.94,157.4367
+MH,Marshall Islands,BR,Brazil,2017,62630073.56,29.3075
+MH,Marshall Islands,CY,Cyprus,2017,-10267284.06,-4.8045
+MH,Marshall Islands,DE,Germany,2017,44374100.0,20.7647
+MH,Marshall Islands,ES,Spain,2017,-3597900.0,-1.6836
+MH,Marshall Islands,FR,France,2017,791502.87,0.3704
+MH,Marshall Islands,GR,Greece,2017,778788.95,0.3644
+MH,Marshall Islands,HR,"Croatia, Republic of",2017,316826126.18,148.2574
+MH,Marshall Islands,IN,India,2017,16315408.28,7.6347
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2017,71365000.0,33.3949
+MH,Marshall Islands,KR,"Korea, Republic of",2017,1125756915.0,526.7931
+MH,Marshall Islands,KW,Kuwait,2017,1255382.58,0.5875
+MH,Marshall Islands,LU,Luxembourg,2017,470267069.43,220.0595
+MH,Marshall Islands,MU,Mauritius,2017,14400000.0,6.7384
+MH,Marshall Islands,NL,"Netherlands, The",2017,502506700.0,235.1459
+MH,Marshall Islands,RU,Russian Federation,2017,-58161005.08,-27.2162
+MH,Marshall Islands,TR,"Türkiye, Republic of",2017,137000000.0,64.1086
+MH,Marshall Islands,US,United States,2017,3082000000.0,1442.2087
+MH,Marshall Islands,BE,Belgium,2018,171521000.0,77.9641
+MH,Marshall Islands,BG,Bulgaria,2018,289146469.97,131.4302
+MH,Marshall Islands,BR,Brazil,2018,62994485.99,28.6339
+MH,Marshall Islands,CN,"China, People's Republic of",2018,76054500.0,34.5702
+MH,Marshall Islands,CY,Cyprus,2018,193561733.07,87.9826
+MH,Marshall Islands,DE,Germany,2018,64234500.0,29.1975
+MH,Marshall Islands,ES,Spain,2018,-6870000.0,-3.1227
+MH,Marshall Islands,GR,Greece,2018,774391.88,0.352
+MH,Marshall Islands,HR,"Croatia, Republic of",2018,332723155.93,151.2378
+MH,Marshall Islands,ID,Indonesia,2018,1.21,0.0
+MH,Marshall Islands,IN,India,2018,4183842.63,1.9017
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2018,68094000.0,30.9518
+MH,Marshall Islands,KR,"Korea, Republic of",2018,1346387129.0,611.9941
+MH,Marshall Islands,KW,Kuwait,2018,1248558.72,0.5675
+MH,Marshall Islands,LU,Luxembourg,2018,441627893.47,200.74
+MH,Marshall Islands,MT,Malta,2018,25075508.95,11.398
+MH,Marshall Islands,MU,Mauritius,2018,12000000.0,5.4545
+MH,Marshall Islands,NL,"Netherlands, The",2018,687000000.0,312.2727
+MH,Marshall Islands,RU,Russian Federation,2018,-52112605.11,-23.6875
+MH,Marshall Islands,SI,"Slovenia, Republic of",2018,-2290.0,-0.001
+MH,Marshall Islands,TR,"Türkiye, Republic of",2018,-52000000.0,-23.6364
+MH,Marshall Islands,US,United States,2018,3231000000.0,1468.6364
+MH,Marshall Islands,BE,Belgium,2019,431385600.0,185.2235
+MH,Marshall Islands,BG,Bulgaria,2019,298914417.0,128.3445
+MH,Marshall Islands,CN,"China, People's Republic of",2019,96824200.0,41.5733
+MH,Marshall Islands,CY,Cyprus,2019,243957292.04,104.7477
+MH,Marshall Islands,GB,United Kingdom,2019,2624300.0,1.1268
+MH,Marshall Islands,GR,Greece,2019,782511.53,0.336
+MH,Marshall Islands,HR,"Croatia, Republic of",2019,414567879.89,178.0025
+MH,Marshall Islands,IN,India,2019,8600611.72,3.6928
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2019,58511610.0,25.1231
+MH,Marshall Islands,KR,"Korea, Republic of",2019,1358609911.0,583.3447
+MH,Marshall Islands,LU,Luxembourg,2019,433537818.71,186.1476
+MH,Marshall Islands,MT,Malta,2019,24173321.2,10.3793
+MH,Marshall Islands,MU,Mauritius,2019,30000000.0,12.8811
+MH,Marshall Islands,NL,"Netherlands, The",2019,807724600.0,346.8118
+MH,Marshall Islands,RU,Russian Federation,2019,79940326.92,34.3239
+MH,Marshall Islands,SI,"Slovenia, Republic of",2019,1123.4,0.0005
+MH,Marshall Islands,TR,"Türkiye, Republic of",2019,-7000000.0,-3.0056
+MH,Marshall Islands,US,United States,2019,3344000000.0,1435.8094
+MH,Marshall Islands,BE,Belgium,2020,431939200.0,178.6349
+MH,Marshall Islands,BG,Bulgaria,2020,321701486.92,133.0445
+MH,Marshall Islands,CN,"China, People's Republic of",2020,164859400.0,68.1801
+MH,Marshall Islands,CY,Cyprus,2020,42199508.87,17.4522
+MH,Marshall Islands,DE,Germany,2020,49084000.0,20.2994
+MH,Marshall Islands,ES,Spain,2020,-2454200.0,-1.015
+MH,Marshall Islands,FR,France,2020,387251.29,0.1602
+MH,Marshall Islands,GR,Greece,2020,908054.0,0.3755
+MH,Marshall Islands,HR,"Croatia, Republic of",2020,374620077.92,154.9297
+MH,Marshall Islands,IN,India,2020,13784399.4,5.7007
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2020,50938790.0,21.0665
+MH,Marshall Islands,KR,"Korea, Republic of",2020,1387387813.5,573.7749
+MH,Marshall Islands,MT,Malta,2020,26068529.18,10.781
+MH,Marshall Islands,NL,"Netherlands, The",2020,1067577000.0,441.5124
+MH,Marshall Islands,RU,Russian Federation,2020,124447163.22,51.467
+MH,Marshall Islands,SI,"Slovenia, Republic of",2020,1227.1,0.0005
+MH,Marshall Islands,TR,"Türkiye, Republic of",2020,22000000.0,9.0984
+MH,Marshall Islands,US,United States,2020,3426000000.0,1416.8734
+MH,Marshall Islands,BE,Belgium,2021,407736000.0,156.0739
+MH,Marshall Islands,BG,Bulgaria,2021,311401934.1,119.1989
+MH,Marshall Islands,BR,Brazil,2021,64063068.07,24.5222
+MH,Marshall Islands,CN,"China, People's Republic of",2021,180069900.0,68.9275
+MH,Marshall Islands,CY,Cyprus,2021,17645854.18,6.7545
+MH,Marshall Islands,DE,Germany,2021,125718600.0,48.1228
+MH,Marshall Islands,ES,Spain,2021,14723800.0,5.636
+MH,Marshall Islands,FR,France,2021,1698547.39,0.6502
+MH,Marshall Islands,GB,United Kingdom,2021,29554800.0,11.313
+MH,Marshall Islands,GR,Greece,2021,913093.06,0.3495
+MH,Marshall Islands,HR,"Croatia, Republic of",2021,608927121.71,233.0861
+MH,Marshall Islands,IN,India,2021,19501362.67,7.4648
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2021,43866350.0,16.7912
+MH,Marshall Islands,KR,"Korea, Republic of",2021,1098724197.13,420.5715
+MH,Marshall Islands,MT,Malta,2021,4371355211.3,1673.2746
+MH,Marshall Islands,NL,"Netherlands, The",2021,826798000.0,316.4831
+MH,Marshall Islands,RU,Russian Federation,2021,32373708.64,12.3921
+MH,Marshall Islands,TR,"Türkiye, Republic of",2021,31000000.0,11.8662
+MH,Marshall Islands,US,United States,2021,1914000000.0,732.6441
+MH,Marshall Islands,BE,Belgium,2022,-93860800.0,-36.2784
+MH,Marshall Islands,BG,Bulgaria,2022,336096417.08,129.9056
+MH,Marshall Islands,BR,Brazil,2022,45006795.89,17.3957
+MH,Marshall Islands,CA,Canada,2022,471219583.92,182.1325
+MH,Marshall Islands,CN,"China, People's Republic of",2022,189309600.0,73.1706
+MH,Marshall Islands,CY,Cyprus,2022,148777912.53,57.5046
+MH,Marshall Islands,DE,Germany,2022,357311000.0,138.1053
+MH,Marshall Islands,ES,Spain,2022,15999000.0,6.1838
+MH,Marshall Islands,FR,France,2022,-912093.04,-0.3525
+MH,Marshall Islands,GB,United Kingdom,2022,30170000.0,11.6611
+MH,Marshall Islands,GR,Greece,2022,919275.88,0.3553
+MH,Marshall Islands,HR,"Croatia, Republic of",2022,563814478.86,217.9216
+MH,Marshall Islands,IN,India,2022,21380374.99,8.2638
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2022,25786710.0,9.9669
+MH,Marshall Islands,KR,"Korea, Republic of",2022,1666013552.39,643.9359
+MH,Marshall Islands,MT,Malta,2022,4275462793.54,1652.5219
+MH,Marshall Islands,MU,Mauritius,2022,56000000.0,21.6447
+MH,Marshall Islands,NL,"Netherlands, The",2022,744486800.0,287.7538
+MH,Marshall Islands,TR,"Türkiye, Republic of",2022,-39000000.0,-15.074
+MH,Marshall Islands,US,United States,2022,1973000000.0,762.5901
+MH,Marshall Islands,BE,Belgium,2023,-97240000.0,-36.8667
+MH,Marshall Islands,BG,Bulgaria,2023,384621468.93,145.8218
+MH,Marshall Islands,BR,Brazil,2023,49689490.05,18.8388
+MH,Marshall Islands,CA,Canada,2023,2863931211.34,1085.8041
+MH,Marshall Islands,CN,"China, People's Republic of",2023,137270400.0,52.0434
+MH,Marshall Islands,CY,Cyprus,2023,83837298.07,31.7853
+MH,Marshall Islands,DE,Germany,2023,364650000.0,138.25
+MH,Marshall Islands,ES,Spain,2023,15470000.0,5.8652
+MH,Marshall Islands,FR,France,2023,461927.44,0.1751
+MH,Marshall Islands,GB,United Kingdom,2023,28018100.0,10.6225
+MH,Marshall Islands,GR,Greece,2023,1239424.35,0.4699
+MH,Marshall Islands,IN,India,2023,27792349.04,10.5369
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2023,21281000.0,8.0683
+MH,Marshall Islands,KR,"Korea, Republic of",2023,1368529199.88,518.8514
+MH,Marshall Islands,MT,Malta,2023,4578748057.0,1735.9437
+MH,Marshall Islands,MU,Mauritius,2023,-15000000.0,-5.687
+MH,Marshall Islands,NL,"Netherlands, The",2023,723775000.0,274.4053
+MH,Marshall Islands,TR,"Türkiye, Republic of",2023,-36000000.0,-13.6487
+MH,Marshall Islands,US,United States,2023,3595000000.0,1362.9747
+MH,Marshall Islands,BG,Bulgaria,2024,354467226.18,122.1844
+MH,Marshall Islands,BR,Brazil,2024,46936456.97,16.1789
+MH,Marshall Islands,CA,Canada,2024,2504523312.46,863.3058
+MH,Marshall Islands,CN,"China, People's Republic of",2024,137460200.0,47.3823
+MH,Marshall Islands,CY,Cyprus,2024,111830668.96,38.5479
+MH,Marshall Islands,DE,Germany,2024,435299100.0,150.047
+MH,Marshall Islands,ES,Spain,2024,15583500.0,5.3716
+MH,Marshall Islands,GB,United Kingdom,2024,16309150.0,5.6217
+MH,Marshall Islands,GR,Greece,2024,1189477.13,0.41
+MH,Marshall Islands,HR,"Croatia, Republic of",2024,566028967.95,195.1094
+MH,Marshall Islands,IN,India,2024,27515906.9,9.4847
+MH,Marshall Islands,KZ,"Kazakhstan, Republic of",2024,21281000.0,7.3355
+MH,Marshall Islands,KR,"Korea, Republic of",2024,1494016978.6,514.9856
+MH,Marshall Islands,MT,Malta,2024,4478612086.86,1543.7715
+MH,Marshall Islands,MU,Mauritius,2024,369000000.0,127.1938
+MH,Marshall Islands,NL,"Netherlands, The",2024,663857100.0,228.8306
+MH,Marshall Islands,TR,"Türkiye, Republic of",2024,128000000.0,44.1214
+MH,Marshall Islands,US,United States,2024,3716000000.0,1280.9001
+NR,Nauru,IT,Italy,2010,213961.7,0.4499
+NR,Nauru,IT,Italy,2011,207188.33,0.3184
+NR,Nauru,IT,Italy,2012,211271.56,0.2091
+NR,Nauru,IT,Italy,2013,220831.15,0.234
+NR,Nauru,IT,Italy,2015,6902.36,0.0081
+NR,Nauru,IT,Italy,2016,6682.99,0.0069
+NR,Nauru,GR,Greece,2017,97694.91,0.0893
+NR,Nauru,IT,Italy,2017,7195.8,0.0066
+NR,Nauru,GR,Greece,2018,97143.32,0.0742
+NR,Nauru,IN,India,2018,2091921.32,1.5969
+NR,Nauru,KR,"Korea, Republic of",2018,5823200.0,4.4453
+NR,Nauru,GR,Greece,2019,98161.89,0.0784
+NR,Nauru,KR,"Korea, Republic of",2019,-24200.0,-0.0193
+NR,Nauru,GR,Greece,2020,110439.0,0.0886
+NR,Nauru,KR,"Korea, Republic of",2020,-3288200.0,-2.6372
+NR,Nauru,RS,"Serbia, Republic of",2020,1601771.87,1.2846
+NR,Nauru,GR,Greece,2021,114006.38,0.065
+NR,Nauru,KR,"Korea, Republic of",2021,-9938587.64,-5.6666
+NR,Nauru,RS,"Serbia, Republic of",2021,1509532.88,0.8607
+NR,Nauru,BR,Brazil,2022,5839028.95,3.8321
+NR,Nauru,GR,Greece,2022,114814.16,0.0754
+NR,Nauru,KR,"Korea, Republic of",2022,10101034.48,6.6291
+NR,Nauru,GR,Greece,2023,116312.3,0.0768
+NR,Nauru,KR,"Korea, Republic of",2023,-12022200.0,-7.9388
+NR,Nauru,GR,Greece,2024,112389.24,0.0691
+NR,Nauru,KR,"Korea, Republic of",2024,-6987871.87,-4.2979
+NU,Niue,BR,Brazil,2010,2682821.0,13.328
+NU,Niue,GR,Greece,2010,12025800.0,59.7429
+NU,Niue,PL,"Poland, Republic of",2010,2462804.9,12.235
+NU,Niue,BR,Brazil,2011,2682821.0,13.328
+NU,Niue,GR,Greece,2011,11645100.0,57.8517
+NU,Niue,BR,Brazil,2012,2682821.0,13.328
+NU,Niue,CL,Chile,2012,188696.0,0.9374
+NU,Niue,GR,Greece,2012,11861406.0,58.9262
+NU,Niue,BR,Brazil,2013,2682821.0,13.328
+NU,Niue,CL,Chile,2013,754097.0,3.7463
+NU,Niue,GR,Greece,2013,12404921.75,61.6264
+NU,Niue,BR,Brazil,2014,2682821.0,13.328
+NU,Niue,CL,Chile,2014,2035972.0,10.1145
+NU,Niue,BR,Brazil,2015,6915248.56,34.3542
+NU,Niue,NL,"Netherlands, The",2015,8709600.0,43.2684
+NU,Niue,BR,Brazil,2016,6915252.57,32.8573
+NU,Niue,MU,Mauritius,2016,5700000.0,27.0831
+NU,Niue,NL,"Netherlands, The",2016,6324600.0,30.0508
+NU,Niue,BR,Brazil,2017,16848537.03,72.3944
+NU,Niue,GR,Greece,2017,12741.36,0.0547
+NU,Niue,MU,Mauritius,2017,21700000.0,93.2401
+NU,Niue,NL,"Netherlands, The",2017,2398600.0,10.3063
+NU,Niue,CL,Chile,2018,231137.0,0.8573
+NU,Niue,GR,Greece,2018,12669.42,0.047
+NU,Niue,MU,Mauritius,2018,21000000.0,77.8924
+NU,Niue,GR,Greece,2019,12802.27,0.0492
+NU,Niue,MU,Mauritius,2019,25000000.0,96.1644
+NU,Niue,NL,"Netherlands, The",2019,4493600.0,17.285
+NU,Niue,GR,Greece,2020,12271.0,0.0474
+NU,Niue,MU,Mauritius,2020,28000000.0,108.1574
+NU,Niue,GR,Greece,2021,14868.77,0.0583
+NU,Niue,MU,Mauritius,2021,3000000.0,11.7597
+NU,Niue,GR,Greece,2022,14974.0,0.0661
+NU,Niue,MU,Mauritius,2022,-25000000.0,-110.3918
+NU,Niue,GR,Greece,2023,15169.44,0.0591
+NU,Niue,MU,Mauritius,2023,3000000.0,11.6827
+NU,Niue,GR,Greece,2024,14657.84,0.0491
+NU,Niue,MU,Mauritius,2024,3000000.0,10.05
+PG,Papua New Guinea,GB,United Kingdom,2010,259873000.0,1.8236
+PG,Papua New Guinea,IT,Italy,2010,3276147.27,0.023
+PG,Papua New Guinea,KR,"Korea, Republic of",2010,29743243.0,0.2087
+PG,Papua New Guinea,NL,"Netherlands, The",2010,16873533.6,0.1184
+PG,Papua New Guinea,GB,United Kingdom,2011,437546300.0,2.4328
+PG,Papua New Guinea,IT,Italy,2011,3171086.24,0.0176
+PG,Papua New Guinea,KR,"Korea, Republic of",2011,106885392.0,0.5943
+PG,Papua New Guinea,NL,"Netherlands, The",2011,18841771.8,0.1048
+PG,Papua New Guinea,TH,Thailand,2011,285168.0,0.0016
+PG,Papua New Guinea,CA,Canada,2012,504741511.71,2.3702
+PG,Papua New Guinea,IT,Italy,2012,20220268.11,0.095
+PG,Papua New Guinea,KR,"Korea, Republic of",2012,29123164.0,0.1368
+PG,Papua New Guinea,MU,Mauritius,2012,50000.0,0.0002
+PG,Papua New Guinea,PK,Pakistan,2012,3088.45,0.0
+PG,Papua New Guinea,AU,Australia,2013,14535054000.0,68.3638
+PG,Papua New Guinea,CA,Canada,2013,323430283.94,1.5212
+PG,Papua New Guinea,ES,Spain,2013,-1379100.0,-0.0065
+PG,Papua New Guinea,FI,Finland,2013,6895500.0,0.0324
+PG,Papua New Guinea,IT,Italy,2013,21135053.65,0.0994
+PG,Papua New Guinea,KR,"Korea, Republic of",2013,33641831.0,0.1582
+PG,Papua New Guinea,LU,Luxembourg,2013,126245108.82,0.5938
+PG,Papua New Guinea,PK,Pakistan,2013,-2838.81,-0.0
+PG,Papua New Guinea,TH,Thailand,2013,286466.0,0.0013
+PG,Papua New Guinea,CA,Canada,2014,323266614.95,1.3927
+PG,Papua New Guinea,ES,Spain,2014,1214100.0,0.0052
+PG,Papua New Guinea,FR,France,2014,-24729446.89,-0.1065
+PG,Papua New Guinea,GB,United Kingdom,2014,265336000.0,1.1432
+PG,Papua New Guinea,IT,Italy,2014,5204.85,0.0
+PG,Papua New Guinea,KR,"Korea, Republic of",2014,88484641.0,0.3812
+PG,Papua New Guinea,LU,Luxembourg,2014,152209116.4,0.6558
+PG,Papua New Guinea,TH,Thailand,2014,285168.0,0.0012
+PG,Papua New Guinea,CA,Canada,2015,577804465.32,2.6598
+PG,Papua New Guinea,ES,Spain,2015,2177400.0,0.01
+PG,Papua New Guinea,IT,Italy,2015,12463457.2,0.0574
+PG,Papua New Guinea,KR,"Korea, Republic of",2015,87654205.0,0.4035
+PG,Papua New Guinea,LU,Luxembourg,2015,200349872.64,0.9223
+PG,Papua New Guinea,NL,"Netherlands, The",2015,229715700.0,1.0575
+PG,Papua New Guinea,AU,Australia,2016,11592795600.0,55.845
+PG,Papua New Guinea,CA,Canada,2016,475161987.04,2.289
+PG,Papua New Guinea,ES,Spain,2016,2108200.0,0.0102
+PG,Papua New Guinea,GB,United Kingdom,2016,237428600.0,1.1437
+PG,Papua New Guinea,IT,Italy,2016,12067355.77,0.0581
+PG,Papua New Guinea,KR,"Korea, Republic of",2016,80935774.0,0.3899
+PG,Papua New Guinea,LU,Luxembourg,2016,49390129.57,0.2379
+PG,Papua New Guinea,NL,"Netherlands, The",2016,238226600.0,1.1476
+PG,Papua New Guinea,AU,Australia,2017,12523680000.0,55.0668
+PG,Papua New Guinea,BR,Brazil,2017,13438.07,0.0001
+PG,Papua New Guinea,CA,Canada,2017,318852132.32,1.402
+PG,Papua New Guinea,ES,Spain,2017,1199300.0,0.0053
+PG,Papua New Guinea,GB,United Kingdom,2017,341840950.0,1.5031
+PG,Papua New Guinea,IT,Italy,2017,143390706.6,0.6305
+PG,Papua New Guinea,KR,"Korea, Republic of",2017,79439829.0,0.3493
+PG,Papua New Guinea,LU,Luxembourg,2017,96008777.79,0.4222
+PG,Papua New Guinea,MU,Mauritius,2017,86500000.0,0.3803
+PG,Papua New Guinea,AU,Australia,2018,10688635200.0,44.3332
+PG,Papua New Guinea,CA,Canada,2018,690565207.83,2.8643
+PG,Papua New Guinea,CN,"China, People's Republic of",2018,713305900.0,2.9586
+PG,Papua New Guinea,ES,Spain,2018,2290000.0,0.0095
+PG,Papua New Guinea,GB,United Kingdom,2018,302152900.0,1.2532
+PG,Papua New Guinea,IT,Italy,2018,136898490.0,0.5678
+PG,Papua New Guinea,KR,"Korea, Republic of",2018,54352401.69,0.2254
+PG,Papua New Guinea,LU,Luxembourg,2018,33.21,0.0
+PG,Papua New Guinea,MU,Mauritius,2018,11200000.0,0.0465
+PG,Papua New Guinea,CA,Canada,2019,147025040.2,0.594
+PG,Papua New Guinea,CN,"China, People's Republic of",2019,721740300.0,2.916
+PG,Papua New Guinea,GB,United Kingdom,2019,254557100.0,1.0285
+PG,Papua New Guinea,IT,Italy,2019,254960123.6,1.0301
+PG,Papua New Guinea,KR,"Korea, Republic of",2019,53135523.8,0.2147
+PG,Papua New Guinea,LU,Luxembourg,2019,32.58,0.0
+PG,Papua New Guinea,MU,Mauritius,2019,9000000.0,0.0364
+PG,Papua New Guinea,CA,Canada,2020,216241443.68,0.9067
+PG,Papua New Guinea,CN,"China, People's Republic of",2020,1784998600.0,7.4848
+PG,Papua New Guinea,DE,Germany,2020,6135500.0,0.0257
+PG,Papua New Guinea,ES,Spain,2020,-1227100.0,-0.0051
+PG,Papua New Guinea,GB,United Kingdom,2020,221430000.0,0.9285
+PG,Papua New Guinea,IT,Italy,2020,325483366.6,1.3648
+PG,Papua New Guinea,KR,"Korea, Republic of",2020,44598667.0,0.187
+PG,Papua New Guinea,LU,Luxembourg,2020,36.81,0.0
+PG,Papua New Guinea,MU,Mauritius,2020,9000000.0,0.0377
+PG,Papua New Guinea,AU,Australia,2021,17519612000.0,67.1007
+PG,Papua New Guinea,CA,Canada,2021,66070734.55,0.2531
+PG,Papua New Guinea,CN,"China, People's Republic of",2021,1556656600.0,5.9621
+PG,Papua New Guinea,GB,United Kingdom,2021,201510000.0,0.7718
+PG,Papua New Guinea,IT,Italy,2021,300755134.4,1.1519
+PG,Papua New Guinea,KR,"Korea, Republic of",2021,39710214.71,0.1521
+PG,Papua New Guinea,LU,Luxembourg,2021,32.85,0.0
+PG,Papua New Guinea,MU,Mauritius,2021,9000000.0,0.0345
+PG,Papua New Guinea,AU,Australia,2022,17061482500.0,53.9013
+PG,Papua New Guinea,CA,Canada,2022,69102403.88,0.2183
+PG,Papua New Guinea,CN,"China, People's Republic of",2022,1677041500.0,5.2982
+PG,Papua New Guinea,ES,Spain,2022,3199800.0,0.0101
+PG,Papua New Guinea,GB,United Kingdom,2022,167745200.0,0.5299
+PG,Papua New Guinea,IT,Italy,2022,282911383.6,0.8938
+PG,Papua New Guinea,KR,"Korea, Republic of",2022,41786233.16,0.132
+PG,Papua New Guinea,LU,Luxembourg,2022,33.06,0.0
+PG,Papua New Guinea,MU,Mauritius,2022,9000000.0,0.0284
+PG,Papua New Guinea,NL,"Netherlands, The",2022,798883400.0,2.5239
+PG,Papua New Guinea,AU,Australia,2023,17625996000.0,57.1969
+PG,Papua New Guinea,CA,Canada,2023,199125056.57,0.6462
+PG,Papua New Guinea,CN,"China, People's Republic of",2023,1336314400.0,4.3364
+PG,Papua New Guinea,ES,Spain,2023,3315000.0,0.0108
+PG,Papua New Guinea,FI,Finland,2023,1105000.0,0.0036
+PG,Papua New Guinea,GB,United Kingdom,2023,348952700.0,1.1324
+PG,Papua New Guinea,IT,Italy,2023,293096830.0,0.9511
+PG,Papua New Guinea,KR,"Korea, Republic of",2023,54012043.0,0.1753
+PG,Papua New Guinea,MU,Mauritius,2023,9000000.0,0.0292
+PG,Papua New Guinea,NL,"Netherlands, The",2023,830960000.0,2.6965
+PG,Papua New Guinea,AU,Australia,2024,16312786300.0,51.2974
+PG,Papua New Guinea,CA,Canada,2024,183716075.16,0.5777
+PG,Papua New Guinea,CN,"China, People's Republic of",2024,1142636900.0,3.5931
+PG,Papua New Guinea,ES,Spain,2024,3116700.0,0.0098
+PG,Papua New Guinea,FI,Finland,2024,1038900.0,0.0033
+PG,Papua New Guinea,IT,Italy,2024,275564069.4,0.8665
+PG,Papua New Guinea,KR,"Korea, Republic of",2024,63957835.16,0.2011
+PG,Papua New Guinea,MU,Mauritius,2024,9000000.0,0.0283
+PG,Papua New Guinea,NL,"Netherlands, The",2024,804108600.0,2.5286
+PW,Palau,IT,Italy,2010,29396.4,0.0156
+PW,Palau,KR,"Korea, Republic of",2010,3975492.0,2.1141
+PW,Palau,IT,Italy,2011,28465.8,0.0143
+PW,Palau,KR,"Korea, Republic of",2011,2025559.0,1.0192
+PW,Palau,IT,Italy,2012,29026.8,0.0135
+PW,Palau,KR,"Korea, Republic of",2012,4577849.0,2.1231
+PW,Palau,IT,Italy,2013,30340.2,0.0135
+PW,Palau,KR,"Korea, Republic of",2013,1492542.0,0.666
+PW,Palau,KY,Cayman Islands,2014,11112218.0,4.5247
+PW,Palau,JP,Japan,2014,154512077.88,62.9144
+PW,Palau,KR,"Korea, Republic of",2014,6566402.0,2.6737
+PW,Palau,TW,Taiwan Province of China,2014,39126872.17,15.9317
+PW,Palau,US,United States,2014,28000005.52,11.4011
+PW,Palau,KY,Cayman Islands,2015,18036552.0,6.2833
+PW,Palau,IT,Italy,2015,2052.2,0.0007
+PW,Palau,JP,Japan,2015,173189565.26,60.3327
+PW,Palau,KR,"Korea, Republic of",2015,5642201.0,1.9655
+PW,Palau,TW,Taiwan Province of China,2015,40875958.51,14.2396
+PW,Palau,US,United States,2015,33356515.96,11.6202
+PW,Palau,KY,Cayman Islands,2016,17995546.0,5.8958
+PW,Palau,IT,Italy,2016,1986.98,0.0007
+PW,Palau,JP,Japan,2016,187415045.75,61.4019
+PW,Palau,KR,"Korea, Republic of",2016,5671736.0,1.8582
+PW,Palau,TW,Taiwan Province of China,2016,41036868.35,13.4447
+PW,Palau,US,United States,2016,39313841.55,12.8802
+PW,Palau,KY,Cayman Islands,2017,26260961.0,8.9889
+PW,Palau,IT,Italy,2017,2398.6,0.0008
+PW,Palau,JP,Japan,2017,209697903.34,71.7778
+PW,Palau,KR,"Korea, Republic of",2017,5873193.0,2.0103
+PW,Palau,TW,Taiwan Province of China,2017,32752179.67,11.2108
+PW,Palau,US,United States,2017,46615870.64,15.9562
+PW,Palau,CN,"China, People's Republic of",2018,11820700.0,4.1044
+PW,Palau,KY,Cayman Islands,2018,25030630.0,8.6912
+PW,Palau,JP,Japan,2018,222768817.3,77.3507
+PW,Palau,KR,"Korea, Republic of",2018,3252193.0,1.1292
+PW,Palau,TW,Taiwan Province of China,2018,30225293.61,10.495
+PW,Palau,US,United States,2018,52160868.48,18.1115
+PW,Palau,CN,"China, People's Republic of",2019,18527000.0,6.5689
+PW,Palau,KY,Cayman Islands,2019,35510246.0,12.5904
+PW,Palau,JP,Japan,2019,223543862.59,79.2593
+PW,Palau,KR,"Korea, Republic of",2019,6238193.0,2.2118
+PW,Palau,TW,Taiwan Province of China,2019,28561415.49,10.1267
+PW,Palau,US,United States,2019,57588263.0,20.4184
+PW,Palau,CN,"China, People's Republic of",2020,18527000.0,7.0798
+PW,Palau,KY,Cayman Islands,2020,33326789.47,12.7353
+PW,Palau,JP,Japan,2020,231236574.08,88.3633
+PW,Palau,KR,"Korea, Republic of",2020,6238193.0,2.3838
+PW,Palau,TW,Taiwan Province of China,2020,22547388.58,8.6161
+PW,Palau,US,United States,2020,61891876.81,23.651
+PW,Palau,CN,"China, People's Republic of",2021,18498400.0,7.9961
+PW,Palau,KY,Cayman Islands,2021,33779061.13,14.6013
+PW,Palau,GB,United Kingdom,2021,1038448200.0,448.8773
+PW,Palau,JP,Japan,2021,225813758.13,97.6097
+PW,Palau,KR,"Korea, Republic of",2021,5918169.27,2.5582
+PW,Palau,TW,Taiwan Province of China,2021,18297705.83,7.9093
+PW,Palau,US,United States,2021,67049572.44,28.9827
+PW,Palau,VI,United States Virgin Islands,2021,2254698.92,0.9746
+PW,Palau,CN,"China, People's Republic of",2022,18372500.0,7.5351
+PW,Palau,GB,United Kingdom,2022,1008884800.0,413.7711
+PW,Palau,KR,"Korea, Republic of",2022,-21111824.13,-8.6585
+PW,Palau,CN,"China, People's Republic of",2023,18092100.0,6.5377
+PW,Palau,GB,United Kingdom,2023,883843700.0,319.3849
+PW,Palau,KR,"Korea, Republic of",2023,4295430.0,1.5522
+PW,Palau,CN,"China, People's Republic of",2024,16764800.0,6.0581
+PW,Palau,KR,"Korea, Republic of",2024,4281804.03,1.5473
+SB,Solomon Islands,IT,Italy,2010,14698.2,0.0016
+SB,Solomon Islands,KR,"Korea, Republic of",2010,45276000.0,5.0411
+SB,Solomon Islands,IT,Italy,2011,14232.9,0.0013
+SB,Solomon Islands,KR,"Korea, Republic of",2011,45023000.0,4.2319
+SB,Solomon Islands,IT,Italy,2012,14513.4,0.0012
+SB,Solomon Islands,KR,"Korea, Republic of",2012,41327000.0,3.4869
+SB,Solomon Islands,MU,Mauritius,2012,210000.0,0.0177
+SB,Solomon Islands,CA,Canada,2013,-2108602.86,-0.164
+SB,Solomon Islands,IT,Italy,2013,15170.1,0.0012
+SB,Solomon Islands,KR,"Korea, Republic of",2013,43413000.0,3.3761
+SB,Solomon Islands,MU,Mauritius,2013,260000.0,0.0202
+SB,Solomon Islands,CA,Canada,2014,-2943427.29,-0.2204
+SB,Solomon Islands,GB,United Kingdom,2014,12869500.46,0.9636
+SB,Solomon Islands,KR,"Korea, Republic of",2014,12616000.0,0.9446
+SB,Solomon Islands,MU,Mauritius,2014,260000.0,0.0195
+SB,Solomon Islands,US,United States,2014,18900595.74,1.4152
+SB,Solomon Islands,CA,Canada,2015,-3795758.67,-0.2902
+SB,Solomon Islands,GB,United Kingdom,2015,11900627.14,0.9099
+SB,Solomon Islands,KR,"Korea, Republic of",2015,12761000.0,0.9757
+SB,Solomon Islands,NL,"Netherlands, The",2015,15241800.0,1.1654
+SB,Solomon Islands,US,United States,2015,12262877.49,0.9376
+SB,Solomon Islands,GB,United Kingdom,2016,10834323.37,0.7854
+SB,Solomon Islands,KR,"Korea, Republic of",2016,12195714.0,0.8841
+SB,Solomon Islands,US,United States,2016,29060792.09,2.1066
+SB,Solomon Islands,BR,Brazil,2017,6833.18,0.0005
+SB,Solomon Islands,ES,Spain,2017,1199300.0,0.0816
+SB,Solomon Islands,GB,United Kingdom,2017,11533374.64,0.7847
+SB,Solomon Islands,KR,"Korea, Republic of",2017,17497150.0,1.1905
+SB,Solomon Islands,US,United States,2017,50883972.79,3.462
+SB,Solomon Islands,VU,Vanuatu,2017,3690072.0,0.2511
+SB,Solomon Islands,AU,Australia,2018,47288600.0,2.9272
+SB,Solomon Islands,GB,United Kingdom,2018,28540180.29,1.7667
+SB,Solomon Islands,KR,"Korea, Republic of",2018,24190000.0,1.4974
+SB,Solomon Islands,US,United States,2018,43395350.4,2.6862
+SB,Solomon Islands,VU,Vanuatu,2018,6483822.0,0.4014
+SB,Solomon Islands,CN,"China, People's Republic of",2019,100000.0,0.0062
+SB,Solomon Islands,GB,United Kingdom,2019,37733806.7,2.3305
+SB,Solomon Islands,KR,"Korea, Republic of",2019,31313500.0,1.9339
+SB,Solomon Islands,US,United States,2019,42972806.32,2.654
+SB,Solomon Islands,VU,Vanuatu,2019,8319058.0,0.5138
+SB,Solomon Islands,CN,"China, People's Republic of",2020,6857600.0,0.4464
+SB,Solomon Islands,GB,United Kingdom,2020,36801467.72,2.3957
+SB,Solomon Islands,KR,"Korea, Republic of",2020,29230500.0,1.9028
+SB,Solomon Islands,US,United States,2020,59863426.46,3.897
+SB,Solomon Islands,VU,Vanuatu,2020,9895771.6,0.6442
+SB,Solomon Islands,CN,"China, People's Republic of",2021,3383600.0,0.2171
+SB,Solomon Islands,GB,United Kingdom,2021,18816139.67,1.2075
+SB,Solomon Islands,KR,"Korea, Republic of",2021,30113412.82,1.9324
+SB,Solomon Islands,US,United States,2021,66611214.19,4.2746
+SB,Solomon Islands,VU,Vanuatu,2021,11397691.5,0.7314
+SB,Solomon Islands,CA,Canada,2022,471219583.92,32.1285
+SB,Solomon Islands,CN,"China, People's Republic of",2022,1847700.0,0.126
+SB,Solomon Islands,GB,United Kingdom,2022,23240564.54,1.5846
+SB,Solomon Islands,KR,"Korea, Republic of",2022,35009668.75,2.387
+SB,Solomon Islands,RS,"Serbia, Republic of",2022,890668.33,0.0607
+SB,Solomon Islands,US,United States,2022,67657224.05,4.613
+SB,Solomon Islands,AU,Australia,2023,32832000.0,2.1799
+SB,Solomon Islands,CA,Canada,2023,2863931211.34,190.1523
+SB,Solomon Islands,CN,"China, People's Republic of",2023,46992400.0,3.1201
+SB,Solomon Islands,GB,United Kingdom,2023,29163299.62,1.9363
+SB,Solomon Islands,IT,Italy,2023,1105.0,0.0001
+SB,Solomon Islands,KR,"Korea, Republic of",2023,23245000.0,1.5434
+SB,Solomon Islands,RS,"Serbia, Republic of",2023,1051505.18,0.0698
+SB,Solomon Islands,US,United States,2023,71262031.45,4.7315
+SB,Solomon Islands,VU,Vanuatu,2023,17529575.7,1.1639
+SB,Solomon Islands,AU,Australia,2024,38545400.0,2.4335
+SB,Solomon Islands,CA,Canada,2024,2504523312.46,158.1174
+SB,Solomon Islands,CN,"China, People's Republic of",2024,47713500.0,3.0123
+SB,Solomon Islands,GB,United Kingdom,2024,33554763.48,2.1184
+SB,Solomon Islands,IE,Ireland,2024,-31167.0,-0.002
+SB,Solomon Islands,IT,Italy,2024,87267.6,0.0055
+SB,Solomon Islands,KR,"Korea, Republic of",2024,39793684.72,2.5123
+SB,Solomon Islands,RS,"Serbia, Republic of",2024,1005520.6,0.0635
+SB,Solomon Islands,US,United States,2024,59535162.69,3.7586
+SB,Solomon Islands,VU,Vanuatu,2024,19620236.9,1.2387
+TO,Tonga,IT,Italy,2010,3141403.53,0.8562
+TO,Tonga,KR,"Korea, Republic of",2010,614600.0,0.1675
+TO,Tonga,IT,Italy,2011,3041903.26,0.7345
+TO,Tonga,KR,"Korea, Republic of",2011,614600.0,0.1484
+TO,Tonga,IT,Italy,2012,3101852.67,0.6584
+TO,Tonga,KR,"Korea, Republic of",2012,614600.0,0.1305
+TO,Tonga,MU,Mauritius,2012,380000.0,0.0807
+TO,Tonga,IT,Italy,2013,3242204.8,0.7176
+TO,Tonga,KR,"Korea, Republic of",2013,614600.0,0.136
+TO,Tonga,MU,Mauritius,2013,480000.0,0.1062
+TO,Tonga,IT,Italy,2014,459423.94,0.1042
+TO,Tonga,KR,"Korea, Republic of",2014,704600.0,0.1598
+TO,Tonga,MU,Mauritius,2014,480000.0,0.1088
+TO,Tonga,IT,Italy,2015,411971.7,0.0942
+TO,Tonga,KR,"Korea, Republic of",2015,804600.0,0.1839
+TO,Tonga,IT,Italy,2016,660970.24,0.1571
+TO,Tonga,KR,"Korea, Republic of",2016,804600.0,0.1912
+TO,Tonga,BR,Brazil,2017,2212.78,0.0005
+TO,Tonga,IT,Italy,2017,791538.0,0.1721
+TO,Tonga,KR,"Korea, Republic of",2017,804600.0,0.1749
+TO,Tonga,CN,"China, People's Republic of",2018,8919700.0,1.8073
+TO,Tonga,IT,Italy,2018,717915.0,0.1455
+TO,Tonga,KR,"Korea, Republic of",2018,804600.0,0.163
+TO,Tonga,CN,"China, People's Republic of",2019,10008900.0,1.9779
+TO,Tonga,IT,Italy,2019,748184.4,0.1479
+TO,Tonga,KR,"Korea, Republic of",2019,804600.0,0.159
+TO,Tonga,CN,"China, People's Republic of",2020,11926500.0,2.3544
+TO,Tonga,IT,Italy,2020,769391.7,0.1519
+TO,Tonga,KR,"Korea, Republic of",2020,804600.0,0.1588
+TO,Tonga,CN,"China, People's Republic of",2021,29408500.0,5.663
+TO,Tonga,IT,Italy,2021,710140.2,0.1367
+TO,Tonga,KR,"Korea, Republic of",2021,794494.14,0.153
+TO,Tonga,CN,"China, People's Republic of",2022,10547800.0,1.8953
+TO,Tonga,IT,Italy,2022,668758.2,0.1202
+TO,Tonga,KR,"Korea, Republic of",2022,840144.96,0.151
+TO,Tonga,NL,"Netherlands, The",2022,11732600.0,2.1082
+TO,Tonga,CN,"China, People's Republic of",2023,30297500.0,5.1253
+TO,Tonga,IT,Italy,2023,678470.0,0.1148
+TO,Tonga,KR,"Korea, Republic of",2023,804600.0,0.1361
+TO,Tonga,NL,"Netherlands, The",2023,12155000.0,2.0562
+TO,Tonga,CN,"China, People's Republic of",2024,11999800.0,2.0299
+TO,Tonga,GB,United Kingdom,2024,26345550.0,4.4567
+TO,Tonga,IT,Italy,2024,659701.5,0.1116
+TO,Tonga,KR,"Korea, Republic of",2024,-893344.07,-0.1511
+TO,Tonga,NL,"Netherlands, The",2024,11427900.0,1.9332
+TV,Tuvalu,IT,Italy,2010,228487.53,0.7117
+TV,Tuvalu,US,United States,2010,1000000.0,3.1147
+TV,Tuvalu,IT,Italy,2011,221254.31,0.5645
+TV,Tuvalu,US,United States,2011,1000000.0,2.5512
+TV,Tuvalu,IT,Italy,2012,225614.76,0.5734
+TV,Tuvalu,US,United States,2012,1000000.0,2.5416
+TV,Tuvalu,IT,Italy,2013,235823.34,0.6107
+TV,Tuvalu,US,United States,2013,1000000.0,2.5896
+TV,Tuvalu,MU,Mauritius,2016,800000.0,1.9217
+TV,Tuvalu,MU,Mauritius,2017,800000.0,1.7669
+TV,Tuvalu,MU,Mauritius,2018,1000000.0,2.0827
+TV,Tuvalu,MU,Mauritius,2024,36000000.0,57.8032
+VU,Vanuatu,IT,Italy,2010,137627.26,0.0205
+VU,Vanuatu,KR,"Korea, Republic of",2010,1876759.0,0.2798
+VU,Vanuatu,IT,Italy,2011,133416.62,0.0173
+VU,Vanuatu,KR,"Korea, Republic of",2011,1876759.0,0.2437
+VU,Vanuatu,AU,Australia,2012,127981500.0,17.1135
+VU,Vanuatu,IT,Italy,2012,136045.97,0.0182
+VU,Vanuatu,KR,"Korea, Republic of",2012,17936759.0,2.3985
+VU,Vanuatu,US,United States,2012,130000000.0,17.3834
+VU,Vanuatu,AU,Australia,2013,120564000.0,15.8992
+VU,Vanuatu,CA,Canada,2013,364328.69,0.048
+VU,Vanuatu,DE,Germany,2013,413730.0,0.0546
+VU,Vanuatu,FR,France,2013,38937790.43,5.1348
+VU,Vanuatu,IT,Italy,2013,142201.76,0.0188
+VU,Vanuatu,KR,"Korea, Republic of",2013,14667759.0,1.9343
+VU,Vanuatu,CA,Canada,2014,117662.27,0.0152
+VU,Vanuatu,DE,Germany,2014,364230.0,0.0471
+VU,Vanuatu,FR,France,2014,48621364.36,6.2841
+VU,Vanuatu,IT,Italy,2014,319918.99,0.0413
+VU,Vanuatu,KR,"Korea, Republic of",2014,1065000.0,0.1376
+VU,Vanuatu,AU,Australia,2015,73790600.0,9.7132
+VU,Vanuatu,CA,Canada,2015,151734.1,0.02
+VU,Vanuatu,DE,Germany,2015,326610.0,0.043
+VU,Vanuatu,IT,Italy,2015,278644.06,0.0367
+VU,Vanuatu,KR,"Korea, Republic of",2015,2108759.0,0.2776
+VU,Vanuatu,AU,Australia,2016,83214000.0,10.3458
+VU,Vanuatu,DE,Germany,2016,316230.0,0.0393
+VU,Vanuatu,FR,France,2016,40229071.89,5.0016
+VU,Vanuatu,IT,Italy,2016,269789.52,0.0335
+VU,Vanuatu,KR,"Korea, Republic of",2016,1869759.0,0.2325
+VU,Vanuatu,AU,Australia,2017,86580000.0,9.8382
+VU,Vanuatu,BR,Brazil,2017,7141.09,0.0008
+VU,Vanuatu,DE,Germany,2017,359790.0,0.0409
+VU,Vanuatu,GB,United Kingdom,2017,2702300.0,0.3071
+VU,Vanuatu,IT,Italy,2017,322611.7,0.0367
+VU,Vanuatu,KR,"Korea, Republic of",2017,3515971.0,0.3995
+VU,Vanuatu,AU,Australia,2018,70580000.0,7.716
+VU,Vanuatu,CN,"China, People's Republic of",2018,128027100.0,13.9962
+VU,Vanuatu,DE,Germany,2018,343500.0,0.0376
+VU,Vanuatu,IT,Italy,2018,204955.0,0.0224
+VU,Vanuatu,KR,"Korea, Republic of",2018,16332759.0,1.7855
+VU,Vanuatu,AU,Australia,2019,61652800.0,6.5831
+VU,Vanuatu,CN,"China, People's Republic of",2019,87555500.0,9.349
+VU,Vanuatu,DE,Germany,2019,337020.0,0.036
+VU,Vanuatu,IT,Italy,2019,213446.0,0.0228
+VU,Vanuatu,KR,"Korea, Republic of",2019,7405759.0,0.7908
+VU,Vanuatu,CN,"China, People's Republic of",2020,129174200.0,14.204
+VU,Vanuatu,IT,Italy,2020,219650.9,0.0242
+VU,Vanuatu,KR,"Korea, Republic of",2020,4292759.0,0.472
+VU,Vanuatu,TH,Thailand,2020,1161624.58,0.1277
+VU,Vanuatu,CN,"China, People's Republic of",2021,90416700.0,9.5136
+VU,Vanuatu,IT,Italy,2021,202735.4,0.0213
+VU,Vanuatu,KR,"Korea, Republic of",2021,-5207771.92,-0.548
+VU,Vanuatu,TH,Thailand,2021,1637040.11,0.1722
+VU,Vanuatu,CA,Canada,2022,471219583.92,44.664
+VU,Vanuatu,CN,"China, People's Republic of",2022,67793600.0,6.4257
+VU,Vanuatu,IT,Italy,2022,82128.2,0.0078
+VU,Vanuatu,KR,"Korea, Republic of",2022,18688362.17,1.7714
+VU,Vanuatu,TH,Thailand,2022,1582925.86,0.15
+VU,Vanuatu,CA,Canada,2023,2863931211.34,256.6566
+VU,Vanuatu,CN,"China, People's Republic of",2023,82454200.0,7.3893
+VU,Vanuatu,IT,Italy,2023,82875.0,0.0074
+VU,Vanuatu,KR,"Korea, Republic of",2023,8097759.0,0.7257
+VU,Vanuatu,TH,Thailand,2023,1598610.21,0.1433
+VU,Vanuatu,CA,Canada,2024,2504523312.46,224.0238
+VU,Vanuatu,CN,"China, People's Republic of",2024,84650200.0,7.5718
+VU,Vanuatu,DE,Germany,2024,1038900.0,0.0929
+VU,Vanuatu,IT,Italy,2024,81034.2,0.0072
+VU,Vanuatu,KR,"Korea, Republic of",2024,9032806.81,0.808
+VU,Vanuatu,TH,Thailand,2024,1609684.54,0.144
+WS,Samoa,AU,Australia,2010,64662668.0,9.5056
+WS,Samoa,BR,Brazil,2010,1192474.49,0.1753
+WS,Samoa,HK,"Hong Kong Special Administrative Region, People's Republic of China",2010,1556370184.58,228.7902
+WS,Samoa,IT,Italy,2010,1502244.23,0.2208
+WS,Samoa,KR,"Korea, Republic of",2010,7548079.0,1.1096
+WS,Samoa,PL,"Poland, Republic of",2010,1113322.76,0.1637
+WS,Samoa,US,United States,2010,1000000.0,0.147
+WS,Samoa,AU,Australia,2011,68530440.0,9.2099
+WS,Samoa,BR,Brazil,2011,1059228.59,0.1424
+WS,Samoa,HK,"Hong Kong Special Administrative Region, People's Republic of China",2011,1600798403.19,215.133
+WS,Samoa,IT,Italy,2011,1454687.78,0.1955
+WS,Samoa,KR,"Korea, Republic of",2011,7547090.0,1.0143
+WS,Samoa,US,United States,2011,1000000.0,0.1344
+WS,Samoa,AU,Australia,2012,70122080.0,9.0698
+WS,Samoa,BR,Brazil,2012,151768.13,0.0196
+WS,Samoa,IT,Italy,2012,1483356.56,0.1919
+WS,Samoa,KR,"Korea, Republic of",2012,7556772.0,0.9774
+WS,Samoa,MU,Mauritius,2012,570000.0,0.0737
+WS,Samoa,US,United States,2012,1000000.0,0.1293
+WS,Samoa,AS,American Samoa,2013,2901637.22,0.3637
+WS,Samoa,AU,Australia,2013,78899670.0,9.8904
+WS,Samoa,BR,Brazil,2013,291388.27,0.0365
+WS,Samoa,ES,Spain,2013,-11032800.0,-1.383
+WS,Samoa,IT,Italy,2013,1550475.24,0.1944
+WS,Samoa,KR,"Korea, Republic of",2013,2615700.0,0.3279
+WS,Samoa,MU,Mauritius,2013,7070000.0,0.8863
+WS,Samoa,US,United States,2013,1000000.0,0.1254
+WS,Samoa,AS,American Samoa,2014,3785284.4,0.4751
+WS,Samoa,AU,Australia,2014,70929098.2,8.903
+WS,Samoa,BR,Brazil,2014,14605636.14,1.8333
+WS,Samoa,ES,Spain,2014,-8498700.0,-1.0668
+WS,Samoa,KR,"Korea, Republic of",2014,7555772.0,0.9484
+WS,Samoa,MU,Mauritius,2014,8700000.0,1.092
+WS,Samoa,RU,Russian Federation,2014,-171233.17,-0.0215
+WS,Samoa,US,United States,2014,20000000.0,2.5104
+WS,Samoa,AS,American Samoa,2015,1893270.63,0.2297
+WS,Samoa,AU,Australia,2015,64717595.4,7.8526
+WS,Samoa,BR,Brazil,2015,13028274.51,1.5808
+WS,Samoa,ES,Spain,2015,-7620900.0,-0.9247
+WS,Samoa,KR,"Korea, Republic of",2015,7790272.0,0.9452
+WS,Samoa,LU,Luxembourg,2015,30090.58,0.0037
+WS,Samoa,MU,Mauritius,2015,2000000.0,0.2427
+WS,Samoa,RU,Russian Federation,2015,-166367.83,-0.0202
+WS,Samoa,US,United States,2015,20000000.0,2.4267
+WS,Samoa,BR,Brazil,2016,14385267.45,1.7046
+WS,Samoa,ES,Spain,2016,-7378700.0,-0.8743
+WS,Samoa,KR,"Korea, Republic of",2016,19788072.0,2.3448
+WS,Samoa,LU,Luxembourg,2016,45.33,0.0
+WS,Samoa,MU,Mauritius,2016,3000000.0,0.3555
+WS,Samoa,NL,"Netherlands, The",2016,-6324600.0,-0.7494
+WS,Samoa,RU,Russian Federation,2016,-169686.43,-0.0201
+WS,Samoa,US,United States,2016,20000000.0,2.3699
+WS,Samoa,BR,Brazil,2017,11920882.78,1.3472
+WS,Samoa,ES,Spain,2017,-8395100.0,-0.9488
+WS,Samoa,KR,"Korea, Republic of",2017,7788272.0,0.8802
+WS,Samoa,LU,Luxembourg,2017,-25.19,-0.0
+WS,Samoa,MU,Mauritius,2017,3000000.0,0.339
+WS,Samoa,NL,"Netherlands, The",2017,-5996500.0,-0.6777
+WS,Samoa,RU,Russian Federation,2017,-170736.29,-0.0193
+WS,Samoa,US,United States,2017,20000000.0,2.2603
+WS,Samoa,CN,"China, People's Republic of",2018,479028200.0,54.5312
+WS,Samoa,ES,Spain,2018,-8015000.0,-0.9124
+WS,Samoa,IT,Italy,2018,200375.0,0.0228
+WS,Samoa,KR,"Korea, Republic of",2018,8364872.0,0.9522
+WS,Samoa,LU,Luxembourg,2018,-24.05,-0.0
+WS,Samoa,MU,Mauritius,2018,3000000.0,0.3415
+WS,Samoa,NL,"Netherlands, The",2018,-1145000.0,-0.1303
+WS,Samoa,RU,Russian Federation,2018,-167176.52,-0.019
+WS,Samoa,US,United States,2018,20000000.0,2.2767
+WS,Samoa,AS,American Samoa,2019,16861203.0,1.8469
+WS,Samoa,AU,Australia,2019,36247208.4,3.9703
+WS,Samoa,BR,Brazil,2019,11607546.82,1.2714
+WS,Samoa,CN,"China, People's Republic of",2019,476789700.0,52.2251
+WS,Samoa,ES,Spain,2019,-7863800.0,-0.8614
+WS,Samoa,IT,Italy,2019,208952.4,0.0229
+WS,Samoa,KR,"Korea, Republic of",2019,4370287.0,0.4787
+WS,Samoa,LU,Luxembourg,2019,-23.59,-0.0
+WS,Samoa,MU,Mauritius,2019,3000000.0,0.3286
+WS,Samoa,NL,"Netherlands, The",2019,-1123400.0,-0.1231
+WS,Samoa,PG,Papua New Guinea,2019,29078627.4,3.1851
+WS,Samoa,US,United States,2019,5000000.0,0.5477
+WS,Samoa,AU,Australia,2020,38645372.79,4.4477
+WS,Samoa,BR,Brazil,2020,4209384.78,0.4845
+WS,Samoa,CN,"China, People's Republic of",2020,450298600.0,51.8249
+WS,Samoa,ES,Spain,2020,-8589700.0,-0.9886
+WS,Samoa,IT,Italy,2020,381628.1,0.0439
+WS,Samoa,KR,"Korea, Republic of",2020,20345515.0,2.3416
+WS,Samoa,MU,Mauritius,2020,5000000.0,0.5755
+WS,Samoa,US,United States,2020,5000000.0,0.5755
+WS,Samoa,AU,Australia,2021,40493184.1,4.71
+WS,Samoa,BR,Brazil,2021,4340421.46,0.5049
+WS,Samoa,CN,"China, People's Republic of",2021,492886700.0,57.3307
+WS,Samoa,ES,Spain,2021,-7928200.0,-0.9222
+WS,Samoa,IT,Italy,2021,352238.6,0.041
+WS,Samoa,KR,"Korea, Republic of",2021,21041781.2,2.4475
+WS,Samoa,MU,Mauritius,2021,5000000.0,0.5816
+WS,Samoa,US,United States,2021,5000000.0,0.5816
+WS,Samoa,AU,Australia,2022,39574793.0,4.4488
+WS,Samoa,CN,"China, People's Republic of",2022,597685900.0,67.1893
+WS,Samoa,ES,Spain,2022,-7466200.0,-0.8393
+WS,Samoa,IT,Italy,2022,76795.2,0.0086
+WS,Samoa,KR,"Korea, Republic of",2022,63192406.51,7.1038
+WS,Samoa,MU,Mauritius,2022,5000000.0,0.5621
+WS,Samoa,US,United States,2022,5000000.0,0.5621
+WS,Samoa,AU,Australia,2023,35892871.2,3.435
+WS,Samoa,CN,"China, People's Republic of",2023,550192100.0,52.6545
+WS,Samoa,ES,Spain,2023,-7735000.0,-0.7403
+WS,Samoa,IT,Italy,2023,77350.0,0.0074
+WS,Samoa,KR,"Korea, Republic of",2023,23809515.0,2.2786
+WS,Samoa,MU,Mauritius,2023,2000000.0,0.1914
+WS,Samoa,US,United States,2023,5000000.0,0.4785
+WS,Samoa,CN,"China, People's Republic of",2024,481773400.0,40.9758
+WS,Samoa,ES,Spain,2024,-7272300.0,-0.6185
+WS,Samoa,IT,Italy,2024,75839.7,0.0065
+WS,Samoa,KR,"Korea, Republic of",2024,25196933.77,2.1431
+WS,Samoa,MU,Mauritius,2024,3000000.0,0.2552
+WS,Samoa,US,United States,2024,5000000.0,0.4253

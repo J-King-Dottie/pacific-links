@@ -1,9 +1,9 @@
 {
   "title": "Pacific-origin migrant stock abroad by destination country",
   "source": "United Nations International Migrant Stock 2024: Destination and origin",
-  "retrieved_at": "2026-06-22T06:33:32+00:00",
-  "row_count": 1480,
-  "origin_count": 21,
+  "retrieved_at": "2026-06-27T01:25:01+00:00",
+  "row_count": 1426,
+  "origin_count": 20,
   "years": [
     1990,
     1995,
@@ -118,19 +118,6 @@
         2024
       ],
       "destination_country_count": 4
-    },
-    "NC": {
-      "years": [
-        1990,
-        1995,
-        2000,
-        2005,
-        2010,
-        2015,
-        2020,
-        2024
-      ],
-      "destination_country_count": 8
     },
     "NR": {
       "years": [

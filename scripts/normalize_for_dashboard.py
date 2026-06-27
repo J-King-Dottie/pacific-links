@@ -6,7 +6,7 @@ Unified output schema for all metrics:
   year, value_usd, pct_gdp
 
 Exceptions:
-  - imports:   adds hs1_code, hs1_name
+  - imports/exports: adds hs1_code, hs1_name
   - migration: value_people instead of value_usd; pct_population instead of pct_gdp
 
 This script:
@@ -33,7 +33,12 @@ RAW_DIR     = Path(__file__).parent.parent / "data" / "raw"
 DASH_DIR    = Path(__file__).parent.parent / "dashboard" / "public" / "data"
 EXCEL_PATH  = DASH_DIR / "pacific_links_data.xlsx"
 
+PACIFIC_SCOPE = {"CK", "FM", "FJ", "KI", "MH", "NR", "NU", "PG", "PW", "SB", "TO", "TV", "VU", "WS"}
 EXCLUDED_PACIFIC = {"NC"}
+
+
+def in_scope_pacific(code):
+    return code in PACIFIC_SCOPE and code not in EXCLUDED_PACIFIC
 
 # Stated scope of the project (dashboard + landing page + download).
 # Sources carry ragged out-of-scope tails (aid back to 1983 and stray future
@@ -62,7 +67,7 @@ ISO3_TO_ISO2 = {
     "KEN": "KE", "KIR": "KI", "KOR": "KR", "KOS": "XK", "KWT": "KW",
     "LBN": "LB", "LKA": "LK", "LTU": "LT", "LUX": "LU", "MAC": "MO",
     "MEX": "MX", "MHL": "MH", "MKD": "MK", "MLI": "ML", "MLT": "MT",
-    "MNP": "MP", "MOZ": "MZ", "MUS": "MU", "NGA": "NG",
+    "MNP": "MP", "MOZ": "MZ", "MUS": "MU", "MYS": "MY", "NGA": "NG",
     "NIC": "NI", "NLD": "NL", "NOR": "NO", "NZL": "NZ", "PAK": "PK",
     "PAN": "PA", "PER": "PE", "PHL": "PH", "PLW": "PW", "PNG": "PG",
     "POL": "PL", "PRI": "PR", "PRT": "PT", "PYF": "PF", "ROU": "RO",
@@ -81,7 +86,7 @@ M49_TO_ISO2 = {
     "246": "FI", "258": "PF", "296": "KI", "300": "GR", "316": "GU",
     "324": "GN", "348": "HU", "352": "IS", "356": "IN", "428": "LV",
     "440": "LT", "442": "LU", "466": "ML", "484": "MX", "520": "NR",
-    "548": "VU", "554": "NZ", "570": "NU", "578": "NO",
+    "540": "NC", "548": "VU", "554": "NZ", "570": "NU", "578": "NO",
     "580": "MP", "583": "FM", "584": "MH", "585": "PW", "598": "PG",
     "703": "SK", "705": "SI", "710": "ZA", "772": "TK", "776": "TO",
     "798": "TV", "876": "WF", "882": "WS",
@@ -125,7 +130,7 @@ def write_csv(path, fieldnames, rows):
     if not rows:
         raise RuntimeError(f"Refusing to write 0 rows to {path}")
     with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -134,17 +139,23 @@ def write_csv(path, fieldnames, rows):
 # Normalizers — each returns list of dicts in the unified schema
 # ---------------------------------------------------------------------------
 
-def normalize_aid(gdp_pop):
-    rows = list(csv.DictReader(open(DATA_DIR / "aid_by_donor_year.csv", encoding="utf-8")))
+def normalize_aid_measure(gdp_pop, value_field, fallback_file, label):
+    source_path = DATA_DIR / "aid_by_donor_year.csv"
+    rows = list(csv.DictReader(open(source_path, encoding="utf-8")))
+    if rows and value_field not in rows[0] and fallback_file:
+        fallback_path = DATA_DIR / fallback_file
+        if fallback_path.exists():
+            rows = list(csv.DictReader(open(fallback_path, encoding="utf-8")))
+            value_field = "value_usd"
     out = []
     for r in rows:
         pac  = r.get("pacific_code") or r.get("recipient_code", "")
         cpty = r.get("counterpart_code") or r.get("donor_code", "")
         try:
-            val = float(r.get("aid_spent_usd") or r.get("value_usd") or 0)
+            val = float(r.get(value_field) or r.get("value_usd") or 0)
         except ValueError:
             continue
-        if val <= 0 or pac in EXCLUDED_PACIFIC:
+        if val <= 0 or not in_scope_pacific(pac):
             continue
         year = int(r["year"])
         gdp  = best_gdp(gdp_pop, pac, year)
@@ -157,8 +168,16 @@ def normalize_aid(gdp_pop):
             "value_usd":        round(val, 2),
             "pct_gdp":          round(val / gdp * 100, 4) if gdp else None,
         })
-    print(f"  Aid:          {len(out):>6} rows")
+    print(f"  {label:<13} {len(out):>6} rows")
     return out
+
+
+def normalize_aid(gdp_pop):
+    return normalize_aid_measure(gdp_pop, "aid_spent_usd", None, "Aid spent:")
+
+
+def normalize_aid_committed(gdp_pop):
+    return normalize_aid_measure(gdp_pop, "aid_committed_usd", "aid_committed_by_donor_year.csv", "Aid committed:")
 
 
 def normalize_imports(gdp_pop):
@@ -178,7 +197,7 @@ def normalize_imports(gdp_pop):
             val = float(r.get("value_usd") or r.get("import_value_usd") or 0)
         except (ValueError, KeyError):
             continue
-        if val <= 0 or pac in EXCLUDED_PACIFIC:
+        if val <= 0 or not in_scope_pacific(pac):
             continue
         year = int(r["year"])
         gdp  = best_gdp(gdp_pop, pac, year)
@@ -194,6 +213,37 @@ def normalize_imports(gdp_pop):
             "pct_gdp":          round(val / gdp * 100, 4) if gdp else None,
         })
     print(f"  Imports:      {len(out):>6} rows")
+    return out
+
+
+def normalize_exports(gdp_pop):
+    src = RAW_DIR / "baci_exports.csv"
+    print(f"    exports source: {src.name}")
+    rows = list(csv.DictReader(open(src, encoding="utf-8")))
+    out = []
+    for r in rows:
+        pac = r.get("pacific_code") or r.get("reporter_code", "")
+        cpty = r.get("counterpart_code") or r.get("destination_code", "")
+        try:
+            val = float(r.get("value_usd") or 0)
+        except (ValueError, KeyError):
+            continue
+        if val <= 0 or not in_scope_pacific(pac):
+            continue
+        year = int(r["year"])
+        gdp = best_gdp(gdp_pop, pac, year)
+        out.append({
+            "pacific_code":     pac,
+            "pacific_name":     r.get("pacific_name") or r.get("reporter_name", ""),
+            "counterpart_code": cpty,
+            "counterpart_name": r.get("counterpart_name") or r.get("destination_name", ""),
+            "year":             year,
+            "hs1_code":         r.get("hs1_code", ""),
+            "hs1_name":         r.get("hs1_name", ""),
+            "value_usd":        round(val, 2),
+            "pct_gdp":          round(val / gdp * 100, 4) if gdp else None,
+        })
+    print(f"  Exports:      {len(out):>6} rows")
     return out
 
 
@@ -213,7 +263,7 @@ def normalize_remittances(gdp_pop):
             val = float(r.get("value_usd") or r.get("remittance_estimate_usd") or 0)
         except (ValueError, KeyError):
             continue
-        if val <= 0 or pac in EXCLUDED_PACIFIC:
+        if val <= 0 or not in_scope_pacific(pac):
             continue
         iso2 = r.get("counterpart_code") or r.get("source_iso2", "").strip() or ISO3_TO_ISO2.get(raw_code, "")
         year = int(r["year"])
@@ -231,6 +281,36 @@ def normalize_remittances(gdp_pop):
     return out
 
 
+def normalize_fdi(gdp_pop):
+    rows = list(csv.DictReader(open(DATA_DIR / "fdi_positions_by_investor_year.csv", encoding="utf-8-sig")))
+    out = []
+    for r in rows:
+        pac = r.get("pacific_code") or r.get("recipient_code", "")
+        raw_code = (r.get("investor_code") or r.get("counterpart_code") or "").strip()
+        iso2 = r.get("counterpart_code") or r.get("investor_iso2", "").strip() or ISO3_TO_ISO2.get(raw_code, "")
+        if not iso2:
+            continue
+        try:
+            val = float(r.get("value_usd") or r.get("fdi_position_usd") or 0)
+        except (ValueError, KeyError):
+            continue
+        if val == 0 or not in_scope_pacific(pac):
+            continue
+        year = int(r["year"])
+        gdp = best_gdp(gdp_pop, pac, year)
+        out.append({
+            "pacific_code":     pac,
+            "pacific_name":     r.get("pacific_name") or r.get("recipient_name", ""),
+            "counterpart_code": iso2,
+            "counterpart_name": r.get("counterpart_name") or r.get("investor_name", ""),
+            "year":             year,
+            "value_usd":        round(val, 2),
+            "pct_gdp":          round(val / gdp * 100, 4) if gdp else None,
+        })
+    print(f"  FDI:          {len(out):>6} rows")
+    return out
+
+
 def normalize_migration(gdp_pop):
     rows = list(csv.DictReader(open(DATA_DIR / "migrants_abroad_by_destination_year.csv", encoding="utf-8")))
     valid = []
@@ -242,7 +322,7 @@ def normalize_migration(gdp_pop):
             val = float(r.get("value_people") or r.get("value") or r.get("migrant_stock") or 0)
         except (ValueError, KeyError):
             continue
-        if val <= 0 or pac in EXCLUDED_PACIFIC:
+        if val <= 0 or not in_scope_pacific(pac):
             continue
         valid.append({
             "pacific_code":     pac,
@@ -273,7 +353,7 @@ def normalize_debt(gdp_pop):
             val = float(r.get("value_usd") or 0)
         except ValueError:
             continue
-        if val <= 0 or pac in EXCLUDED_PACIFIC:
+        if val <= 0 or not in_scope_pacific(pac):
             continue
         year = int(r["year"])
         gdp  = best_gdp(gdp_pop, pac, year)
@@ -306,7 +386,20 @@ METRIC_META = [
         "value_label": "USD (spent/disbursed aid)",
         "pct_col":   "pct_gdp",
         "pct_label": "% of recipient GDP",
-        "notes":     "Spent/disbursed aid only — not commitments. Aggregate donor categories removed.",
+        "notes":     "Spent/disbursed aid. Aggregate donor categories removed. Do not add spent and committed values together; they are separate views of the same aid relationship.",
+    },
+    {
+        "metric":    "Aid committed",
+        "tab":       "Aid committed",
+        "source":    "Lowy Institute Pacific Aid Map via Pacific Data Hub",
+        "sourceUrl": "https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where aid commitment records are available.",
+        "value_col": "value_usd",
+        "value_label": "USD (committed aid)",
+        "pct_col":   "pct_gdp",
+        "pct_label": "% of recipient GDP",
+        "notes":     "Committed aid, not spent/disbursed aid. Aggregate donor categories removed. Do not add spent and committed values together; they are separate views of the same aid relationship.",
     },
     {
         "metric":    "Imports",
@@ -319,7 +412,20 @@ METRIC_META = [
         "value_label": "USD (import value)",
         "pct_col":   "pct_gdp",
         "pct_label": "% of importer GDP",
-        "notes":     "Grouped by supplier country. Small flows tied to ship registration / bunkering fuel removed (HS 8901, HS 271000 for MH, HS 89 for MH).",
+        "notes":     "Grouped by supplier country and HS1 product group. This app is trying to show comparable bilateral relationships across many Pacific countries and partners, so we use BACI because it reconciles importer and exporter reports from Comtrade into one bilateral flow. Trade data can still look unusually large for small island economies, especially Marshall Islands, because ship registries, bunkering fuel, re-exports, transshipment, and partner-country reporting rules can record vessel-related activity as merchandise trade.",
+    },
+    {
+        "metric":    "Exports",
+        "tab":       "Exports",
+        "source":    "CEPII BACI Reconciled Bilateral Trade Data",
+        "sourceUrl": "https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where export records are available.",
+        "value_col": "value_usd",
+        "value_label": "USD (export value)",
+        "pct_col":   "pct_gdp",
+        "pct_label": "% of exporter GDP",
+        "notes":     "Grouped by destination country and HS1 product group. This app is trying to show comparable bilateral relationships across many Pacific countries and partners, so we use BACI because it reconciles importer and exporter reports from Comtrade into one bilateral flow. Trade data can still look unusually large for small island economies, especially Marshall Islands, because ship registries, bunkering fuel, re-exports, transshipment, and partner-country reporting rules can record vessel-related activity as merchandise trade.",
     },
     {
         "metric":    "Remittances",
@@ -340,6 +446,19 @@ METRIC_META = [
         "notes":     "Modelled bilateral estimates — not observed flows. No interpolation between benchmark years. Non-country aggregate rows removed.",
     },
     {
+        "metric":    "FDI",
+        "tab":       "FDI",
+        "source":    "IMF Direct Investment Positions by Counterpart Economy",
+        "sourceUrl": "https://data.imf.org/en/datasets/IMF.STA:DIP",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where inward FDI stock records are available.",
+        "value_col": "value_usd",
+        "value_label": "USD (year-end inward FDI stock)",
+        "pct_col":   "pct_gdp",
+        "pct_label": "% of recipient GDP",
+        "notes":     "Year-end inward FDI stock, not annual FDI flow. Stock is used because it shows the investment position that has built up and is still recorded at year end; flow would show only new investment entering or leaving in a single year. FDI is an official estimate of some foreign-owned business and investment stakes; it can miss smaller, less formal, or unreported businesses on the ground. The counterpart is the immediate investor economy, not necessarily the ultimate owner. Some small-island figures, especially Marshall Islands, can be warped by ship registry, holding-company, and corporate-structure effects. Zero-value rows are removed. Negative net positions are retained in the download; the dashboard map/table ranks positive inward positions.",
+    },
+    {
         "metric":    "Migration",
         "tab":       "Migration",
         "source":    "UN International Migrant Stock 2024",
@@ -350,7 +469,7 @@ METRIC_META = [
         "value_label": "People (migrant stock — people born in Pacific country living in destination)",
         "pct_col":   "pct_population",
         "pct_label": "% of origin country population (can exceed 100% for small islands)",
-        "notes":     "Migrant stock, not annual flows. Regional and aggregate destination rows removed.",
+        "notes":     "Migrant stock, not annual flows. Regional and aggregate destination rows removed. Missing country-pair rows mean the UN matrix does not report a value, not confirmed zero; for example, the UN matrix is blank for Vanuatu-born people in New Zealand even though New Zealand census data records that community.",
     },
     {
         "metric":    "Debt",
@@ -379,8 +498,11 @@ BACI_VERSION = "HS92_V202601"  # keep in sync with scripts/fetch_baci_trade.py
 
 SOURCE_RELEASES = {
     "Aid":         {"release": "Lowy Pacific Aid Map (live SDMX)",          "meta": "aid_by_donor_year.metadata.json"},
+    "Aid committed": {"release": "Lowy Pacific Aid Map (live SDMX)",        "meta": "aid_by_donor_year.metadata.json"},
     "Imports":     {"release": f"CEPII BACI {BACI_VERSION.replace('_', ' ')}", "file": RAW_DIR / "baci" / f"BACI_{BACI_VERSION}.zip"},
+    "Exports":     {"release": f"CEPII BACI {BACI_VERSION.replace('_', ' ')}", "file": RAW_DIR / "baci" / f"BACI_{BACI_VERSION}.zip"},
     "Remittances": {"release": "World Bank/KNOMAD bilateral matrices",      "meta": "remittances_by_source_year.metadata.json"},
+    "FDI":          {"release": "IMF Direct Investment Positions by Counterpart Economy", "meta": "fdi_positions_by_investor_year.metadata.json"},
     "Migration":   {"release": "UN International Migrant Stock 2024",       "meta": "migrants_abroad_by_destination_year.metadata.json"},
     "Debt":        {"release": "World Bank IDS (live API)",                 "file": DATA_DIR / "debt_by_creditor_year.csv"},
 }
@@ -429,8 +551,11 @@ BORDER       = Border(bottom=Side(style="thin", color="C4B090"))
 
 TAB_COLOR = {
     "Aid":          "2A6B72",
+    "Aid committed": "6A4E1C",
     "Imports":      "8A5C10",
+    "Exports":      "1E666D",
     "Remittances":  "4A7A50",
+    "FDI":           "2F5FB3",
     "Migration":    "5A4080",
     "Debt":         "A04030",
 }
@@ -599,8 +724,11 @@ def build_excel_tab(wb, tab_name, rows, value_col, pct_col, id_cols, id_labels):
 DATASETS = [
     # (filename_stem, fieldnames)
     ("aid_by_donor_year",               ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+    ("aid_committed_by_donor_year",     ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
     ("imports_by_supplier_year",        ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
+    ("exports_by_destination_year",      ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
     ("remittances_by_source_year",      ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+    ("fdi_positions_by_investor_year",  ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
     ("migrants_abroad_by_destination_year", ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_people", "pct_population"]),
     ("debt_by_creditor_year",           ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
 ]
@@ -612,25 +740,34 @@ if __name__ == "__main__":
     print(f"  GDP/pop loaded for {len(gdp_pop)} countries\n")
 
     aid         = normalize_aid(gdp_pop)
+    aid_committed = normalize_aid_committed(gdp_pop)
     imports     = normalize_imports(gdp_pop)
+    exports     = normalize_exports(gdp_pop)
     remittances = normalize_remittances(gdp_pop)
+    fdi         = normalize_fdi(gdp_pop)
     migration   = normalize_migration(gdp_pop)
     debt        = normalize_debt(gdp_pop)
 
     # Clip all outputs to the stated 2010-2024 scope.
     def clip(rows):
         return [r for r in rows if YEAR_MIN <= int(r["year"]) <= YEAR_MAX]
-    before = {"aid": len(aid), "imports": len(imports), "remittances": len(remittances),
+    before = {"aid": len(aid), "aid_committed": len(aid_committed), "imports": len(imports), "exports": len(exports), "remittances": len(remittances),
+              "fdi": len(fdi),
               "migration": len(migration), "debt": len(debt)}
-    aid, imports, remittances, migration, debt = map(clip, (aid, imports, remittances, migration, debt))
+    aid, aid_committed, imports, exports, remittances, fdi, migration, debt = map(clip, (aid, aid_committed, imports, exports, remittances, fdi, migration, debt))
     print(f"\nClipped to {YEAR_MIN}-{YEAR_MAX}: "
-          f"aid {before['aid']}->{len(aid)}, migration {before['migration']}->{len(migration)} "
+          f"aid {before['aid']}->{len(aid)}, aid committed {before['aid_committed']}->{len(aid_committed)}, "
+          f"fdi {before['fdi']}->{len(fdi)}, "
+          f"migration {before['migration']}->{len(migration)} "
           f"(others unchanged)")
 
     datasets = [
         ("aid_by_donor_year",                   aid,         ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+        ("aid_committed_by_donor_year",         aid_committed, ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
         ("imports_by_supplier_year",             imports,     ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
+        ("exports_by_destination_year",          exports,     ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
         ("remittances_by_source_year",           remittances, ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+        ("fdi_positions_by_investor_year",       fdi,         ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
         ("migrants_abroad_by_destination_year",  migration,   ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_people", "pct_population"]),
         ("debt_by_creditor_year",                debt,        ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
     ]
@@ -666,8 +803,11 @@ if __name__ == "__main__":
     id_labels = ["Pacific ISO2", "Pacific Country", "Counterpart Code", "Counterpart Name"]
 
     build_excel_tab(wb, "Aid",         aid,         "value_usd",    "pct_gdp",       id_cols, id_labels)
+    build_excel_tab(wb, "Aid committed", aid_committed, "value_usd", "pct_gdp",     id_cols, id_labels)
     build_excel_tab(wb, "Imports",     imports,     "value_usd",    "pct_gdp",       id_cols, id_labels)
+    build_excel_tab(wb, "Exports",     exports,     "value_usd",    "pct_gdp",       id_cols, id_labels)
     build_excel_tab(wb, "Remittances", remittances, "value_usd",    "pct_gdp",       id_cols, id_labels)
+    build_excel_tab(wb, "FDI",          fdi,         "value_usd",    "pct_gdp",       id_cols, id_labels)
     build_excel_tab(wb, "Migration",   migration,   "value_people", "pct_population", id_cols, id_labels)
     build_excel_tab(wb, "Debt",        debt,        "value_usd",    "pct_gdp",       id_cols, id_labels)
 

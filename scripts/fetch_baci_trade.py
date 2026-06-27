@@ -9,6 +9,7 @@ Usage:
   python fetch_baci_trade.py --phase download
   python fetch_baci_trade.py --phase extract
   python fetch_baci_trade.py --phase combine
+  python fetch_baci_trade.py --phase exports
 
 See BACI_INGEST_PLAN.md for full documentation.
 """
@@ -43,31 +44,7 @@ BACI_DIR  = RAW_DIR / "baci"
 ZIP_PATH  = BACI_DIR / f"BACI_{BACI_VERSION}.zip"
 CKPT_PATH = BACI_DIR / "checkpoint.json"
 OUT_PATH  = RAW_DIR / "baci_imports.csv"
-
-# Commercial transport vessels are commonly attributed to the country of
-# registration rather than the economy where they are owned or operated.
-# Exclude them from domestic trade exposure before aggregating HS6 to HS1.
-EXCLUDED_HS_PREFIXES = {
-    "8901": "commercial vessels attributed to flag registry",
-}
-
-# Bilateral series that are impossible relative to the recipient economies and
-# consist of implausible petroleum/LNG flows. M49 tuple is (importer, exporter).
-EXCLUDED_BILATERAL_FLOWS = {
-    ("772", "566"): "anomalous Nigeria-to-Tokelau petroleum flows",
-}
-
-# Marshall Islands' open ship registry causes international bunkering to be
-# recorded as domestic refined-fuel imports. M49 tuple is (importer, HS6).
-EXCLUDED_IMPORTER_HS6 = {
-    ("584", "271000"): "Marshall Islands flag-registry bunker fuel",
-}
-
-# Marshall Islands' registry also attracts vessel and yacht transactions that
-# are recorded as imports despite not representing domestic goods exposure.
-EXCLUDED_IMPORTER_HS_PREFIXES = {
-    ("584", "89"): "Marshall Islands flag-registry vessel transactions",
-}
+EXPORTS_OUT_PATH = RAW_DIR / "baci_exports.csv"
 
 BACI_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -213,7 +190,6 @@ def process_year(year):
 
         fname = candidates[0]
         out_path = BACI_DIR / f"filtered_{year}.csv"
-        audit_path = BACI_DIR / f"excluded_{year}.csv"
         rows_written = 0
 
         with zf.open(fname) as raw:
@@ -223,31 +199,12 @@ def process_year(year):
                 writer = csv.writer(fout)
                 writer.writerow(["year", "importer_m49", "exporter_m49", "hs1_code", "hs1_name", "value_usd"])
                 agg = {}
-                excluded = {}
                 for row in reader:
                     j = row["j"].strip()
                     if j not in PACIFIC_M49:
                         continue
                     i = row["i"].strip()
                     hs6 = row["k"].strip().zfill(6)
-                    exclusion_reason = EXCLUDED_BILATERAL_FLOWS.get((j, i))
-                    if not exclusion_reason:
-                        exclusion_reason = EXCLUDED_IMPORTER_HS6.get((j, hs6))
-                    if not exclusion_reason:
-                        exclusion_reason = next(
-                            (reason for (importer, prefix), reason in EXCLUDED_IMPORTER_HS_PREFIXES.items()
-                             if j == importer and hs6.startswith(prefix)),
-                            None,
-                        )
-                    if not exclusion_reason:
-                        exclusion_reason = next(
-                            (reason for prefix, reason in EXCLUDED_HS_PREFIXES.items() if hs6.startswith(prefix)),
-                            None,
-                        )
-                    if exclusion_reason:
-                        key = (j, i, hs6, exclusion_reason)
-                        excluded[key] = excluded.get(key, 0) + float(row["v"] or 0) * 1000
-                        continue
                     hs1 = hs6[0]
                     val = float(row["v"] or 0) * 1000
                     key = (j, i, hs1)
@@ -257,16 +214,8 @@ def process_year(year):
                     writer.writerow([year, j, i, hs1, HS1_NAMES.get(hs1, hs1), round(val, 2)])
                     rows_written += 1
 
-        with open(audit_path, "w", newline="", encoding="utf-8") as fout:
-            writer = csv.writer(fout)
-            writer.writerow(["year", "importer_m49", "exporter_m49", "hs6_code", "reason", "value_usd"])
-            for (j, i, hs6, reason), val in sorted(excluded.items()):
-                writer.writerow([year, j, i, hs6, reason, round(val, 2)])
-
         return {
             "year": year, "status": "ok", "rows_written": rows_written,
-            "excluded_rows": len(excluded),
-            "excluded_value_usd": round(sum(excluded.values()), 2),
             "file": fname,
         }
 
@@ -329,11 +278,7 @@ def phase_extract(force=False):
             if result["status"] == "missing":
                 print(f"  {year}: not found in ZIP, skipping")
             else:
-                print(
-                    f"  {year}: {result['rows_written']} HS1 rows; "
-                    f"excluded {result['excluded_rows']} HS6 vessel flows "
-                    f"(${result['excluded_value_usd']:,.0f})"
-                )
+                print(f"  {year}: {result['rows_written']} HS1 rows")
             done_years.add(year)
             ckpt["extracted_years"] = sorted(done_years)
             save_ckpt(ckpt)
@@ -397,11 +342,82 @@ def phase_combine():
     save_ckpt(ckpt)
     print("Phase 3: Done.")
 
+
+def phase_exports():
+    ckpt = load_ckpt()
+    if not ckpt.get("download_done"):
+        sys.exit("Exports: ZIP not downloaded yet. Run --phase download first.")
+
+    print(f"Exports: Building {EXPORTS_OUT_PATH} ...")
+    country_codes = load_baci_country_codes()
+    fieldnames = [
+        "reporter_code", "reporter_name", "destination_code", "destination_name",
+        "year", "hs1_code", "hs1_name", "value_usd",
+    ]
+    total_rows = 0
+    skipped_non_country_rows = 0
+
+    with open(EXPORTS_OUT_PATH, "w", newline="", encoding="utf-8") as fout:
+        writer = csv.DictWriter(fout, fieldnames=fieldnames)
+        writer.writeheader()
+
+        with zipfile.ZipFile(ZIP_PATH, "r") as zf:
+            names = zf.namelist()
+            for year in YEARS:
+                candidates = [n for n in names if f"_Y{year}_" in n and n.endswith(".csv")]
+                if not candidates:
+                    continue
+
+                agg = {}
+                fname = candidates[0]
+                with zf.open(fname) as raw:
+                    text = io.TextIOWrapper(raw, encoding="utf-8")
+                    reader = csv.DictReader(text)
+                    for row in reader:
+                        i = row["i"].strip()
+                        if i not in PACIFIC_M49:
+                            continue
+                        j = row["j"].strip()
+                        hs6 = row["k"].strip().zfill(6)
+                        hs1 = hs6[0]
+                        val = float(row["v"] or 0) * 1000
+                        key = (i, j, hs1)
+                        agg[key] = agg.get(key, 0) + val
+
+                for (i, j, hs1), val in sorted(agg.items()):
+                    pacific_iso2 = PACIFIC_M49.get(i, "")
+                    destination = country_codes.get(j, {})
+                    destination_iso2 = destination.get("iso2", "")
+                    if not pacific_iso2:
+                        continue
+                    if not destination_iso2:
+                        skipped_non_country_rows += 1
+                        continue
+                    writer.writerow({
+                        "reporter_code": pacific_iso2,
+                        "reporter_name": PACIFIC_NAMES.get(pacific_iso2, pacific_iso2),
+                        "destination_code": destination_iso2,
+                        "destination_name": PACIFIC_NAMES.get(destination_iso2, destination.get("name", destination_iso2)),
+                        "year": year,
+                        "hs1_code": hs1,
+                        "hs1_name": HS1_NAMES.get(hs1, hs1),
+                        "value_usd": round(val, 2),
+                    })
+                    total_rows += 1
+
+                print(f"  {year}: {len(agg)} HS1 export rows")
+
+    print(f"  {total_rows} rows written to {EXPORTS_OUT_PATH}")
+    print(f"  {skipped_non_country_rows} non-country aggregate rows omitted")
+    ckpt["exports_done"] = True
+    save_ckpt(ckpt)
+    print("Exports: Done.")
+
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["download", "extract", "combine"], default=None)
+    parser.add_argument("--phase", choices=["download", "extract", "combine", "exports"], default=None)
     parser.add_argument("--force", action="store_true", help="reprocess completed extraction years")
     args = parser.parse_args()
 
@@ -411,3 +427,5 @@ if __name__ == "__main__":
         phase_extract(force=args.force)
     if args.phase == "combine" or args.phase is None:
         phase_combine()
+    if args.phase == "exports" or args.phase is None:
+        phase_exports()

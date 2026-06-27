@@ -127,7 +127,7 @@
 
 .metric-selector {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 4px;
   margin: 0 8px 8px;
   padding: 3px;
@@ -168,7 +168,9 @@
 
 .metric-tab.metric-aid.active { color: #7a4e08; }
 .metric-tab.metric-trade.active { color: #1e5a60; }
+.metric-tab.metric-exports.active { color: #285f36; }
 .metric-tab.metric-remittances.active { color: #8c3020; }
+.metric-tab.metric-fdi.active { color: #244b91; }
 .metric-tab.metric-migration.active { color: #6a4a5e; }
 .metric-tab.metric-debt.active { color: #476b35; }
 
@@ -270,9 +272,9 @@
 .sections-fixed-head > * {
   flex: 0 0 auto;
 }
-/* ... except the table, which fills the remaining height */
+/* ... except the table, which can shrink and scroll when it is too tall. */
 .sections-fixed-head > .metric-table-shell {
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -283,7 +285,7 @@
   flex: 0 0 auto;
 }
 .sections-fixed-head .single-table-rows {
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
   overflow-y: auto;
   scrollbar-gutter: stable;
@@ -372,6 +374,51 @@
 .info-icon-btn:hover { color: #5a3e1b; }
 .info-icon-btn.pinned { color: #5a3e1b; }
 
+.metric-mode-toggle,
+.trade-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 2px;
+  margin: -2px 0 0 1px;
+  padding: 2px;
+  border: 1px solid rgba(180,150,100,0.28);
+  border-radius: 5px;
+  background: rgba(255,250,238,0.36);
+  flex: 0 0 auto;
+}
+
+.metric-mode-btn,
+.trade-mode-btn {
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  color: #8a7050;
+  cursor: pointer;
+  font-size: 0.56rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 4px 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.metric-mode-btn.active,
+.trade-mode-btn.active {
+  background: rgba(42,107,114,0.14);
+  color: #1e5a60;
+}
+
+.aid-mode-btn.active {
+  background: rgba(138,92,16,0.14);
+  color: #7a4e08;
+}
+
+.metric-mode-btn:hover,
+.trade-mode-btn:hover {
+  color: #3a2810;
+}
+
 .info-tooltip {
   position: fixed;
   z-index: 3000;
@@ -426,7 +473,9 @@
 }
 .metric-header.metric-aid .metric-header-label         { color: #7a4e08; }
 .metric-header.metric-trade .metric-header-label       { color: #1e5a60; }
+.metric-header.metric-exports .metric-header-label     { color: #285f36; }
 .metric-header.metric-remittances .metric-header-label { color: #8c3020; }
+.metric-header.metric-fdi .metric-header-label         { color: #244b91; }
 .metric-header.metric-migration .metric-header-label   { color: #6a4a5e; }
 .metric-header.metric-debt .metric-header-label        { color: #476b35; }
 .metric-header.metric-combined .metric-header-label    { color: #2c1f0a; padding-left: 14px; }
@@ -468,7 +517,9 @@
 
 .single-table-header.metric-aid .metric-header-label         { color: #7a4e08; }
 .single-table-header.metric-trade .metric-header-label       { color: #1e5a60; }
+.single-table-header.metric-exports .metric-header-label     { color: #285f36; }
 .single-table-header.metric-remittances .metric-header-label { color: #8c3020; }
+.single-table-header.metric-fdi .metric-header-label         { color: #244b91; }
 .single-table-header.metric-migration .metric-header-label   { color: #6a4a5e; }
 .single-table-header.metric-debt .metric-header-label        { color: #476b35; }
 

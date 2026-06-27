@@ -2,7 +2,7 @@
 
 **Explore the connections shaping the Pacific.**
 
-Pacific Links brings together aid, trade (imports), remittances, migration, and debt
+Pacific Links brings together aid, trade, remittances, investment, migration, and debt
 data for 14 Pacific Island Countries, from 2010 to 2024. All of this data already
 exists — but it's spread across different sources, each using different codes,
 currencies, and years. The hard part is cleaning it and pulling it together. This
@@ -23,13 +23,14 @@ the [Lowy Pacific Aid Map](https://pacificaidmap.lowyinstitute.org).
 - **Published data** (`dashboard/public/data/`) — the harmonised CSVs the app reads,
   plus `pacific_links_data.xlsx` (one tab per metric + an About tab) for download.
 
-## The five metrics and their sources
+## The six metrics and their sources
 
 | Metric | Source | Notes |
 |--------|--------|-------|
-| **Aid** | [Lowy Pacific Aid Map](https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam) via Pacific Data Hub | Spent/disbursed aid only, by donor |
+| **Aid** | [Lowy Pacific Aid Map](https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam) via Pacific Data Hub | Spent/disbursed and committed aid, by donor |
 | **Imports** | [CEPII BACI](https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37) | Reconciled bilateral merchandise imports, by supplier |
 | **Remittances** | [World Bank / KNOMAD](https://www.knomad.org/data/remittances) | Modelled bilateral matrices, benchmark years |
+| **FDI** | [IMF Direct Investment Positions](https://data.imf.org/en/datasets/IMF.STA:DIP) | Year-end inward direct investment values, by immediate investor economy |
 | **Migration** | [UN Migrant Stock 2024](https://www.un.org/development/desa/pd/content/international-migrant-stock) | Migrant stock (people), benchmark years |
 | **Debt** | [World Bank IDS](https://databank.worldbank.org/source/international-debt-statistics) | External PPG debt stock, by creditor |
 
@@ -49,9 +50,9 @@ pacific_code, pacific_name, counterpart_code, counterpart_name, year, value_usd,
 - **Migration** uses `value_people` and `pct_population` instead of `value_usd` / `pct_gdp`.
 
 All datasets are clipped to the stated **2010–2024** scope. Values inside that window
-are the source figures unchanged, apart from a small set of documented, intentional
-adjustments (e.g. removing ship-registry/bunkering flows from imports). See
-[`DATA_PIPELINE.md`](DATA_PIPELINE.md) for the full per-metric methodology.
+are the source figures unchanged, with trade shown as BACI records it after HS1
+grouping. See [`DATA_PIPELINE.md`](DATA_PIPELINE.md) for the full per-metric
+methodology.
 
 ## Refreshing the data
 
@@ -62,8 +63,8 @@ python3 scripts/refresh_all.py --skip-baci  # skip the large BACI download
 python3 scripts/refresh_all.py --only-normalize  # just re-harmonise existing CSVs
 ```
 
-Aid, debt, and imports refresh automatically (live APIs / public download).
-Remittances and migration are benchmark-year workbooks you download manually — the
+Aid, debt, and trade refresh automatically (live APIs / public download).
+Remittances, FDI, and migration are source files you download manually — the
 runner prints a reminder and [`DATA_PIPELINE.md`](DATA_PIPELINE.md) has the URLs.
 
 The raw source files are **not** committed (they're large and third-party); the
