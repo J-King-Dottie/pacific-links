@@ -127,7 +127,7 @@
 
 .metric-selector {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 4px;
   margin: 0 8px 8px;
   padding: 3px;
@@ -170,9 +170,11 @@
 .metric-tab.metric-trade.active { color: #1e5a60; }
 .metric-tab.metric-exports.active { color: #285f36; }
 .metric-tab.metric-remittances.active { color: #8c3020; }
-.metric-tab.metric-fdi.active { color: #244b91; }
 .metric-tab.metric-migration.active { color: #6a4a5e; }
+.metric-tab.metric-students.active { color: #934b04; }
+.metric-tab.metric-security.active { color: #345f62; }
 .metric-tab.metric-debt.active { color: #476b35; }
+.metric-tab.metric-investment.active { color: #244b91; }
 
 /* Scrollable tables area */
 .panel-content {
@@ -475,9 +477,13 @@
 .metric-header.metric-trade .metric-header-label       { color: #1e5a60; }
 .metric-header.metric-exports .metric-header-label     { color: #285f36; }
 .metric-header.metric-remittances .metric-header-label { color: #8c3020; }
-.metric-header.metric-fdi .metric-header-label         { color: #244b91; }
 .metric-header.metric-migration .metric-header-label   { color: #6a4a5e; }
+.metric-header.metric-students .metric-header-label    { color: #934b04; }
+.metric-header.metric-security .metric-header-label    { color: #345f62; }
+.metric-header.metric-security_arms .metric-header-label { color: #5f5a25; }
 .metric-header.metric-debt .metric-header-label        { color: #476b35; }
+.metric-header.metric-fdi .metric-header-label         { color: #244b91; }
+.metric-header.metric-portfolio .metric-header-label   { color: #5f4524; }
 .metric-header.metric-combined .metric-header-label    { color: #2c1f0a; padding-left: 14px; }
 
 .metric-header-count {
@@ -519,9 +525,13 @@
 .single-table-header.metric-trade .metric-header-label       { color: #1e5a60; }
 .single-table-header.metric-exports .metric-header-label     { color: #285f36; }
 .single-table-header.metric-remittances .metric-header-label { color: #8c3020; }
-.single-table-header.metric-fdi .metric-header-label         { color: #244b91; }
 .single-table-header.metric-migration .metric-header-label   { color: #6a4a5e; }
+.single-table-header.metric-students .metric-header-label    { color: #934b04; }
+.single-table-header.metric-security .metric-header-label    { color: #345f62; }
+.single-table-header.metric-security_arms .metric-header-label { color: #5f5a25; }
 .single-table-header.metric-debt .metric-header-label        { color: #476b35; }
+.single-table-header.metric-fdi .metric-header-label         { color: #244b91; }
+.single-table-header.metric-portfolio .metric-header-label   { color: #5f4524; }
 
 .metric-table-preview {
   height: auto;

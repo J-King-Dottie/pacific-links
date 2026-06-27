@@ -2,8 +2,8 @@
 One-command refresh for the Pacific Links dataset.
 
 Runs every automatable source in order, then harmonizes and rebuilds the
-download. The two benchmark sources (remittances, migration) are manual Excel
-downloads that only update every few years — the runner reminds you about them
+download. The benchmark/manual sources are downloaded outside this runner and
+update less frequently — the runner reminds you about them
 but does not block on them.
 
 Usage:
@@ -12,9 +12,12 @@ Usage:
   python3 scripts/refresh_all.py --only-normalize  # just re-harmonize existing CSVs
 
 Automatable (pulled fresh every run):
-  - Aid    — Lowy Pacific Aid Map, live SDMX API
-  - Debt   — World Bank IDS, live API
-  - Trade  — CEPII BACI (downloads the published version ZIP)
+  - Aid      — Lowy Pacific Aid Map, live SDMX API
+  - Debt     — World Bank IDS, live API
+  - Trade    — CEPII BACI (downloads the published version ZIP)
+  - Students — UNESCO UIS OPRI bulk download
+  - Security — OECD CRS 152xx + SIPRI Arms Transfers
+  - Portfolio investment — IMF PIP live API
 
 Manual (update rarely; download the workbook then re-run normalize):
   - Remittances — World Bank/KNOMAD bilateral matrices (benchmark years)
@@ -59,6 +62,10 @@ def main():
             print("\n  Skipping BACI trade refresh (--skip-baci). Using existing data/raw/baci_imports.csv.")
         else:
             run("Imports — CEPII BACI (download + extract + combine)", ["scripts/fetch_baci_trade.py"])
+        run("Students — UNESCO UIS OPRI", ["scripts/build_students.py"])
+        run("Security assistance — OECD CRS 152xx", ["scripts/build_security_assistance_crs.py"])
+        run("Security arms — SIPRI Arms Transfers", ["scripts/build_security_arms_sipri.py"])
+        run("Portfolio investment — IMF PIP", ["scripts/build_portfolio_positions.py"])
 
         print("\n" + "-"*70)
         print("  MANUAL sources (benchmark years, update rarely):")

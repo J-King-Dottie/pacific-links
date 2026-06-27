@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useCallback } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { PathLayer, ScatterplotLayer } from '@deck.gl/layers'
@@ -25,7 +25,21 @@ const CENTROIDS = {
   KZ: [66.92, 48.02], KW: [47.48, 29.31], PK: [69.35, 30.38],
   LK: [80.77, 7.87], TH: [100.99, 15.87], MU: [57.55, -20.35],
   BM: [-64.75, 32.31], KY: [-80.57, 19.31], VG: [-64.64, 18.42],
-  VI: [-64.90, 18.34], CL: [-71.54, -35.68], FJ: [178.07, -17.71],
+  VI: [-64.90, 18.34], CL: [-71.54, -35.68], SA: [45.08, 23.89],
+  GH: [-1.02, 7.95], CU: [-77.78, 21.52], MA: [-7.09, 31.79],
+  JO: [36.24, 30.59], RO: [24.97, 45.94], AR: [-63.62, -38.42],
+  PA: [-80.78, 8.54], AZ: [47.58, 40.14], CZ: [15.47, 49.82],
+  VN: [108.28, 14.06], SE: [18.64, 60.13], EC: [-78.18, -1.83],
+  PT: [-8.22, 39.40], UA: [31.17, 48.38], HU: [19.50, 47.16],
+  IL: [34.85, 31.05], AT: [14.55, 47.52], MO: [113.54, 22.20],
+  NO: [8.47, 60.47], DO: [-70.16, 18.74], NI: [-85.21, 12.87],
+  BW: [24.68, -22.33], SK: [19.70, 48.67], BJ: [2.32, 9.31],
+  EE: [25.01, 58.60], IS: [-19.02, 64.96], BA: [17.68, 43.92],
+  DZ: [1.66, 28.03], LT: [23.88, 55.17], SV: [-88.90, 13.79],
+  BB: [-59.54, 13.19], BS: [-77.40, 25.03], BH: [50.56, 26.07],
+  GI: [-5.35, 36.14], GG: [-2.58, 49.47], IM: [-4.55, 54.24],
+  JE: [-2.13, 49.21], CW: [-68.99, 12.17],
+  FJ: [178.07, -17.71],
   PG: [143.96, -6.31], WS: [-172.10, -13.76], TO: [-175.20, -21.13],
   VU: [166.96, -15.38], SB: [160.16, -9.64], KI: [-168.73, 1.87],
   FM: [158.26, 6.92], MH: [171.18, 7.10], PW: [134.58, 7.51],
@@ -81,6 +95,14 @@ const MULTILATERAL_LABEL_OVERRIDES = {
   IDS_BND: 'Bondholders',
 }
 
+const SECURITY_PROVIDER_LABEL_OVERRIDES = {
+  CRS_1UN0: 'United\nNations',
+  CRS_1UN011: 'UNDP',
+  CRS_1UN014: 'UNICEF',
+  CRS_1UN019: 'UN Peacebuilding\nFund',
+  CRS_4EU001: 'European\nUnion',
+}
+
 // Distinct colors for multi-selected external countries
 const INFLUENCER_COLORS = [
   [180, 120, 40],   // ochre
@@ -94,21 +116,14 @@ const INFLUENCER_COLORS = [
 const PACIFIC_CODES = new Set(PACIFIC_LIST.map(c => c.code))
 
 
-function scoreToColor(score) {
-  const t = Math.min(score / 60, 1)
-  // Cool grey-blue (low) → warm amber (high) on light map
-  const r = Math.round(160 + t * 80)
-  const g = Math.round(140 - t * 60)
-  const b = Math.round(110 - t * 70)
-  return `rgb(${r},${g},${b})`
-}
-
 export default function MapView({ exposureScores, dataIndex, allRows, selectedCountries, activeMetrics, onCountryClick, onMapLoaded, interactive = true }) {
   const mapContainer = useRef(null)
   const mapRef = useRef(null)
   const deckRef = useRef(null)
   const flowDotsRef = useRef(new Map())
   const artificialNodeSlotsRef = useRef(new Map())
+  const onCountryClickRef = useRef(onCountryClick)
+  const onMapLoadedRef = useRef(onMapLoaded)
   const [mapReady, setMapReady] = useState(false)
   const [tooltip, setTooltip] = useState(null)
   const [flowTooltip, setFlowTooltip] = useState(null)
@@ -118,18 +133,23 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     total > 0 && Number.isFinite(value) ? (value / total) * 100 : null
   )
 
-  const flowEndpointFor = (code) => {
+  useEffect(() => {
+    onCountryClickRef.current = onCountryClick
+    onMapLoadedRef.current = onMapLoaded
+  }, [onCountryClick, onMapLoaded])
+
+  const flowEndpointFor = useCallback((code) => {
     const countryCode = IDS_COUNTRY_CENTROID_OVERRIDES[code]
     if (countryCode && CENTROIDS[countryCode]) {
       return { pos: CENTROIDS[countryCode], artificial: false }
     }
     if (CENTROIDS[code]) return { pos: CENTROIDS[code], artificial: false }
     const artificialPos = artificialNodeSlotsRef.current.get(code)
-    if (selectedMetric === 'debt' && artificialPos) {
+    if ((selectedMetric === 'debt' || selectedMetric === 'security') && artificialPos) {
       return { pos: artificialPos, artificial: true }
     }
     return null
-  }
+  }, [selectedMetric])
 
   function setEndpointTooltip(code, point, fallbackTooltip) {
     const endpoint = flowDotsRef.current.get(code)
@@ -263,7 +283,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         if (!f) return
         const iso = f.properties.ISO_A2
         const entry = PACIFIC_LIST.find(c => c.code === iso)
-        if (entry) onCountryClick(iso, entry.name)
+        if (entry) onCountryClickRef.current?.(iso, entry.name)
       })
 
       // Custom labels for Pacific island nations — Positron suppresses these at default zoom
@@ -325,7 +345,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         if (!f) return
         const code = f.properties.ISO_A2
         const name = f.properties.NAME
-        if (code && code !== '-99' && !PACIFIC_CODES.has(code)) onCountryClick(code, name)
+        if (code && code !== '-99' && !PACIFIC_CODES.has(code)) onCountryClickRef.current?.(code, name)
       })
 
       map.on('mouseenter', 'country-fill', e => {
@@ -346,11 +366,6 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
       // Fix country name overrides in Positron's built-in label layers
       // Override Positron country labels: replace Turkey/mojibake with correct Türkiye
       // Match on native 'name' field (Türkiye) which is reliably encoded in the tile
-      const fixedNameExpr = ['match', ['get', 'name'],
-        'Türkiye', 'Türkiye',
-        'Turkey',  'Türkiye',
-        ['get', 'name_en'],
-      ]
       // Fix Turkey name + suppress Positron's own Pacific labels (we draw our own)
       const pacNamesSet = new Set(PACIFIC_LIST.map(c => c.name))
       for (const layer of ['place_country_1', 'place_country_2']) {
@@ -410,24 +425,11 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
       deckRef.current = overlay
 
       setMapReady(true)
-      onMapLoaded?.()
+      onMapLoadedRef.current?.()
     })
 
     return () => map.remove()
   }, [])
-
-  // Choropleth
-  useEffect(() => {
-    if (!mapReady || !mapRef.current) return
-    const map = mapRef.current
-    if (!map.getLayer('pacific-fill')) return
-    const colorExpr = ['match', ['get', 'ISO_A2']]
-    for (const pac of PACIFIC_LIST) {
-      colorExpr.push(pac.code, scoreToColor(exposureScores[pac.code]?.score ?? 0))
-    }
-    colorExpr.push('#c8b89a')
-    map.setPaintProperty('pacific-fill', 'fill-color', colorExpr)
-  }, [mapReady, exposureScores])
 
   // Selected highlight — each country gets its arc color
   useEffect(() => {
@@ -461,11 +463,9 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
   useEffect(() => {
     if (!mapReady || !deckRef.current) return
 
-    const MAX_PX = 14
     const MIN_PX = 0.8
     const SELECTED_MAX_PX = 18
     const SELECTED_MIN_PX = 1.5
-    const MIN_FLOW_PCT = 0.1
     const DOT_RADIUS = 5
     const TWO_PI = Math.PI * 2
     const TAN_ALPHA  = Math.tan(Math.PI / 10)
@@ -634,7 +634,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         const rd = Math.log(right.radius / left.radius)
         const tP = (td + rd) / 2, tM = (td - rd) / 2
         if (!isValid(tP, tM, Math.PI / TAN_2ALPHA)) return null
-        let r = 0, theta = 0
+        let r, theta
         if (left.type === 'joint' && right.type !== 'joint') {
           r = right.radius * Math.exp(-(td)); theta = left.theta
         } else if (right.type === 'joint' && left.type !== 'joint') {
@@ -815,22 +815,30 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
 
     const paths = []
     const dotMap = new Map() // destCode → {pos, name, entries:[{label,color,byMetric,totalPct}]}
-    const filteredMetric = activeMetrics.length === 1 ? activeMetrics[0] : null
     const selectedFlowSets = []
-    const flowPct = (byMetric) => {
-      const total = activeMetrics.reduce((s, m) => s + Math.min(byMetric[m]?.pct ?? 0, 100), 0)
-      return filteredMetric ? total : total / activeMetrics.length
+    const flowValue = (byMetric) => {
+      return activeMetrics.reduce((sum, metric) => {
+        const value = byMetric[metric]?.value
+        return sum + (Number.isFinite(value) ? value : 0)
+      }, 0)
     }
 
+    const artificialLabelOverrides = selectedMetric === 'security'
+      ? SECURITY_PROVIDER_LABEL_OVERRIDES
+      : MULTILATERAL_LABEL_OVERRIDES
+    const artificialGroupLabel = selectedMetric === 'security'
+      ? 'Multilateral security providers'
+      : MULTILATERAL_GROUP_LABEL.name
+
     const artificialTotals = new Map()
-    if (selectedMetric === 'debt') {
+    if (selectedMetric === 'debt' || selectedMetric === 'security') {
       for (const country of selectedCountries) {
         if (!country.isPacific) continue
         const tops = getTopCounterparts(dataIndex, country.code, activeMetrics, null)
         for (const t of tops) {
-          if (!MULTILATERAL_LABEL_OVERRIDES[t.counterpartCode]) continue
-          const widthValue = flowPct(t.byMetric)
-          if (!(widthValue >= MIN_FLOW_PCT && widthValue > 0)) continue
+          if (!artificialLabelOverrides[t.counterpartCode]) continue
+          const widthValue = flowValue(t.byMetric)
+          if (!(widthValue > 0)) continue
           artificialTotals.set(t.counterpartCode, (artificialTotals.get(t.counterpartCode) ?? 0) + widthValue)
         }
       }
@@ -853,15 +861,16 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         const footprint = getInfluencerFootprint(dataIndex, country.code, activeMetrics)
         const totalValue = footprint.reduce((sum, f) => sum + (f.byMetric[selectedMetric]?.value ?? 0), 0)
         flows = footprint
-          .filter(f => flowEndpointFor(f.pacificCode) && f.totalPct > 0)
+          .filter(f => flowEndpointFor(f.pacificCode) && flowValue(f.byMetric) > 0)
           .map(f => {
             const metricValue = f.byMetric[selectedMetric]?.value ?? null
             const sharePct = valueSharePct(metricValue, totalValue)
             const endpoint = flowEndpointFor(f.pacificCode)
+            const widthValue = flowValue(f.byMetric)
             return {
               to: endpoint.pos,
               pct: sharePct,
-              widthValue: metricValue,
+              widthValue,
               destCode: f.pacificCode,
               destName: f.pacificName,
               artificialDest: endpoint.artificial,
@@ -878,14 +887,14 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
       } else {
         const tops = getTopCounterparts(dataIndex, country.code, activeMetrics, null)
         flows = tops
-          .filter(t => flowEndpointFor(t.counterpartCode) && t.totalPct > 0)
+          .filter(t => flowEndpointFor(t.counterpartCode) && flowValue(t.byMetric) > 0)
           .map(t => {
-            const pct = flowPct(t.byMetric)
             const endpoint = flowEndpointFor(t.counterpartCode)
+            const widthValue = flowValue(t.byMetric)
             return {
               to: endpoint.pos,
-              pct,
-              widthValue: pct,
+              pct: t.totalPct,
+              widthValue,
               destCode: t.counterpartCode,
               destName: t.counterpartName,
               artificialDest: endpoint.artificial,
@@ -893,7 +902,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
             }
           })
       }
-      flows = flows.filter(f => f.pct >= MIN_FLOW_PCT && f.widthValue > 0)
+      flows = flows.filter(f => f.widthValue > 0)
       if (!flows.length) continue
       selectedFlowSets.push({
         color,
@@ -930,7 +939,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     // Pick the color of the first (largest) entry for each dot
     dots.forEach(d => {
       d.color = d.entries[0].color
-      d.displayName = MULTILATERAL_LABEL_OVERRIDES[d.code] ?? d.name
+      d.displayName = artificialLabelOverrides[d.code] ?? d.name
     })
     flowDotsRef.current = new Map(dots.map(d => [d.code, d]))
 
@@ -970,7 +979,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
       features: artificialDots.length
         ? [{
             type: 'Feature',
-            properties: { name: MULTILATERAL_GROUP_LABEL.name },
+            properties: { name: artificialGroupLabel },
             geometry: { type: 'Polygon', coordinates: MULTILATERAL_EEZ_POLYGON },
           }]
         : [],
@@ -981,7 +990,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         ? [
             {
               type: 'Feature',
-              properties: { name: MULTILATERAL_GROUP_LABEL.name, size: 12, anchor: 'center', offset: [0, 0] },
+              properties: { name: artificialGroupLabel, size: 12, anchor: 'center', offset: [0, 0] },
               geometry: { type: 'Point', coordinates: MULTILATERAL_GROUP_LABEL.pos },
             },
             ...artificialDots.map(d => ({
@@ -994,7 +1003,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     })
 
     deckRef.current.setProps({ layers })
-  }, [mapReady, selectedCountries, dataIndex, allRows, activeMetrics])
+  }, [mapReady, selectedCountries, dataIndex, allRows, activeMetrics, selectedMetric, flowEndpointFor])
 
   const tooltipScore = tooltip?.code ? exposureScores[tooltip.code] : null
   const tooltipIsPacific = tooltip?.code ? PACIFIC_CODES.has(tooltip.code) : false
@@ -1002,11 +1011,14 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
   const tooltipMetricRows = Object.values(tooltipMetricEntry)
   const tooltipMetricTotalValue = tooltipMetricRows.reduce((sum, row) => sum + (Number.isFinite(row.value) ? row.value : 0), 0)
   const tooltipMetricLatestYear = tooltipMetricRows.reduce((latest, row) => Number.isFinite(row.year) ? Math.max(latest, row.year) : latest, 0) || null
-  const tooltipPctHeader = selectedMetric === 'migration'
+  const isPeopleMetric = selectedMetric === 'migration' || selectedMetric === 'students'
+  const tooltipPctHeader = selectedMetric === 'security_arms'
+    ? ''
+    : isPeopleMetric
     ? (tooltipIsPacific ? '% of pop' : '% of total')
     : (tooltipIsPacific ? '% of GDP' : '% of total')
-  const tooltipValueHeader = selectedMetric === 'migration' ? 'people' : '$USD'
-  const METRIC_LABELS = { aid: 'Aid', aid_committed: 'Aid committed', trade: 'Imports', exports: 'Exports', remittances: 'Remittances', fdi: 'FDI', migration: 'Migration', debt: 'Debt' }
+  const tooltipValueHeader = selectedMetric === 'security_arms' ? 'volume' : isPeopleMetric ? 'people' : '$USD'
+  const METRIC_LABELS = { aid: 'Aid', aid_committed: 'Aid committed', trade: 'Imports', exports: 'Exports', remittances: 'Remittances', migration: 'Migration', students: 'Students', security: 'Security assistance', security_arms: 'Security arms', debt: 'Debt', fdi: 'FDI', portfolio: 'Portfolio investment' }
   const tooltipMetricLabel = METRIC_LABELS[selectedMetric]
   const tooltipPctValue = tooltipIsPacific
     ? tooltipScore?.metricScores?.[selectedMetric] ?? null
@@ -1038,7 +1050,8 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
                     </td>
                     <td style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontSize: '0.78rem', paddingRight: 8 }}>
                       {tooltipMetricTotalValue > 0
-                        ? (tooltipMetricTotalValue >= 1e9 ? `${(tooltipMetricTotalValue / 1e9).toFixed(1)}B`
+                        ? selectedMetric === 'security_arms' ? tooltipMetricTotalValue.toFixed(tooltipMetricTotalValue < 10 ? 2 : 1)
+                          : (tooltipMetricTotalValue >= 1e9 ? `${(tooltipMetricTotalValue / 1e9).toFixed(1)}B`
                           : tooltipMetricTotalValue >= 1e6 ? `${(tooltipMetricTotalValue / 1e6).toFixed(1)}M`
                           : tooltipMetricTotalValue >= 1e3 ? `${(tooltipMetricTotalValue / 1e3).toFixed(1)}K`
                           : tooltipMetricTotalValue.toFixed(1))
@@ -1059,16 +1072,17 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
           {flowTooltip.entries.map((e, i) => {
             const fmtVal = (metric, val) => {
               if (val == null) return '-'
+              if (metric === 'security_arms') return val.toFixed(val < 10 ? 2 : 1)
               if (val >= 1e9) return `${(val/1e9).toFixed(1)}B`
               if (val >= 1e6) return `${(val/1e6).toFixed(1)}M`
               if (val >= 1e3) return `${(val/1e3).toFixed(1)}K`
               return val.toFixed(1)
             }
             const metricEntry = e.byMetric[selectedMetric] ?? { pct: null, value: null, year: null }
-            const isMigration = selectedMetric === 'migration'
-            const pctHeader = isMigration ? '% of pop' : '% of GDP'
-            const valueHeader = isMigration ? 'people' : '$USD'
-            const metricLabel = selectedMetric.charAt(0).toUpperCase() + selectedMetric.slice(1)
+            const isPeopleMetric = selectedMetric === 'migration' || selectedMetric === 'students'
+            const pctHeader = selectedMetric === 'security_arms' ? '' : isPeopleMetric ? '% of pop' : '% of GDP'
+            const valueHeader = selectedMetric === 'security_arms' ? 'volume' : isPeopleMetric ? 'people' : '$USD'
+            const metricLabel = METRIC_LABELS[selectedMetric] ?? selectedMetric.charAt(0).toUpperCase() + selectedMetric.slice(1)
             return (
               <div key={i} className="flow-tooltip-entry">
                 <div className="flow-tooltip-header">

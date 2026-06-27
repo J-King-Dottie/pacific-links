@@ -29,18 +29,38 @@
       "retrieved": "2026-06-22"
     },
     {
-      "metric": "FDI",
-      "release": "IMF Direct Investment Positions by Counterpart Economy",
-      "retrieved": "2026-06-27"
-    },
-    {
       "metric": "Migration",
       "release": "UN International Migrant Stock 2024",
       "retrieved": "2026-06-27"
     },
     {
+      "metric": "Students",
+      "release": "UNESCO UIS OPRI February 2026",
+      "retrieved": "2026-06-27"
+    },
+    {
+      "metric": "Security assistance",
+      "release": "OECD CRS 152xx conflict, peace and security",
+      "retrieved": "2026-06-27"
+    },
+    {
+      "metric": "Security arms",
+      "release": "SIPRI Arms Transfers Database",
+      "retrieved": "2026-06-27"
+    },
+    {
       "metric": "Debt",
       "release": "World Bank IDS (live API)",
+      "retrieved": "2026-06-27"
+    },
+    {
+      "metric": "FDI",
+      "release": "IMF Direct Investment Positions by Counterpart Economy",
+      "retrieved": "2026-06-27"
+    },
+    {
+      "metric": "Portfolio",
+      "release": "IMF Portfolio Investment Positions by Counterpart Economy",
       "retrieved": "2026-06-27"
     }
   ]

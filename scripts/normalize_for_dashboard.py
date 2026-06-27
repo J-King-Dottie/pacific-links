@@ -7,7 +7,8 @@ Unified output schema for all metrics:
 
 Exceptions:
   - imports/exports: adds hs1_code, hs1_name
-  - migration: value_people instead of value_usd; pct_population instead of pct_gdp
+  - migration/students: value_people instead of value_usd; pct_population instead of pct_gdp
+  - security assistance/arms: add line-level detail columns for expandable rows
 
 This script:
   1. Reads each data/processed CSV, cleans and renames columns
@@ -54,29 +55,29 @@ REMITTANCE_SKIP_NAME_SUBSTRINGS = ["total", "unidentified", "other south"]
 ISO3_TO_ISO2 = {
     "ABW": "AW", "ALB": "AL", "ARG": "AR", "ASM": "AS", "AUS": "AU",
     "AUT": "AT", "AZE": "AZ", "BEL": "BE", "BEN": "BJ", "BFA": "BF",
-    "BGD": "BD", "BGR": "BG", "BIH": "BA", "BLR": "BY", "BLZ": "BZ",
+    "BGD": "BD", "BGR": "BG", "BHR": "BH", "BHS": "BS", "BIH": "BA", "BLR": "BY", "BLZ": "BZ",
     "BMU": "BM", "BOL": "BO", "BRA": "BR", "BRB": "BB", "BWA": "BW",
     "CAN": "CA", "CHE": "CH", "CHL": "CL", "CHN": "CN", "COL": "CO",
-    "CRI": "CR", "CUB": "CU", "CYM": "KY", "CYP": "CY", "CZE": "CZ",
+    "CRI": "CR", "CUB": "CU", "CWX": "CW", "CYM": "KY", "CYP": "CY", "CZE": "CZ",
     "DEU": "DE", "DNK": "DK", "DOM": "DO", "DZA": "DZ", "ECU": "EC",
     "EGY": "EG", "ESP": "ES", "EST": "EE", "FIN": "FI", "FJI": "FJ",
     "FRA": "FR", "FSM": "FM", "GBR": "GB", "GIN": "GN", "GNB": "GW",
-    "GRC": "GR", "GTM": "GT", "GUM": "GU", "HKG": "HK", "HRV": "HR",
-    "HUN": "HU", "IDN": "ID", "IND": "IN", "IRL": "IE", "ISL": "IS",
-    "ISR": "IL", "ITA": "IT", "JOR": "JO", "JPN": "JP", "KAZ": "KZ",
+    "GIB": "GI", "GGY": "GG", "GRC": "GR", "GTM": "GT", "GUM": "GU", "HKG": "HK", "HRV": "HR",
+    "HUN": "HU", "IDN": "ID", "IMN": "IM", "IND": "IN", "IRL": "IE", "ISL": "IS",
+    "ISR": "IL", "ITA": "IT", "JEY": "JE", "JOR": "JO", "JPN": "JP", "KAZ": "KZ",
     "KEN": "KE", "KIR": "KI", "KOR": "KR", "KOS": "XK", "KWT": "KW",
     "LBN": "LB", "LKA": "LK", "LTU": "LT", "LUX": "LU", "MAC": "MO",
-    "MEX": "MX", "MHL": "MH", "MKD": "MK", "MLI": "ML", "MLT": "MT",
+    "MAR": "MA", "MEX": "MX", "MHL": "MH", "MKD": "MK", "MLI": "ML", "MLT": "MT",
     "MNP": "MP", "MOZ": "MZ", "MUS": "MU", "MYS": "MY", "NGA": "NG",
     "NIC": "NI", "NLD": "NL", "NOR": "NO", "NZL": "NZ", "PAK": "PK",
     "PAN": "PA", "PER": "PE", "PHL": "PH", "PLW": "PW", "PNG": "PG",
     "POL": "PL", "PRI": "PR", "PRT": "PT", "PYF": "PF", "ROU": "RO",
-    "RUS": "RU", "SEN": "SN", "SGP": "SG", "SLB": "SB", "SLV": "SV",
+    "RUS": "RU", "SAU": "SA", "SEN": "SN", "SGP": "SG", "SLB": "SB", "SLV": "SV",
     "SRB": "RS", "SVK": "SK", "SVN": "SI", "SWE": "SE", "SWZ": "SZ",
     "SYC": "SC", "TGO": "TG", "THA": "TH", "TON": "TO", "TUR": "TR",
     "TUV": "TV", "TWN": "TW", "UKR": "UA", "URY": "UY", "USA": "US",
     "VEN": "VE", "VGB": "VG", "VIR": "VI", "VNM": "VN", "VUT": "VU",
-    "WSM": "WS", "ZAF": "ZA",
+    "WSM": "WS", "ZAF": "ZA", "GHA": "GH",
 }
 
 M49_TO_ISO2 = {
@@ -311,6 +312,36 @@ def normalize_fdi(gdp_pop):
     return out
 
 
+def normalize_portfolio(gdp_pop):
+    rows = list(csv.DictReader(open(DATA_DIR / "portfolio_positions_by_holder_year.csv", encoding="utf-8-sig")))
+    out = []
+    for r in rows:
+        pac = r.get("pacific_code", "")
+        raw_code = (r.get("holder_code") or r.get("counterpart_code") or "").strip()
+        iso2 = r.get("counterpart_code") if len(r.get("counterpart_code", "")) == 2 else ISO3_TO_ISO2.get(raw_code, f"PIP_{raw_code}" if raw_code else "")
+        if not iso2:
+            continue
+        try:
+            val = float(r.get("value_usd") or 0)
+        except (ValueError, KeyError):
+            continue
+        if val <= 0 or not in_scope_pacific(pac):
+            continue
+        year = int(r["year"])
+        gdp = best_gdp(gdp_pop, pac, year)
+        out.append({
+            "pacific_code":     pac,
+            "pacific_name":     r.get("pacific_name", ""),
+            "counterpart_code": iso2,
+            "counterpart_name": r.get("counterpart_name") or r.get("holder_name", ""),
+            "year":             year,
+            "value_usd":        round(val, 2),
+            "pct_gdp":          round(val / gdp * 100, 4) if gdp else None,
+        })
+    print(f"  Portfolio:    {len(out):>6} rows")
+    return out
+
+
 def normalize_migration(gdp_pop):
     rows = list(csv.DictReader(open(DATA_DIR / "migrants_abroad_by_destination_year.csv", encoding="utf-8")))
     valid = []
@@ -340,6 +371,96 @@ def normalize_migration(gdp_pop):
         out.append({**r, "pct_population": round(r["value_people"] / pop * 100, 4) if pop else None})
 
     print(f"  Migration:    {len(out):>6} rows")
+    return out
+
+
+def normalize_students(gdp_pop):
+    rows = list(csv.DictReader(open(DATA_DIR / "students_by_destination_year.csv", encoding="utf-8-sig")))
+    out = []
+    for r in rows:
+        pac = r.get("pacific_code", "")
+        raw_code = (r.get("host_code") or r.get("counterpart_code") or "").strip()
+        iso2 = r.get("counterpart_code") if len(r.get("counterpart_code", "")) == 2 else ISO3_TO_ISO2.get(raw_code, "")
+        try:
+            val = float(r.get("value_people") or r.get("value") or 0)
+        except (ValueError, KeyError):
+            continue
+        if val <= 0 or not in_scope_pacific(pac) or not iso2 or iso2 == pac:
+            continue
+        year = int(r["year"])
+        pop = best_pop(gdp_pop, pac, year)
+        out.append({
+            "pacific_code":     pac,
+            "pacific_name":     r.get("pacific_name", ""),
+            "counterpart_code": iso2,
+            "counterpart_name": r.get("counterpart_name") or r.get("host_name", ""),
+            "year":             year,
+            "value_people":     round(val, 2),
+            "pct_population":   round(val / pop * 100, 4) if pop else None,
+        })
+
+    print(f"  Students:     {len(out):>6} rows")
+    return out
+
+
+def normalize_security_assistance(gdp_pop):
+    rows = list(csv.DictReader(open(DATA_DIR / "security_assistance_by_provider_year.csv", encoding="utf-8-sig")))
+    out = []
+    for r in rows:
+        pac = r.get("pacific_code", "")
+        cpty = r.get("counterpart_code") or r.get("donor_code", "")
+        try:
+            val = float(r.get("value_usd") or 0)
+        except (ValueError, KeyError):
+            continue
+        if val <= 0 or not in_scope_pacific(pac):
+            continue
+        year = int(r["year"])
+        gdp = best_gdp(gdp_pop, pac, year)
+        out.append({
+            "pacific_code":     pac,
+            "pacific_name":     r.get("pacific_name", ""),
+            "counterpart_code": cpty,
+            "counterpart_name": r.get("counterpart_name") or r.get("donor_name", ""),
+            "year":             year,
+            "sector_code":      r.get("sector_code", ""),
+            "sector_name":      r.get("sector_name", ""),
+            "value_usd":        round(val, 2),
+            "pct_gdp":          round(val / gdp * 100, 4) if gdp else None,
+        })
+    print(f"  Security aid: {len(out):>6} rows")
+    return out
+
+
+def normalize_security_arms(gdp_pop):
+    rows = list(csv.DictReader(open(DATA_DIR / "security_arms_by_supplier_year.csv", encoding="utf-8-sig")))
+    out = []
+    for r in rows:
+        pac = r.get("pacific_code", "")
+        cpty = r.get("counterpart_code") or r.get("supplier_code", "")
+        try:
+            val = float(r.get("value_tiv") or 0)
+        except (ValueError, KeyError):
+            continue
+        if val <= 0 or not in_scope_pacific(pac):
+            continue
+        out.append({
+            "pacific_code":        pac,
+            "pacific_name":        r.get("pacific_name", ""),
+            "counterpart_code":    cpty,
+            "counterpart_name":    r.get("counterpart_name") or r.get("supplier_name", ""),
+            "year":                int(r["year"]),
+            "order_year":          r.get("order_year", ""),
+            "number_ordered":      r.get("number_ordered", ""),
+            "weapon_designation":  r.get("weapon_designation", ""),
+            "weapon_description":  r.get("weapon_description", ""),
+            "deliveries":          r.get("deliveries", ""),
+            "delivery_years":      r.get("delivery_years", ""),
+            "status":              r.get("status", ""),
+            "comments":            r.get("comments", ""),
+            "value_tiv":           round(val, 4),
+        })
+    print(f"  Security arms:{len(out):>6} rows")
     return out
 
 
@@ -381,12 +502,12 @@ METRIC_META = [
         "source":    "Lowy Institute Pacific Aid Map via Pacific Data Hub",
         "sourceUrl": "https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam",
         "sourceLinks": [],
-        "coverage":  "14 Pacific island countries, 2010-2024 where aid records are available.",
+        "coverage":  "14 Pacific island countries, 2010-2024 where aid spending records are available.",
         "value_col": "value_usd",
-        "value_label": "USD (spent/disbursed aid)",
+        "value_label": "USD (aid money spent)",
         "pct_col":   "pct_gdp",
         "pct_label": "% of recipient GDP",
-        "notes":     "Spent/disbursed aid. Aggregate donor categories removed. Do not add spent and committed values together; they are separate views of the same aid relationship.",
+        "notes":     "Aid money actually spent by donors in Pacific countries. Aggregate donor categories removed, so the table shows direct donor relationships only. Do not add spent and promised values together; they are separate views of the same aid relationship. For very small economies, a large project can look very large as a share of GDP.",
     },
     {
         "metric":    "Aid committed",
@@ -394,12 +515,12 @@ METRIC_META = [
         "source":    "Lowy Institute Pacific Aid Map via Pacific Data Hub",
         "sourceUrl": "https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam",
         "sourceLinks": [],
-        "coverage":  "14 Pacific island countries, 2010-2024 where aid commitment records are available.",
+        "coverage":  "14 Pacific island countries, 2010-2024 where promised aid records are available.",
         "value_col": "value_usd",
-        "value_label": "USD (committed aid)",
+        "value_label": "USD (aid money promised)",
         "pct_col":   "pct_gdp",
         "pct_label": "% of recipient GDP",
-        "notes":     "Committed aid, not spent/disbursed aid. Aggregate donor categories removed. Do not add spent and committed values together; they are separate views of the same aid relationship.",
+        "notes":     "Aid money promised by donors, not necessarily spent yet. Aggregate donor categories removed, so the table shows direct donor relationships only. Do not add spent and promised values together; they are separate views of the same aid relationship. For very small economies, a large project or commitment can look very large as a share of GDP.",
     },
     {
         "metric":    "Imports",
@@ -407,12 +528,12 @@ METRIC_META = [
         "source":    "CEPII BACI Reconciled Bilateral Trade Data",
         "sourceUrl": "https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37",
         "sourceLinks": [],
-        "coverage":  "14 Pacific island countries, 2010-2024 where import records are available.",
+        "coverage":  "14 Pacific island countries, 2010-2024 where records show Pacific countries buying goods from overseas.",
         "value_col": "value_usd",
-        "value_label": "USD (import value)",
+        "value_label": "USD (goods bought from overseas)",
         "pct_col":   "pct_gdp",
-        "pct_label": "% of importer GDP",
-        "notes":     "Grouped by supplier country and HS1 product group. This app is trying to show comparable bilateral relationships across many Pacific countries and partners, so we use BACI because it reconciles importer and exporter reports from Comtrade into one bilateral flow. Trade data can still look unusually large for small island economies, especially Marshall Islands, because ship registries, bunkering fuel, re-exports, transshipment, and partner-country reporting rules can record vessel-related activity as merchandise trade.",
+        "pct_label": "% of Pacific country GDP",
+        "notes":     "Grouped by Pacific country, seller country, year, and broad product group. This app is trying to show comparable relationships across many Pacific countries and partners, so we use BACI because it turns importer and exporter reports from Comtrade into one country-to-country number. Trade data can still look unusually large for small island economies, especially Marshall Islands, because ship registries, bunkering fuel, re-exports, transshipment, and partner-country reporting rules can record vessel-related activity as goods trade. Read these as recorded goods trade, not a perfect measure of domestic economic exposure.",
     },
     {
         "metric":    "Exports",
@@ -420,12 +541,12 @@ METRIC_META = [
         "source":    "CEPII BACI Reconciled Bilateral Trade Data",
         "sourceUrl": "https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37",
         "sourceLinks": [],
-        "coverage":  "14 Pacific island countries, 2010-2024 where export records are available.",
+        "coverage":  "14 Pacific island countries, 2010-2024 where records show Pacific countries selling goods overseas.",
         "value_col": "value_usd",
-        "value_label": "USD (export value)",
+        "value_label": "USD (goods sold overseas)",
         "pct_col":   "pct_gdp",
-        "pct_label": "% of exporter GDP",
-        "notes":     "Grouped by destination country and HS1 product group. This app is trying to show comparable bilateral relationships across many Pacific countries and partners, so we use BACI because it reconciles importer and exporter reports from Comtrade into one bilateral flow. Trade data can still look unusually large for small island economies, especially Marshall Islands, because ship registries, bunkering fuel, re-exports, transshipment, and partner-country reporting rules can record vessel-related activity as merchandise trade.",
+        "pct_label": "% of Pacific country GDP",
+        "notes":     "Grouped by Pacific country, buyer country, year, and broad product group. This app is trying to show comparable relationships across many Pacific countries and partners, so we use BACI because it turns importer and exporter reports from Comtrade into one country-to-country number. Trade data can still look unusually large for small island economies, especially Marshall Islands, because ship registries, bunkering fuel, re-exports, transshipment, and partner-country reporting rules can record vessel-related activity as goods trade. Read these as recorded goods trade, not a perfect measure of domestic production.",
     },
     {
         "metric":    "Remittances",
@@ -438,25 +559,12 @@ METRIC_META = [
             ("2017 matrix (archive)", "https://web.archive.org/web/20190124090151id_/http://pubdocs.worldbank.org/en/705611533661084197/bilateralremittancematrix2017-Apr2018.xlsx"),
             ("2010 matrix (archive)", "https://web.archive.org/web/20160531235700id_/http://pubdocs.worldbank.org:80/pubdocs/publicdoc/2015/9/895701443117529385/Bilateral-Remittance-Matrix-2010.xlsx"),
         ],
-        "coverage":  "14 Pacific island countries. Benchmark years only: 2010, 2017, 2018, 2021.",
+        "coverage":  "14 Pacific island countries. Money sent home to Pacific countries from people overseas. Benchmark years only: 2010, 2017, 2018, 2021.",
         "value_col": "value_usd",
-        "value_label": "USD (modelled bilateral estimate)",
+        "value_label": "USD (money sent home, modelled estimate)",
         "pct_col":   "pct_gdp",
         "pct_label": "% of recipient GDP",
-        "notes":     "Modelled bilateral estimates — not observed flows. No interpolation between benchmark years. Non-country aggregate rows removed.",
-    },
-    {
-        "metric":    "FDI",
-        "tab":       "FDI",
-        "source":    "IMF Direct Investment Positions by Counterpart Economy",
-        "sourceUrl": "https://data.imf.org/en/datasets/IMF.STA:DIP",
-        "sourceLinks": [],
-        "coverage":  "14 Pacific island countries, 2010-2024 where inward FDI stock records are available.",
-        "value_col": "value_usd",
-        "value_label": "USD (year-end inward FDI stock)",
-        "pct_col":   "pct_gdp",
-        "pct_label": "% of recipient GDP",
-        "notes":     "Year-end inward FDI stock, not annual FDI flow. Stock is used because it shows the investment position that has built up and is still recorded at year end; flow would show only new investment entering or leaving in a single year. FDI is an official estimate of some foreign-owned business and investment stakes; it can miss smaller, less formal, or unreported businesses on the ground. The counterpart is the immediate investor economy, not necessarily the ultimate owner. Some small-island figures, especially Marshall Islands, can be warped by ship registry, holding-company, and corporate-structure effects. Zero-value rows are removed. Negative net positions are retained in the download; the dashboard map/table ranks positive inward positions.",
+        "notes":     "Modelled country-to-country estimates, not directly observed transfers. We do not fill in missing years. Non-country aggregate rows removed.",
     },
     {
         "metric":    "Migration",
@@ -466,10 +574,49 @@ METRIC_META = [
         "sourceLinks": [],
         "coverage":  "14 Pacific island countries. Benchmark years only: 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024.",
         "value_col": "value_people",
-        "value_label": "People (migrant stock — people born in Pacific country living in destination)",
+        "value_label": "People (born in Pacific country, living overseas)",
         "pct_col":   "pct_population",
         "pct_label": "% of origin country population (can exceed 100% for small islands)",
-        "notes":     "Migrant stock, not annual flows. Regional and aggregate destination rows removed. Missing country-pair rows mean the UN matrix does not report a value, not confirmed zero; for example, the UN matrix is blank for Vanuatu-born people in New Zealand even though New Zealand census data records that community.",
+        "notes":     "People living overseas, not annual moves. Regional and aggregate destination rows removed. Missing country-pair rows mean the UN matrix does not report a value, not confirmed zero; for example, the UN matrix is blank for Vanuatu-born people in New Zealand even though New Zealand census data records that community.",
+    },
+    {
+        "metric":    "Students",
+        "tab":       "Students",
+        "source":    "UNESCO UIS Other Policy Relevant Indicators (OPRI)",
+        "sourceUrl": "https://databrowser.uis.unesco.org/resources/bulk",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where overseas higher-education student records are available.",
+        "value_col": "value_people",
+        "value_label": "People (recorded overseas higher-education students)",
+        "pct_col":   "pct_population",
+        "pct_label": "% of origin country population",
+        "notes":     "Recorded overseas higher-education students by Pacific country of origin and study destination. These are students recorded in a destination country in that year, not annual departures, not scholarship counts, and not all overseas study. School-level study is outside scope, and missing destination-country origin reporting can make totals look lower than expected. Self-country and aggregate rows removed.",
+    },
+    {
+        "metric":    "Security assistance",
+        "tab":       "Security assistance",
+        "source":    "OECD CRS security-related assistance records",
+        "sourceUrl": "https://sdmx.oecd.org/dcd-public/rest/dataflow/OECD.DCD.FSD/DSD_CRS@DF_CRS/1.6",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where OECD records show security-related assistance spent in Pacific countries.",
+        "value_col": "value_usd",
+        "value_label": "USD (security-related assistance spent)",
+        "pct_col":   "pct_gdp",
+        "pct_label": "% of recipient GDP",
+        "notes":     "OECD rows tagged as security-related. These are reported amounts spent in current US dollars on security, peacebuilding, reintegration, mine action and related purposes. They are not all defence cooperation and should not be added to SIPRI arms transfers.",
+    },
+    {
+        "metric":    "Security arms",
+        "tab":       "Security arms",
+        "source":    "SIPRI Arms Transfers Database",
+        "sourceUrl": "https://armstransfers.sipri.org/ArmsTransfer/TransferRegister",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where SIPRI records major conventional arms delivered to Pacific countries.",
+        "value_col": "value_tiv",
+        "value_label": "Arms transfer volume (SIPRI trend-indicator value)",
+        "pct_col":   None,
+        "pct_label": "",
+        "notes":     "SIPRI records major conventional arms only. It usually does not capture small arms, ammunition, routine policing equipment, training, or most day-to-day security cooperation. We label SIPRI's trend-indicator value as arms transfer volume because it is a comparable measure of transfer size, not USD, and it should not be added to CRS security assistance. Sparse rows are meaningful: no row means SIPRI did not identify a delivery.",
     },
     {
         "metric":    "Debt",
@@ -477,12 +624,38 @@ METRIC_META = [
         "source":    "World Bank International Debt Statistics (IDS)",
         "sourceUrl": "https://databank.worldbank.org/source/international-debt-statistics",
         "sourceLinks": [],
-        "coverage":  "Fiji, FSM, PNG, Samoa, Solomon Islands, Tonga, Vanuatu — IDS reporting countries only, 2010-2024.",
+        "coverage":  "World Bank IDS has seven Pacific debtor countries in scope: Fiji, FSM, PNG, Samoa, Solomon Islands, Tonga, Vanuatu. In this pull, the published positive creditor-level rows cover Fiji, PNG, Samoa, Solomon Islands, Tonga, and Vanuatu.",
         "value_col": "value_usd",
-        "value_label": "USD (external debt stock — public and publicly guaranteed)",
+        "value_label": "USD (public external debt owed at year end)",
         "pct_col":   "pct_gdp",
         "pct_label": "% of debtor GDP",
-        "notes":     "Debt stock (outstanding obligations), not new borrowing. IDS creditor names retained including multilateral institutions.",
+        "notes":     "Money owed at year end, not new borrowing during the year. Lender names are retained as IDS reports them, including multilateral institutions.",
+    },
+    {
+        "metric":    "FDI",
+        "tab":       "FDI",
+        "source":    "IMF Direct Investment Positions by Counterpart Economy",
+        "sourceUrl": "https://data.imf.org/en/datasets/IMF.STA:DIP",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where records show direct business investment from overseas into Pacific countries.",
+        "value_col": "value_usd",
+        "value_label": "USD (direct business investment from overseas at year end)",
+        "pct_col":   "pct_gdp",
+        "pct_label": "% of recipient GDP",
+        "notes":     "Year-end amount, not new money during the year. The year-end amount is used because it shows the direct business investment from overseas that has built up and is still recorded. FDI can miss smaller, less formal, or unreported businesses on the ground. The country shown is the immediate investor economy, not necessarily the ultimate owner. Some small-island figures, especially Marshall Islands, can be warped by ship registry, holding-company, and corporate-structure effects. Zero-value rows are removed. Negative values are retained in the download; the dashboard map/table ranks positive values.",
+    },
+    {
+        "metric":    "Portfolio",
+        "tab":       "Portfolio",
+        "source":    "IMF Portfolio Investment Positions by Counterpart Economy",
+        "sourceUrl": "https://data.imf.org/en/datasets/IMF.STA:PIP",
+        "sourceLinks": [],
+        "coverage":  "14 Pacific island countries, 2010-2024 where overseas money invested in Pacific shares and bonds is reported.",
+        "value_col": "value_usd",
+        "value_label": "USD (overseas money invested in Pacific shares and bonds at year end)",
+        "pct_col":   "pct_gdp",
+        "pct_label": "% of recipient GDP",
+        "notes":     "Portfolio investment is money placed in shares or bonds. It is different from FDI: FDI is a business stake, while portfolio investment usually does not mean owning or running the business. This view shows which countries report money invested in Pacific shares and bonds. It does not show where Pacific residents invest overseas, because that direction is mostly missing from the source. Values are year-end amounts, not money newly invested during the year. Some small-island figures, especially Marshall Islands, can be warped by ship registry, corporate, and financial structures. Read these as reported holdings of Pacific-linked shares and bonds, not a simple measure of ordinary local investment markets.",
     },
 ]
 
@@ -502,9 +675,13 @@ SOURCE_RELEASES = {
     "Imports":     {"release": f"CEPII BACI {BACI_VERSION.replace('_', ' ')}", "file": RAW_DIR / "baci" / f"BACI_{BACI_VERSION}.zip"},
     "Exports":     {"release": f"CEPII BACI {BACI_VERSION.replace('_', ' ')}", "file": RAW_DIR / "baci" / f"BACI_{BACI_VERSION}.zip"},
     "Remittances": {"release": "World Bank/KNOMAD bilateral matrices",      "meta": "remittances_by_source_year.metadata.json"},
-    "FDI":          {"release": "IMF Direct Investment Positions by Counterpart Economy", "meta": "fdi_positions_by_investor_year.metadata.json"},
     "Migration":   {"release": "UN International Migrant Stock 2024",       "meta": "migrants_abroad_by_destination_year.metadata.json"},
+    "Students":    {"release": "UNESCO UIS OPRI February 2026",             "meta": "students_by_destination_year.metadata.json"},
+    "Security assistance": {"release": "OECD CRS 152xx conflict, peace and security", "meta": "security_assistance_by_provider_year.metadata.json"},
+    "Security arms": {"release": "SIPRI Arms Transfers Database",           "meta": "security_arms_by_supplier_year.metadata.json"},
     "Debt":        {"release": "World Bank IDS (live API)",                 "file": DATA_DIR / "debt_by_creditor_year.csv"},
+    "FDI":          {"release": "IMF Direct Investment Positions by Counterpart Economy", "meta": "fdi_positions_by_investor_year.metadata.json"},
+    "Portfolio":    {"release": "IMF Portfolio Investment Positions by Counterpart Economy", "meta": "portfolio_positions_by_holder_year.metadata.json"},
 }
 
 
@@ -555,9 +732,13 @@ TAB_COLOR = {
     "Imports":      "8A5C10",
     "Exports":      "1E666D",
     "Remittances":  "4A7A50",
-    "FDI":           "2F5FB3",
     "Migration":    "5A4080",
+    "Students":     "B45F06",
+    "Security assistance": "3C6E71",
+    "Security arms": "6F6A2F",
     "Debt":         "A04030",
+    "FDI":           "2F5FB3",
+    "Portfolio":     "7A5A2E",
 }
 
 
@@ -707,7 +888,7 @@ def build_excel_tab(wb, tab_name, rows, value_col, pct_col, id_cols, id_labels):
                     cell.fill = fill
 
     # Column widths
-    id_widths = [8, 22, 12, 28]  # approximate for code/name pairs
+    id_widths = [8, 22, 12, 28] + [18, 34, 18, 18, 18, 18]
     for col_i, w in enumerate(id_widths[:len(id_labels)], 1):
         ws.column_dimensions[get_column_letter(col_i)].width = w
     for col_i in range(len(id_labels) + 1, len(headers) + 1):
@@ -728,9 +909,13 @@ DATASETS = [
     ("imports_by_supplier_year",        ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
     ("exports_by_destination_year",      ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
     ("remittances_by_source_year",      ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
-    ("fdi_positions_by_investor_year",  ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
     ("migrants_abroad_by_destination_year", ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_people", "pct_population"]),
+    ("students_by_destination_year",    ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_people", "pct_population"]),
+    ("security_assistance_by_provider_year", ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "sector_code", "sector_name", "value_usd", "pct_gdp"]),
+    ("security_arms_by_supplier_year",  ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "order_year", "number_ordered", "weapon_designation", "weapon_description", "deliveries", "delivery_years", "status", "comments", "value_tiv"]),
     ("debt_by_creditor_year",           ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+    ("fdi_positions_by_investor_year",  ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+    ("portfolio_positions_by_holder_year", ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
 ]
 
 
@@ -744,20 +929,28 @@ if __name__ == "__main__":
     imports     = normalize_imports(gdp_pop)
     exports     = normalize_exports(gdp_pop)
     remittances = normalize_remittances(gdp_pop)
-    fdi         = normalize_fdi(gdp_pop)
     migration   = normalize_migration(gdp_pop)
+    students    = normalize_students(gdp_pop)
+    security_assistance = normalize_security_assistance(gdp_pop)
+    security_arms = normalize_security_arms(gdp_pop)
     debt        = normalize_debt(gdp_pop)
+    fdi         = normalize_fdi(gdp_pop)
+    portfolio   = normalize_portfolio(gdp_pop)
 
     # Clip all outputs to the stated 2010-2024 scope.
     def clip(rows):
         return [r for r in rows if YEAR_MIN <= int(r["year"]) <= YEAR_MAX]
     before = {"aid": len(aid), "aid_committed": len(aid_committed), "imports": len(imports), "exports": len(exports), "remittances": len(remittances),
-              "fdi": len(fdi),
+              "students": len(students), "security_assistance": len(security_assistance), "security_arms": len(security_arms), "fdi": len(fdi), "portfolio": len(portfolio),
               "migration": len(migration), "debt": len(debt)}
-    aid, aid_committed, imports, exports, remittances, fdi, migration, debt = map(clip, (aid, aid_committed, imports, exports, remittances, fdi, migration, debt))
+    aid, aid_committed, imports, exports, remittances, migration, students, security_assistance, security_arms, debt, fdi, portfolio = map(clip, (aid, aid_committed, imports, exports, remittances, migration, students, security_assistance, security_arms, debt, fdi, portfolio))
     print(f"\nClipped to {YEAR_MIN}-{YEAR_MAX}: "
           f"aid {before['aid']}->{len(aid)}, aid committed {before['aid_committed']}->{len(aid_committed)}, "
+          f"students {before['students']}->{len(students)}, "
+          f"security assistance {before['security_assistance']}->{len(security_assistance)}, "
+          f"security arms {before['security_arms']}->{len(security_arms)}, "
           f"fdi {before['fdi']}->{len(fdi)}, "
+          f"portfolio {before['portfolio']}->{len(portfolio)}, "
           f"migration {before['migration']}->{len(migration)} "
           f"(others unchanged)")
 
@@ -767,9 +960,13 @@ if __name__ == "__main__":
         ("imports_by_supplier_year",             imports,     ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
         ("exports_by_destination_year",          exports,     ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "hs1_code", "hs1_name", "value_usd", "pct_gdp"]),
         ("remittances_by_source_year",           remittances, ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
-        ("fdi_positions_by_investor_year",       fdi,         ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
         ("migrants_abroad_by_destination_year",  migration,   ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_people", "pct_population"]),
+        ("students_by_destination_year",         students,    ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_people", "pct_population"]),
+        ("security_assistance_by_provider_year", security_assistance, ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "sector_code", "sector_name", "value_usd", "pct_gdp"]),
+        ("security_arms_by_supplier_year",       security_arms, ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "order_year", "number_ordered", "weapon_designation", "weapon_description", "deliveries", "delivery_years", "status", "comments", "value_tiv"]),
         ("debt_by_creditor_year",                debt,        ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+        ("fdi_positions_by_investor_year",       fdi,         ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
+        ("portfolio_positions_by_holder_year",   portfolio,   ["pacific_code", "pacific_name", "counterpart_code", "counterpart_name", "year", "value_usd", "pct_gdp"]),
     ]
 
     print("\nWriting harmonized CSVs...")
@@ -806,10 +1003,30 @@ if __name__ == "__main__":
     build_excel_tab(wb, "Aid committed", aid_committed, "value_usd", "pct_gdp",     id_cols, id_labels)
     build_excel_tab(wb, "Imports",     imports,     "value_usd",    "pct_gdp",       id_cols, id_labels)
     build_excel_tab(wb, "Exports",     exports,     "value_usd",    "pct_gdp",       id_cols, id_labels)
-    build_excel_tab(wb, "Remittances", remittances, "value_usd",    "pct_gdp",       id_cols, id_labels)
-    build_excel_tab(wb, "FDI",          fdi,         "value_usd",    "pct_gdp",       id_cols, id_labels)
-    build_excel_tab(wb, "Migration",   migration,   "value_people", "pct_population", id_cols, id_labels)
     build_excel_tab(wb, "Debt",        debt,        "value_usd",    "pct_gdp",       id_cols, id_labels)
+    build_excel_tab(
+        wb,
+        "Security assistance",
+        security_assistance,
+        "value_usd",
+        "pct_gdp",
+        id_cols + ["sector_code", "sector_name"],
+        id_labels + ["Sector Code", "Sector"],
+    )
+    build_excel_tab(
+        wb,
+        "Security arms",
+        security_arms,
+        "value_tiv",
+        None,
+        id_cols + ["weapon_designation", "weapon_description", "delivery_years", "status"],
+        id_labels + ["Weapon", "Description", "Delivery Years", "Status"],
+    )
+    build_excel_tab(wb, "Remittances", remittances, "value_usd",    "pct_gdp",       id_cols, id_labels)
+    build_excel_tab(wb, "Migration",   migration,   "value_people", "pct_population", id_cols, id_labels)
+    build_excel_tab(wb, "Students",    students,    "value_people", "pct_population", id_cols, id_labels)
+    build_excel_tab(wb, "FDI",          fdi,         "value_usd",    "pct_gdp",       id_cols, id_labels)
+    build_excel_tab(wb, "Portfolio",    portfolio,   "value_usd",    "pct_gdp",       id_cols, id_labels)
 
     wb.save(EXCEL_PATH)
     print(f"\n  Saved: {EXCEL_PATH}")

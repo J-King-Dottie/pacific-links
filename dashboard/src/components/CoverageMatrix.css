@@ -3,11 +3,18 @@
   --row: 10px;        /* cell height + 1px grid gap */
   --head: 26px;
   display: flex;
-  gap: 5px;
+  flex-direction: column;
+  gap: 14px;
   width: 100%;
   max-width: 600px;
   align-self: flex-start;
   font-variant-numeric: tabular-nums;
+}
+
+.cov-row {
+  display: flex;
+  gap: 5px;
+  width: 100%;
 }
 
 /* Shared country axis on the left — labelled once */
@@ -33,6 +40,9 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+}
+.cov-block-spacer {
+  visibility: hidden;
 }
 .cov-block-head {
   height: var(--head);

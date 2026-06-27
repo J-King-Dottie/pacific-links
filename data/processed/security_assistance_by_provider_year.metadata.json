@@ -1,0 +1,32 @@
+{
+  "source": "OECD CRS: Creditor Reporting System (flows)",
+  "source_url": "https://sdmx.oecd.org/dcd-public/rest/dataflow/OECD.DCD.FSD/DSD_CRS@DF_CRS/1.6",
+  "retrieval_url": "https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_CRS@DF_CRS,1.6/.COK+FJI+KIR+MHL+FSM+NRU+NIU+PLW+PNG+WSM+SLB+TON+TUV+VUT.15210+15220+15230+15240+15250+15261.100._T._T.D.Q._T..?startPeriod=2010&endPeriod=2024&dimensionAtObservation=AllDimensions",
+  "retrieved_at": "2026-06-27T05:32:04.151359+00:00",
+  "row_count": 456,
+  "recipient_count": 14,
+  "provider_count": 18,
+  "year_min": 2010,
+  "year_max": 2024,
+  "sectors": {
+    "15210": "Security system management and reform",
+    "15220": "Civilian peace-building, conflict prevention and resolution",
+    "15230": "Participation in international peacekeeping operations",
+    "15240": "Reintegration and SALW control",
+    "15250": "Removal of land mines and explosive remnants of war",
+    "15261": "Child soldiers prevention and demobilisation"
+  },
+  "excluded_aggregate_donors": [
+    "9OTH0",
+    "9OTH011",
+    "ALLD",
+    "ALLM",
+    "DAC",
+    "DACEU",
+    "DACEU_EC",
+    "DAC_EC",
+    "EU00",
+    "G7"
+  ],
+  "note": "CRS 152xx conflict, peace and security purpose-code family. Values are disbursements in current USD."
+}

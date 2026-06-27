@@ -28,6 +28,8 @@ export default function App() {
   const [activeMetrics, setActiveMetrics] = useState(['aid'])
   const [aidMode, setAidMode] = useState('aid')
   const [tradeMode, setTradeMode] = useState('trade')
+  const [securityMode, setSecurityMode] = useState('security')
+  const [investmentMode, setInvestmentMode] = useState('fdi')
   const [selectedYear, setSelectedYear] = useState(null)
   const [playing, setPlaying] = useState(false)
 
@@ -89,8 +91,10 @@ export default function App() {
   const selectMetric = useCallback((metric) => {
     if (metric === 'aid') setActiveMetrics([aidMode])
     else if (metric === 'trade') setActiveMetrics([tradeMode])
+    else if (metric === 'security') setActiveMetrics([securityMode])
+    else if (metric === 'investment') setActiveMetrics([investmentMode])
     else setActiveMetrics([metric])
-  }, [aidMode, tradeMode])
+  }, [aidMode, tradeMode, securityMode, investmentMode])
   const toggleMetric = selectMetric
   const handleAidModeChange = useCallback((mode) => {
     setAidMode(mode)
@@ -99,6 +103,14 @@ export default function App() {
   const handleTradeModeChange = useCallback((mode) => {
     setTradeMode(mode)
     setActiveMetrics(prev => ['trade', 'exports'].includes(prev[0]) ? [mode] : prev)
+  }, [])
+  const handleSecurityModeChange = useCallback((mode) => {
+    setSecurityMode(mode)
+    setActiveMetrics(prev => ['security', 'security_arms'].includes(prev[0]) ? [mode] : prev)
+  }, [])
+  const handleInvestmentModeChange = useCallback((mode) => {
+    setInvestmentMode(mode)
+    setActiveMetrics(prev => ['fdi', 'portfolio'].includes(prev[0]) ? [mode] : prev)
   }, [])
 
   const handleYearChange = useCallback((year) => { setSelectedYear(year); setPlaying(false) }, [])
@@ -148,6 +160,8 @@ export default function App() {
               activeMetrics={activeMetrics}
               onAidModeChange={handleAidModeChange}
               onTradeModeChange={handleTradeModeChange}
+              onSecurityModeChange={handleSecurityModeChange}
+              onInvestmentModeChange={handleInvestmentModeChange}
               onCountryClick={handleCountryClick}
               onToggleMetric={toggleMetric}
               onSelectMetric={selectMetric}
@@ -189,7 +203,7 @@ export default function App() {
               <h1>Pacific Links</h1>
               <p className="intro-subtitle">Turning fragmented bilateral datasets into a relationship map.</p>
               <p className="intro-lead">
-                Pacific Links brings together aid, trade, remittances, investment, migration, and debt data for 14 Pacific Island Countries from 2010 to 2024 (where available).
+                Pacific Links brings together aid, trade, debt, security, remittances, migration, students, and investment data for 14 Pacific Island Countries from 2010 to 2024 (where available).
               </p>
             </header>
 

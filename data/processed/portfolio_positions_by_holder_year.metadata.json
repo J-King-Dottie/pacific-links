@@ -1,0 +1,119 @@
+{
+  "source": "IMF Portfolio Investment Positions by Counterpart Economy",
+  "source_url": "https://data.imf.org/en/datasets/IMF.STA:PIP",
+  "retrieved_at": "2026-06-27T07:08:35+00:00",
+  "row_count": 1284,
+  "recipient_count": 13,
+  "holder_count": 67,
+  "year_min": 2010,
+  "year_max": 2024,
+  "coverage": {
+    "CK": {
+      "start": 2010,
+      "end": 2022,
+      "year_count": 13,
+      "holder_count": 13
+    },
+    "FJ": {
+      "start": 2010,
+      "end": 2024,
+      "year_count": 15,
+      "holder_count": 20
+    },
+    "FM": {
+      "start": 2010,
+      "end": 2023,
+      "year_count": 9,
+      "holder_count": 4
+    },
+    "KI": {
+      "start": 2010,
+      "end": 2024,
+      "year_count": 9,
+      "holder_count": 4
+    },
+    "MH": {
+      "start": 2010,
+      "end": 2024,
+      "year_count": 15,
+      "holder_count": 64
+    },
+    "NR": {
+      "start": 2014,
+      "end": 2024,
+      "year_count": 11,
+      "holder_count": 8
+    },
+    "NU": {
+      "start": 2010,
+      "end": 2024,
+      "year_count": 9,
+      "holder_count": 6
+    },
+    "PG": {
+      "start": 2010,
+      "end": 2024,
+      "year_count": 15,
+      "holder_count": 41
+    },
+    "PW": {
+      "start": 2010,
+      "end": 2023,
+      "year_count": 9,
+      "holder_count": 4
+    },
+    "SB": {
+      "start": 2010,
+      "end": 2018,
+      "year_count": 6,
+      "holder_count": 3
+    },
+    "TO": {
+      "start": 2013,
+      "end": 2023,
+      "year_count": 7,
+      "holder_count": 5
+    },
+    "VU": {
+      "start": 2019,
+      "end": 2024,
+      "year_count": 3,
+      "holder_count": 2
+    },
+    "WS": {
+      "start": 2010,
+      "end": 2024,
+      "year_count": 15,
+      "holder_count": 14
+    }
+  },
+  "retrieval_urls": {
+    "COK": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.COK.A?startPeriod=2010&endPeriod=2024",
+    "FJI": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.FJI.A?startPeriod=2010&endPeriod=2024",
+    "KIR": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.KIR.A?startPeriod=2010&endPeriod=2024",
+    "MHL": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.MHL.A?startPeriod=2010&endPeriod=2024",
+    "FSM": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.FSM.A?startPeriod=2010&endPeriod=2024",
+    "NRU": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.NRU.A?startPeriod=2010&endPeriod=2024",
+    "NIU": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.NIU.A?startPeriod=2010&endPeriod=2024",
+    "PLW": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.PLW.A?startPeriod=2010&endPeriod=2024",
+    "PNG": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.PNG.A?startPeriod=2010&endPeriod=2024",
+    "WSM": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.WSM.A?startPeriod=2010&endPeriod=2024",
+    "SLB": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.SLB.A?startPeriod=2010&endPeriod=2024",
+    "TON": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.TON.A?startPeriod=2010&endPeriod=2024",
+    "TUV": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.TUV.A?startPeriod=2010&endPeriod=2024",
+    "VUT": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,PIP/.A.P_TOTINV_P_USD.S1.S1.VUT.A?startPeriod=2010&endPeriod=2024"
+  },
+  "filters": {
+    "ACCOUNTING_ENTRY": "Assets",
+    "INDICATOR": "Portfolio investment, Total investment, Positions",
+    "SECTOR": "Total economy",
+    "COUNTERPART_SECTOR": "Total economy",
+    "FREQUENCY": "Annual"
+  },
+  "notes": [
+    "Rows show reporting economies' portfolio investment assets where the security issuer is a Pacific country.",
+    "This is inbound portfolio investment into Pacific-issued shares and bonds, not Pacific residents' outbound investment.",
+    "Values are positions/stocks, not annual flows.",
+    "Missing observations are not zero."
+  ]
+}

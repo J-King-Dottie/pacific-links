@@ -10,10 +10,17 @@ const YEARS = Array.from({ length: YEAR_MAX - YEAR_MIN + 1 }, (_, i) => YEAR_MIN
 const METRICS = [
   { key: 'aid', label: 'Aid', color: '#8a5c10', includes: ['aid', 'aid_committed'] },
   { key: 'trade', label: 'Trade', color: '#1e666d', includes: ['trade', 'exports'] },
+  { key: 'debt', label: 'Debt', color: '#507840' },
+  { key: 'security', label: 'Security', color: '#3c6e71', includes: ['security', 'security_arms'] },
   { key: 'remittances', label: 'Remittances', color: '#a0442c' },
   { key: 'migration', label: 'Migration', color: '#76516a' },
-  { key: 'debt', label: 'Debt', color: '#507840' },
-  { key: 'fdi', label: 'FDI', color: '#2f5fb3' },
+  { key: 'students', label: 'Students', color: '#b45f06' },
+  { key: 'investment', label: 'Investment', color: '#2f5fb3', includes: ['fdi', 'portfolio'] },
+]
+
+const METRIC_ROWS = [
+  METRICS.slice(0, 4),
+  METRICS.slice(4),
 ]
 
 // Short row labels so the shared country axis stays narrow.
@@ -43,36 +50,40 @@ export default function CoverageMatrix({ rows }) {
 
   return (
     <div className="coverage-matrix" role="img"
-      aria-label="Data coverage grid: 14 Pacific countries down the side, six metrics across the top, each metric showing years 2010 to 2024. Filled cells mark where bilateral data exists.">
-      <div className="cov-axis">
-        <div className="cov-axis-head" />
-        {SORTED_PACIFIC_LIST.map(c => (
-          <div key={c.code} className="cov-row-label" title={c.name}>
-            {SHORT_NAME[c.code] ?? c.name}
-          </div>
-        ))}
-      </div>
-
-      {METRICS.map(m => (
-        <div key={m.key} className="cov-block">
-          <div className="cov-block-head">
-            <span className="cov-metric-name" style={{ color: m.color }}>{m.label}</span>
-            <span className="cov-metric-years">'10–'24</span>
-          </div>
-          <div className="cov-grid">
+      aria-label="Data coverage grid: 14 Pacific countries down the side, eight metrics across the top, each metric showing years 2010 to 2024. Filled cells mark where bilateral data exists.">
+      {METRIC_ROWS.map((metricRow, rowIndex) => (
+        <div key={rowIndex} className="cov-row">
+          <div className="cov-axis">
+            <div className="cov-axis-head" />
             {SORTED_PACIFIC_LIST.map(c => (
-              YEARS.map(y => {
-                const on = presence[m.key].has(`${c.code}|${y}`)
-                return (
-                  <span
-                    key={`${c.code}-${y}`}
-                    className={`cov-cell${on ? ' on' : ''}`}
-                    style={on ? { background: m.color, borderColor: m.color } : undefined}
-                  />
-                )
-              })
+              <div key={c.code} className="cov-row-label" title={c.name}>
+                {SHORT_NAME[c.code] ?? c.name}
+              </div>
             ))}
           </div>
+
+          {metricRow.map(m => (
+            <div key={m.key} className="cov-block">
+              <div className="cov-block-head">
+                <span className="cov-metric-name" style={{ color: m.color }}>{m.label}</span>
+                <span className="cov-metric-years">'10–'24</span>
+              </div>
+              <div className="cov-grid">
+                {SORTED_PACIFIC_LIST.map(c => (
+                  YEARS.map(y => {
+                    const on = presence[m.key].has(`${c.code}|${y}`)
+                    return (
+                      <span
+                        key={`${c.code}-${y}`}
+                        className={`cov-cell${on ? ' on' : ''}`}
+                        style={on ? { background: m.color, borderColor: m.color } : undefined}
+                      />
+                    )
+                  })
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       ))}
     </div>

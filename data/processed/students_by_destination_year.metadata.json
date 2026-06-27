@@ -1,0 +1,13 @@
+{
+  "source": "UNESCO UIS Other Policy Relevant Indicators (OPRI)",
+  "source_url": "https://download.uis.unesco.org/bdds/202602/OPRI.zip",
+  "release": "February 2026",
+  "retrieved_at": "2026-06-27T03:42:22.855015+00:00",
+  "row_count": 3094,
+  "origin_count": 14,
+  "host_count": 90,
+  "year_min": 1998,
+  "year_max": 2025,
+  "skipped_self_rows": 4,
+  "note": "Extracts inbound internationally mobile tertiary students by Pacific origin and host country. Self-country rows are removed."
+}

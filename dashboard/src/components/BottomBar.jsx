@@ -1,13 +1,17 @@
 import './BottomBar.css'
 
-const METRIC_LABELS = { aid: 'Aid', trade: 'Trade', exports: 'Exports', fdi: 'FDI', remittances: 'Remittances', migration: 'Migration', debt: 'Debt' }
+const METRIC_LABELS = { aid: 'Aid', trade: 'Trade', exports: 'Exports', fdi: 'Investment - FDI', portfolio: 'Investment - Portfolio', remittances: 'Remittances', migration: 'Migration', students: 'Students', security: 'Security assistance', security_arms: 'Security arms', debt: 'Debt' }
 const SOURCES = {
   aid: 'Lowy Pacific Aid Map via PDH',
   trade: 'CEPII BACI reconciled bilateral trade data',
   exports: 'CEPII BACI reconciled bilateral trade data',
   fdi: 'IMF Direct Investment Positions by Counterpart Economy',
+  portfolio: 'IMF Portfolio Investment Positions by Counterpart Economy',
   remittances: 'World Bank / KNOMAD Bilateral Remittance Matrices',
   migration: 'UN International Migrant Stock 2024',
+  students: 'UNESCO UIS overseas higher-education students',
+  security: 'OECD CRS conflict, peace and security disbursements',
+  security_arms: 'SIPRI major conventional arms transfers',
   debt: 'World Bank International Debt Statistics',
 }
 
@@ -27,7 +31,7 @@ export default function BottomBar({ selectedYear, activeMetrics, metricYears }) 
       <div className="data-note">
         {mode}
         {!selectedYear && (
-          <span className="note-detail"> - within a 3-year freshness window</span>
+          <span className="note-detail"> - latest row for each relationship</span>
         )}
       </div>
 

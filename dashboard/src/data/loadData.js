@@ -1,6 +1,6 @@
 import Papa from 'papaparse'
 
-const DATASET_VERSION = '2026-06-27-fdi'
+const DATASET_VERSION = '2026-06-27-investment'
 const YEAR_MIN = 2010
 const YEAR_MAX = 2024
 
@@ -200,6 +200,122 @@ async function loadMigration() {
     .filter(r => r.value > 0 && validYear(r.year))
 }
 
+async function loadStudents() {
+  const rows = await parseCsv(`/data/students_by_destination_year.csv?v=${DATASET_VERSION}`)
+  return rows
+    .filter(r => r.pacific_code && r.counterpart_code && r.value_people)
+    .map(r => ({
+      pacificCode:     r.pacific_code,
+      pacificName:     r.pacific_name,
+      counterpartCode: r.counterpart_code,
+      counterpartName: r.counterpart_name,
+      year:            parseInt(r.year),
+      metric:          'students',
+      value:           num(r.value_people),
+      pct:             num(r.pct_population),
+    }))
+    .filter(r => r.value > 0 && validYear(r.year))
+}
+
+async function loadSecurityAssistance() {
+  const rows = await parseCsv(`/data/security_assistance_by_provider_year.csv?v=${DATASET_VERSION}`)
+  const grouped = new Map()
+
+  rows
+    .filter(r => r.pacific_code && r.counterpart_code && r.value_usd)
+    .forEach(r => {
+      const year = parseInt(r.year)
+      const value = num(r.value_usd)
+      if (!(value > 0)) return
+
+      const key = [r.pacific_code, r.counterpart_code, year].join('|')
+      if (!grouped.has(key)) {
+        grouped.set(key, {
+          pacificCode:     r.pacific_code,
+          pacificName:     r.pacific_name,
+          counterpartCode: r.counterpart_code,
+          counterpartName: r.counterpart_name,
+          year,
+          metric:          'security',
+          value:           0,
+          pct:             0,
+          securityBreakdown: [],
+        })
+      }
+
+      const entry = grouped.get(key)
+      entry.value += value
+      entry.pct += num(r.pct_gdp) ?? 0
+      entry.securityBreakdown.push({
+        type: 'assistance',
+        code: r.sector_code,
+        name: r.sector_name || r.sector_code,
+        value,
+        pct: num(r.pct_gdp),
+      })
+    })
+
+  return [...grouped.values()]
+    .map(entry => ({
+      ...entry,
+      value: Math.round(entry.value * 100) / 100,
+      pct: entry.pct ? Math.round(entry.pct * 10000) / 10000 : null,
+      securityBreakdown: entry.securityBreakdown.sort((a, b) => b.value - a.value),
+    }))
+    .filter(r => validYear(r.year))
+}
+
+async function loadSecurityArms() {
+  const rows = await parseCsv(`/data/security_arms_by_supplier_year.csv?v=${DATASET_VERSION}`)
+  const grouped = new Map()
+
+  rows
+    .filter(r => r.pacific_code && r.counterpart_code && r.value_tiv)
+    .forEach(r => {
+      const year = parseInt(r.year)
+      const value = num(r.value_tiv)
+      if (!(value > 0)) return
+
+      const key = [r.pacific_code, r.counterpart_code, year].join('|')
+      if (!grouped.has(key)) {
+        grouped.set(key, {
+          pacificCode:     r.pacific_code,
+          pacificName:     r.pacific_name,
+          counterpartCode: r.counterpart_code,
+          counterpartName: r.counterpart_name,
+          year,
+          metric:          'security_arms',
+          value:           0,
+          pct:             null,
+          securityBreakdown: [],
+        })
+      }
+
+      const entry = grouped.get(key)
+      entry.value += value
+      entry.securityBreakdown.push({
+        type: 'arms',
+        code: r.weapon_designation,
+        name: [r.weapon_designation, r.weapon_description].filter(Boolean).join(' - '),
+        value,
+        orderYear: r.order_year,
+        numberOrdered: r.number_ordered,
+        deliveries: r.deliveries,
+        deliveryYears: r.delivery_years,
+        status: r.status,
+        comments: r.comments,
+      })
+    })
+
+  return [...grouped.values()]
+    .map(entry => ({
+      ...entry,
+      value: Math.round(entry.value * 10000) / 10000,
+      securityBreakdown: entry.securityBreakdown.sort((a, b) => b.value - a.value),
+    }))
+    .filter(r => validYear(r.year))
+}
+
 async function loadFdi() {
   const rows = await parseCsv(`/data/fdi_positions_by_investor_year.csv?v=${DATASET_VERSION}`)
   return rows
@@ -211,6 +327,23 @@ async function loadFdi() {
       counterpartName: r.counterpart_name,
       year:            parseInt(r.year),
       metric:          'fdi',
+      value:           num(r.value_usd),
+      pct:             num(r.pct_gdp),
+    }))
+    .filter(r => r.value > 0 && validYear(r.year))
+}
+
+async function loadPortfolio() {
+  const rows = await parseCsv(`/data/portfolio_positions_by_holder_year.csv?v=${DATASET_VERSION}`)
+  return rows
+    .filter(r => r.pacific_code && r.counterpart_code && r.value_usd)
+    .map(r => ({
+      pacificCode:     r.pacific_code,
+      pacificName:     r.pacific_name,
+      counterpartCode: r.counterpart_code,
+      counterpartName: r.counterpart_name,
+      year:            parseInt(r.year),
+      metric:          'portfolio',
       value:           num(r.value_usd),
       pct:             num(r.pct_gdp),
     }))
@@ -235,11 +368,11 @@ async function loadDebt() {
 }
 
 export async function loadAllData() {
-  const [aid, aidCommitted, trade, exports, remittances, fdi, migration, debt] = await Promise.all([
-    loadAid(), loadAidCommitted(), loadTrade(), loadExports(), loadRemittances(), loadFdi(), loadMigration(), loadDebt(),
+  const [aid, aidCommitted, trade, exports, remittances, migration, students, security, securityArms, debt, fdi, portfolio] = await Promise.all([
+    loadAid(), loadAidCommitted(), loadTrade(), loadExports(), loadRemittances(), loadMigration(), loadStudents(), loadSecurityAssistance(), loadSecurityArms(), loadDebt(), loadFdi(), loadPortfolio(),
   ])
 
-  const all = [...aid, ...aidCommitted, ...trade, ...exports, ...remittances, ...fdi, ...migration, ...debt]
+  const all = [...aid, ...aidCommitted, ...trade, ...exports, ...remittances, ...migration, ...students, ...security, ...securityArms, ...debt, ...fdi, ...portfolio]
 
   const metricYears = {}
   for (const r of all) {

@@ -1,0 +1,2244 @@
+pacific_code,pacific_name,counterpart_code,counterpart_name,year,value_people,pct_population
+CK,Cook Islands,AU,Australia,2010,2.0,0.0125
+CK,Cook Islands,AU,Australia,2011,1.0,0.0063
+CK,Cook Islands,AU,Australia,2012,3.0,0.0187
+CK,Cook Islands,AU,Australia,2013,4.0,0.025
+CK,Cook Islands,BE,Belgium,2012,1.0,0.0063
+CK,Cook Islands,BE,Belgium,2017,3.0,0.0187
+CK,Cook Islands,BE,Belgium,2020,1.0,0.0064
+CK,Cook Islands,BR,Brazil,2010,1.0,0.0063
+CK,Cook Islands,BR,Brazil,2016,2.0,0.0125
+CK,Cook Islands,BR,Brazil,2020,1.0,0.0064
+CK,Cook Islands,BW,Botswana,2016,1.0,0.0063
+CK,Cook Islands,CA,Canada,2013,3.0,0.0187
+CK,Cook Islands,CU,Cuba,2015,3.0,0.0187
+CK,Cook Islands,CU,Cuba,2016,1.0,0.0063
+CK,Cook Islands,CU,Cuba,2017,1.0,0.0063
+CK,Cook Islands,CU,Cuba,2019,1.0,0.0062
+CK,Cook Islands,DE,Germany,2018,1.0,0.0063
+CK,Cook Islands,DE,Germany,2020,2.0,0.0128
+CK,Cook Islands,DE,Germany,2021,1.0,0.0066
+CK,Cook Islands,DE,Germany,2022,3.0,0.0204
+CK,Cook Islands,DE,Germany,2023,4.0,0.0281
+CK,Cook Islands,DE,Germany,2024,4.0,0.0281
+CK,Cook Islands,ES,Spain,2021,1.0,0.0066
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2010,2.0,0.0125
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2011,1.0,0.0063
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2013,1.0,0.0063
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2014,1.0,0.0063
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2015,2.0,0.0125
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2016,1.0,0.0063
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2018,2.0,0.0125
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2019,1.0,0.0062
+CK,Cook Islands,GB,United Kingdom of Great Britain and Northern Ireland,2020,2.0,0.0128
+CK,Cook Islands,IE,Ireland,2013,1.0,0.0063
+CK,Cook Islands,IL,Israel,2010,2.0,0.0125
+CK,Cook Islands,JO,Jordan,2023,19.0,0.1336
+CK,Cook Islands,MA,Morocco,2014,20.0,0.125
+CK,Cook Islands,MA,Morocco,2015,1.0,0.0063
+CK,Cook Islands,MA,Morocco,2016,1.0,0.0063
+CK,Cook Islands,MY,Malaysia,2012,5.0,0.0312
+CK,Cook Islands,PA,Panama,2022,10.0,0.0679
+CK,Cook Islands,PT,Portugal,2013,1.0,0.0063
+CK,Cook Islands,RO,Romania,2010,16.0,0.1
+CK,Cook Islands,RO,Romania,2015,2.0,0.0125
+CK,Cook Islands,RU,Russian Federation,2022,2.0,0.0136
+CK,Cook Islands,RU,Russian Federation,2023,1.0,0.007
+CK,Cook Islands,SK,Slovakia,2020,1.0,0.0064
+CK,Cook Islands,TH,Thailand,2020,83.0,0.5306
+CK,Cook Islands,TH,Thailand,2024,1.0,0.007
+CK,Cook Islands,US,United States of America,2013,6.7,0.0419
+CK,Cook Islands,US,United States of America,2014,5.0,0.0312
+CK,Cook Islands,US,United States of America,2015,2.6,0.0163
+CK,Cook Islands,US,United States of America,2016,1.3,0.0081
+CK,Cook Islands,US,United States of America,2018,2.54,0.0159
+CK,Cook Islands,US,United States of America,2021,10.08,0.0664
+CK,Cook Islands,US,United States of America,2023,2.38,0.0167
+FJ,Fiji,AR,Argentina,2017,2.0,0.0002
+FJ,Fiji,AU,Australia,2010,572.0,0.0628
+FJ,Fiji,AU,Australia,2011,546.0,0.0598
+FJ,Fiji,AU,Australia,2012,503.0,0.055
+FJ,Fiji,AU,Australia,2013,450.0,0.0491
+FJ,Fiji,AU,Australia,2014,685.0,0.0747
+FJ,Fiji,AU,Australia,2015,450.0,0.049
+FJ,Fiji,AU,Australia,2016,445.0,0.0484
+FJ,Fiji,AU,Australia,2017,665.0,0.0724
+FJ,Fiji,AU,Australia,2018,420.0,0.0458
+FJ,Fiji,AU,Australia,2019,536.0,0.0586
+FJ,Fiji,AU,Australia,2020,569.0,0.0622
+FJ,Fiji,AU,Australia,2021,535.0,0.0584
+FJ,Fiji,AU,Australia,2022,825.0,0.0897
+FJ,Fiji,AU,Australia,2023,1869.0,0.2022
+FJ,Fiji,AU,Australia,2024,2907.0,0.313
+FJ,Fiji,AT,Austria,2023,1.0,0.0001
+FJ,Fiji,AZ,Azerbaijan,2012,1.0,0.0001
+FJ,Fiji,AZ,Azerbaijan,2023,1.0,0.0001
+FJ,Fiji,BE,Belgium,2010,1.0,0.0001
+FJ,Fiji,BE,Belgium,2011,1.0,0.0001
+FJ,Fiji,BE,Belgium,2012,1.0,0.0001
+FJ,Fiji,BE,Belgium,2013,2.0,0.0002
+FJ,Fiji,BE,Belgium,2014,1.0,0.0001
+FJ,Fiji,BE,Belgium,2016,1.0,0.0001
+FJ,Fiji,BJ,Benin,2014,1.0,0.0001
+FJ,Fiji,BJ,Benin,2015,1.0,0.0001
+FJ,Fiji,BJ,Benin,2016,1.0,0.0001
+FJ,Fiji,BJ,Benin,2018,1.0,0.0001
+FJ,Fiji,BR,Brazil,2010,2.0,0.0002
+FJ,Fiji,BR,Brazil,2015,1.0,0.0001
+FJ,Fiji,BR,Brazil,2016,1.0,0.0001
+FJ,Fiji,CA,Canada,2010,18.0,0.002
+FJ,Fiji,CA,Canada,2011,6.0,0.0007
+FJ,Fiji,CA,Canada,2012,18.0,0.002
+FJ,Fiji,CA,Canada,2013,18.0,0.002
+FJ,Fiji,CA,Canada,2014,24.0,0.0026
+FJ,Fiji,CA,Canada,2015,9.0,0.001
+FJ,Fiji,CA,Canada,2016,6.0,0.0007
+FJ,Fiji,CA,Canada,2017,15.0,0.0016
+FJ,Fiji,CA,Canada,2018,15.04,0.0016
+FJ,Fiji,CA,Canada,2019,18.0,0.002
+FJ,Fiji,CA,Canada,2020,18.0,0.002
+FJ,Fiji,CA,Canada,2021,15.0,0.0016
+FJ,Fiji,CA,Canada,2022,9.0,0.001
+FJ,Fiji,CA,Canada,2023,21.0,0.0023
+FJ,Fiji,CH,Switzerland,2011,1.0,0.0001
+FJ,Fiji,CH,Switzerland,2012,1.0,0.0001
+FJ,Fiji,CH,Switzerland,2013,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2014,1.0,0.0001
+FJ,Fiji,CH,Switzerland,2015,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2016,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2017,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2018,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2019,1.0,0.0001
+FJ,Fiji,CH,Switzerland,2022,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2023,2.0,0.0002
+FJ,Fiji,CH,Switzerland,2024,2.0,0.0002
+FJ,Fiji,CU,Cuba,2012,3.0,0.0003
+FJ,Fiji,CU,Cuba,2013,8.0,0.0009
+FJ,Fiji,CU,Cuba,2015,21.0,0.0023
+FJ,Fiji,CU,Cuba,2016,26.0,0.0028
+FJ,Fiji,CU,Cuba,2017,28.0,0.003
+FJ,Fiji,CU,Cuba,2018,28.0,0.0031
+FJ,Fiji,CU,Cuba,2019,26.0,0.0028
+FJ,Fiji,CU,Cuba,2020,19.0,0.0021
+FJ,Fiji,CU,Cuba,2021,16.0,0.0017
+FJ,Fiji,CU,Cuba,2023,8.0,0.0009
+FJ,Fiji,CU,Cuba,2024,3.0,0.0003
+FJ,Fiji,CZ,Czechia,2013,1.0,0.0001
+FJ,Fiji,CZ,Czechia,2015,1.0,0.0001
+FJ,Fiji,CZ,Czechia,2016,2.0,0.0002
+FJ,Fiji,CZ,Czechia,2017,1.0,0.0001
+FJ,Fiji,CZ,Czechia,2022,2.0,0.0002
+FJ,Fiji,CZ,Czechia,2023,2.0,0.0002
+FJ,Fiji,DE,Germany,2013,1.0,0.0001
+FJ,Fiji,DE,Germany,2014,1.0,0.0001
+FJ,Fiji,DE,Germany,2015,2.0,0.0002
+FJ,Fiji,DE,Germany,2016,2.0,0.0002
+FJ,Fiji,DE,Germany,2017,1.0,0.0001
+FJ,Fiji,DE,Germany,2018,3.0,0.0003
+FJ,Fiji,DE,Germany,2019,3.0,0.0003
+FJ,Fiji,DE,Germany,2020,4.0,0.0004
+FJ,Fiji,DE,Germany,2021,2.0,0.0002
+FJ,Fiji,DE,Germany,2022,6.0,0.0007
+FJ,Fiji,DE,Germany,2023,4.0,0.0004
+FJ,Fiji,DE,Germany,2024,7.0,0.0008
+FJ,Fiji,DK,Denmark,2015,1.0,0.0001
+FJ,Fiji,EC,Ecuador,2019,1.0,0.0001
+FJ,Fiji,ES,Spain,2010,2.0,0.0002
+FJ,Fiji,ES,Spain,2012,1.0,0.0001
+FJ,Fiji,ES,Spain,2013,1.0,0.0001
+FJ,Fiji,ES,Spain,2016,2.0,0.0002
+FJ,Fiji,ES,Spain,2017,1.0,0.0001
+FJ,Fiji,ES,Spain,2018,2.0,0.0002
+FJ,Fiji,ES,Spain,2019,3.0,0.0003
+FJ,Fiji,ES,Spain,2020,1.0,0.0001
+FJ,Fiji,ES,Spain,2021,2.0,0.0002
+FJ,Fiji,ES,Spain,2023,1.0,0.0001
+FJ,Fiji,ES,Spain,2024,2.0,0.0002
+FJ,Fiji,EE,Estonia,2019,1.0,0.0001
+FJ,Fiji,EE,Estonia,2020,1.0,0.0001
+FJ,Fiji,FR,France,2010,7.0,0.0008
+FJ,Fiji,FR,France,2011,15.0,0.0016
+FJ,Fiji,FR,France,2012,10.0,0.0011
+FJ,Fiji,FR,France,2013,4.0,0.0004
+FJ,Fiji,FR,France,2014,5.0,0.0005
+FJ,Fiji,FR,France,2015,10.0,0.0011
+FJ,Fiji,FR,France,2016,9.0,0.001
+FJ,Fiji,FR,France,2017,7.0,0.0008
+FJ,Fiji,FR,France,2018,4.0,0.0004
+FJ,Fiji,FR,France,2019,3.0,0.0003
+FJ,Fiji,FR,France,2020,6.0,0.0007
+FJ,Fiji,FR,France,2021,4.0,0.0004
+FJ,Fiji,FR,France,2022,5.2,0.0006
+FJ,Fiji,FR,France,2023,6.75,0.0007
+FJ,Fiji,FR,France,2024,6.31,0.0007
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2010,21.0,0.0023
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2011,22.0,0.0024
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2012,17.0,0.0019
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2013,15.0,0.0016
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2014,11.0,0.0012
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2015,13.0,0.0014
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2016,22.0,0.0024
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2017,23.0,0.0025
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2018,21.0,0.0023
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2019,25.0,0.0027
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2020,22.0,0.0024
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2021,16.0,0.0017
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2022,22.0,0.0024
+FJ,Fiji,GB,United Kingdom of Great Britain and Northern Ireland,2023,23.0,0.0025
+FJ,Fiji,HK,"China, Hong Kong Special Administrative Region",2018,1.0,0.0001
+FJ,Fiji,HK,"China, Hong Kong Special Administrative Region",2020,1.0,0.0001
+FJ,Fiji,HK,"China, Hong Kong Special Administrative Region",2021,1.0,0.0001
+FJ,Fiji,HK,"China, Hong Kong Special Administrative Region",2022,1.0,0.0001
+FJ,Fiji,HK,"China, Hong Kong Special Administrative Region",2023,1.0,0.0001
+FJ,Fiji,HK,"China, Hong Kong Special Administrative Region",2024,1.0,0.0001
+FJ,Fiji,HU,Hungary,2015,2.0,0.0002
+FJ,Fiji,HU,Hungary,2016,1.0,0.0001
+FJ,Fiji,HU,Hungary,2017,1.0,0.0001
+FJ,Fiji,HU,Hungary,2018,1.0,0.0001
+FJ,Fiji,HU,Hungary,2019,1.0,0.0001
+FJ,Fiji,HU,Hungary,2021,3.0,0.0003
+FJ,Fiji,ID,Indonesia,2015,3.0,0.0003
+FJ,Fiji,ID,Indonesia,2016,3.0,0.0003
+FJ,Fiji,ID,Indonesia,2017,3.0,0.0003
+FJ,Fiji,ID,Indonesia,2018,3.0,0.0003
+FJ,Fiji,IN,India,2011,49.0,0.0054
+FJ,Fiji,IN,India,2012,31.0,0.0034
+FJ,Fiji,IN,India,2013,38.0,0.0041
+FJ,Fiji,IN,India,2014,46.0,0.005
+FJ,Fiji,IN,India,2015,53.0,0.0058
+FJ,Fiji,IN,India,2016,57.0,0.0062
+FJ,Fiji,IN,India,2017,60.0,0.0065
+FJ,Fiji,IN,India,2018,35.0,0.0038
+FJ,Fiji,IN,India,2019,33.0,0.0036
+FJ,Fiji,IN,India,2020,19.0,0.0021
+FJ,Fiji,IN,India,2021,16.0,0.0017
+FJ,Fiji,IN,India,2022,8.0,0.0009
+FJ,Fiji,IN,India,2023,8.0,0.0009
+FJ,Fiji,IE,Ireland,2017,1.0,0.0001
+FJ,Fiji,IE,Ireland,2018,1.0,0.0001
+FJ,Fiji,IE,Ireland,2019,1.0,0.0001
+FJ,Fiji,IE,Ireland,2020,2.0,0.0002
+FJ,Fiji,IE,Ireland,2021,2.0,0.0002
+FJ,Fiji,IE,Ireland,2022,4.0,0.0004
+FJ,Fiji,IS,Iceland,2012,1.0,0.0001
+FJ,Fiji,IS,Iceland,2014,1.0,0.0001
+FJ,Fiji,IT,Italy,2011,2.0,0.0002
+FJ,Fiji,IT,Italy,2013,2.0,0.0002
+FJ,Fiji,IT,Italy,2014,18.0,0.002
+FJ,Fiji,IT,Italy,2015,5.0,0.0005
+FJ,Fiji,IT,Italy,2016,1.0,0.0001
+FJ,Fiji,IT,Italy,2017,1.0,0.0001
+FJ,Fiji,IT,Italy,2018,5.0,0.0005
+FJ,Fiji,IT,Italy,2019,3.0,0.0003
+FJ,Fiji,IT,Italy,2020,4.0,0.0004
+FJ,Fiji,IT,Italy,2021,2.0,0.0002
+FJ,Fiji,IT,Italy,2022,3.0,0.0003
+FJ,Fiji,IT,Italy,2023,5.0,0.0005
+FJ,Fiji,JP,Japan,2013,26.0,0.0028
+FJ,Fiji,JP,Japan,2014,25.0,0.0027
+FJ,Fiji,JP,Japan,2015,33.0,0.0036
+FJ,Fiji,JP,Japan,2016,36.0,0.0039
+FJ,Fiji,JP,Japan,2017,37.0,0.004
+FJ,Fiji,JP,Japan,2018,49.0,0.0053
+FJ,Fiji,JP,Japan,2019,63.0,0.0069
+FJ,Fiji,JP,Japan,2020,58.0,0.0063
+FJ,Fiji,JP,Japan,2021,45.0,0.0049
+FJ,Fiji,JP,Japan,2022,49.0,0.0053
+FJ,Fiji,JP,Japan,2023,46.0,0.005
+FJ,Fiji,KR,Republic of Korea,2010,16.0,0.0018
+FJ,Fiji,KR,Republic of Korea,2011,20.0,0.0022
+FJ,Fiji,KR,Republic of Korea,2012,23.0,0.0025
+FJ,Fiji,KR,Republic of Korea,2013,20.0,0.0022
+FJ,Fiji,KR,Republic of Korea,2014,17.0,0.0019
+FJ,Fiji,KR,Republic of Korea,2015,19.0,0.0021
+FJ,Fiji,KR,Republic of Korea,2016,23.0,0.0025
+FJ,Fiji,KR,Republic of Korea,2017,17.0,0.0019
+FJ,Fiji,KR,Republic of Korea,2018,16.0,0.0017
+FJ,Fiji,KR,Republic of Korea,2019,11.0,0.0012
+FJ,Fiji,KR,Republic of Korea,2020,11.0,0.0012
+FJ,Fiji,KR,Republic of Korea,2021,11.0,0.0012
+FJ,Fiji,KR,Republic of Korea,2022,7.0,0.0008
+FJ,Fiji,KR,Republic of Korea,2023,11.0,0.0012
+FJ,Fiji,KR,Republic of Korea,2024,13.0,0.0014
+FJ,Fiji,LK,Sri Lanka,2018,1.0,0.0001
+FJ,Fiji,LK,Sri Lanka,2019,1.0,0.0001
+FJ,Fiji,LK,Sri Lanka,2020,1.0,0.0001
+FJ,Fiji,LK,Sri Lanka,2021,1.0,0.0001
+FJ,Fiji,LK,Sri Lanka,2022,1.0,0.0001
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2018,1.0,0.0001
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2019,1.0,0.0001
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2020,1.0,0.0001
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2021,1.0,0.0001
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2022,2.0,0.0002
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2023,2.0,0.0002
+FJ,Fiji,MO,"China, Macao Special Administrative Region",2024,2.0,0.0002
+FJ,Fiji,MA,Morocco,2014,10.0,0.0011
+FJ,Fiji,MA,Morocco,2015,4.0,0.0004
+FJ,Fiji,MA,Morocco,2016,3.0,0.0003
+FJ,Fiji,MA,Morocco,2017,3.0,0.0003
+FJ,Fiji,MA,Morocco,2019,1.0,0.0001
+FJ,Fiji,MA,Morocco,2020,1.0,0.0001
+FJ,Fiji,MA,Morocco,2021,2.0,0.0002
+FJ,Fiji,MA,Morocco,2022,1.0,0.0001
+FJ,Fiji,MH,Marshall Islands,2019,15.0,0.0016
+FJ,Fiji,MH,Marshall Islands,2022,7.0,0.0008
+FJ,Fiji,MT,Malta,2012,1.0,0.0001
+FJ,Fiji,MT,Malta,2013,1.0,0.0001
+FJ,Fiji,MT,Malta,2014,1.0,0.0001
+FJ,Fiji,MT,Malta,2018,1.0,0.0001
+FJ,Fiji,MT,Malta,2021,1.0,0.0001
+FJ,Fiji,MT,Malta,2022,2.0,0.0002
+FJ,Fiji,MY,Malaysia,2010,25.0,0.0027
+FJ,Fiji,MY,Malaysia,2011,19.0,0.0021
+FJ,Fiji,MY,Malaysia,2012,19.0,0.0021
+FJ,Fiji,MY,Malaysia,2014,43.0,0.0047
+FJ,Fiji,MY,Malaysia,2015,39.0,0.0042
+FJ,Fiji,MY,Malaysia,2016,39.0,0.0042
+FJ,Fiji,MY,Malaysia,2017,10.0,0.0011
+FJ,Fiji,MY,Malaysia,2019,11.0,0.0012
+FJ,Fiji,MY,Malaysia,2020,5.0,0.0005
+FJ,Fiji,MY,Malaysia,2021,8.0,0.0009
+FJ,Fiji,MY,Malaysia,2022,9.0,0.001
+FJ,Fiji,MY,Malaysia,2023,9.0,0.001
+FJ,Fiji,MY,Malaysia,2024,11.0,0.0012
+FJ,Fiji,NL,Netherlands,2014,1.0,0.0001
+FJ,Fiji,NL,Netherlands,2015,2.0,0.0002
+FJ,Fiji,NO,Norway,2010,1.0,0.0001
+FJ,Fiji,NO,Norway,2011,1.0,0.0001
+FJ,Fiji,NO,Norway,2012,2.0,0.0002
+FJ,Fiji,NO,Norway,2015,1.0,0.0001
+FJ,Fiji,NO,Norway,2016,1.0,0.0001
+FJ,Fiji,NO,Norway,2017,1.0,0.0001
+FJ,Fiji,NO,Norway,2021,1.0,0.0001
+FJ,Fiji,NO,Norway,2022,1.0,0.0001
+FJ,Fiji,NO,Norway,2023,1.0,0.0001
+FJ,Fiji,NO,Norway,2024,2.0,0.0002
+FJ,Fiji,NZ,New Zealand,2010,685.0,0.0752
+FJ,Fiji,NZ,New Zealand,2011,569.0,0.0623
+FJ,Fiji,NZ,New Zealand,2012,463.0,0.0506
+FJ,Fiji,NZ,New Zealand,2013,425.85,0.0465
+FJ,Fiji,NZ,New Zealand,2014,432.36,0.0471
+FJ,Fiji,NZ,New Zealand,2015,394.29,0.0429
+FJ,Fiji,NZ,New Zealand,2016,362.35,0.0394
+FJ,Fiji,NZ,New Zealand,2017,361.16,0.0393
+FJ,Fiji,NZ,New Zealand,2018,364.08,0.0397
+FJ,Fiji,NZ,New Zealand,2019,388.83,0.0425
+FJ,Fiji,NZ,New Zealand,2020,361.58,0.0395
+FJ,Fiji,NZ,New Zealand,2021,280.85,0.0306
+FJ,Fiji,NZ,New Zealand,2022,220.83,0.024
+FJ,Fiji,NZ,New Zealand,2023,295.25,0.0319
+FJ,Fiji,NZ,New Zealand,2024,306.05,0.033
+FJ,Fiji,PH,Philippines,2024,26.0,0.0028
+FJ,Fiji,PL,Poland,2010,1.0,0.0001
+FJ,Fiji,PL,Poland,2017,1.0,0.0001
+FJ,Fiji,PL,Poland,2024,1.0,0.0001
+FJ,Fiji,PT,Portugal,2012,2.0,0.0002
+FJ,Fiji,PT,Portugal,2013,3.0,0.0003
+FJ,Fiji,PT,Portugal,2014,4.0,0.0004
+FJ,Fiji,PT,Portugal,2015,3.0,0.0003
+FJ,Fiji,PT,Portugal,2016,2.0,0.0002
+FJ,Fiji,PT,Portugal,2017,2.0,0.0002
+FJ,Fiji,PT,Portugal,2022,1.0,0.0001
+FJ,Fiji,PT,Portugal,2023,1.0,0.0001
+FJ,Fiji,SA,Saudi Arabia,2010,3.0,0.0003
+FJ,Fiji,SA,Saudi Arabia,2011,6.0,0.0007
+FJ,Fiji,SA,Saudi Arabia,2012,8.0,0.0009
+FJ,Fiji,SA,Saudi Arabia,2013,14.0,0.0015
+FJ,Fiji,SA,Saudi Arabia,2014,16.0,0.0017
+FJ,Fiji,SA,Saudi Arabia,2015,17.0,0.0019
+FJ,Fiji,SA,Saudi Arabia,2016,19.0,0.0021
+FJ,Fiji,SA,Saudi Arabia,2017,19.0,0.0021
+FJ,Fiji,SA,Saudi Arabia,2018,18.0,0.002
+FJ,Fiji,SA,Saudi Arabia,2019,3.0,0.0003
+FJ,Fiji,SA,Saudi Arabia,2020,3.0,0.0003
+FJ,Fiji,SA,Saudi Arabia,2021,1.0,0.0001
+FJ,Fiji,SA,Saudi Arabia,2022,5.0,0.0005
+FJ,Fiji,SA,Saudi Arabia,2024,1.0,0.0001
+FJ,Fiji,SE,Sweden,2010,2.0,0.0002
+FJ,Fiji,SE,Sweden,2011,2.0,0.0002
+FJ,Fiji,SE,Sweden,2012,1.0,0.0001
+FJ,Fiji,SE,Sweden,2014,6.0,0.0007
+FJ,Fiji,SE,Sweden,2015,3.0,0.0003
+FJ,Fiji,SE,Sweden,2016,1.0,0.0001
+FJ,Fiji,SE,Sweden,2017,1.0,0.0001
+FJ,Fiji,SE,Sweden,2018,1.0,0.0001
+FJ,Fiji,SE,Sweden,2019,1.0,0.0001
+FJ,Fiji,SE,Sweden,2020,1.0,0.0001
+FJ,Fiji,SE,Sweden,2021,1.0,0.0001
+FJ,Fiji,SE,Sweden,2022,4.0,0.0004
+FJ,Fiji,SE,Sweden,2023,5.0,0.0005
+FJ,Fiji,SE,Sweden,2024,3.0,0.0003
+FJ,Fiji,TH,Thailand,2010,1.0,0.0001
+FJ,Fiji,TH,Thailand,2011,2.0,0.0002
+FJ,Fiji,TH,Thailand,2012,4.0,0.0004
+FJ,Fiji,TH,Thailand,2020,1.0,0.0001
+FJ,Fiji,TH,Thailand,2024,1.0,0.0001
+FJ,Fiji,TR,Türkiye,2014,2.0,0.0002
+FJ,Fiji,TR,Türkiye,2015,4.0,0.0004
+FJ,Fiji,TR,Türkiye,2016,4.0,0.0004
+FJ,Fiji,TR,Türkiye,2017,4.0,0.0004
+FJ,Fiji,TR,Türkiye,2018,3.0,0.0003
+FJ,Fiji,TR,Türkiye,2019,2.0,0.0002
+FJ,Fiji,TR,Türkiye,2020,2.0,0.0002
+FJ,Fiji,TR,Türkiye,2021,5.0,0.0005
+FJ,Fiji,TR,Türkiye,2022,5.0,0.0005
+FJ,Fiji,TR,Türkiye,2023,2.0,0.0002
+FJ,Fiji,US,United States of America,2013,130.16,0.0142
+FJ,Fiji,US,United States of America,2014,118.0,0.0129
+FJ,Fiji,US,United States of America,2015,90.23,0.0098
+FJ,Fiji,US,United States of America,2016,123.93,0.0135
+FJ,Fiji,US,United States of America,2017,115.96,0.0126
+FJ,Fiji,US,United States of America,2018,128.94,0.0141
+FJ,Fiji,US,United States of America,2020,104.07,0.0114
+FJ,Fiji,US,United States of America,2021,103.66,0.0113
+FJ,Fiji,US,United States of America,2023,162.2,0.0176
+FJ,Fiji,WS,Samoa,2017,28.0,0.003
+FJ,Fiji,WS,Samoa,2018,19.0,0.0021
+FJ,Fiji,WS,Samoa,2019,11.0,0.0012
+FJ,Fiji,WS,Samoa,2020,13.0,0.0014
+FJ,Fiji,WS,Samoa,2021,4.0,0.0004
+FJ,Fiji,WS,Samoa,2022,32.0,0.0035
+FJ,Fiji,WS,Samoa,2023,3.0,0.0003
+FJ,Fiji,WS,Samoa,2024,47.0,0.0051
+FJ,Fiji,ZA,South Africa,2011,2.0,0.0002
+FJ,Fiji,ZA,South Africa,2012,2.0,0.0002
+FJ,Fiji,ZA,South Africa,2014,3.0,0.0003
+FJ,Fiji,ZA,South Africa,2015,3.0,0.0003
+FJ,Fiji,ZA,South Africa,2016,2.0,0.0002
+FJ,Fiji,ZA,South Africa,2017,2.0,0.0002
+FJ,Fiji,ZA,South Africa,2018,2.0,0.0002
+FJ,Fiji,ZA,South Africa,2019,2.0,0.0002
+FJ,Fiji,ZA,South Africa,2021,3.0,0.0003
+FJ,Fiji,ZA,South Africa,2023,1.0,0.0001
+FM,Micronesia (FSM),AR,Argentina,2016,1.0,0.0009
+FM,Micronesia (FSM),AR,Argentina,2017,1.0,0.0009
+FM,Micronesia (FSM),AU,Australia,2010,3.0,0.0028
+FM,Micronesia (FSM),AU,Australia,2011,3.0,0.0028
+FM,Micronesia (FSM),AU,Australia,2012,3.0,0.0028
+FM,Micronesia (FSM),AU,Australia,2013,1.0,0.0009
+FM,Micronesia (FSM),BE,Belgium,2021,1.0,0.0009
+FM,Micronesia (FSM),BR,Brazil,2019,1.0,0.0009
+FM,Micronesia (FSM),BR,Brazil,2021,1.0,0.0009
+FM,Micronesia (FSM),BR,Brazil,2022,1.0,0.0009
+FM,Micronesia (FSM),CA,Canada,2015,3.0,0.0028
+FM,Micronesia (FSM),CA,Canada,2016,3.0,0.0028
+FM,Micronesia (FSM),CA,Canada,2017,3.0,0.0027
+FM,Micronesia (FSM),CA,Canada,2018,1.06,0.001
+FM,Micronesia (FSM),CU,Cuba,2021,4.0,0.0036
+FM,Micronesia (FSM),CU,Cuba,2024,1.0,0.0009
+FM,Micronesia (FSM),DE,Germany,2016,1.0,0.0009
+FM,Micronesia (FSM),ES,Spain,2012,2.0,0.0019
+FM,Micronesia (FSM),ES,Spain,2017,1.0,0.0009
+FM,Micronesia (FSM),FR,France,2012,4.0,0.0037
+FM,Micronesia (FSM),FR,France,2014,1.0,0.0009
+FM,Micronesia (FSM),FR,France,2015,2.0,0.0018
+FM,Micronesia (FSM),FR,France,2016,2.0,0.0018
+FM,Micronesia (FSM),FR,France,2018,7.0,0.0064
+FM,Micronesia (FSM),FR,France,2020,1.0,0.0009
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2010,3.0,0.0028
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2011,2.0,0.0019
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2012,1.0,0.0009
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2013,4.0,0.0037
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2014,5.0,0.0046
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2015,3.0,0.0028
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2018,1.0,0.0009
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2021,2.0,0.0018
+FM,Micronesia (FSM),GB,United Kingdom of Great Britain and Northern Ireland,2022,1.0,0.0009
+FM,Micronesia (FSM),GH,Ghana,2021,1.0,0.0009
+FM,Micronesia (FSM),ID,Indonesia,2015,1.0,0.0009
+FM,Micronesia (FSM),ID,Indonesia,2016,1.0,0.0009
+FM,Micronesia (FSM),ID,Indonesia,2017,1.0,0.0009
+FM,Micronesia (FSM),ID,Indonesia,2018,1.0,0.0009
+FM,Micronesia (FSM),IN,India,2021,2.0,0.0018
+FM,Micronesia (FSM),IE,Ireland,2018,2.0,0.0018
+FM,Micronesia (FSM),IT,Italy,2014,4.0,0.0037
+FM,Micronesia (FSM),IT,Italy,2015,4.0,0.0037
+FM,Micronesia (FSM),JP,Japan,2013,1.0,0.0009
+FM,Micronesia (FSM),JP,Japan,2014,2.0,0.0018
+FM,Micronesia (FSM),JP,Japan,2015,5.0,0.0046
+FM,Micronesia (FSM),JP,Japan,2016,4.0,0.0037
+FM,Micronesia (FSM),JP,Japan,2017,5.0,0.0046
+FM,Micronesia (FSM),JP,Japan,2018,4.0,0.0036
+FM,Micronesia (FSM),JP,Japan,2019,13.0,0.0118
+FM,Micronesia (FSM),JP,Japan,2020,18.0,0.0162
+FM,Micronesia (FSM),JP,Japan,2021,13.0,0.0116
+FM,Micronesia (FSM),JP,Japan,2022,11.0,0.0098
+FM,Micronesia (FSM),JP,Japan,2023,12.0,0.0107
+FM,Micronesia (FSM),KR,Republic of Korea,2012,1.0,0.0009
+FM,Micronesia (FSM),KR,Republic of Korea,2013,1.0,0.0009
+FM,Micronesia (FSM),MA,Morocco,2014,4.0,0.0037
+FM,Micronesia (FSM),MA,Morocco,2015,4.0,0.0037
+FM,Micronesia (FSM),MA,Morocco,2016,3.0,0.0028
+FM,Micronesia (FSM),MA,Morocco,2017,3.0,0.0027
+FM,Micronesia (FSM),MA,Morocco,2018,1.0,0.0009
+FM,Micronesia (FSM),MA,Morocco,2019,6.0,0.0054
+FM,Micronesia (FSM),MA,Morocco,2020,4.0,0.0036
+FM,Micronesia (FSM),MA,Morocco,2021,1.0,0.0009
+FM,Micronesia (FSM),MA,Morocco,2022,2.0,0.0018
+FM,Micronesia (FSM),MA,Morocco,2024,1.0,0.0009
+FM,Micronesia (FSM),MH,Marshall Islands,2022,17.0,0.0152
+FM,Micronesia (FSM),MU,Mauritius,2021,1.0,0.0009
+FM,Micronesia (FSM),MY,Malaysia,2010,11.0,0.0102
+FM,Micronesia (FSM),NZ,New Zealand,2010,1.0,0.0009
+FM,Micronesia (FSM),NZ,New Zealand,2015,1.0,0.0009
+FM,Micronesia (FSM),NZ,New Zealand,2016,2.0,0.0018
+FM,Micronesia (FSM),NZ,New Zealand,2017,3.0,0.0027
+FM,Micronesia (FSM),NZ,New Zealand,2018,4.0,0.0036
+FM,Micronesia (FSM),NZ,New Zealand,2019,4.0,0.0036
+FM,Micronesia (FSM),NZ,New Zealand,2020,2.0,0.0018
+FM,Micronesia (FSM),NZ,New Zealand,2021,1.0,0.0009
+FM,Micronesia (FSM),PT,Portugal,2013,1.0,0.0009
+FM,Micronesia (FSM),PT,Portugal,2014,1.0,0.0009
+FM,Micronesia (FSM),PT,Portugal,2017,1.0,0.0009
+FM,Micronesia (FSM),SA,Saudi Arabia,2011,47.0,0.0436
+FM,Micronesia (FSM),SA,Saudi Arabia,2012,63.0,0.0584
+FM,Micronesia (FSM),SA,Saudi Arabia,2013,108.0,0.0999
+FM,Micronesia (FSM),SA,Saudi Arabia,2014,124.0,0.1144
+FM,Micronesia (FSM),SA,Saudi Arabia,2015,120.0,0.1104
+FM,Micronesia (FSM),SA,Saudi Arabia,2016,131.0,0.1201
+FM,Micronesia (FSM),SA,Saudi Arabia,2017,131.0,0.1197
+FM,Micronesia (FSM),SA,Saudi Arabia,2018,121.0,0.1101
+FM,Micronesia (FSM),RS,Serbia,2016,1.0,0.0009
+FM,Micronesia (FSM),US,United States of America,2013,84.22,0.0779
+FM,Micronesia (FSM),US,United States of America,2014,33.0,0.0304
+FM,Micronesia (FSM),US,United States of America,2015,49.36,0.0454
+FM,Micronesia (FSM),US,United States of America,2016,27.69,0.0254
+FM,Micronesia (FSM),US,United States of America,2017,35.18,0.0321
+FM,Micronesia (FSM),US,United States of America,2018,46.62,0.0424
+FM,Micronesia (FSM),US,United States of America,2020,21.29,0.0192
+FM,Micronesia (FSM),US,United States of America,2021,28.67,0.0257
+FM,Micronesia (FSM),US,United States of America,2023,40.32,0.0358
+FM,Micronesia (FSM),VN,Viet Nam,2020,1.0,0.0009
+FM,Micronesia (FSM),VN,Viet Nam,2021,1.0,0.0009
+FM,Micronesia (FSM),VN,Viet Nam,2022,1.0,0.0009
+KI,Kiribati,AU,Australia,2010,76.0,0.0699
+KI,Kiribati,AU,Australia,2011,93.0,0.0841
+KI,Kiribati,AU,Australia,2012,88.0,0.0784
+KI,Kiribati,AU,Australia,2013,60.0,0.0527
+KI,Kiribati,AU,Australia,2014,35.0,0.0303
+KI,Kiribati,AU,Australia,2015,38.0,0.0325
+KI,Kiribati,AU,Australia,2016,41.0,0.0346
+KI,Kiribati,AU,Australia,2017,45.0,0.0374
+KI,Kiribati,AU,Australia,2018,47.0,0.0385
+KI,Kiribati,AU,Australia,2019,53.0,0.0428
+KI,Kiribati,AU,Australia,2020,45.0,0.0357
+KI,Kiribati,AU,Australia,2021,21.0,0.0164
+KI,Kiribati,AU,Australia,2022,40.0,0.0307
+KI,Kiribati,AU,Australia,2023,32.0,0.0241
+KI,Kiribati,AU,Australia,2024,42.0,0.0312
+KI,Kiribati,BR,Brazil,2018,1.0,0.0008
+KI,Kiribati,BR,Brazil,2019,1.0,0.0008
+KI,Kiribati,BR,Brazil,2020,1.0,0.0008
+KI,Kiribati,BR,Brazil,2021,1.0,0.0008
+KI,Kiribati,BR,Brazil,2022,2.0,0.0015
+KI,Kiribati,BR,Brazil,2023,1.0,0.0008
+KI,Kiribati,BR,Brazil,2024,2.0,0.0015
+KI,Kiribati,CA,Canada,2013,3.0,0.0026
+KI,Kiribati,CA,Canada,2014,3.0,0.0026
+KI,Kiribati,CA,Canada,2015,6.0,0.0051
+KI,Kiribati,CA,Canada,2016,3.0,0.0025
+KI,Kiribati,CU,Cuba,2010,34.0,0.0313
+KI,Kiribati,CU,Cuba,2011,33.0,0.0298
+KI,Kiribati,CU,Cuba,2012,32.0,0.0285
+KI,Kiribati,CU,Cuba,2013,31.0,0.0272
+KI,Kiribati,CU,Cuba,2014,23.0,0.0199
+KI,Kiribati,CU,Cuba,2015,18.0,0.0154
+KI,Kiribati,CU,Cuba,2016,16.0,0.0135
+KI,Kiribati,CU,Cuba,2017,11.0,0.0091
+KI,Kiribati,CU,Cuba,2018,6.0,0.0049
+KI,Kiribati,CU,Cuba,2019,4.0,0.0032
+KI,Kiribati,CU,Cuba,2020,4.0,0.0032
+KI,Kiribati,CU,Cuba,2021,4.0,0.0031
+KI,Kiribati,CU,Cuba,2023,1.0,0.0008
+KI,Kiribati,CU,Cuba,2024,2.0,0.0015
+KI,Kiribati,DE,Germany,2013,3.0,0.0026
+KI,Kiribati,DE,Germany,2014,3.0,0.0026
+KI,Kiribati,DE,Germany,2015,4.0,0.0034
+KI,Kiribati,DE,Germany,2016,3.0,0.0025
+KI,Kiribati,DE,Germany,2017,2.0,0.0017
+KI,Kiribati,DE,Germany,2018,1.0,0.0008
+KI,Kiribati,DE,Germany,2019,1.0,0.0008
+KI,Kiribati,DE,Germany,2021,1.0,0.0008
+KI,Kiribati,DE,Germany,2022,1.0,0.0008
+KI,Kiribati,DE,Germany,2023,1.0,0.0008
+KI,Kiribati,DE,Germany,2024,1.0,0.0007
+KI,Kiribati,DO,Dominican Republic,2020,1.0,0.0008
+KI,Kiribati,DO,Dominican Republic,2021,2.0,0.0016
+KI,Kiribati,DO,Dominican Republic,2022,1.0,0.0008
+KI,Kiribati,DO,Dominican Republic,2023,1.0,0.0008
+KI,Kiribati,EC,Ecuador,2014,1.0,0.0009
+KI,Kiribati,ES,Spain,2010,1.0,0.0009
+KI,Kiribati,ES,Spain,2013,1.0,0.0009
+KI,Kiribati,FR,France,2012,1.0,0.0009
+KI,Kiribati,FR,France,2013,1.0,0.0009
+KI,Kiribati,FR,France,2020,1.0,0.0008
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2010,1.0,0.0009
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2011,1.0,0.0009
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2012,1.0,0.0009
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2014,1.0,0.0009
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2016,4.0,0.0034
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2017,2.0,0.0017
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2018,1.0,0.0008
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2020,1.0,0.0008
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2021,1.0,0.0008
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2022,1.0,0.0008
+KI,Kiribati,GB,United Kingdom of Great Britain and Northern Ireland,2023,1.0,0.0008
+KI,Kiribati,IN,India,2020,1.0,0.0008
+KI,Kiribati,IE,Ireland,2015,1.0,0.0009
+KI,Kiribati,IT,Italy,2014,1.0,0.0009
+KI,Kiribati,IT,Italy,2015,1.0,0.0009
+KI,Kiribati,IT,Italy,2020,1.0,0.0008
+KI,Kiribati,IT,Italy,2021,1.0,0.0008
+KI,Kiribati,JP,Japan,2013,2.0,0.0018
+KI,Kiribati,JP,Japan,2014,1.0,0.0009
+KI,Kiribati,JP,Japan,2015,1.0,0.0009
+KI,Kiribati,JP,Japan,2016,1.0,0.0008
+KI,Kiribati,JP,Japan,2017,4.0,0.0033
+KI,Kiribati,JP,Japan,2018,6.0,0.0049
+KI,Kiribati,JP,Japan,2019,12.0,0.0097
+KI,Kiribati,JP,Japan,2020,6.0,0.0048
+KI,Kiribati,JP,Japan,2021,3.0,0.0023
+KI,Kiribati,JP,Japan,2022,6.0,0.0046
+KI,Kiribati,JP,Japan,2023,3.0,0.0023
+KI,Kiribati,KR,Republic of Korea,2018,1.0,0.0008
+KI,Kiribati,KR,Republic of Korea,2019,1.0,0.0008
+KI,Kiribati,KR,Republic of Korea,2020,1.0,0.0008
+KI,Kiribati,KR,Republic of Korea,2023,2.0,0.0015
+KI,Kiribati,MA,Morocco,2016,12.0,0.0101
+KI,Kiribati,MA,Morocco,2017,12.0,0.01
+KI,Kiribati,MA,Morocco,2018,9.0,0.0074
+KI,Kiribati,MA,Morocco,2019,9.0,0.0073
+KI,Kiribati,MA,Morocco,2020,9.0,0.0071
+KI,Kiribati,MA,Morocco,2021,8.0,0.0062
+KI,Kiribati,MA,Morocco,2022,6.0,0.0046
+KI,Kiribati,MA,Morocco,2023,6.0,0.0045
+KI,Kiribati,MA,Morocco,2024,5.0,0.0037
+KI,Kiribati,MH,Marshall Islands,2019,11.0,0.0089
+KI,Kiribati,MH,Marshall Islands,2022,2.0,0.0015
+KI,Kiribati,MU,Mauritius,2013,1.0,0.0009
+KI,Kiribati,MU,Mauritius,2014,1.0,0.0009
+KI,Kiribati,MU,Mauritius,2015,1.0,0.0009
+KI,Kiribati,MU,Mauritius,2016,1.0,0.0008
+KI,Kiribati,MY,Malaysia,2019,1.0,0.0008
+KI,Kiribati,MY,Malaysia,2020,1.0,0.0008
+KI,Kiribati,MY,Malaysia,2021,1.0,0.0008
+KI,Kiribati,MY,Malaysia,2022,1.0,0.0008
+KI,Kiribati,MY,Malaysia,2023,1.0,0.0008
+KI,Kiribati,MY,Malaysia,2024,1.0,0.0007
+KI,Kiribati,NZ,New Zealand,2010,19.0,0.0175
+KI,Kiribati,NZ,New Zealand,2011,27.0,0.0244
+KI,Kiribati,NZ,New Zealand,2012,34.0,0.0303
+KI,Kiribati,NZ,New Zealand,2013,41.65,0.0366
+KI,Kiribati,NZ,New Zealand,2014,47.72,0.0414
+KI,Kiribati,NZ,New Zealand,2015,54.5,0.0467
+KI,Kiribati,NZ,New Zealand,2016,48.72,0.0411
+KI,Kiribati,NZ,New Zealand,2017,49.5,0.0412
+KI,Kiribati,NZ,New Zealand,2018,56.5,0.0463
+KI,Kiribati,NZ,New Zealand,2019,46.0,0.0371
+KI,Kiribati,NZ,New Zealand,2020,37.57,0.0298
+KI,Kiribati,NZ,New Zealand,2021,33.0,0.0257
+KI,Kiribati,NZ,New Zealand,2022,34.0,0.0261
+KI,Kiribati,NZ,New Zealand,2023,22.65,0.0171
+KI,Kiribati,NZ,New Zealand,2024,29.96,0.0223
+KI,Kiribati,PH,Philippines,2024,4.0,0.003
+KI,Kiribati,PT,Portugal,2011,1.0,0.0009
+KI,Kiribati,PT,Portugal,2013,1.0,0.0009
+KI,Kiribati,PT,Portugal,2014,1.0,0.0009
+KI,Kiribati,PT,Portugal,2015,1.0,0.0009
+KI,Kiribati,PT,Portugal,2016,1.0,0.0008
+KI,Kiribati,PT,Portugal,2019,1.0,0.0008
+KI,Kiribati,PT,Portugal,2020,1.0,0.0008
+KI,Kiribati,SK,Slovakia,2018,1.0,0.0008
+KI,Kiribati,SK,Slovakia,2019,1.0,0.0008
+KI,Kiribati,SK,Slovakia,2020,1.0,0.0008
+KI,Kiribati,SK,Slovakia,2021,1.0,0.0008
+KI,Kiribati,SE,Sweden,2017,1.0,0.0008
+KI,Kiribati,SE,Sweden,2018,1.0,0.0008
+KI,Kiribati,TH,Thailand,2024,1.0,0.0007
+KI,Kiribati,TR,Türkiye,2015,1.0,0.0009
+KI,Kiribati,TR,Türkiye,2016,1.0,0.0008
+KI,Kiribati,US,United States of America,2013,66.99,0.0588
+KI,Kiribati,US,United States of America,2014,80.0,0.0694
+KI,Kiribati,US,United States of America,2015,51.57,0.0441
+KI,Kiribati,US,United States of America,2016,64.87,0.0548
+KI,Kiribati,US,United States of America,2017,77.28,0.0643
+KI,Kiribati,US,United States of America,2018,71.69,0.0587
+KI,Kiribati,US,United States of America,2020,74.68,0.0592
+KI,Kiribati,US,United States of America,2021,65.55,0.0511
+KI,Kiribati,US,United States of America,2023,47.45,0.0358
+KI,Kiribati,VN,Viet Nam,2021,7.0,0.0055
+KI,Kiribati,VN,Viet Nam,2022,7.0,0.0054
+KI,Kiribati,WS,Samoa,2017,10.0,0.0083
+KI,Kiribati,WS,Samoa,2019,4.0,0.0032
+KI,Kiribati,WS,Samoa,2020,2.0,0.0016
+KI,Kiribati,WS,Samoa,2024,2.0,0.0015
+MH,Marshall Islands,AR,Argentina,2016,1.0,0.0021
+MH,Marshall Islands,AR,Argentina,2017,1.0,0.0021
+MH,Marshall Islands,AU,Australia,2010,3.0,0.0058
+MH,Marshall Islands,AU,Australia,2011,4.0,0.0077
+MH,Marshall Islands,AU,Australia,2012,3.0,0.0058
+MH,Marshall Islands,AU,Australia,2013,2.0,0.0039
+MH,Marshall Islands,BR,Brazil,2010,2.0,0.0038
+MH,Marshall Islands,BR,Brazil,2011,1.0,0.0019
+MH,Marshall Islands,CL,Chile,2019,2.0,0.0045
+MH,Marshall Islands,DE,Germany,2017,1.0,0.0021
+MH,Marshall Islands,DE,Germany,2018,1.0,0.0022
+MH,Marshall Islands,DE,Germany,2019,1.0,0.0023
+MH,Marshall Islands,DE,Germany,2020,1.0,0.0023
+MH,Marshall Islands,DE,Germany,2021,1.0,0.0024
+MH,Marshall Islands,DE,Germany,2022,1.0,0.0025
+MH,Marshall Islands,DE,Germany,2023,1.0,0.0026
+MH,Marshall Islands,DE,Germany,2024,1.0,0.0027
+MH,Marshall Islands,ES,Spain,2010,37.0,0.0711
+MH,Marshall Islands,ES,Spain,2019,2.0,0.0045
+MH,Marshall Islands,ES,Spain,2020,2.0,0.0047
+MH,Marshall Islands,ES,Spain,2021,10.0,0.0242
+MH,Marshall Islands,FR,France,2012,59.0,0.1147
+MH,Marshall Islands,FR,France,2017,153.0,0.3288
+MH,Marshall Islands,FR,France,2018,169.0,0.3732
+MH,Marshall Islands,FR,France,2019,2.0,0.0045
+MH,Marshall Islands,FR,France,2020,4.0,0.0094
+MH,Marshall Islands,FR,France,2021,175.0,0.423
+MH,Marshall Islands,FR,France,2022,198.0,0.494
+MH,Marshall Islands,FR,France,2023,27.0,0.0695
+MH,Marshall Islands,FR,France,2024,30.0,0.0799
+MH,Marshall Islands,GB,United Kingdom of Great Britain and Northern Ireland,2015,1.0,0.002
+MH,Marshall Islands,GB,United Kingdom of Great Britain and Northern Ireland,2019,1.0,0.0023
+MH,Marshall Islands,GB,United Kingdom of Great Britain and Northern Ireland,2020,2.0,0.0047
+MH,Marshall Islands,GH,Ghana,2014,1.0,0.002
+MH,Marshall Islands,IN,India,2014,5.0,0.01
+MH,Marshall Islands,IN,India,2017,3.0,0.0064
+MH,Marshall Islands,IT,Italy,2021,1.0,0.0024
+MH,Marshall Islands,IT,Italy,2022,1.0,0.0025
+MH,Marshall Islands,JP,Japan,2013,2.0,0.0039
+MH,Marshall Islands,JP,Japan,2014,2.0,0.004
+MH,Marshall Islands,JP,Japan,2015,2.0,0.0041
+MH,Marshall Islands,JP,Japan,2016,1.0,0.0021
+MH,Marshall Islands,JP,Japan,2017,2.0,0.0043
+MH,Marshall Islands,JP,Japan,2018,2.0,0.0044
+MH,Marshall Islands,JP,Japan,2019,5.0,0.0114
+MH,Marshall Islands,JP,Japan,2020,7.0,0.0164
+MH,Marshall Islands,JP,Japan,2021,11.0,0.0266
+MH,Marshall Islands,JP,Japan,2022,5.0,0.0125
+MH,Marshall Islands,JP,Japan,2023,4.0,0.0103
+MH,Marshall Islands,KR,Republic of Korea,2013,1.0,0.002
+MH,Marshall Islands,KR,Republic of Korea,2014,1.0,0.002
+MH,Marshall Islands,KR,Republic of Korea,2015,1.0,0.002
+MH,Marshall Islands,MA,Morocco,2015,1.0,0.002
+MH,Marshall Islands,MA,Morocco,2018,1.0,0.0022
+MH,Marshall Islands,MA,Morocco,2019,3.0,0.0068
+MH,Marshall Islands,MA,Morocco,2020,1.0,0.0023
+MH,Marshall Islands,MA,Morocco,2021,1.0,0.0024
+MH,Marshall Islands,MA,Morocco,2022,1.0,0.0025
+MH,Marshall Islands,MA,Morocco,2023,2.0,0.0052
+MH,Marshall Islands,MA,Morocco,2024,1.0,0.0027
+MH,Marshall Islands,MT,Malta,2013,1.0,0.002
+MH,Marshall Islands,MY,Malaysia,2010,1.0,0.0019
+MH,Marshall Islands,NZ,New Zealand,2010,1.0,0.0019
+MH,Marshall Islands,NZ,New Zealand,2011,3.0,0.0058
+MH,Marshall Islands,NZ,New Zealand,2012,3.0,0.0058
+MH,Marshall Islands,NZ,New Zealand,2013,3.0,0.0059
+MH,Marshall Islands,NZ,New Zealand,2014,3.0,0.006
+MH,Marshall Islands,NZ,New Zealand,2015,1.0,0.002
+MH,Marshall Islands,NZ,New Zealand,2016,1.0,0.0021
+MH,Marshall Islands,NZ,New Zealand,2017,1.0,0.0021
+MH,Marshall Islands,NZ,New Zealand,2018,1.0,0.0022
+MH,Marshall Islands,NZ,New Zealand,2019,1.0,0.0023
+MH,Marshall Islands,NZ,New Zealand,2020,2.0,0.0047
+MH,Marshall Islands,NZ,New Zealand,2021,2.0,0.0048
+MH,Marshall Islands,NZ,New Zealand,2022,1.0,0.0025
+MH,Marshall Islands,NZ,New Zealand,2023,3.0,0.0077
+MH,Marshall Islands,NZ,New Zealand,2024,3.0,0.008
+MH,Marshall Islands,PL,Poland,2023,5.0,0.0129
+MH,Marshall Islands,PL,Poland,2024,1.0,0.0027
+MH,Marshall Islands,UA,Ukraine,2020,1.0,0.0023
+MH,Marshall Islands,UA,Ukraine,2021,1.0,0.0024
+MH,Marshall Islands,US,United States of America,2013,40.2,0.0793
+MH,Marshall Islands,US,United States of America,2014,12.0,0.0241
+MH,Marshall Islands,US,United States of America,2015,16.45,0.0337
+MH,Marshall Islands,US,United States of America,2016,21.83,0.0458
+MH,Marshall Islands,US,United States of America,2017,12.69,0.0273
+MH,Marshall Islands,US,United States of America,2018,26.64,0.0588
+MH,Marshall Islands,US,United States of America,2020,10.14,0.0237
+MH,Marshall Islands,US,United States of America,2021,8.72,0.0211
+MH,Marshall Islands,US,United States of America,2023,3.83,0.0099
+NR,Nauru,AR,Argentina,2022,1.0,0.0085
+NR,Nauru,AU,Australia,2010,13.0,0.1294
+NR,Nauru,AU,Australia,2011,10.0,0.099
+NR,Nauru,AU,Australia,2012,6.0,0.0584
+NR,Nauru,AU,Australia,2013,5.0,0.0475
+NR,Nauru,AU,Australia,2014,50.0,0.4655
+NR,Nauru,AU,Australia,2015,54.0,0.493
+NR,Nauru,AU,Australia,2016,71.0,0.6368
+NR,Nauru,AU,Australia,2017,22.0,0.1943
+NR,Nauru,AU,Australia,2018,16.0,0.1394
+NR,Nauru,AU,Australia,2019,16.0,0.1381
+NR,Nauru,AU,Australia,2020,21.0,0.1804
+NR,Nauru,AU,Australia,2021,18.0,0.1537
+NR,Nauru,AU,Australia,2022,23.0,0.1949
+NR,Nauru,AU,Australia,2023,40.0,0.3368
+NR,Nauru,AU,Australia,2024,59.0,0.4938
+NR,Nauru,BG,Bulgaria,2016,1.0,0.009
+NR,Nauru,BR,Brazil,2010,1.0,0.01
+NR,Nauru,BR,Brazil,2011,1.0,0.0099
+NR,Nauru,BR,Brazil,2012,1.0,0.0097
+NR,Nauru,BR,Brazil,2014,1.0,0.0093
+NR,Nauru,CU,Cuba,2010,17.0,0.1693
+NR,Nauru,CU,Cuba,2011,16.0,0.1584
+NR,Nauru,CU,Cuba,2012,5.0,0.0487
+NR,Nauru,CU,Cuba,2013,7.0,0.0666
+NR,Nauru,CU,Cuba,2014,5.0,0.0465
+NR,Nauru,CU,Cuba,2015,4.0,0.0365
+NR,Nauru,CU,Cuba,2016,3.0,0.0269
+NR,Nauru,CU,Cuba,2017,1.0,0.0088
+NR,Nauru,CZ,Czechia,2019,3.0,0.0259
+NR,Nauru,CZ,Czechia,2021,1.0,0.0085
+NR,Nauru,ES,Spain,2010,1.0,0.01
+NR,Nauru,FR,France,2012,3.0,0.0292
+NR,Nauru,FR,France,2014,1.0,0.0093
+NR,Nauru,FR,France,2015,3.0,0.0274
+NR,Nauru,FR,France,2017,4.0,0.0353
+NR,Nauru,FR,France,2018,1.0,0.0087
+NR,Nauru,FR,France,2020,2.0,0.0172
+NR,Nauru,FR,France,2021,1.0,0.0085
+NR,Nauru,GB,United Kingdom of Great Britain and Northern Ireland,2018,1.0,0.0087
+NR,Nauru,GB,United Kingdom of Great Britain and Northern Ireland,2021,1.0,0.0085
+NR,Nauru,GB,United Kingdom of Great Britain and Northern Ireland,2022,2.0,0.0169
+NR,Nauru,GB,United Kingdom of Great Britain and Northern Ireland,2023,3.0,0.0253
+NR,Nauru,IN,India,2014,1.0,0.0093
+NR,Nauru,IN,India,2016,1.0,0.009
+NR,Nauru,IN,India,2017,1.0,0.0088
+NR,Nauru,IN,India,2020,12.0,0.1031
+NR,Nauru,JP,Japan,2020,2.0,0.0172
+NR,Nauru,JP,Japan,2021,2.0,0.0171
+NR,Nauru,JP,Japan,2022,1.0,0.0085
+NR,Nauru,KR,Republic of Korea,2022,1.0,0.0085
+NR,Nauru,MA,Morocco,2014,1.0,0.0093
+NR,Nauru,MA,Morocco,2015,2.0,0.0183
+NR,Nauru,MA,Morocco,2016,2.0,0.0179
+NR,Nauru,MA,Morocco,2017,1.0,0.0088
+NR,Nauru,MA,Morocco,2018,1.0,0.0087
+NR,Nauru,MA,Morocco,2024,1.0,0.0084
+NR,Nauru,MY,Malaysia,2010,13.0,0.1294
+NR,Nauru,MY,Malaysia,2011,12.0,0.1188
+NR,Nauru,MY,Malaysia,2012,4.0,0.039
+NR,Nauru,MY,Malaysia,2020,1.0,0.0086
+NR,Nauru,MY,Malaysia,2023,1.0,0.0084
+NR,Nauru,MY,Malaysia,2024,1.0,0.0084
+NR,Nauru,NZ,New Zealand,2010,1.0,0.01
+NR,Nauru,NZ,New Zealand,2011,1.0,0.0099
+NR,Nauru,NZ,New Zealand,2012,5.0,0.0487
+NR,Nauru,NZ,New Zealand,2013,10.0,0.0951
+NR,Nauru,NZ,New Zealand,2014,11.0,0.1024
+NR,Nauru,NZ,New Zealand,2015,11.0,0.1004
+NR,Nauru,NZ,New Zealand,2016,10.0,0.0897
+NR,Nauru,NZ,New Zealand,2017,9.0,0.0795
+NR,Nauru,NZ,New Zealand,2018,10.0,0.0871
+NR,Nauru,NZ,New Zealand,2019,9.0,0.0777
+NR,Nauru,NZ,New Zealand,2020,8.0,0.0687
+NR,Nauru,NZ,New Zealand,2021,5.0,0.0427
+NR,Nauru,NZ,New Zealand,2022,2.0,0.0169
+NR,Nauru,NZ,New Zealand,2023,3.0,0.0253
+NR,Nauru,NZ,New Zealand,2024,21.0,0.1758
+NR,Nauru,PL,Poland,2021,2.0,0.0171
+NR,Nauru,TH,Thailand,2010,4.0,0.0398
+NR,Nauru,TH,Thailand,2011,3.0,0.0297
+NR,Nauru,TH,Thailand,2012,2.0,0.0195
+NR,Nauru,TH,Thailand,2015,4.0,0.0365
+NR,Nauru,TH,Thailand,2016,3.0,0.0269
+NR,Nauru,TH,Thailand,2020,2.0,0.0172
+NR,Nauru,TH,Thailand,2022,2.0,0.0169
+NR,Nauru,US,United States of America,2013,0.96,0.0091
+NR,Nauru,US,United States of America,2014,6.0,0.0559
+NR,Nauru,US,United States of America,2015,10.41,0.095
+NR,Nauru,US,United States of America,2018,1.27,0.0111
+NR,Nauru,US,United States of America,2020,2.41,0.0207
+NR,Nauru,US,United States of America,2021,1.26,0.0108
+NR,Nauru,ZA,South Africa,2019,2.0,0.0173
+NR,Nauru,ZA,South Africa,2020,1.0,0.0086
+NU,Niue,AU,Australia,2010,5.0,0.3413
+NU,Niue,AU,Australia,2011,5.0,0.3413
+NU,Niue,AU,Australia,2012,5.0,0.3413
+NU,Niue,AU,Australia,2013,3.0,0.2048
+NU,Niue,BA,Bosnia and Herzegovina,2018,1.0,0.0647
+NU,Niue,BR,Brazil,2017,1.0,0.0657
+NU,Niue,BR,Brazil,2019,1.0,0.0647
+NU,Niue,CA,Canada,2018,1.08,0.0699
+NU,Niue,CA,Canada,2023,3.0,0.1829
+NU,Niue,DE,Germany,2014,1.0,0.0683
+NU,Niue,DE,Germany,2019,1.0,0.0647
+NU,Niue,DE,Germany,2020,4.0,0.2561
+NU,Niue,DE,Germany,2021,1.0,0.0604
+NU,Niue,DE,Germany,2022,2.0,0.1236
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2010,1.0,0.0683
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2011,1.0,0.0683
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2012,4.0,0.273
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2013,2.0,0.1365
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2016,1.0,0.0667
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2017,1.0,0.0657
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2020,1.0,0.064
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2021,1.0,0.0604
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2022,1.0,0.0618
+NU,Niue,GB,United Kingdom of Great Britain and Northern Ireland,2023,14.0,0.8537
+NU,Niue,GR,Greece,2023,4.0,0.2439
+NU,Niue,ID,Indonesia,2015,3.0,0.2048
+NU,Niue,ID,Indonesia,2016,3.0,0.2001
+NU,Niue,ID,Indonesia,2017,3.0,0.1971
+NU,Niue,ID,Indonesia,2018,3.0,0.1942
+NU,Niue,IT,Italy,2013,1.0,0.0683
+NU,Niue,JP,Japan,2019,1.0,0.0647
+NU,Niue,MA,Morocco,2017,1.0,0.0657
+NU,Niue,MA,Morocco,2020,1.0,0.064
+NU,Niue,MA,Morocco,2021,2.0,0.1208
+NU,Niue,MA,Morocco,2022,1.0,0.0618
+NU,Niue,MA,Morocco,2023,1.0,0.061
+NU,Niue,MY,Malaysia,2012,2.0,0.1365
+NU,Niue,NI,Nicaragua,2023,2.0,0.122
+NU,Niue,PT,Portugal,2010,1.0,0.0683
+NU,Niue,PT,Portugal,2012,2.0,0.1365
+NU,Niue,US,United States of America,2013,6.7,0.4573
+NU,Niue,US,United States of America,2014,2.0,0.1365
+NU,Niue,US,United States of America,2015,6.5,0.4437
+NU,Niue,US,United States of America,2016,2.38,0.1588
+NU,Niue,US,United States of America,2017,2.36,0.1551
+NU,Niue,US,United States of America,2018,4.45,0.288
+NU,Niue,US,United States of America,2020,1.27,0.0813
+NU,Niue,US,United States of America,2021,12.5,0.7553
+NU,Niue,US,United States of America,2023,1.28,0.078
+NU,Niue,WS,Samoa,2023,1.0,0.061
+PG,Papua New Guinea,AR,Argentina,2016,13.0,0.0001
+PG,Papua New Guinea,AR,Argentina,2017,10.0,0.0001
+PG,Papua New Guinea,AR,Argentina,2018,8.0,0.0001
+PG,Papua New Guinea,AR,Argentina,2021,4.0,0.0
+PG,Papua New Guinea,AU,Australia,2010,675.0,0.0088
+PG,Papua New Guinea,AU,Australia,2011,658.0,0.0084
+PG,Papua New Guinea,AU,Australia,2012,745.0,0.0092
+PG,Papua New Guinea,AU,Australia,2013,965.0,0.0116
+PG,Papua New Guinea,AU,Australia,2014,1007.0,0.0118
+PG,Papua New Guinea,AU,Australia,2015,1043.0,0.0119
+PG,Papua New Guinea,AU,Australia,2016,1141.0,0.0127
+PG,Papua New Guinea,AU,Australia,2017,978.0,0.0107
+PG,Papua New Guinea,AU,Australia,2018,937.0,0.01
+PG,Papua New Guinea,AU,Australia,2019,1106.0,0.0115
+PG,Papua New Guinea,AU,Australia,2020,927.0,0.0094
+PG,Papua New Guinea,AU,Australia,2021,738.0,0.0074
+PG,Papua New Guinea,AU,Australia,2022,780.0,0.0076
+PG,Papua New Guinea,AU,Australia,2023,1023.0,0.0098
+PG,Papua New Guinea,AU,Australia,2024,1241.0,0.0117
+PG,Papua New Guinea,AT,Austria,2015,2.0,0.0
+PG,Papua New Guinea,AT,Austria,2016,0.5,0.0
+PG,Papua New Guinea,AT,Austria,2017,1.0,0.0
+PG,Papua New Guinea,BE,Belgium,2017,1.0,0.0
+PG,Papua New Guinea,BE,Belgium,2022,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2015,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2016,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2017,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2018,1.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2019,2.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2020,2.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2021,2.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2022,3.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2023,2.0,0.0
+PG,Papua New Guinea,BG,Bulgaria,2024,1.0,0.0
+PG,Papua New Guinea,BR,Brazil,2010,75.0,0.001
+PG,Papua New Guinea,BR,Brazil,2011,48.0,0.0006
+PG,Papua New Guinea,BR,Brazil,2012,33.0,0.0004
+PG,Papua New Guinea,BR,Brazil,2014,11.0,0.0001
+PG,Papua New Guinea,BR,Brazil,2015,10.0,0.0001
+PG,Papua New Guinea,BR,Brazil,2016,7.0,0.0001
+PG,Papua New Guinea,BR,Brazil,2017,6.0,0.0001
+PG,Papua New Guinea,BR,Brazil,2018,7.0,0.0001
+PG,Papua New Guinea,BR,Brazil,2019,4.0,0.0
+PG,Papua New Guinea,BR,Brazil,2020,2.0,0.0
+PG,Papua New Guinea,BR,Brazil,2021,1.0,0.0
+PG,Papua New Guinea,BR,Brazil,2022,3.0,0.0
+PG,Papua New Guinea,BR,Brazil,2023,6.0,0.0001
+PG,Papua New Guinea,BR,Brazil,2024,2.0,0.0
+PG,Papua New Guinea,CA,Canada,2010,3.0,0.0
+PG,Papua New Guinea,CA,Canada,2012,6.0,0.0001
+PG,Papua New Guinea,CA,Canada,2013,3.0,0.0
+PG,Papua New Guinea,CA,Canada,2014,9.0,0.0001
+PG,Papua New Guinea,CA,Canada,2015,6.0,0.0001
+PG,Papua New Guinea,CA,Canada,2016,6.0,0.0001
+PG,Papua New Guinea,CA,Canada,2017,3.0,0.0
+PG,Papua New Guinea,CA,Canada,2018,3.2,0.0
+PG,Papua New Guinea,CA,Canada,2019,6.0,0.0001
+PG,Papua New Guinea,CA,Canada,2020,6.0,0.0001
+PG,Papua New Guinea,CA,Canada,2021,3.0,0.0
+PG,Papua New Guinea,CA,Canada,2023,3.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2010,3.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2011,4.0,0.0001
+PG,Papua New Guinea,CH,Switzerland,2012,5.0,0.0001
+PG,Papua New Guinea,CH,Switzerland,2013,4.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2014,2.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2015,3.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2016,2.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2017,2.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2018,2.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2019,1.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2023,1.0,0.0
+PG,Papua New Guinea,CH,Switzerland,2024,1.0,0.0
+PG,Papua New Guinea,CL,Chile,2018,1.0,0.0
+PG,Papua New Guinea,CL,Chile,2019,1.0,0.0
+PG,Papua New Guinea,CL,Chile,2022,4.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2015,1.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2016,1.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2017,3.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2018,3.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2019,4.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2020,6.0,0.0001
+PG,Papua New Guinea,CZ,Czechia,2021,6.0,0.0001
+PG,Papua New Guinea,CZ,Czechia,2022,5.0,0.0
+PG,Papua New Guinea,CZ,Czechia,2023,10.0,0.0001
+PG,Papua New Guinea,DE,Germany,2013,1.0,0.0
+PG,Papua New Guinea,DE,Germany,2017,1.0,0.0
+PG,Papua New Guinea,DE,Germany,2018,4.0,0.0
+PG,Papua New Guinea,DE,Germany,2019,6.0,0.0001
+PG,Papua New Guinea,DE,Germany,2020,4.0,0.0
+PG,Papua New Guinea,DE,Germany,2021,3.0,0.0
+PG,Papua New Guinea,DE,Germany,2022,5.0,0.0
+PG,Papua New Guinea,DE,Germany,2023,4.0,0.0
+PG,Papua New Guinea,DE,Germany,2024,2.0,0.0
+PG,Papua New Guinea,DK,Denmark,2010,1.0,0.0
+PG,Papua New Guinea,EC,Ecuador,2016,5.0,0.0001
+PG,Papua New Guinea,ES,Spain,2010,1.0,0.0
+PG,Papua New Guinea,ES,Spain,2012,1.0,0.0
+PG,Papua New Guinea,ES,Spain,2017,1.0,0.0
+PG,Papua New Guinea,ES,Spain,2018,2.0,0.0
+PG,Papua New Guinea,ES,Spain,2019,2.0,0.0
+PG,Papua New Guinea,ES,Spain,2020,1.0,0.0
+PG,Papua New Guinea,ES,Spain,2021,1.0,0.0
+PG,Papua New Guinea,ES,Spain,2022,1.0,0.0
+PG,Papua New Guinea,ES,Spain,2023,2.0,0.0
+PG,Papua New Guinea,ES,Spain,2024,1.0,0.0
+PG,Papua New Guinea,EE,Estonia,2020,1.0,0.0
+PG,Papua New Guinea,EE,Estonia,2021,1.0,0.0
+PG,Papua New Guinea,EE,Estonia,2022,1.0,0.0
+PG,Papua New Guinea,FI,Finland,2017,1.0,0.0
+PG,Papua New Guinea,FI,Finland,2018,1.0,0.0
+PG,Papua New Guinea,FI,Finland,2019,1.0,0.0
+PG,Papua New Guinea,FI,Finland,2022,1.0,0.0
+PG,Papua New Guinea,FI,Finland,2023,1.0,0.0
+PG,Papua New Guinea,FR,France,2012,2.0,0.0
+PG,Papua New Guinea,FR,France,2013,1.0,0.0
+PG,Papua New Guinea,FR,France,2017,2.0,0.0
+PG,Papua New Guinea,FR,France,2019,2.0,0.0
+PG,Papua New Guinea,FR,France,2021,2.0,0.0
+PG,Papua New Guinea,FR,France,2022,3.0,0.0
+PG,Papua New Guinea,FR,France,2023,2.0,0.0
+PG,Papua New Guinea,FR,France,2024,1.7,0.0
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2010,29.0,0.0004
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2011,21.0,0.0003
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2012,15.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2013,17.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2014,12.0,0.0001
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2015,17.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2016,15.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2017,14.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2018,10.0,0.0001
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2019,16.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2020,17.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2021,19.0,0.0002
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2022,14.0,0.0001
+PG,Papua New Guinea,GB,United Kingdom of Great Britain and Northern Ireland,2023,18.0,0.0002
+PG,Papua New Guinea,ID,Indonesia,2015,4.0,0.0
+PG,Papua New Guinea,ID,Indonesia,2016,6.0,0.0001
+PG,Papua New Guinea,ID,Indonesia,2017,5.0,0.0001
+PG,Papua New Guinea,ID,Indonesia,2018,6.0,0.0001
+PG,Papua New Guinea,IN,India,2013,1.0,0.0
+PG,Papua New Guinea,IN,India,2014,5.0,0.0001
+PG,Papua New Guinea,IN,India,2015,7.0,0.0001
+PG,Papua New Guinea,IN,India,2016,27.0,0.0003
+PG,Papua New Guinea,IN,India,2017,45.0,0.0005
+PG,Papua New Guinea,IN,India,2018,47.0,0.0005
+PG,Papua New Guinea,IN,India,2019,38.0,0.0004
+PG,Papua New Guinea,IN,India,2020,24.0,0.0002
+PG,Papua New Guinea,IN,India,2021,14.0,0.0001
+PG,Papua New Guinea,IN,India,2022,6.0,0.0001
+PG,Papua New Guinea,IN,India,2023,6.0,0.0001
+PG,Papua New Guinea,IE,Ireland,2011,1.0,0.0
+PG,Papua New Guinea,IE,Ireland,2012,1.0,0.0
+PG,Papua New Guinea,IE,Ireland,2017,1.0,0.0
+PG,Papua New Guinea,IT,Italy,2012,2.0,0.0
+PG,Papua New Guinea,IT,Italy,2015,2.0,0.0
+PG,Papua New Guinea,IT,Italy,2017,2.0,0.0
+PG,Papua New Guinea,IT,Italy,2019,1.0,0.0
+PG,Papua New Guinea,IT,Italy,2020,1.0,0.0
+PG,Papua New Guinea,IT,Italy,2022,1.0,0.0
+PG,Papua New Guinea,JP,Japan,2013,19.0,0.0002
+PG,Papua New Guinea,JP,Japan,2014,18.0,0.0002
+PG,Papua New Guinea,JP,Japan,2015,20.0,0.0002
+PG,Papua New Guinea,JP,Japan,2016,16.0,0.0002
+PG,Papua New Guinea,JP,Japan,2017,17.0,0.0002
+PG,Papua New Guinea,JP,Japan,2018,26.0,0.0003
+PG,Papua New Guinea,JP,Japan,2019,27.0,0.0003
+PG,Papua New Guinea,JP,Japan,2020,22.0,0.0002
+PG,Papua New Guinea,JP,Japan,2021,19.0,0.0002
+PG,Papua New Guinea,JP,Japan,2022,19.0,0.0002
+PG,Papua New Guinea,JP,Japan,2023,33.0,0.0003
+PG,Papua New Guinea,KR,Republic of Korea,2011,1.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2013,3.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2014,5.0,0.0001
+PG,Papua New Guinea,KR,Republic of Korea,2015,12.0,0.0001
+PG,Papua New Guinea,KR,Republic of Korea,2016,13.0,0.0001
+PG,Papua New Guinea,KR,Republic of Korea,2017,4.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2018,5.0,0.0001
+PG,Papua New Guinea,KR,Republic of Korea,2019,5.0,0.0001
+PG,Papua New Guinea,KR,Republic of Korea,2020,2.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2021,3.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2022,4.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2023,5.0,0.0
+PG,Papua New Guinea,KR,Republic of Korea,2024,4.0,0.0
+PG,Papua New Guinea,LK,Sri Lanka,2018,1.0,0.0
+PG,Papua New Guinea,LK,Sri Lanka,2020,1.0,0.0
+PG,Papua New Guinea,LK,Sri Lanka,2021,2.0,0.0
+PG,Papua New Guinea,LK,Sri Lanka,2022,3.0,0.0
+PG,Papua New Guinea,LK,Sri Lanka,2023,1.0,0.0
+PG,Papua New Guinea,MA,Morocco,2010,4.0,0.0001
+PG,Papua New Guinea,MA,Morocco,2014,2.0,0.0
+PG,Papua New Guinea,MA,Morocco,2015,2.0,0.0
+PG,Papua New Guinea,MA,Morocco,2016,2.0,0.0
+PG,Papua New Guinea,MA,Morocco,2017,1.0,0.0
+PG,Papua New Guinea,MA,Morocco,2018,1.0,0.0
+PG,Papua New Guinea,MA,Morocco,2019,2.0,0.0
+PG,Papua New Guinea,MA,Morocco,2020,2.0,0.0
+PG,Papua New Guinea,MA,Morocco,2021,2.0,0.0
+PG,Papua New Guinea,MA,Morocco,2023,2.0,0.0
+PG,Papua New Guinea,MH,Marshall Islands,2012,1.0,0.0
+PG,Papua New Guinea,MT,Malta,2014,1.0,0.0
+PG,Papua New Guinea,MT,Malta,2017,1.0,0.0
+PG,Papua New Guinea,MT,Malta,2018,1.0,0.0
+PG,Papua New Guinea,MT,Malta,2019,1.0,0.0
+PG,Papua New Guinea,MY,Malaysia,2010,4.0,0.0001
+PG,Papua New Guinea,MY,Malaysia,2011,3.0,0.0
+PG,Papua New Guinea,MY,Malaysia,2012,2.0,0.0
+PG,Papua New Guinea,MY,Malaysia,2014,6.0,0.0001
+PG,Papua New Guinea,MY,Malaysia,2015,26.0,0.0003
+PG,Papua New Guinea,MY,Malaysia,2016,36.0,0.0004
+PG,Papua New Guinea,MY,Malaysia,2017,74.0,0.0008
+PG,Papua New Guinea,MY,Malaysia,2019,54.0,0.0006
+PG,Papua New Guinea,MY,Malaysia,2020,29.0,0.0003
+PG,Papua New Guinea,MY,Malaysia,2021,23.0,0.0002
+PG,Papua New Guinea,MY,Malaysia,2022,24.0,0.0002
+PG,Papua New Guinea,MY,Malaysia,2023,21.0,0.0002
+PG,Papua New Guinea,MY,Malaysia,2024,25.0,0.0002
+PG,Papua New Guinea,NL,Netherlands,2019,1.0,0.0
+PG,Papua New Guinea,NZ,New Zealand,2010,84.0,0.0011
+PG,Papua New Guinea,NZ,New Zealand,2011,121.0,0.0015
+PG,Papua New Guinea,NZ,New Zealand,2012,143.0,0.0018
+PG,Papua New Guinea,NZ,New Zealand,2013,151.91,0.0018
+PG,Papua New Guinea,NZ,New Zealand,2014,149.82,0.0018
+PG,Papua New Guinea,NZ,New Zealand,2015,162.38,0.0019
+PG,Papua New Guinea,NZ,New Zealand,2016,165.56,0.0018
+PG,Papua New Guinea,NZ,New Zealand,2017,149.28,0.0016
+PG,Papua New Guinea,NZ,New Zealand,2018,165.61,0.0018
+PG,Papua New Guinea,NZ,New Zealand,2019,166.19,0.0017
+PG,Papua New Guinea,NZ,New Zealand,2020,157.31,0.0016
+PG,Papua New Guinea,NZ,New Zealand,2021,97.0,0.001
+PG,Papua New Guinea,NZ,New Zealand,2022,82.13,0.0008
+PG,Papua New Guinea,NZ,New Zealand,2023,96.39,0.0009
+PG,Papua New Guinea,NZ,New Zealand,2024,119.81,0.0011
+PG,Papua New Guinea,PH,Philippines,2024,86.0,0.0008
+PG,Papua New Guinea,PL,Poland,2011,1.0,0.0
+PG,Papua New Guinea,PL,Poland,2016,1.0,0.0
+PG,Papua New Guinea,PL,Poland,2017,6.0,0.0001
+PG,Papua New Guinea,PL,Poland,2018,7.0,0.0001
+PG,Papua New Guinea,PL,Poland,2019,2.0,0.0
+PG,Papua New Guinea,PL,Poland,2020,13.0,0.0001
+PG,Papua New Guinea,PL,Poland,2021,11.0,0.0001
+PG,Papua New Guinea,PL,Poland,2022,53.0,0.0005
+PG,Papua New Guinea,PL,Poland,2023,6.0,0.0001
+PG,Papua New Guinea,PL,Poland,2024,5.0,0.0
+PG,Papua New Guinea,PT,Portugal,2013,1.0,0.0
+PG,Papua New Guinea,PT,Portugal,2015,1.0,0.0
+PG,Papua New Guinea,PT,Portugal,2016,1.0,0.0
+PG,Papua New Guinea,PT,Portugal,2017,1.0,0.0
+PG,Papua New Guinea,PT,Portugal,2018,2.0,0.0
+PG,Papua New Guinea,PT,Portugal,2019,2.0,0.0
+PG,Papua New Guinea,PT,Portugal,2020,2.0,0.0
+PG,Papua New Guinea,RO,Romania,2015,1.0,0.0
+PG,Papua New Guinea,RO,Romania,2016,1.0,0.0
+PG,Papua New Guinea,RU,Russian Federation,2020,6.0,0.0001
+PG,Papua New Guinea,RU,Russian Federation,2021,3.0,0.0
+PG,Papua New Guinea,RU,Russian Federation,2022,1.0,0.0
+PG,Papua New Guinea,RS,Serbia,2020,1.0,0.0
+PG,Papua New Guinea,RS,Serbia,2021,1.0,0.0
+PG,Papua New Guinea,SI,Slovenia,2022,1.0,0.0
+PG,Papua New Guinea,SI,Slovenia,2023,1.0,0.0
+PG,Papua New Guinea,SE,Sweden,2013,1.0,0.0
+PG,Papua New Guinea,SE,Sweden,2014,1.0,0.0
+PG,Papua New Guinea,SE,Sweden,2024,1.0,0.0
+PG,Papua New Guinea,TH,Thailand,2010,2.0,0.0
+PG,Papua New Guinea,TH,Thailand,2011,2.0,0.0
+PG,Papua New Guinea,TH,Thailand,2015,1.0,0.0
+PG,Papua New Guinea,TH,Thailand,2016,1.0,0.0
+PG,Papua New Guinea,TH,Thailand,2020,3.0,0.0
+PG,Papua New Guinea,TH,Thailand,2022,4.0,0.0
+PG,Papua New Guinea,TH,Thailand,2023,3.0,0.0
+PG,Papua New Guinea,TR,Türkiye,2012,3.0,0.0
+PG,Papua New Guinea,TR,Türkiye,2013,4.0,0.0
+PG,Papua New Guinea,TR,Türkiye,2014,10.0,0.0001
+PG,Papua New Guinea,TR,Türkiye,2015,23.0,0.0003
+PG,Papua New Guinea,TR,Türkiye,2016,28.0,0.0003
+PG,Papua New Guinea,TR,Türkiye,2017,18.0,0.0002
+PG,Papua New Guinea,TR,Türkiye,2018,15.0,0.0002
+PG,Papua New Guinea,TR,Türkiye,2019,13.0,0.0001
+PG,Papua New Guinea,TR,Türkiye,2020,13.0,0.0001
+PG,Papua New Guinea,TR,Türkiye,2021,11.0,0.0001
+PG,Papua New Guinea,TR,Türkiye,2022,7.0,0.0001
+PG,Papua New Guinea,TR,Türkiye,2023,7.0,0.0001
+PG,Papua New Guinea,US,United States of America,2013,74.65,0.0009
+PG,Papua New Guinea,US,United States of America,2014,75.0,0.0009
+PG,Papua New Guinea,US,United States of America,2015,101.93,0.0012
+PG,Papua New Guinea,US,United States of America,2016,98.0,0.0011
+PG,Papua New Guinea,US,United States of America,2017,88.21,0.001
+PG,Papua New Guinea,US,United States of America,2018,93.58,0.001
+PG,Papua New Guinea,US,United States of America,2020,99.21,0.001
+PG,Papua New Guinea,US,United States of America,2021,114.14,0.0011
+PG,Papua New Guinea,US,United States of America,2023,125.77,0.0012
+PG,Papua New Guinea,WS,Samoa,2017,5.0,0.0001
+PG,Papua New Guinea,WS,Samoa,2018,1.0,0.0
+PG,Papua New Guinea,WS,Samoa,2019,6.0,0.0001
+PG,Papua New Guinea,WS,Samoa,2022,3.0,0.0
+PG,Papua New Guinea,WS,Samoa,2024,11.0,0.0001
+PG,Papua New Guinea,ZA,South Africa,2011,1.0,0.0
+PG,Papua New Guinea,ZA,South Africa,2017,1.0,0.0
+PG,Papua New Guinea,ZA,South Africa,2018,1.0,0.0
+PG,Papua New Guinea,ZA,South Africa,2019,1.0,0.0
+PW,Palau,AU,Australia,2010,3.0,0.0163
+PW,Palau,AU,Australia,2011,2.0,0.0111
+PW,Palau,AU,Australia,2012,3.0,0.0169
+PW,Palau,AU,Australia,2013,1.0,0.0057
+PW,Palau,AT,Austria,2022,1.0,0.0056
+PW,Palau,BR,Brazil,2010,1.0,0.0054
+PW,Palau,BR,Brazil,2011,1.0,0.0055
+PW,Palau,BR,Brazil,2012,1.0,0.0056
+PW,Palau,BR,Brazil,2015,2.0,0.0113
+PW,Palau,BR,Brazil,2016,1.0,0.0056
+PW,Palau,BR,Brazil,2017,2.0,0.0112
+PW,Palau,BR,Brazil,2018,1.0,0.0056
+PW,Palau,BR,Brazil,2019,2.0,0.0112
+PW,Palau,BR,Brazil,2020,3.0,0.0169
+PW,Palau,BR,Brazil,2021,2.0,0.0112
+PW,Palau,BR,Brazil,2022,2.0,0.0113
+PW,Palau,BR,Brazil,2023,1.0,0.0056
+PW,Palau,BR,Brazil,2024,1.0,0.0057
+PW,Palau,BW,Botswana,2022,1.0,0.0056
+PW,Palau,CA,Canada,2018,1.08,0.0061
+PW,Palau,CU,Cuba,2015,6.0,0.0338
+PW,Palau,CU,Cuba,2016,10.0,0.0562
+PW,Palau,CU,Cuba,2017,10.0,0.0561
+PW,Palau,CU,Cuba,2018,10.0,0.0561
+PW,Palau,CU,Cuba,2019,7.0,0.0393
+PW,Palau,CU,Cuba,2020,6.0,0.0337
+PW,Palau,CU,Cuba,2021,3.0,0.0169
+PW,Palau,CU,Cuba,2023,2.0,0.0113
+PW,Palau,CU,Cuba,2024,2.0,0.0113
+PW,Palau,DE,Germany,2013,3.0,0.017
+PW,Palau,DE,Germany,2014,4.0,0.0226
+PW,Palau,DE,Germany,2015,3.0,0.0169
+PW,Palau,DE,Germany,2016,11.0,0.0618
+PW,Palau,DE,Germany,2017,6.0,0.0337
+PW,Palau,DE,Germany,2018,10.0,0.0561
+PW,Palau,DE,Germany,2019,9.0,0.0506
+PW,Palau,DE,Germany,2020,42.0,0.2361
+PW,Palau,DE,Germany,2021,6.0,0.0337
+PW,Palau,DE,Germany,2022,5.0,0.0282
+PW,Palau,DE,Germany,2023,4.0,0.0226
+PW,Palau,DE,Germany,2024,8.0,0.0452
+PW,Palau,DZ,Algeria,2023,1.0,0.0056
+PW,Palau,ES,Spain,2011,1.0,0.0055
+PW,Palau,ES,Spain,2018,1.0,0.0056
+PW,Palau,FR,France,2011,1.0,0.0055
+PW,Palau,FR,France,2014,1.0,0.0056
+PW,Palau,FR,France,2018,1.0,0.0056
+PW,Palau,FR,France,2022,1.0,0.0056
+PW,Palau,FR,France,2023,1.0,0.0056
+PW,Palau,FR,France,2024,1.0,0.0057
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2010,1.0,0.0054
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2012,3.0,0.0169
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2013,1.0,0.0057
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2018,1.0,0.0056
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2019,1.0,0.0056
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2020,1.0,0.0056
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2021,1.0,0.0056
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2022,2.0,0.0113
+PW,Palau,GB,United Kingdom of Great Britain and Northern Ireland,2023,2.0,0.0113
+PW,Palau,IE,Ireland,2022,1.0,0.0056
+PW,Palau,IT,Italy,2015,5.0,0.0281
+PW,Palau,IT,Italy,2019,1.0,0.0056
+PW,Palau,IT,Italy,2020,1.0,0.0056
+PW,Palau,JP,Japan,2013,4.0,0.0227
+PW,Palau,JP,Japan,2014,3.0,0.0169
+PW,Palau,JP,Japan,2015,3.0,0.0169
+PW,Palau,JP,Japan,2016,2.0,0.0112
+PW,Palau,JP,Japan,2017,4.0,0.0225
+PW,Palau,JP,Japan,2018,4.0,0.0225
+PW,Palau,JP,Japan,2019,7.0,0.0393
+PW,Palau,JP,Japan,2020,4.0,0.0225
+PW,Palau,JP,Japan,2021,5.0,0.0281
+PW,Palau,JP,Japan,2022,7.0,0.0394
+PW,Palau,JP,Japan,2023,7.0,0.0395
+PW,Palau,KR,Republic of Korea,2011,1.0,0.0055
+PW,Palau,KR,Republic of Korea,2012,1.0,0.0056
+PW,Palau,KR,Republic of Korea,2013,1.0,0.0057
+PW,Palau,KR,Republic of Korea,2014,1.0,0.0056
+PW,Palau,LU,Luxembourg,2019,1.0,0.0056
+PW,Palau,MA,Morocco,2019,3.0,0.0169
+PW,Palau,MA,Morocco,2020,4.0,0.0225
+PW,Palau,MA,Morocco,2021,3.0,0.0169
+PW,Palau,MA,Morocco,2022,2.0,0.0113
+PW,Palau,MA,Morocco,2023,2.0,0.0113
+PW,Palau,MH,Marshall Islands,2019,1.0,0.0056
+PW,Palau,NZ,New Zealand,2010,2.0,0.0109
+PW,Palau,NZ,New Zealand,2011,2.0,0.0111
+PW,Palau,NZ,New Zealand,2012,1.0,0.0056
+PW,Palau,NZ,New Zealand,2013,2.0,0.0113
+PW,Palau,NZ,New Zealand,2015,1.0,0.0056
+PW,Palau,NZ,New Zealand,2016,2.0,0.0112
+PW,Palau,NZ,New Zealand,2017,2.0,0.0112
+PW,Palau,NZ,New Zealand,2018,3.0,0.0168
+PW,Palau,NZ,New Zealand,2019,1.5,0.0084
+PW,Palau,NZ,New Zealand,2020,2.0,0.0112
+PW,Palau,NZ,New Zealand,2021,2.0,0.0112
+PW,Palau,NZ,New Zealand,2022,1.0,0.0056
+PW,Palau,NZ,New Zealand,2024,1.0,0.0057
+PW,Palau,PH,Philippines,2024,4.0,0.0226
+PW,Palau,PL,Poland,2022,1.0,0.0056
+PW,Palau,PT,Portugal,2010,1.0,0.0054
+PW,Palau,PT,Portugal,2011,1.0,0.0055
+PW,Palau,PT,Portugal,2013,2.0,0.0113
+PW,Palau,PT,Portugal,2015,1.0,0.0056
+PW,Palau,PT,Portugal,2016,1.0,0.0056
+PW,Palau,PT,Portugal,2017,1.0,0.0056
+PW,Palau,PT,Portugal,2018,1.0,0.0056
+PW,Palau,PT,Portugal,2019,1.0,0.0056
+PW,Palau,RS,Serbia,2020,2.0,0.0112
+PW,Palau,TR,Türkiye,2021,10.0,0.0562
+PW,Palau,TR,Türkiye,2022,8.0,0.045
+PW,Palau,US,United States of America,2013,19.14,0.1085
+PW,Palau,US,United States of America,2014,6.0,0.0339
+PW,Palau,US,United States of America,2015,13.01,0.0732
+PW,Palau,US,United States of America,2016,14.93,0.0839
+PW,Palau,US,United States of America,2017,13.78,0.0774
+PW,Palau,US,United States of America,2018,38.38,0.2154
+PW,Palau,US,United States of America,2020,38.13,0.2143
+PW,Palau,US,United States of America,2021,30.01,0.1688
+PW,Palau,US,United States of America,2023,16.06,0.0906
+SB,Solomon Islands,AU,Australia,2010,120.0,0.0225
+SB,Solomon Islands,AU,Australia,2011,120.0,0.0217
+SB,Solomon Islands,AU,Australia,2012,131.0,0.0228
+SB,Solomon Islands,AU,Australia,2013,148.0,0.0249
+SB,Solomon Islands,AU,Australia,2014,146.0,0.0237
+SB,Solomon Islands,AU,Australia,2015,151.0,0.0236
+SB,Solomon Islands,AU,Australia,2016,171.0,0.0258
+SB,Solomon Islands,AU,Australia,2017,117.0,0.0171
+SB,Solomon Islands,AU,Australia,2018,165.0,0.0233
+SB,Solomon Islands,AU,Australia,2019,196.0,0.0269
+SB,Solomon Islands,AU,Australia,2020,173.0,0.0232
+SB,Solomon Islands,AU,Australia,2021,121.0,0.0159
+SB,Solomon Islands,AU,Australia,2022,119.0,0.0152
+SB,Solomon Islands,AU,Australia,2023,153.0,0.0191
+SB,Solomon Islands,AU,Australia,2024,172.0,0.021
+SB,Solomon Islands,AT,Austria,2015,1.0,0.0002
+SB,Solomon Islands,AT,Austria,2018,1.0,0.0001
+SB,Solomon Islands,AT,Austria,2022,1.0,0.0001
+SB,Solomon Islands,BE,Belgium,2022,1.0,0.0001
+SB,Solomon Islands,BA,Bosnia and Herzegovina,2015,1.0,0.0002
+SB,Solomon Islands,CA,Canada,2010,3.0,0.0006
+SB,Solomon Islands,CA,Canada,2011,6.0,0.0011
+SB,Solomon Islands,CA,Canada,2012,6.0,0.001
+SB,Solomon Islands,CA,Canada,2013,9.0,0.0015
+SB,Solomon Islands,CA,Canada,2018,1.08,0.0002
+SB,Solomon Islands,CA,Canada,2019,3.0,0.0004
+SB,Solomon Islands,CA,Canada,2020,6.0,0.0008
+SB,Solomon Islands,CA,Canada,2022,3.0,0.0004
+SB,Solomon Islands,CA,Canada,2023,6.0,0.0007
+SB,Solomon Islands,CH,Switzerland,2016,1.0,0.0002
+SB,Solomon Islands,CH,Switzerland,2017,1.0,0.0001
+SB,Solomon Islands,CH,Switzerland,2018,1.0,0.0001
+SB,Solomon Islands,CU,Cuba,2010,50.0,0.0094
+SB,Solomon Islands,CU,Cuba,2011,74.0,0.0134
+SB,Solomon Islands,CU,Cuba,2012,62.0,0.0108
+SB,Solomon Islands,CU,Cuba,2013,91.0,0.0153
+SB,Solomon Islands,CU,Cuba,2014,93.0,0.0151
+SB,Solomon Islands,CU,Cuba,2015,82.0,0.0128
+SB,Solomon Islands,CU,Cuba,2016,60.0,0.0091
+SB,Solomon Islands,CU,Cuba,2017,52.0,0.0076
+SB,Solomon Islands,CU,Cuba,2018,38.0,0.0054
+SB,Solomon Islands,CU,Cuba,2019,31.0,0.0043
+SB,Solomon Islands,CU,Cuba,2020,26.0,0.0035
+SB,Solomon Islands,CU,Cuba,2021,16.0,0.0021
+SB,Solomon Islands,CU,Cuba,2023,3.0,0.0004
+SB,Solomon Islands,CU,Cuba,2024,4.0,0.0005
+SB,Solomon Islands,DE,Germany,2013,1.0,0.0002
+SB,Solomon Islands,DE,Germany,2014,1.0,0.0002
+SB,Solomon Islands,DE,Germany,2019,1.0,0.0001
+SB,Solomon Islands,DE,Germany,2020,19.0,0.0026
+SB,Solomon Islands,DE,Germany,2024,1.0,0.0001
+SB,Solomon Islands,EC,Ecuador,2012,1.0,0.0002
+SB,Solomon Islands,FI,Finland,2010,1.0,0.0002
+SB,Solomon Islands,FI,Finland,2011,1.0,0.0002
+SB,Solomon Islands,FI,Finland,2012,1.0,0.0002
+SB,Solomon Islands,FI,Finland,2013,2.0,0.0003
+SB,Solomon Islands,FI,Finland,2014,3.0,0.0005
+SB,Solomon Islands,FI,Finland,2015,4.0,0.0006
+SB,Solomon Islands,FI,Finland,2016,2.0,0.0003
+SB,Solomon Islands,FI,Finland,2018,1.0,0.0001
+SB,Solomon Islands,FI,Finland,2022,1.0,0.0001
+SB,Solomon Islands,FR,France,2010,4.0,0.0008
+SB,Solomon Islands,FR,France,2011,2.0,0.0004
+SB,Solomon Islands,FR,France,2012,1.0,0.0002
+SB,Solomon Islands,FR,France,2013,1.0,0.0002
+SB,Solomon Islands,FR,France,2014,2.0,0.0003
+SB,Solomon Islands,FR,France,2015,5.0,0.0008
+SB,Solomon Islands,FR,France,2016,2.0,0.0003
+SB,Solomon Islands,FR,France,2017,1.0,0.0001
+SB,Solomon Islands,FR,France,2019,2.0,0.0003
+SB,Solomon Islands,FR,France,2022,2.0,0.0003
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2010,8.0,0.0015
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2011,6.0,0.0011
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2012,2.0,0.0003
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2013,4.0,0.0007
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2014,3.0,0.0005
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2015,3.0,0.0005
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2016,4.0,0.0006
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2017,6.0,0.0009
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2018,2.0,0.0003
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2019,5.0,0.0007
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2020,8.0,0.0011
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2021,5.0,0.0007
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2022,6.0,0.0008
+SB,Solomon Islands,GB,United Kingdom of Great Britain and Northern Ireland,2023,10.0,0.0012
+SB,Solomon Islands,IN,India,2012,1.0,0.0002
+SB,Solomon Islands,IN,India,2014,1.0,0.0002
+SB,Solomon Islands,IE,Ireland,2018,6.0,0.0008
+SB,Solomon Islands,IE,Ireland,2021,1.0,0.0001
+SB,Solomon Islands,IT,Italy,2014,3.0,0.0005
+SB,Solomon Islands,IT,Italy,2016,1.0,0.0002
+SB,Solomon Islands,IT,Italy,2023,1.0,0.0001
+SB,Solomon Islands,JP,Japan,2013,10.0,0.0017
+SB,Solomon Islands,JP,Japan,2014,10.0,0.0016
+SB,Solomon Islands,JP,Japan,2015,8.0,0.0013
+SB,Solomon Islands,JP,Japan,2016,10.0,0.0015
+SB,Solomon Islands,JP,Japan,2017,12.0,0.0018
+SB,Solomon Islands,JP,Japan,2018,19.0,0.0027
+SB,Solomon Islands,JP,Japan,2019,21.0,0.0029
+SB,Solomon Islands,JP,Japan,2020,13.0,0.0017
+SB,Solomon Islands,JP,Japan,2021,10.0,0.0013
+SB,Solomon Islands,JP,Japan,2022,10.0,0.0013
+SB,Solomon Islands,JP,Japan,2023,20.0,0.0025
+SB,Solomon Islands,KR,Republic of Korea,2012,3.0,0.0005
+SB,Solomon Islands,KR,Republic of Korea,2013,8.0,0.0013
+SB,Solomon Islands,KR,Republic of Korea,2014,7.0,0.0011
+SB,Solomon Islands,KR,Republic of Korea,2015,7.0,0.0011
+SB,Solomon Islands,KR,Republic of Korea,2016,9.0,0.0014
+SB,Solomon Islands,KR,Republic of Korea,2017,8.0,0.0012
+SB,Solomon Islands,KR,Republic of Korea,2018,5.0,0.0007
+SB,Solomon Islands,KR,Republic of Korea,2019,12.0,0.0016
+SB,Solomon Islands,KR,Republic of Korea,2020,5.0,0.0007
+SB,Solomon Islands,KR,Republic of Korea,2021,2.0,0.0003
+SB,Solomon Islands,KR,Republic of Korea,2022,1.0,0.0001
+SB,Solomon Islands,KR,Republic of Korea,2023,1.0,0.0001
+SB,Solomon Islands,KR,Republic of Korea,2024,3.0,0.0004
+SB,Solomon Islands,MA,Morocco,2014,1.0,0.0002
+SB,Solomon Islands,MA,Morocco,2019,4.0,0.0005
+SB,Solomon Islands,MA,Morocco,2020,3.0,0.0004
+SB,Solomon Islands,MA,Morocco,2021,3.0,0.0004
+SB,Solomon Islands,MA,Morocco,2022,2.0,0.0003
+SB,Solomon Islands,MA,Morocco,2023,3.0,0.0004
+SB,Solomon Islands,MA,Morocco,2024,3.0,0.0004
+SB,Solomon Islands,MH,Marshall Islands,2019,3.0,0.0004
+SB,Solomon Islands,MH,Marshall Islands,2022,3.0,0.0004
+SB,Solomon Islands,MU,Mauritius,2013,1.0,0.0002
+SB,Solomon Islands,MU,Mauritius,2014,1.0,0.0002
+SB,Solomon Islands,MU,Mauritius,2015,1.0,0.0002
+SB,Solomon Islands,MU,Mauritius,2016,1.0,0.0002
+SB,Solomon Islands,MY,Malaysia,2010,4.0,0.0008
+SB,Solomon Islands,MY,Malaysia,2012,1.0,0.0002
+SB,Solomon Islands,MY,Malaysia,2015,2.0,0.0003
+SB,Solomon Islands,MY,Malaysia,2016,2.0,0.0003
+SB,Solomon Islands,MY,Malaysia,2017,1.0,0.0001
+SB,Solomon Islands,MY,Malaysia,2019,2.0,0.0003
+SB,Solomon Islands,MY,Malaysia,2020,1.0,0.0001
+SB,Solomon Islands,MY,Malaysia,2022,1.0,0.0001
+SB,Solomon Islands,MY,Malaysia,2023,1.0,0.0001
+SB,Solomon Islands,MY,Malaysia,2024,1.0,0.0001
+SB,Solomon Islands,NO,Norway,2013,1.0,0.0002
+SB,Solomon Islands,NO,Norway,2014,1.0,0.0002
+SB,Solomon Islands,NO,Norway,2015,1.0,0.0002
+SB,Solomon Islands,NO,Norway,2016,1.0,0.0002
+SB,Solomon Islands,NZ,New Zealand,2010,58.0,0.0109
+SB,Solomon Islands,NZ,New Zealand,2011,65.0,0.0118
+SB,Solomon Islands,NZ,New Zealand,2012,78.0,0.0136
+SB,Solomon Islands,NZ,New Zealand,2013,77.0,0.0129
+SB,Solomon Islands,NZ,New Zealand,2014,79.5,0.0129
+SB,Solomon Islands,NZ,New Zealand,2015,80.96,0.0127
+SB,Solomon Islands,NZ,New Zealand,2016,90.0,0.0136
+SB,Solomon Islands,NZ,New Zealand,2017,96.48,0.0141
+SB,Solomon Islands,NZ,New Zealand,2018,98.52,0.0139
+SB,Solomon Islands,NZ,New Zealand,2019,89.48,0.0123
+SB,Solomon Islands,NZ,New Zealand,2020,92.42,0.0124
+SB,Solomon Islands,NZ,New Zealand,2021,65.31,0.0086
+SB,Solomon Islands,NZ,New Zealand,2022,50.0,0.0064
+SB,Solomon Islands,NZ,New Zealand,2023,52.0,0.0065
+SB,Solomon Islands,NZ,New Zealand,2024,53.41,0.0065
+SB,Solomon Islands,PH,Philippines,2024,39.0,0.0048
+SB,Solomon Islands,PT,Portugal,2012,3.0,0.0005
+SB,Solomon Islands,PT,Portugal,2013,2.0,0.0003
+SB,Solomon Islands,PT,Portugal,2014,3.0,0.0005
+SB,Solomon Islands,PT,Portugal,2016,4.0,0.0006
+SB,Solomon Islands,PT,Portugal,2017,4.0,0.0006
+SB,Solomon Islands,PT,Portugal,2018,4.0,0.0006
+SB,Solomon Islands,SK,Slovakia,2011,1.0,0.0002
+SB,Solomon Islands,SE,Sweden,2014,1.0,0.0002
+SB,Solomon Islands,SE,Sweden,2023,1.0,0.0001
+SB,Solomon Islands,SE,Sweden,2024,1.0,0.0001
+SB,Solomon Islands,TH,Thailand,2016,1.0,0.0002
+SB,Solomon Islands,TH,Thailand,2024,1.0,0.0001
+SB,Solomon Islands,TR,Türkiye,2015,1.0,0.0002
+SB,Solomon Islands,TR,Türkiye,2017,1.0,0.0001
+SB,Solomon Islands,TR,Türkiye,2018,1.0,0.0001
+SB,Solomon Islands,TR,Türkiye,2019,1.0,0.0001
+SB,Solomon Islands,TR,Türkiye,2020,1.0,0.0001
+SB,Solomon Islands,TR,Türkiye,2021,3.0,0.0004
+SB,Solomon Islands,TR,Türkiye,2022,1.0,0.0001
+SB,Solomon Islands,TR,Türkiye,2023,1.0,0.0001
+SB,Solomon Islands,US,United States of America,2013,9.57,0.0016
+SB,Solomon Islands,US,United States of America,2014,10.0,0.0016
+SB,Solomon Islands,US,United States of America,2015,8.65,0.0014
+SB,Solomon Islands,US,United States of America,2016,4.98,0.0008
+SB,Solomon Islands,US,United States of America,2017,8.01,0.0012
+SB,Solomon Islands,US,United States of America,2018,10.48,0.0015
+SB,Solomon Islands,US,United States of America,2020,20.29,0.0027
+SB,Solomon Islands,US,United States of America,2021,19.85,0.0026
+SB,Solomon Islands,US,United States of America,2023,11.31,0.0014
+SB,Solomon Islands,VN,Viet Nam,2021,1.0,0.0001
+SB,Solomon Islands,VN,Viet Nam,2022,1.0,0.0001
+SB,Solomon Islands,WS,Samoa,2017,4.0,0.0006
+SB,Solomon Islands,WS,Samoa,2018,27.0,0.0038
+SB,Solomon Islands,WS,Samoa,2019,5.0,0.0007
+SB,Solomon Islands,WS,Samoa,2020,5.0,0.0007
+SB,Solomon Islands,WS,Samoa,2022,5.0,0.0006
+SB,Solomon Islands,WS,Samoa,2024,5.0,0.0006
+SB,Solomon Islands,ZA,South Africa,2011,1.0,0.0002
+SB,Solomon Islands,ZA,South Africa,2013,1.0,0.0002
+SB,Solomon Islands,ZA,South Africa,2014,1.0,0.0002
+SB,Solomon Islands,ZA,South Africa,2019,1.0,0.0001
+TO,Tonga,AU,Australia,2010,56.0,0.0521
+TO,Tonga,AU,Australia,2011,46.0,0.0428
+TO,Tonga,AU,Australia,2012,54.0,0.0503
+TO,Tonga,AU,Australia,2013,54.0,0.0504
+TO,Tonga,AU,Australia,2014,57.0,0.0535
+TO,Tonga,AU,Australia,2015,44.0,0.0415
+TO,Tonga,AU,Australia,2016,37.0,0.0351
+TO,Tonga,AU,Australia,2017,36.0,0.0342
+TO,Tonga,AU,Australia,2018,41.0,0.0388
+TO,Tonga,AU,Australia,2019,56.0,0.053
+TO,Tonga,AU,Australia,2020,54.0,0.0511
+TO,Tonga,AU,Australia,2021,40.0,0.0379
+TO,Tonga,AU,Australia,2022,29.0,0.0276
+TO,Tonga,AU,Australia,2023,66.0,0.0631
+TO,Tonga,AU,Australia,2024,93.0,0.0893
+TO,Tonga,BR,Brazil,2015,1.0,0.0009
+TO,Tonga,CA,Canada,2021,3.0,0.0028
+TO,Tonga,CA,Canada,2023,3.0,0.0029
+TO,Tonga,CH,Switzerland,2010,1.0,0.0009
+TO,Tonga,CH,Switzerland,2011,2.0,0.0019
+TO,Tonga,CH,Switzerland,2021,1.0,0.0009
+TO,Tonga,CH,Switzerland,2022,1.0,0.001
+TO,Tonga,CH,Switzerland,2024,1.0,0.001
+TO,Tonga,CU,Cuba,2010,3.0,0.0028
+TO,Tonga,CU,Cuba,2011,3.0,0.0028
+TO,Tonga,CU,Cuba,2012,3.0,0.0028
+TO,Tonga,CU,Cuba,2013,6.0,0.0056
+TO,Tonga,CU,Cuba,2014,9.0,0.0084
+TO,Tonga,CU,Cuba,2015,11.0,0.0104
+TO,Tonga,CU,Cuba,2016,12.0,0.0114
+TO,Tonga,CU,Cuba,2017,12.0,0.0114
+TO,Tonga,CU,Cuba,2018,11.0,0.0104
+TO,Tonga,CU,Cuba,2019,8.0,0.0076
+TO,Tonga,CU,Cuba,2020,5.0,0.0047
+TO,Tonga,CU,Cuba,2021,3.0,0.0028
+TO,Tonga,DE,Germany,2013,2.0,0.0019
+TO,Tonga,DE,Germany,2014,1.0,0.0009
+TO,Tonga,DE,Germany,2015,2.0,0.0019
+TO,Tonga,DE,Germany,2016,1.0,0.0009
+TO,Tonga,DE,Germany,2018,1.0,0.0009
+TO,Tonga,DE,Germany,2019,1.0,0.0009
+TO,Tonga,DE,Germany,2020,1.0,0.0009
+TO,Tonga,DE,Germany,2021,1.0,0.0009
+TO,Tonga,ES,Spain,2021,1.0,0.0009
+TO,Tonga,FR,France,2010,3.0,0.0028
+TO,Tonga,FR,France,2011,7.0,0.0065
+TO,Tonga,FR,France,2012,8.0,0.0074
+TO,Tonga,FR,France,2013,2.0,0.0019
+TO,Tonga,FR,France,2017,1.0,0.0009
+TO,Tonga,FR,France,2022,1.0,0.001
+TO,Tonga,FR,France,2023,1.26,0.0012
+TO,Tonga,FR,France,2024,2.12,0.002
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2010,4.0,0.0037
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2011,3.0,0.0028
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2012,5.0,0.0047
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2013,3.0,0.0028
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2014,3.0,0.0028
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2015,4.0,0.0038
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2016,2.0,0.0019
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2017,3.0,0.0028
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2018,4.0,0.0038
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2019,4.0,0.0038
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2020,5.0,0.0047
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2021,4.0,0.0038
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2022,3.0,0.0029
+TO,Tonga,GB,United Kingdom of Great Britain and Northern Ireland,2023,4.0,0.0038
+TO,Tonga,HR,Croatia,2020,1.0,0.0009
+TO,Tonga,HU,Hungary,2014,3.0,0.0028
+TO,Tonga,IN,India,2011,1.0,0.0009
+TO,Tonga,IN,India,2012,3.0,0.0028
+TO,Tonga,IN,India,2013,4.0,0.0037
+TO,Tonga,IN,India,2016,1.0,0.0009
+TO,Tonga,IN,India,2017,1.0,0.0009
+TO,Tonga,IN,India,2018,1.0,0.0009
+TO,Tonga,IN,India,2020,1.0,0.0009
+TO,Tonga,IN,India,2021,2.0,0.0019
+TO,Tonga,IN,India,2022,1.0,0.001
+TO,Tonga,IN,India,2023,1.0,0.001
+TO,Tonga,IE,Ireland,2022,1.0,0.001
+TO,Tonga,IT,Italy,2010,1.0,0.0009
+TO,Tonga,IT,Italy,2011,1.0,0.0009
+TO,Tonga,IT,Italy,2012,3.0,0.0028
+TO,Tonga,IT,Italy,2013,1.0,0.0009
+TO,Tonga,IT,Italy,2014,1.0,0.0009
+TO,Tonga,IT,Italy,2015,1.0,0.0009
+TO,Tonga,IT,Italy,2016,1.0,0.0009
+TO,Tonga,IT,Italy,2017,1.0,0.0009
+TO,Tonga,IT,Italy,2019,1.0,0.0009
+TO,Tonga,IT,Italy,2022,1.0,0.001
+TO,Tonga,JP,Japan,2013,33.0,0.0308
+TO,Tonga,JP,Japan,2014,32.0,0.03
+TO,Tonga,JP,Japan,2015,36.0,0.0339
+TO,Tonga,JP,Japan,2016,32.0,0.0303
+TO,Tonga,JP,Japan,2017,36.0,0.0342
+TO,Tonga,JP,Japan,2018,41.0,0.0388
+TO,Tonga,JP,Japan,2019,53.0,0.0502
+TO,Tonga,JP,Japan,2020,43.0,0.0407
+TO,Tonga,JP,Japan,2021,47.0,0.0446
+TO,Tonga,JP,Japan,2022,47.0,0.0447
+TO,Tonga,JP,Japan,2023,46.0,0.044
+TO,Tonga,LU,Luxembourg,2010,1.0,0.0009
+TO,Tonga,LU,Luxembourg,2012,1.0,0.0009
+TO,Tonga,MA,Morocco,2016,2.0,0.0019
+TO,Tonga,MA,Morocco,2017,1.0,0.0009
+TO,Tonga,MA,Morocco,2018,1.0,0.0009
+TO,Tonga,MA,Morocco,2020,1.0,0.0009
+TO,Tonga,MA,Morocco,2021,1.0,0.0009
+TO,Tonga,MA,Morocco,2022,1.0,0.001
+TO,Tonga,MA,Morocco,2023,1.0,0.001
+TO,Tonga,MH,Marshall Islands,2019,4.0,0.0038
+TO,Tonga,MT,Malta,2016,1.0,0.0009
+TO,Tonga,MT,Malta,2017,2.0,0.0019
+TO,Tonga,MT,Malta,2018,1.0,0.0009
+TO,Tonga,MY,Malaysia,2010,1.0,0.0009
+TO,Tonga,NZ,New Zealand,2010,513.0,0.4777
+TO,Tonga,NZ,New Zealand,2011,227.0,0.211
+TO,Tonga,NZ,New Zealand,2012,178.0,0.1656
+TO,Tonga,NZ,New Zealand,2013,235.11,0.2196
+TO,Tonga,NZ,New Zealand,2014,236.0,0.2214
+TO,Tonga,NZ,New Zealand,2015,213.18,0.2009
+TO,Tonga,NZ,New Zealand,2016,217.08,0.2057
+TO,Tonga,NZ,New Zealand,2017,178.93,0.1698
+TO,Tonga,NZ,New Zealand,2018,162.73,0.1541
+TO,Tonga,NZ,New Zealand,2019,179.02,0.1694
+TO,Tonga,NZ,New Zealand,2020,157.33,0.1488
+TO,Tonga,NZ,New Zealand,2021,109.03,0.1034
+TO,Tonga,NZ,New Zealand,2022,92.95,0.0885
+TO,Tonga,NZ,New Zealand,2023,123.1,0.1177
+TO,Tonga,NZ,New Zealand,2024,145.21,0.1394
+TO,Tonga,PH,Philippines,2024,5.0,0.0048
+TO,Tonga,PT,Portugal,2011,1.0,0.0009
+TO,Tonga,PT,Portugal,2013,1.0,0.0009
+TO,Tonga,SA,Saudi Arabia,2019,11.0,0.0104
+TO,Tonga,SA,Saudi Arabia,2020,10.0,0.0095
+TO,Tonga,SE,Sweden,2018,1.0,0.0009
+TO,Tonga,SE,Sweden,2019,1.0,0.0009
+TO,Tonga,SE,Sweden,2020,1.0,0.0009
+TO,Tonga,SE,Sweden,2024,2.0,0.0019
+TO,Tonga,TH,Thailand,2022,1.0,0.001
+TO,Tonga,TR,Türkiye,2016,1.0,0.0009
+TO,Tonga,TR,Türkiye,2017,1.0,0.0009
+TO,Tonga,TR,Türkiye,2018,1.0,0.0009
+TO,Tonga,TR,Türkiye,2019,1.0,0.0009
+TO,Tonga,US,United States of America,2013,100.49,0.0938
+TO,Tonga,US,United States of America,2014,110.0,0.1032
+TO,Tonga,US,United States of America,2015,122.65,0.1156
+TO,Tonga,US,United States of America,2016,151.96,0.144
+TO,Tonga,US,United States of America,2017,167.16,0.1587
+TO,Tonga,US,United States of America,2018,201.38,0.1908
+TO,Tonga,US,United States of America,2020,201.22,0.1904
+TO,Tonga,US,United States of America,2021,232.88,0.2208
+TO,Tonga,US,United States of America,2023,180.61,0.1727
+TO,Tonga,WS,Samoa,2017,2.0,0.0019
+TO,Tonga,WS,Samoa,2018,23.0,0.0218
+TO,Tonga,WS,Samoa,2019,8.0,0.0076
+TO,Tonga,WS,Samoa,2022,8.0,0.0076
+TO,Tonga,WS,Samoa,2023,1.0,0.001
+TO,Tonga,WS,Samoa,2024,7.0,0.0067
+TV,Tuvalu,AU,Australia,2010,16.0,0.1507
+TV,Tuvalu,AU,Australia,2011,10.0,0.0928
+TV,Tuvalu,AU,Australia,2012,13.0,0.1189
+TV,Tuvalu,AU,Australia,2013,11.0,0.1
+TV,Tuvalu,AU,Australia,2014,8.0,0.0728
+TV,Tuvalu,AU,Australia,2015,9.0,0.0821
+TV,Tuvalu,AU,Australia,2016,12.0,0.1098
+TV,Tuvalu,AU,Australia,2017,4.0,0.0368
+TV,Tuvalu,AU,Australia,2018,16.0,0.1488
+TV,Tuvalu,AU,Australia,2019,18.0,0.1701
+TV,Tuvalu,AU,Australia,2020,17.0,0.1635
+TV,Tuvalu,AU,Australia,2021,12.0,0.1177
+TV,Tuvalu,AU,Australia,2022,14.0,0.1401
+TV,Tuvalu,AU,Australia,2023,23.0,0.2343
+TV,Tuvalu,AU,Australia,2024,19.0,0.197
+TV,Tuvalu,BE,Belgium,2014,1.0,0.0091
+TV,Tuvalu,BA,Bosnia and Herzegovina,2014,1.0,0.0091
+TV,Tuvalu,BR,Brazil,2015,1.0,0.0091
+TV,Tuvalu,CU,Cuba,2010,20.0,0.1884
+TV,Tuvalu,CU,Cuba,2011,20.0,0.1855
+TV,Tuvalu,CU,Cuba,2012,19.0,0.1738
+TV,Tuvalu,CU,Cuba,2013,19.0,0.1727
+TV,Tuvalu,CU,Cuba,2014,19.0,0.173
+TV,Tuvalu,CU,Cuba,2015,20.0,0.1824
+TV,Tuvalu,CU,Cuba,2016,15.0,0.1372
+TV,Tuvalu,CU,Cuba,2017,11.0,0.1012
+TV,Tuvalu,CU,Cuba,2018,7.0,0.0651
+TV,Tuvalu,CU,Cuba,2019,4.0,0.0378
+TV,Tuvalu,CU,Cuba,2020,3.0,0.0288
+TV,Tuvalu,CU,Cuba,2021,2.0,0.0196
+TV,Tuvalu,DE,Germany,2014,2.0,0.0182
+TV,Tuvalu,DE,Germany,2015,1.0,0.0091
+TV,Tuvalu,DE,Germany,2020,1.0,0.0096
+TV,Tuvalu,DE,Germany,2023,1.0,0.0102
+TV,Tuvalu,DE,Germany,2024,2.0,0.0207
+TV,Tuvalu,ES,Spain,2017,1.0,0.0092
+TV,Tuvalu,ES,Spain,2018,1.0,0.0093
+TV,Tuvalu,ES,Spain,2019,1.0,0.0095
+TV,Tuvalu,ES,Spain,2021,1.0,0.0098
+TV,Tuvalu,FR,France,2010,1.0,0.0094
+TV,Tuvalu,FR,France,2011,2.0,0.0186
+TV,Tuvalu,FR,France,2013,1.0,0.0091
+TV,Tuvalu,FR,France,2014,1.0,0.0091
+TV,Tuvalu,FR,France,2018,1.0,0.0093
+TV,Tuvalu,FR,France,2019,2.0,0.0189
+TV,Tuvalu,FR,France,2021,2.0,0.0196
+TV,Tuvalu,FR,France,2022,0.2,0.002
+TV,Tuvalu,FR,France,2024,1.0,0.0104
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2010,2.0,0.0188
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2011,2.0,0.0186
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2012,2.0,0.0183
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2013,1.0,0.0091
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2014,1.0,0.0091
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2015,1.0,0.0091
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2016,3.0,0.0274
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2017,1.0,0.0092
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2018,3.0,0.0279
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2019,7.0,0.0662
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2020,7.0,0.0673
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2021,4.0,0.0392
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2022,2.0,0.02
+TV,Tuvalu,GB,United Kingdom of Great Britain and Northern Ireland,2023,2.0,0.0204
+TV,Tuvalu,IN,India,2012,1.0,0.0091
+TV,Tuvalu,IN,India,2013,4.0,0.0364
+TV,Tuvalu,IN,India,2014,6.0,0.0546
+TV,Tuvalu,IN,India,2015,1.0,0.0091
+TV,Tuvalu,IN,India,2016,2.0,0.0183
+TV,Tuvalu,IN,India,2017,2.0,0.0184
+TV,Tuvalu,IT,Italy,2011,1.0,0.0093
+TV,Tuvalu,IT,Italy,2012,9.0,0.0823
+TV,Tuvalu,IT,Italy,2013,3.0,0.0273
+TV,Tuvalu,IT,Italy,2015,2.0,0.0182
+TV,Tuvalu,IT,Italy,2017,1.0,0.0092
+TV,Tuvalu,IT,Italy,2018,1.0,0.0093
+TV,Tuvalu,IT,Italy,2019,1.0,0.0095
+TV,Tuvalu,JP,Japan,2013,5.0,0.0455
+TV,Tuvalu,JP,Japan,2014,3.0,0.0273
+TV,Tuvalu,JP,Japan,2015,1.0,0.0091
+TV,Tuvalu,JP,Japan,2016,1.0,0.0091
+TV,Tuvalu,JP,Japan,2019,1.0,0.0095
+TV,Tuvalu,JP,Japan,2020,2.0,0.0192
+TV,Tuvalu,JP,Japan,2021,2.0,0.0196
+TV,Tuvalu,JP,Japan,2022,1.0,0.01
+TV,Tuvalu,KR,Republic of Korea,2010,1.0,0.0094
+TV,Tuvalu,KR,Republic of Korea,2011,1.0,0.0093
+TV,Tuvalu,KR,Republic of Korea,2012,1.0,0.0091
+TV,Tuvalu,KR,Republic of Korea,2013,2.0,0.0182
+TV,Tuvalu,KR,Republic of Korea,2020,1.0,0.0096
+TV,Tuvalu,KR,Republic of Korea,2021,1.0,0.0098
+TV,Tuvalu,MA,Morocco,2016,7.0,0.064
+TV,Tuvalu,MA,Morocco,2017,8.0,0.0736
+TV,Tuvalu,MA,Morocco,2018,8.0,0.0744
+TV,Tuvalu,MA,Morocco,2019,7.0,0.0662
+TV,Tuvalu,MA,Morocco,2020,5.0,0.0481
+TV,Tuvalu,MA,Morocco,2021,6.0,0.0589
+TV,Tuvalu,MA,Morocco,2022,6.0,0.06
+TV,Tuvalu,MA,Morocco,2023,5.0,0.0509
+TV,Tuvalu,MA,Morocco,2024,4.0,0.0415
+TV,Tuvalu,MH,Marshall Islands,2019,4.0,0.0378
+TV,Tuvalu,MT,Malta,2021,1.0,0.0098
+TV,Tuvalu,MY,Malaysia,2010,17.0,0.1602
+TV,Tuvalu,NL,Netherlands,2011,1.0,0.0093
+TV,Tuvalu,NZ,New Zealand,2010,17.0,0.1602
+TV,Tuvalu,NZ,New Zealand,2011,10.0,0.0928
+TV,Tuvalu,NZ,New Zealand,2012,14.0,0.128
+TV,Tuvalu,NZ,New Zealand,2013,22.0,0.2
+TV,Tuvalu,NZ,New Zealand,2014,29.0,0.264
+TV,Tuvalu,NZ,New Zealand,2015,33.66,0.307
+TV,Tuvalu,NZ,New Zealand,2016,36.77,0.3364
+TV,Tuvalu,NZ,New Zealand,2017,41.0,0.3772
+TV,Tuvalu,NZ,New Zealand,2018,33.1,0.3079
+TV,Tuvalu,NZ,New Zealand,2019,30.0,0.2835
+TV,Tuvalu,NZ,New Zealand,2020,25.0,0.2404
+TV,Tuvalu,NZ,New Zealand,2021,22.0,0.2158
+TV,Tuvalu,NZ,New Zealand,2022,13.0,0.1301
+TV,Tuvalu,NZ,New Zealand,2023,13.0,0.1324
+TV,Tuvalu,NZ,New Zealand,2024,29.0,0.3006
+TV,Tuvalu,PL,Poland,2015,4.0,0.0365
+TV,Tuvalu,PL,Poland,2016,1.0,0.0091
+TV,Tuvalu,PL,Poland,2017,1.0,0.0092
+TV,Tuvalu,PL,Poland,2018,1.0,0.0093
+TV,Tuvalu,PL,Poland,2019,1.0,0.0095
+TV,Tuvalu,PL,Poland,2020,1.0,0.0096
+TV,Tuvalu,PT,Portugal,2013,1.0,0.0091
+TV,Tuvalu,PT,Portugal,2014,2.0,0.0182
+TV,Tuvalu,SK,Slovakia,2023,1.0,0.0102
+TV,Tuvalu,SE,Sweden,2024,1.0,0.0104
+TV,Tuvalu,TH,Thailand,2020,5.0,0.0481
+TV,Tuvalu,TH,Thailand,2024,2.0,0.0207
+TV,Tuvalu,TR,Türkiye,2021,1.0,0.0098
+TV,Tuvalu,UA,Ukraine,2014,1.0,0.0091
+TV,Tuvalu,UA,Ukraine,2015,1.0,0.0091
+TV,Tuvalu,UA,Ukraine,2017,4.0,0.0368
+TV,Tuvalu,UA,Ukraine,2021,3.0,0.0294
+TV,Tuvalu,UA,Ukraine,2023,2.0,0.0204
+TV,Tuvalu,US,United States of America,2013,1.91,0.0174
+TV,Tuvalu,US,United States of America,2014,1.0,0.0091
+TV,Tuvalu,US,United States of America,2015,6.89,0.0628
+TV,Tuvalu,US,United States of America,2016,4.98,0.0456
+TV,Tuvalu,US,United States of America,2017,3.63,0.0334
+TV,Tuvalu,US,United States of America,2018,5.07,0.0472
+TV,Tuvalu,US,United States of America,2020,5.07,0.0488
+TV,Tuvalu,US,United States of America,2021,7.46,0.0732
+TV,Tuvalu,US,United States of America,2023,3.83,0.039
+TV,Tuvalu,WS,Samoa,2017,5.0,0.046
+TV,Tuvalu,WS,Samoa,2019,6.0,0.0567
+TV,Tuvalu,WS,Samoa,2020,5.0,0.0481
+TV,Tuvalu,WS,Samoa,2024,5.0,0.0518
+VU,Vanuatu,AR,Argentina,2022,2.0,0.0006
+VU,Vanuatu,AR,Argentina,2023,1.0,0.0003
+VU,Vanuatu,AU,Australia,2010,66.0,0.0277
+VU,Vanuatu,AU,Australia,2011,68.0,0.0279
+VU,Vanuatu,AU,Australia,2012,79.0,0.0317
+VU,Vanuatu,AU,Australia,2013,78.0,0.0307
+VU,Vanuatu,AU,Australia,2014,66.0,0.0254
+VU,Vanuatu,AU,Australia,2015,52.0,0.0195
+VU,Vanuatu,AU,Australia,2016,52.0,0.0191
+VU,Vanuatu,AU,Australia,2017,41.0,0.0147
+VU,Vanuatu,AU,Australia,2018,49.0,0.0172
+VU,Vanuatu,AU,Australia,2019,56.0,0.0192
+VU,Vanuatu,AU,Australia,2020,46.0,0.0154
+VU,Vanuatu,AU,Australia,2021,31.0,0.0101
+VU,Vanuatu,AU,Australia,2022,30.0,0.0096
+VU,Vanuatu,AU,Australia,2023,45.0,0.014
+VU,Vanuatu,AU,Australia,2024,65.0,0.0198
+VU,Vanuatu,BG,Bulgaria,2010,1.0,0.0004
+VU,Vanuatu,BG,Bulgaria,2024,1.0,0.0003
+VU,Vanuatu,BR,Brazil,2010,1.0,0.0004
+VU,Vanuatu,BR,Brazil,2017,1.0,0.0004
+VU,Vanuatu,BR,Brazil,2018,3.0,0.0011
+VU,Vanuatu,BR,Brazil,2019,4.0,0.0014
+VU,Vanuatu,BR,Brazil,2020,5.0,0.0017
+VU,Vanuatu,BR,Brazil,2022,1.0,0.0003
+VU,Vanuatu,BR,Brazil,2023,1.0,0.0003
+VU,Vanuatu,BR,Brazil,2024,1.0,0.0003
+VU,Vanuatu,BW,Botswana,2022,1.0,0.0003
+VU,Vanuatu,CA,Canada,2015,3.0,0.0011
+VU,Vanuatu,CA,Canada,2018,1.08,0.0004
+VU,Vanuatu,CA,Canada,2019,3.0,0.001
+VU,Vanuatu,CL,Chile,2024,1.0,0.0003
+VU,Vanuatu,CU,Cuba,2010,27.0,0.0113
+VU,Vanuatu,CU,Cuba,2011,27.0,0.0111
+VU,Vanuatu,CU,Cuba,2012,25.0,0.01
+VU,Vanuatu,CU,Cuba,2013,24.0,0.0094
+VU,Vanuatu,CU,Cuba,2014,25.0,0.0096
+VU,Vanuatu,CU,Cuba,2015,24.0,0.009
+VU,Vanuatu,CU,Cuba,2016,13.0,0.0048
+VU,Vanuatu,CU,Cuba,2017,7.0,0.0025
+VU,Vanuatu,CU,Cuba,2020,2.0,0.0007
+VU,Vanuatu,CY,Cyprus,2023,1.0,0.0003
+VU,Vanuatu,CZ,Czechia,2017,1.0,0.0004
+VU,Vanuatu,CZ,Czechia,2020,1.0,0.0003
+VU,Vanuatu,CZ,Czechia,2021,1.0,0.0003
+VU,Vanuatu,CZ,Czechia,2022,1.0,0.0003
+VU,Vanuatu,CZ,Czechia,2023,1.0,0.0003
+VU,Vanuatu,DE,Germany,2020,9.0,0.003
+VU,Vanuatu,DE,Germany,2021,2.0,0.0007
+VU,Vanuatu,DE,Germany,2022,1.0,0.0003
+VU,Vanuatu,DE,Germany,2023,2.0,0.0006
+VU,Vanuatu,DE,Germany,2024,2.0,0.0006
+VU,Vanuatu,DK,Denmark,2016,1.0,0.0004
+VU,Vanuatu,DK,Denmark,2017,1.0,0.0004
+VU,Vanuatu,DK,Denmark,2018,1.0,0.0004
+VU,Vanuatu,DK,Denmark,2019,1.0,0.0003
+VU,Vanuatu,DK,Denmark,2020,1.0,0.0003
+VU,Vanuatu,DK,Denmark,2021,1.0,0.0003
+VU,Vanuatu,ES,Spain,2012,1.0,0.0004
+VU,Vanuatu,ES,Spain,2023,1.0,0.0003
+VU,Vanuatu,ES,Spain,2024,2.0,0.0006
+VU,Vanuatu,FR,France,2010,17.0,0.0071
+VU,Vanuatu,FR,France,2011,27.0,0.0111
+VU,Vanuatu,FR,France,2012,9.0,0.0036
+VU,Vanuatu,FR,France,2013,4.0,0.0016
+VU,Vanuatu,FR,France,2014,3.0,0.0012
+VU,Vanuatu,FR,France,2015,5.0,0.0019
+VU,Vanuatu,FR,France,2016,7.0,0.0026
+VU,Vanuatu,FR,France,2017,11.0,0.0039
+VU,Vanuatu,FR,France,2018,7.0,0.0025
+VU,Vanuatu,FR,France,2019,2.0,0.0007
+VU,Vanuatu,FR,France,2020,2.0,0.0007
+VU,Vanuatu,FR,France,2021,4.0,0.0013
+VU,Vanuatu,FR,France,2022,7.2,0.0023
+VU,Vanuatu,FR,France,2023,8.11,0.0025
+VU,Vanuatu,FR,France,2024,8.37,0.0026
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2012,1.0,0.0004
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2013,2.0,0.0008
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2014,2.0,0.0008
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2015,1.0,0.0004
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2016,1.0,0.0004
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2017,3.0,0.0011
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2018,2.0,0.0007
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2019,3.0,0.001
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2020,7.0,0.0023
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2021,5.0,0.0016
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2022,3.0,0.001
+VU,Vanuatu,GB,United Kingdom of Great Britain and Northern Ireland,2023,7.0,0.0022
+VU,Vanuatu,HK,"China, Hong Kong Special Administrative Region",2021,1.0,0.0003
+VU,Vanuatu,HK,"China, Hong Kong Special Administrative Region",2022,4.0,0.0013
+VU,Vanuatu,HK,"China, Hong Kong Special Administrative Region",2023,1.0,0.0003
+VU,Vanuatu,HK,"China, Hong Kong Special Administrative Region",2024,2.0,0.0006
+VU,Vanuatu,IN,India,2012,54.0,0.0217
+VU,Vanuatu,IN,India,2019,1.0,0.0003
+VU,Vanuatu,IE,Ireland,2020,1.0,0.0003
+VU,Vanuatu,IE,Ireland,2021,1.0,0.0003
+VU,Vanuatu,IE,Ireland,2022,1.0,0.0003
+VU,Vanuatu,IT,Italy,2010,2.0,0.0008
+VU,Vanuatu,IT,Italy,2011,7.0,0.0029
+VU,Vanuatu,IT,Italy,2012,6.0,0.0024
+VU,Vanuatu,IT,Italy,2013,7.0,0.0028
+VU,Vanuatu,IT,Italy,2014,1.0,0.0004
+VU,Vanuatu,IT,Italy,2015,3.0,0.0011
+VU,Vanuatu,IT,Italy,2016,1.0,0.0004
+VU,Vanuatu,IT,Italy,2017,1.0,0.0004
+VU,Vanuatu,IT,Italy,2018,1.0,0.0004
+VU,Vanuatu,IT,Italy,2020,1.0,0.0003
+VU,Vanuatu,IT,Italy,2022,1.0,0.0003
+VU,Vanuatu,IT,Italy,2023,1.0,0.0003
+VU,Vanuatu,JO,Jordan,2020,1.0,0.0003
+VU,Vanuatu,JO,Jordan,2021,1.0,0.0003
+VU,Vanuatu,JO,Jordan,2022,1.0,0.0003
+VU,Vanuatu,JO,Jordan,2023,1.0,0.0003
+VU,Vanuatu,JP,Japan,2013,1.0,0.0004
+VU,Vanuatu,JP,Japan,2014,1.0,0.0004
+VU,Vanuatu,JP,Japan,2018,2.0,0.0007
+VU,Vanuatu,JP,Japan,2019,7.0,0.0024
+VU,Vanuatu,JP,Japan,2020,7.0,0.0023
+VU,Vanuatu,JP,Japan,2021,6.0,0.002
+VU,Vanuatu,JP,Japan,2022,7.0,0.0022
+VU,Vanuatu,JP,Japan,2023,4.0,0.0012
+VU,Vanuatu,KR,Republic of Korea,2010,1.0,0.0004
+VU,Vanuatu,KR,Republic of Korea,2020,1.0,0.0003
+VU,Vanuatu,KR,Republic of Korea,2021,1.0,0.0003
+VU,Vanuatu,KR,Republic of Korea,2022,2.0,0.0006
+VU,Vanuatu,KR,Republic of Korea,2023,2.0,0.0006
+VU,Vanuatu,LT,Lithuania,2023,1.0,0.0003
+VU,Vanuatu,LT,Lithuania,2024,1.0,0.0003
+VU,Vanuatu,LU,Luxembourg,2014,1.0,0.0004
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2017,1.0,0.0004
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2018,1.0,0.0004
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2019,1.0,0.0003
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2020,1.0,0.0003
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2021,2.0,0.0007
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2022,2.0,0.0006
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2023,1.0,0.0003
+VU,Vanuatu,MO,"China, Macao Special Administrative Region",2024,1.0,0.0003
+VU,Vanuatu,MA,Morocco,2015,1.0,0.0004
+VU,Vanuatu,MA,Morocco,2016,2.0,0.0007
+VU,Vanuatu,MA,Morocco,2017,1.0,0.0004
+VU,Vanuatu,MA,Morocco,2018,1.0,0.0004
+VU,Vanuatu,MA,Morocco,2019,3.0,0.001
+VU,Vanuatu,MA,Morocco,2020,2.0,0.0007
+VU,Vanuatu,MA,Morocco,2021,2.0,0.0007
+VU,Vanuatu,MA,Morocco,2022,1.0,0.0003
+VU,Vanuatu,MA,Morocco,2023,1.0,0.0003
+VU,Vanuatu,MA,Morocco,2024,1.0,0.0003
+VU,Vanuatu,MY,Malaysia,2010,2.0,0.0008
+VU,Vanuatu,MY,Malaysia,2012,2.0,0.0008
+VU,Vanuatu,MY,Malaysia,2014,6.0,0.0023
+VU,Vanuatu,MY,Malaysia,2015,4.0,0.0015
+VU,Vanuatu,MY,Malaysia,2016,8.0,0.0029
+VU,Vanuatu,MY,Malaysia,2019,3.0,0.001
+VU,Vanuatu,MY,Malaysia,2020,2.0,0.0007
+VU,Vanuatu,MY,Malaysia,2021,1.0,0.0003
+VU,Vanuatu,MY,Malaysia,2022,1.0,0.0003
+VU,Vanuatu,MY,Malaysia,2023,1.0,0.0003
+VU,Vanuatu,MY,Malaysia,2024,2.0,0.0006
+VU,Vanuatu,NZ,New Zealand,2010,40.0,0.0168
+VU,Vanuatu,NZ,New Zealand,2011,46.0,0.0189
+VU,Vanuatu,NZ,New Zealand,2012,53.0,0.0213
+VU,Vanuatu,NZ,New Zealand,2013,64.47,0.0253
+VU,Vanuatu,NZ,New Zealand,2014,58.0,0.0223
+VU,Vanuatu,NZ,New Zealand,2015,63.5,0.0239
+VU,Vanuatu,NZ,New Zealand,2016,55.0,0.0202
+VU,Vanuatu,NZ,New Zealand,2017,68.5,0.0246
+VU,Vanuatu,NZ,New Zealand,2018,67.3,0.0236
+VU,Vanuatu,NZ,New Zealand,2019,60.0,0.0205
+VU,Vanuatu,NZ,New Zealand,2020,55.0,0.0184
+VU,Vanuatu,NZ,New Zealand,2021,29.0,0.0095
+VU,Vanuatu,NZ,New Zealand,2022,24.0,0.0077
+VU,Vanuatu,NZ,New Zealand,2023,24.0,0.0075
+VU,Vanuatu,NZ,New Zealand,2024,32.83,0.01
+VU,Vanuatu,PA,Panama,2021,1.0,0.0003
+VU,Vanuatu,PH,Philippines,2024,18.0,0.0055
+VU,Vanuatu,PT,Portugal,2016,1.0,0.0004
+VU,Vanuatu,PT,Portugal,2017,1.0,0.0004
+VU,Vanuatu,RO,Romania,2019,1.0,0.0003
+VU,Vanuatu,RU,Russian Federation,2022,1.0,0.0003
+VU,Vanuatu,RU,Russian Federation,2023,1.0,0.0003
+VU,Vanuatu,RS,Serbia,2021,3.0,0.001
+VU,Vanuatu,RS,Serbia,2022,3.0,0.001
+VU,Vanuatu,RS,Serbia,2023,3.0,0.0009
+VU,Vanuatu,RS,Serbia,2024,3.0,0.0009
+VU,Vanuatu,SK,Slovakia,2021,1.0,0.0003
+VU,Vanuatu,SK,Slovakia,2022,1.0,0.0003
+VU,Vanuatu,SE,Sweden,2014,1.0,0.0004
+VU,Vanuatu,SE,Sweden,2024,1.0,0.0003
+VU,Vanuatu,TH,Thailand,2015,3.0,0.0011
+VU,Vanuatu,TH,Thailand,2016,3.0,0.0011
+VU,Vanuatu,TO,Tonga,2020,13.0,0.0043
+VU,Vanuatu,TR,Türkiye,2015,2.0,0.0008
+VU,Vanuatu,TR,Türkiye,2016,3.0,0.0011
+VU,Vanuatu,TR,Türkiye,2017,3.0,0.0011
+VU,Vanuatu,TR,Türkiye,2018,3.0,0.0011
+VU,Vanuatu,TR,Türkiye,2019,2.0,0.0007
+VU,Vanuatu,TR,Türkiye,2020,1.0,0.0003
+VU,Vanuatu,TR,Türkiye,2021,1.0,0.0003
+VU,Vanuatu,TR,Türkiye,2022,2.0,0.0006
+VU,Vanuatu,TR,Türkiye,2023,2.0,0.0006
+VU,Vanuatu,US,United States of America,2013,6.7,0.0026
+VU,Vanuatu,US,United States of America,2014,7.0,0.0027
+VU,Vanuatu,US,United States of America,2015,9.1,0.0034
+VU,Vanuatu,US,United States of America,2016,11.67,0.0043
+VU,Vanuatu,US,United States of America,2017,13.78,0.0049
+VU,Vanuatu,US,United States of America,2018,17.45,0.0061
+VU,Vanuatu,US,United States of America,2020,13.82,0.0046
+VU,Vanuatu,US,United States of America,2021,12.5,0.0041
+VU,Vanuatu,US,United States of America,2023,8.94,0.0028
+VU,Vanuatu,WS,Samoa,2017,5.0,0.0018
+VU,Vanuatu,WS,Samoa,2018,17.0,0.006
+VU,Vanuatu,WS,Samoa,2019,6.0,0.0021
+VU,Vanuatu,WS,Samoa,2020,3.0,0.001
+VU,Vanuatu,WS,Samoa,2022,2.0,0.0006
+VU,Vanuatu,WS,Samoa,2024,3.0,0.0009
+VU,Vanuatu,ZA,South Africa,2013,1.0,0.0004
+WS,Samoa,AR,Argentina,2016,1.0,0.0005
+WS,Samoa,AR,Argentina,2017,1.0,0.0005
+WS,Samoa,AR,Argentina,2018,1.0,0.0005
+WS,Samoa,AU,Australia,2010,83.0,0.043
+WS,Samoa,AU,Australia,2011,90.0,0.0462
+WS,Samoa,AU,Australia,2012,88.0,0.0448
+WS,Samoa,AU,Australia,2013,90.0,0.0454
+WS,Samoa,AU,Australia,2014,96.0,0.048
+WS,Samoa,AU,Australia,2015,119.0,0.059
+WS,Samoa,AU,Australia,2016,97.0,0.0477
+WS,Samoa,AU,Australia,2017,56.0,0.0273
+WS,Samoa,AU,Australia,2018,66.0,0.0318
+WS,Samoa,AU,Australia,2019,78.0,0.0372
+WS,Samoa,AU,Australia,2020,87.0,0.041
+WS,Samoa,AU,Australia,2021,55.0,0.0257
+WS,Samoa,AU,Australia,2022,88.0,0.0409
+WS,Samoa,AU,Australia,2023,112.0,0.0517
+WS,Samoa,AU,Australia,2024,92.0,0.0422
+WS,Samoa,AZ,Azerbaijan,2014,2.0,0.001
+WS,Samoa,AZ,Azerbaijan,2015,3.0,0.0015
+WS,Samoa,AZ,Azerbaijan,2020,2.0,0.0009
+WS,Samoa,AZ,Azerbaijan,2021,10.0,0.0047
+WS,Samoa,BE,Belgium,2010,1.0,0.0005
+WS,Samoa,BE,Belgium,2016,1.0,0.0005
+WS,Samoa,BE,Belgium,2019,1.0,0.0005
+WS,Samoa,BE,Belgium,2020,1.0,0.0005
+WS,Samoa,BA,Bosnia and Herzegovina,2016,1.0,0.0005
+WS,Samoa,BR,Brazil,2011,2.0,0.001
+WS,Samoa,BR,Brazil,2012,1.0,0.0005
+WS,Samoa,BR,Brazil,2018,1.0,0.0005
+WS,Samoa,BR,Brazil,2019,1.0,0.0005
+WS,Samoa,BR,Brazil,2020,2.0,0.0009
+WS,Samoa,BR,Brazil,2023,1.0,0.0005
+WS,Samoa,CH,Switzerland,2010,11.0,0.0057
+WS,Samoa,CH,Switzerland,2011,9.0,0.0046
+WS,Samoa,CH,Switzerland,2012,6.0,0.0031
+WS,Samoa,CH,Switzerland,2013,7.0,0.0035
+WS,Samoa,CH,Switzerland,2014,7.0,0.0035
+WS,Samoa,CH,Switzerland,2015,4.0,0.002
+WS,Samoa,CH,Switzerland,2016,2.0,0.001
+WS,Samoa,CH,Switzerland,2017,1.0,0.0005
+WS,Samoa,CH,Switzerland,2018,2.0,0.001
+WS,Samoa,CH,Switzerland,2019,3.0,0.0014
+WS,Samoa,CH,Switzerland,2020,2.0,0.0009
+WS,Samoa,CH,Switzerland,2021,1.0,0.0005
+WS,Samoa,DE,Germany,2015,1.0,0.0005
+WS,Samoa,DE,Germany,2022,1.0,0.0005
+WS,Samoa,DE,Germany,2023,1.0,0.0005
+WS,Samoa,DE,Germany,2024,1.0,0.0005
+WS,Samoa,DK,Denmark,2023,1.0,0.0005
+WS,Samoa,DK,Denmark,2024,1.0,0.0005
+WS,Samoa,ES,Spain,2016,1.0,0.0005
+WS,Samoa,ES,Spain,2022,1.0,0.0005
+WS,Samoa,FR,France,2010,1.0,0.0005
+WS,Samoa,FR,France,2011,1.0,0.0005
+WS,Samoa,FR,France,2012,2.0,0.001
+WS,Samoa,FR,France,2013,2.0,0.001
+WS,Samoa,FR,France,2014,3.0,0.0015
+WS,Samoa,FR,France,2015,1.0,0.0005
+WS,Samoa,FR,France,2016,1.0,0.0005
+WS,Samoa,FR,France,2019,1.0,0.0005
+WS,Samoa,FR,France,2020,1.0,0.0005
+WS,Samoa,FR,France,2023,0.26,0.0001
+WS,Samoa,FR,France,2024,0.28,0.0001
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2010,4.0,0.0021
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2011,3.0,0.0015
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2012,5.0,0.0025
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2013,5.0,0.0025
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2014,2.0,0.001
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2015,6.0,0.003
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2016,5.0,0.0025
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2017,9.0,0.0044
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2018,7.0,0.0034
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2019,5.0,0.0024
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2020,3.0,0.0014
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2021,5.0,0.0023
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2022,5.0,0.0023
+WS,Samoa,GB,United Kingdom of Great Britain and Northern Ireland,2023,7.0,0.0032
+WS,Samoa,GH,Ghana,2014,131.0,0.0655
+WS,Samoa,ID,Indonesia,2015,1.0,0.0005
+WS,Samoa,ID,Indonesia,2016,211.0,0.1037
+WS,Samoa,ID,Indonesia,2017,210.0,0.1022
+WS,Samoa,ID,Indonesia,2018,218.0,0.105
+WS,Samoa,IN,India,2012,57.0,0.029
+WS,Samoa,IN,India,2015,1.0,0.0005
+WS,Samoa,IN,India,2018,13.0,0.0063
+WS,Samoa,IN,India,2019,3.0,0.0014
+WS,Samoa,IN,India,2020,1.0,0.0005
+WS,Samoa,IN,India,2021,46.0,0.0215
+WS,Samoa,IN,India,2022,4.0,0.0019
+WS,Samoa,IN,India,2023,4.0,0.0018
+WS,Samoa,IE,Ireland,2021,1.0,0.0005
+WS,Samoa,IS,Iceland,2016,1.0,0.0005
+WS,Samoa,IT,Italy,2017,1.0,0.0005
+WS,Samoa,JP,Japan,2013,7.0,0.0035
+WS,Samoa,JP,Japan,2014,5.0,0.0025
+WS,Samoa,JP,Japan,2015,8.0,0.004
+WS,Samoa,JP,Japan,2016,11.0,0.0054
+WS,Samoa,JP,Japan,2017,20.0,0.0097
+WS,Samoa,JP,Japan,2018,25.0,0.012
+WS,Samoa,JP,Japan,2019,23.0,0.011
+WS,Samoa,JP,Japan,2020,19.0,0.009
+WS,Samoa,JP,Japan,2021,18.0,0.0084
+WS,Samoa,JP,Japan,2022,11.0,0.0051
+WS,Samoa,JP,Japan,2023,11.0,0.0051
+WS,Samoa,KZ,Kazakhstan,2024,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2010,2.0,0.001
+WS,Samoa,KR,Republic of Korea,2011,2.0,0.001
+WS,Samoa,KR,Republic of Korea,2012,2.0,0.001
+WS,Samoa,KR,Republic of Korea,2013,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2014,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2015,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2019,2.0,0.001
+WS,Samoa,KR,Republic of Korea,2020,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2021,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2022,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2023,1.0,0.0005
+WS,Samoa,KR,Republic of Korea,2024,1.0,0.0005
+WS,Samoa,MA,Morocco,2018,1.0,0.0005
+WS,Samoa,MA,Morocco,2021,1.0,0.0005
+WS,Samoa,MA,Morocco,2022,3.0,0.0014
+WS,Samoa,MA,Morocco,2024,1.0,0.0005
+WS,Samoa,MH,Marshall Islands,2019,1.0,0.0005
+WS,Samoa,MT,Malta,2015,1.0,0.0005
+WS,Samoa,MT,Malta,2016,1.0,0.0005
+WS,Samoa,MT,Malta,2019,1.0,0.0005
+WS,Samoa,MY,Malaysia,2011,2.0,0.001
+WS,Samoa,MY,Malaysia,2012,2.0,0.001
+WS,Samoa,MY,Malaysia,2019,1.0,0.0005
+WS,Samoa,MY,Malaysia,2021,1.0,0.0005
+WS,Samoa,MY,Malaysia,2022,2.0,0.0009
+WS,Samoa,MY,Malaysia,2023,2.0,0.0009
+WS,Samoa,MY,Malaysia,2024,3.0,0.0014
+WS,Samoa,NO,Norway,2014,1.0,0.0005
+WS,Samoa,NO,Norway,2015,1.0,0.0005
+WS,Samoa,NZ,New Zealand,2010,81.0,0.042
+WS,Samoa,NZ,New Zealand,2011,106.0,0.0544
+WS,Samoa,NZ,New Zealand,2012,109.0,0.0555
+WS,Samoa,NZ,New Zealand,2013,124.45,0.0628
+WS,Samoa,NZ,New Zealand,2014,130.9,0.0654
+WS,Samoa,NZ,New Zealand,2015,120.0,0.0595
+WS,Samoa,NZ,New Zealand,2016,113.0,0.0555
+WS,Samoa,NZ,New Zealand,2017,112.83,0.0549
+WS,Samoa,NZ,New Zealand,2018,107.9,0.052
+WS,Samoa,NZ,New Zealand,2019,120.11,0.0573
+WS,Samoa,NZ,New Zealand,2020,104.0,0.0491
+WS,Samoa,NZ,New Zealand,2021,70.0,0.0327
+WS,Samoa,NZ,New Zealand,2022,85.0,0.0395
+WS,Samoa,NZ,New Zealand,2023,108.7,0.0502
+WS,Samoa,NZ,New Zealand,2024,105.36,0.0483
+WS,Samoa,PL,Poland,2024,1.0,0.0005
+WS,Samoa,PT,Portugal,2010,1.0,0.0005
+WS,Samoa,RO,Romania,2014,1.0,0.0005
+WS,Samoa,RU,Russian Federation,2018,1.0,0.0005
+WS,Samoa,RU,Russian Federation,2019,1.0,0.0005
+WS,Samoa,SA,Saudi Arabia,2011,1.0,0.0005
+WS,Samoa,SA,Saudi Arabia,2012,1.0,0.0005
+WS,Samoa,SA,Saudi Arabia,2013,2.0,0.001
+WS,Samoa,SA,Saudi Arabia,2014,2.0,0.001
+WS,Samoa,SA,Saudi Arabia,2015,3.0,0.0015
+WS,Samoa,SA,Saudi Arabia,2016,3.0,0.0015
+WS,Samoa,SA,Saudi Arabia,2017,3.0,0.0015
+WS,Samoa,SA,Saudi Arabia,2018,3.0,0.0014
+WS,Samoa,SA,Saudi Arabia,2024,2.0,0.0009
+WS,Samoa,SV,El Salvador,2011,1.0,0.0005
+WS,Samoa,RS,Serbia,2017,1.0,0.0005
+WS,Samoa,RS,Serbia,2022,1.0,0.0005
+WS,Samoa,TH,Thailand,2015,51.0,0.0253
+WS,Samoa,TH,Thailand,2016,99.0,0.0486
+WS,Samoa,TH,Thailand,2022,56.0,0.026
+WS,Samoa,TH,Thailand,2023,48.0,0.0222
+WS,Samoa,TR,Türkiye,2012,1.0,0.0005
+WS,Samoa,TR,Türkiye,2014,2.0,0.001
+WS,Samoa,TR,Türkiye,2015,3.0,0.0015
+WS,Samoa,TR,Türkiye,2016,3.0,0.0015
+WS,Samoa,TR,Türkiye,2017,3.0,0.0015
+WS,Samoa,TR,Türkiye,2018,3.0,0.0014
+WS,Samoa,TR,Türkiye,2019,10.0,0.0048
+WS,Samoa,TR,Türkiye,2020,8.0,0.0038
+WS,Samoa,TR,Türkiye,2021,6.0,0.0028
+WS,Samoa,TR,Türkiye,2022,5.0,0.0023
+WS,Samoa,TR,Türkiye,2023,2.0,0.0009
+WS,Samoa,UA,Ukraine,2020,1.0,0.0005
+WS,Samoa,US,United States of America,2013,50.72,0.0256
+WS,Samoa,US,United States of America,2014,48.0,0.024
+WS,Samoa,US,United States of America,2015,26.86,0.0133
+WS,Samoa,US,United States of America,2016,76.09,0.0374
+WS,Samoa,US,United States of America,2017,69.27,0.0337
+WS,Samoa,US,United States of America,2018,116.07,0.0559
+WS,Samoa,US,United States of America,2020,94.58,0.0446
+WS,Samoa,US,United States of America,2021,124.04,0.058
+WS,Samoa,US,United States of America,2023,82.48,0.0381
+WS,Samoa,ZA,South Africa,2015,1.0,0.0005
+WS,Samoa,ZA,South Africa,2019,1.0,0.0005
+WS,Samoa,ZA,South Africa,2022,1.0,0.0005

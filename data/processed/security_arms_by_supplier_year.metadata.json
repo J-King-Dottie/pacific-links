@@ -1,0 +1,11 @@
+{
+  "source": "SIPRI Arms Transfers Database",
+  "source_url": "https://armstransfers.sipri.org/ArmsTransfer/TransferRegister",
+  "retrieved_at": "2026-06-27T05:32:30.671471+00:00",
+  "row_count": 17,
+  "recipient_count": 5,
+  "supplier_count": 3,
+  "year_min": 2014,
+  "year_max": 2024,
+  "note": "Delivered major conventional arms transfers. Values are SIPRI trend-indicator values (TIV), not USD. Multi-year delivery rows are split evenly across listed delivery years for annual display."
+}

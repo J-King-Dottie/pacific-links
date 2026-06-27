@@ -50,6 +50,8 @@
 .topbar-metrics.intro-animate .topbar-metric:nth-child(4) { animation-delay: 1200ms; }
 .topbar-metrics.intro-animate .topbar-metric:nth-child(5) { animation-delay: 1400ms; }
 .topbar-metrics.intro-animate .topbar-metric:nth-child(6) { animation-delay: 1600ms; }
+.topbar-metrics.intro-animate .topbar-metric:nth-child(7) { animation-delay: 1800ms; }
+.topbar-metrics.intro-animate .topbar-metric:nth-child(8) { animation-delay: 2000ms; }
 
 .topbar-metric {
   border: 1px solid transparent;
@@ -79,15 +81,19 @@
 .topbar-metric-aid { color: #8a5c10; }
 .topbar-metric-trade { color: #1e666d; }
 .topbar-metric-remittances { color: #a0442c; }
-.topbar-metric-fdi { color: #2f5fb3; }
 .topbar-metric-migration { color: #76516a; }
+.topbar-metric-students { color: #b45f06; }
+.topbar-metric-security { color: #3c6e71; }
 .topbar-metric-debt { color: #507840; }
+.topbar-metric-investment { color: #2f5fb3; }
 .topbar-metric-aid.active { color: #7a4e08; }
 .topbar-metric-trade.active { color: #1e5a60; }
 .topbar-metric-remittances.active { color: #8c3020; }
-.topbar-metric-fdi.active { color: #244b91; }
 .topbar-metric-migration.active { color: #6a4a5e; }
+.topbar-metric-students.active { color: #934b04; }
+.topbar-metric-security.active { color: #345f62; }
 .topbar-metric-debt.active { color: #476b35; }
+.topbar-metric-investment.active { color: #244b91; }
 
 .topbar-time {
   display: flex;

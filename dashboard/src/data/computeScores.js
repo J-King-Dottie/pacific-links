@@ -1,18 +1,31 @@
 import { PACIFIC_LIST } from './pacificCountries.js'
 
-export const METRICS = ['aid', 'trade', 'remittances', 'migration', 'debt', 'fdi']
-const FRESHNESS_WINDOW_YEARS = 3
+export const METRICS = ['aid', 'trade', 'debt', 'security', 'remittances', 'migration', 'students', 'investment']
 
-function buildFreshDataIndex(rows, activeMetrics, targetYear, windowYears = FRESHNESS_WINDOW_YEARS) {
-  const minYear = targetYear - (windowYears - 1)
+function buildLatestDataIndex(rows, activeMetrics) {
   const latestYear = {}
   for (const r of rows) {
     if (!activeMetrics.includes(r.metric)) continue
-    if (r.year > targetYear || r.year < minYear) continue
     const k = `${r.pacificCode}|${r.metric}|${r.counterpartCode}`
     if (!latestYear[k] || r.year > latestYear[k]) latestYear[k] = r.year
   }
 
+  return buildIndexForLatestYears(rows, activeMetrics, latestYear)
+}
+
+function buildYearDataIndex(rows, activeMetrics, targetYear) {
+  const latestYear = {}
+  for (const r of rows) {
+    if (!activeMetrics.includes(r.metric)) continue
+    if (r.year !== targetYear) continue
+    const k = `${r.pacificCode}|${r.metric}|${r.counterpartCode}`
+    latestYear[k] = targetYear
+  }
+
+  return buildIndexForLatestYears(rows, activeMetrics, latestYear)
+}
+
+function buildIndexForLatestYears(rows, activeMetrics, latestYear) {
   const index = {}
   for (const r of rows) {
     if (!activeMetrics.includes(r.metric)) continue
@@ -26,34 +39,31 @@ function buildFreshDataIndex(rows, activeMetrics, targetYear, windowYears = FRES
       pct:   r.pct,
       year:  r.year,
       hs1Breakdown: r.hs1Breakdown ?? null,
+      securityBreakdown: r.securityBreakdown ?? null,
     }
   }
   return index
 }
 
 // ---------------------------------------------------------------------------
-// Build data index using a 3-year freshness window.
-// Each counterpart uses its latest observation inside the target-year window.
+// Latest mode: each relationship uses its own latest available observation.
+// This keeps sparse event data, such as SIPRI arms transfers, visible even when
+// the latest recorded delivery for a country pair is older than the metric's
+// newest year.
 // Returns:
 //   { pacificCode -> { metric -> { counterpartCode -> { name, value, year } } } }
 // ---------------------------------------------------------------------------
 
 export function getLatestData(rows, activeMetrics) {
-  const candidateYears = rows
-    .filter(r => activeMetrics.includes(r.metric))
-    .map(r => r.year)
-  if (!candidateYears.length) return {}
-  const targetYear = Math.max(...candidateYears)
-  return buildFreshDataIndex(rows, activeMetrics, targetYear)
+  return buildLatestDataIndex(rows, activeMetrics)
 }
 
 // ---------------------------------------------------------------------------
 // Year mode: an explicitly selected year shows that year's records only.
-// No freshness fallback — the 3-year window is only for the "latest" view.
 // ---------------------------------------------------------------------------
 
 export function getYearData(rows, activeMetrics, year) {
-  return buildFreshDataIndex(rows, activeMetrics, year, 1)
+  return buildYearDataIndex(rows, activeMetrics, year)
 }
 
 // ---------------------------------------------------------------------------
@@ -134,7 +144,7 @@ export function getInfluencerFootprint(dataIndex, counterpartCode, activeMetrics
       }
     })
     .filter(Boolean)
-    .sort((a, b) => b.totalPct - a.totalPct)
+    .sort((a, b) => b.totalValue - a.totalValue)
 }
 
 // ---------------------------------------------------------------------------

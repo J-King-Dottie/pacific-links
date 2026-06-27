@@ -5,15 +5,19 @@ import './TopBar.css'
 const METRIC_LABELS = {
   aid: 'Aid',
   trade: 'Trade',
+  debt: 'Debt',
+  security: 'Security',
   remittances: 'Remittances',
   migration: 'Migration',
-  debt: 'Debt',
-  fdi: 'FDI',
+  students: 'Students',
+  investment: 'Investment',
 }
 
 function isMetricActive(metric, selectedMetric) {
   if (metric === 'aid') return ['aid', 'aid_committed'].includes(selectedMetric)
   if (metric === 'trade') return ['trade', 'exports'].includes(selectedMetric)
+  if (metric === 'security') return ['security', 'security_arms'].includes(selectedMetric)
+  if (metric === 'investment') return ['fdi', 'portfolio'].includes(selectedMetric)
   return selectedMetric === metric
 }
 

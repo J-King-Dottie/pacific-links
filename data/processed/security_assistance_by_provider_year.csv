@@ -1,0 +1,457 @@
+pacific_code,pacific_name,counterpart_code,counterpart_name,year,sector_code,sector_name,value_usd,pct_gdp
+CK,Cook Islands,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",46135.0,0.0161
+CK,Cook Islands,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.0027
+CK,Cook Islands,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",15450.0,0.0053
+CK,Cook Islands,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",22971.0,0.0078
+CK,Cook Islands,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",44363.0,0.0132
+CK,Cook Islands,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",14452.0,0.0038
+CK,Cook Islands,AU,Australia,2018,15240,Reintegration and SALW control,2671.0,0.0007
+CK,Cook Islands,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",27993.0,0.0072
+CK,Cook Islands,NZ,New Zealand,2010,15210,Security system management and reform,330014.0,0.1314
+CK,Cook Islands,NZ,New Zealand,2011,15210,Security system management and reform,88720.0,0.0322
+CK,Cook Islands,NZ,New Zealand,2012,15210,Security system management and reform,207305.0,0.0704
+FJ,Fiji,AU,Australia,2011,15220,"Civilian peace-building, conflict prevention and resolution",6059.0,0.0002
+FJ,Fiji,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",812231.0,0.0194
+FJ,Fiji,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",261998.0,0.0056
+FJ,Fiji,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",389457.0,0.0079
+FJ,Fiji,AU,Australia,2017,15210,Security system management and reform,34890.0,0.0007
+FJ,Fiji,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",752287.0,0.0141
+FJ,Fiji,AU,Australia,2018,15210,Security system management and reform,162450.0,0.0029
+FJ,Fiji,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",245071.0,0.0044
+FJ,Fiji,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0002
+FJ,Fiji,AU,Australia,2019,15210,Security system management and reform,5722.0,0.0001
+FJ,Fiji,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",474692.0,0.0089
+FJ,Fiji,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",469529.0,0.0111
+FJ,Fiji,AU,Australia,2021,15220,"Civilian peace-building, conflict prevention and resolution",1173.0,0.0
+FJ,Fiji,AU,Australia,2022,15210,Security system management and reform,28168.0,0.0006
+FJ,Fiji,AU,Australia,2022,15220,"Civilian peace-building, conflict prevention and resolution",134.0,0.0
+FJ,Fiji,AU,Australia,2023,15210,Security system management and reform,115104.0,0.0021
+FJ,Fiji,AU,Australia,2023,15220,"Civilian peace-building, conflict prevention and resolution",659.0,0.0
+FJ,Fiji,AU,Australia,2024,15210,Security system management and reform,58523.0,0.001
+FJ,Fiji,AU,Australia,2024,15220,"Civilian peace-building, conflict prevention and resolution",970.0,0.0
+FJ,Fiji,CRS_1UN0,United Nations,2012,15261,Child soldiers prevention and demobilisation,62973.0,0.0016
+FJ,Fiji,CRS_1UN0,United Nations,2013,15261,Child soldiers prevention and demobilisation,2473.0,0.0001
+FJ,Fiji,CRS_1UN0,United Nations,2014,15261,Child soldiers prevention and demobilisation,2208.0,0.0
+FJ,Fiji,CRS_1UN0,United Nations,2023,15220,"Civilian peace-building, conflict prevention and resolution",761945.0,0.0139
+FJ,Fiji,CRS_1UN0,United Nations,2024,15210,Security system management and reform,375.0,0.0
+FJ,Fiji,CRS_1UN0,United Nations,2024,15261,Child soldiers prevention and demobilisation,19000.0,0.0003
+FJ,Fiji,CRS_1UN011,UNDP,2023,15220,"Civilian peace-building, conflict prevention and resolution",761945.0,0.0139
+FJ,Fiji,CRS_1UN014,UNICEF,2024,15210,Security system management and reform,375.0,0.0
+FJ,Fiji,CRS_1UN019,UN Peacebuilding Fund,2012,15261,Child soldiers prevention and demobilisation,62973.0,0.0016
+FJ,Fiji,CRS_1UN019,UN Peacebuilding Fund,2013,15261,Child soldiers prevention and demobilisation,2473.0,0.0001
+FJ,Fiji,CRS_1UN019,UN Peacebuilding Fund,2014,15261,Child soldiers prevention and demobilisation,2208.0,0.0
+FJ,Fiji,CRS_1UN019,UN Peacebuilding Fund,2024,15261,Child soldiers prevention and demobilisation,19000.0,0.0003
+FJ,Fiji,DE,Germany,2011,15220,"Civilian peace-building, conflict prevention and resolution",124263.0,0.0033
+FJ,Fiji,DE,Germany,2012,15220,"Civilian peace-building, conflict prevention and resolution",641973.0,0.0162
+FJ,Fiji,DE,Germany,2013,15210,Security system management and reform,65912.0,0.0016
+FJ,Fiji,DE,Germany,2013,15220,"Civilian peace-building, conflict prevention and resolution",497519.0,0.0119
+FJ,Fiji,DE,Germany,2014,15210,Security system management and reform,204118.0,0.0042
+FJ,Fiji,DE,Germany,2014,15220,"Civilian peace-building, conflict prevention and resolution",411770.0,0.0085
+FJ,Fiji,DE,Germany,2015,15210,Security system management and reform,228877.0,0.0049
+FJ,Fiji,DE,Germany,2015,15220,"Civilian peace-building, conflict prevention and resolution",249848.0,0.0053
+FJ,Fiji,DE,Germany,2016,15210,Security system management and reform,101852.0,0.0021
+FJ,Fiji,DE,Germany,2016,15220,"Civilian peace-building, conflict prevention and resolution",57225.0,0.0012
+FJ,Fiji,DE,Germany,2017,15210,Security system management and reform,101764.0,0.0019
+FJ,Fiji,DE,Germany,2017,15220,"Civilian peace-building, conflict prevention and resolution",69400.0,0.0013
+FJ,Fiji,DE,Germany,2018,15210,Security system management and reform,128238.0,0.0023
+FJ,Fiji,DE,Germany,2018,15220,"Civilian peace-building, conflict prevention and resolution",26792.0,0.0005
+FJ,Fiji,DE,Germany,2019,15210,Security system management and reform,32893.0,0.0006
+FJ,Fiji,DE,Germany,2019,15220,"Civilian peace-building, conflict prevention and resolution",26462.0,0.0005
+FJ,Fiji,DE,Germany,2020,15210,Security system management and reform,138101.0,0.0033
+FJ,Fiji,DE,Germany,2021,15210,Security system management and reform,287380.0,0.0069
+FJ,Fiji,DE,Germany,2022,15210,Security system management and reform,203914.0,0.0041
+FJ,Fiji,DE,Germany,2023,15210,Security system management and reform,44577.0,0.0008
+FJ,Fiji,DE,Germany,2023,15220,"Civilian peace-building, conflict prevention and resolution",54647.0,0.001
+FJ,Fiji,DE,Germany,2024,15210,Security system management and reform,34149.0,0.0006
+FJ,Fiji,FR,France,2024,15230,Participation in international peacekeeping operations,74962.0,0.0013
+FJ,Fiji,GB,United Kingdom,2010,15220,"Civilian peace-building, conflict prevention and resolution",9217.0,0.0003
+FJ,Fiji,GB,United Kingdom,2012,15210,Security system management and reform,35430.0,0.0009
+FJ,Fiji,GB,United Kingdom,2013,15210,Security system management and reform,34682.0,0.0008
+FJ,Fiji,GB,United Kingdom,2019,15210,Security system management and reform,361810.0,0.0068
+FJ,Fiji,NZ,New Zealand,2022,15210,Security system management and reform,481003.0,0.0097
+FJ,Fiji,NZ,New Zealand,2022,15220,"Civilian peace-building, conflict prevention and resolution",962005.0,0.0193
+FJ,Fiji,NZ,New Zealand,2023,15210,Security system management and reform,286007.0,0.0052
+FJ,Fiji,NZ,New Zealand,2023,15220,"Civilian peace-building, conflict prevention and resolution",572014.0,0.0104
+FJ,Fiji,NZ,New Zealand,2024,15210,Security system management and reform,243287.0,0.0041
+FJ,Fiji,NZ,New Zealand,2024,15220,"Civilian peace-building, conflict prevention and resolution",486575.0,0.0082
+FJ,Fiji,US,United States,2019,15210,Security system management and reform,17315.0,0.0003
+FJ,Fiji,US,United States,2022,15210,Security system management and reform,557941.0,0.0112
+FJ,Fiji,US,United States,2022,15250,Removal of land mines and explosive remnants of war,63765.0,0.0013
+FJ,Fiji,US,United States,2023,15250,Removal of land mines and explosive remnants of war,472444.0,0.0086
+FJ,Fiji,US,United States,2024,15250,Removal of land mines and explosive remnants of war,404000.0,0.0068
+FM,Micronesia (FSM),AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",22813.0,0.0073
+FM,Micronesia (FSM),AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",7640.0,0.0025
+FM,Micronesia (FSM),AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",11361.0,0.0035
+FM,Micronesia (FSM),AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",21937.0,0.0061
+FM,Micronesia (FSM),AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",7146.0,0.0018
+FM,Micronesia (FSM),AU,Australia,2018,15240,Reintegration and SALW control,2671.0,0.0007
+FM,Micronesia (FSM),AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",13842.0,0.0035
+FM,Micronesia (FSM),AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",13692.0,0.0037
+FM,Micronesia (FSM),AU,Australia,2024,15210,Security system management and reform,27178.0,0.0058
+FM,Micronesia (FSM),US,United States,2018,15210,Security system management and reform,5555.0,0.0014
+KI,Kiribati,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",94784.0,0.047
+KI,Kiribati,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.0039
+KI,Kiribati,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",31742.0,0.0166
+KI,Kiribati,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",47184.0,0.0229
+KI,Kiribati,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",91143.0,0.0409
+KI,Kiribati,AU,Australia,2018,15210,Security system management and reform,56353.0,0.0241
+KI,Kiribati,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",29691.0,0.0127
+KI,Kiribati,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0044
+KI,Kiribati,AU,Australia,2019,15210,Security system management and reform,8645.0,0.004
+KI,Kiribati,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",57511.0,0.0265
+KI,Kiribati,AU,Australia,2020,15210,Security system management and reform,704.0,0.0003
+KI,Kiribati,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",56885.0,0.0258
+KI,Kiribati,AU,Australia,2022,15210,Security system management and reform,28114.0,0.0104
+KI,Kiribati,AU,Australia,2024,15210,Security system management and reform,37556.0,0.0122
+KI,Kiribati,AU,Australia,2024,15220,"Civilian peace-building, conflict prevention and resolution",251.0,0.0001
+KI,Kiribati,KR,South Korea,2017,15210,Security system management and reform,5227.0,0.0023
+KI,Kiribati,KR,South Korea,2018,15210,Security system management and reform,5730.0,0.0025
+MH,Marshall Islands,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",84032.0,0.0451
+MH,Marshall Islands,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.0042
+MH,Marshall Islands,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",28142.0,0.0153
+MH,Marshall Islands,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",41832.0,0.0207
+MH,Marshall Islands,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",80804.0,0.0378
+MH,Marshall Islands,AU,Australia,2018,15210,Security system management and reform,10470.0,0.0048
+MH,Marshall Islands,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",26323.0,0.012
+MH,Marshall Islands,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",50987.0,0.0219
+MH,Marshall Islands,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",50433.0,0.0209
+MH,Marshall Islands,AU,Australia,2022,15210,Security system management and reform,28114.0,0.0109
+MH,Marshall Islands,AU,Australia,2024,15210,Security system management and reform,37556.0,0.0129
+MH,Marshall Islands,DE,Germany,2015,15250,Removal of land mines and explosive remnants of war,70369.0,0.0383
+MH,Marshall Islands,US,United States,2013,15240,Reintegration and SALW control,359407.0,0.1928
+MH,Marshall Islands,US,United States,2016,15250,Removal of land mines and explosive remnants of war,218329.0,0.1082
+MH,Marshall Islands,US,United States,2017,15250,Removal of land mines and explosive remnants of war,214494.0,0.1004
+MH,Marshall Islands,US,United States,2018,15250,Removal of land mines and explosive remnants of war,375717.0,0.1708
+MH,Marshall Islands,US,United States,2020,15250,Removal of land mines and explosive remnants of war,72369.0,0.0299
+MH,Marshall Islands,US,United States,2021,15210,Security system management and reform,335308.0,0.1283
+MH,Marshall Islands,US,United States,2021,15250,Removal of land mines and explosive remnants of war,17155.0,0.0066
+MH,Marshall Islands,US,United States,2023,15250,Removal of land mines and explosive remnants of war,231610.0,0.0878
+MH,Marshall Islands,US,United States,2024,15250,Removal of land mines and explosive remnants of war,310000.0,0.1069
+NR,Nauru,AU,Australia,2010,15210,Security system management and reform,5297330.0,11.1375
+NR,Nauru,AU,Australia,2011,15210,Security system management and reform,2772456.0,4.2606
+NR,Nauru,AU,Australia,2012,15210,Security system management and reform,529453.0,0.5239
+NR,Nauru,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",20246.0,0.0215
+NR,Nauru,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",6780.0,0.008
+NR,Nauru,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",10083.0,0.0103
+NR,Nauru,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",19468.0,0.0178
+NR,Nauru,AU,Australia,2018,15210,Security system management and reform,12155.0,0.0093
+NR,Nauru,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",6342.0,0.0048
+NR,Nauru,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0079
+NR,Nauru,AU,Australia,2019,15210,Security system management and reform,8645.0,0.0069
+NR,Nauru,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",12284.0,0.0098
+NR,Nauru,AU,Australia,2020,15210,Security system management and reform,704.0,0.0006
+NR,Nauru,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",12151.0,0.0097
+NR,Nauru,AU,Australia,2024,15210,Security system management and reform,37556.0,0.0231
+NU,Niue,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",4654.0,0.0231
+NU,Niue,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",1558.0,0.0077
+NU,Niue,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",2317.0,0.011
+NU,Niue,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",4475.0,0.0192
+NU,Niue,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",1458.0,0.0054
+NU,Niue,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",2824.0,0.0109
+NU,Niue,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",2793.0,0.0108
+NU,Niue,AU,Australia,2024,15210,Security system management and reform,37556.0,0.1258
+PG,Papua New Guinea,AT,Austria,2011,15220,"Civilian peace-building, conflict prevention and resolution",31189.0,0.0002
+PG,Papua New Guinea,AT,Austria,2012,15220,"Civilian peace-building, conflict prevention and resolution",54080.0,0.0003
+PG,Papua New Guinea,AT,Austria,2013,15220,"Civilian peace-building, conflict prevention and resolution",37542.0,0.0002
+PG,Papua New Guinea,AU,Australia,2010,15230,Participation in international peacekeeping operations,894.0,0.0
+PG,Papua New Guinea,AU,Australia,2011,15220,"Civilian peace-building, conflict prevention and resolution",148345.0,0.0008
+PG,Papua New Guinea,AU,Australia,2011,15240,Reintegration and SALW control,157061.0,0.0009
+PG,Papua New Guinea,AU,Australia,2012,15220,"Civilian peace-building, conflict prevention and resolution",28733.0,0.0001
+PG,Papua New Guinea,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",333935.0,0.0016
+PG,Papua New Guinea,AU,Australia,2014,15220,"Civilian peace-building, conflict prevention and resolution",2223248.0,0.0096
+PG,Papua New Guinea,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",1772822.0,0.0082
+PG,Papua New Guinea,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",166237.0,0.0008
+PG,Papua New Guinea,AU,Australia,2017,15210,Security system management and reform,5658.0,0.0
+PG,Papua New Guinea,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",321108.0,0.0014
+PG,Papua New Guinea,AU,Australia,2018,15210,Security system management and reform,76023.0,0.0003
+PG,Papua New Guinea,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",264731.0,0.0011
+PG,Papua New Guinea,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0
+PG,Papua New Guinea,AU,Australia,2019,15210,Security system management and reform,134997.0,0.0005
+PG,Papua New Guinea,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",4399510.0,0.0178
+PG,Papua New Guinea,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",3696161.0,0.0155
+PG,Papua New Guinea,AU,Australia,2021,15220,"Civilian peace-building, conflict prevention and resolution",3928637.0,0.015
+PG,Papua New Guinea,AU,Australia,2022,15210,Security system management and reform,28091.0,0.0001
+PG,Papua New Guinea,AU,Australia,2022,15220,"Civilian peace-building, conflict prevention and resolution",2467229.0,0.0078
+PG,Papua New Guinea,AU,Australia,2023,15210,Security system management and reform,318322.0,0.001
+PG,Papua New Guinea,AU,Australia,2023,15220,"Civilian peace-building, conflict prevention and resolution",1393182.0,0.0045
+PG,Papua New Guinea,AU,Australia,2024,15210,Security system management and reform,40292.0,0.0001
+PG,Papua New Guinea,AU,Australia,2024,15220,"Civilian peace-building, conflict prevention and resolution",5442592.0,0.0171
+PG,Papua New Guinea,CRS_1UN0,United Nations,2013,15210,Security system management and reform,91881.0,0.0004
+PG,Papua New Guinea,CRS_1UN0,United Nations,2013,15261,Child soldiers prevention and demobilisation,59120.0,0.0003
+PG,Papua New Guinea,CRS_1UN0,United Nations,2014,15220,"Civilian peace-building, conflict prevention and resolution",198142.0,0.0009
+PG,Papua New Guinea,CRS_1UN0,United Nations,2015,15220,"Civilian peace-building, conflict prevention and resolution",1503058.0,0.0069
+PG,Papua New Guinea,CRS_1UN0,United Nations,2016,15220,"Civilian peace-building, conflict prevention and resolution",3535991.0,0.017
+PG,Papua New Guinea,CRS_1UN0,United Nations,2017,15220,"Civilian peace-building, conflict prevention and resolution",3046601.0,0.0134
+PG,Papua New Guinea,CRS_1UN0,United Nations,2018,15220,"Civilian peace-building, conflict prevention and resolution",3750515.0,0.0156
+PG,Papua New Guinea,CRS_1UN0,United Nations,2019,15220,"Civilian peace-building, conflict prevention and resolution",1602377.0,0.0065
+PG,Papua New Guinea,CRS_1UN0,United Nations,2020,15220,"Civilian peace-building, conflict prevention and resolution",4218584.0,0.0177
+PG,Papua New Guinea,CRS_1UN0,United Nations,2020,15261,Child soldiers prevention and demobilisation,2220.0,0.0
+PG,Papua New Guinea,CRS_1UN0,United Nations,2022,15261,Child soldiers prevention and demobilisation,1075.0,0.0
+PG,Papua New Guinea,CRS_1UN0,United Nations,2023,15261,Child soldiers prevention and demobilisation,10239.0,0.0
+PG,Papua New Guinea,CRS_1UN0,United Nations,2024,15261,Child soldiers prevention and demobilisation,1000.0,0.0
+PG,Papua New Guinea,CRS_1UN011,UNDP,2013,15210,Security system management and reform,91881.0,0.0004
+PG,Papua New Guinea,CRS_1UN011,UNDP,2014,15220,"Civilian peace-building, conflict prevention and resolution",198142.0,0.0009
+PG,Papua New Guinea,CRS_1UN011,UNDP,2015,15220,"Civilian peace-building, conflict prevention and resolution",1503058.0,0.0069
+PG,Papua New Guinea,CRS_1UN011,UNDP,2016,15220,"Civilian peace-building, conflict prevention and resolution",3535991.0,0.017
+PG,Papua New Guinea,CRS_1UN011,UNDP,2017,15220,"Civilian peace-building, conflict prevention and resolution",3046601.0,0.0134
+PG,Papua New Guinea,CRS_1UN011,UNDP,2018,15220,"Civilian peace-building, conflict prevention and resolution",3750515.0,0.0156
+PG,Papua New Guinea,CRS_1UN011,UNDP,2019,15220,"Civilian peace-building, conflict prevention and resolution",1602377.0,0.0065
+PG,Papua New Guinea,CRS_1UN011,UNDP,2020,15220,"Civilian peace-building, conflict prevention and resolution",4218584.0,0.0177
+PG,Papua New Guinea,CRS_1UN019,UN Peacebuilding Fund,2013,15261,Child soldiers prevention and demobilisation,59120.0,0.0003
+PG,Papua New Guinea,CRS_1UN019,UN Peacebuilding Fund,2020,15261,Child soldiers prevention and demobilisation,2220.0,0.0
+PG,Papua New Guinea,CRS_1UN019,UN Peacebuilding Fund,2022,15261,Child soldiers prevention and demobilisation,1075.0,0.0
+PG,Papua New Guinea,CRS_1UN019,UN Peacebuilding Fund,2023,15261,Child soldiers prevention and demobilisation,10239.0,0.0
+PG,Papua New Guinea,CRS_1UN019,UN Peacebuilding Fund,2024,15261,Child soldiers prevention and demobilisation,1000.0,0.0
+PG,Papua New Guinea,CRS_4EU001,European Union institutions,2019,15220,"Civilian peace-building, conflict prevention and resolution",693702.0,0.0028
+PG,Papua New Guinea,CRS_4EU001,European Union institutions,2021,15220,"Civilian peace-building, conflict prevention and resolution",1172731.0,0.0045
+PG,Papua New Guinea,CRS_4EU001,European Union institutions,2022,15220,"Civilian peace-building, conflict prevention and resolution",1193752.0,0.0038
+PG,Papua New Guinea,CRS_4EU001,European Union institutions,2023,15220,"Civilian peace-building, conflict prevention and resolution",186199.0,0.0006
+PG,Papua New Guinea,CRS_4EU001,European Union institutions,2024,15220,"Civilian peace-building, conflict prevention and resolution",830662.0,0.0026
+PG,Papua New Guinea,DE,Germany,2014,15220,"Civilian peace-building, conflict prevention and resolution",10493.0,0.0
+PG,Papua New Guinea,DE,Germany,2015,15220,"Civilian peace-building, conflict prevention and resolution",104125.0,0.0005
+PG,Papua New Guinea,DE,Germany,2016,15220,"Civilian peace-building, conflict prevention and resolution",174124.0,0.0008
+PG,Papua New Guinea,DE,Germany,2017,15220,"Civilian peace-building, conflict prevention and resolution",183021.0,0.0008
+PG,Papua New Guinea,DE,Germany,2018,15220,"Civilian peace-building, conflict prevention and resolution",571210.0,0.0024
+PG,Papua New Guinea,DE,Germany,2019,15220,"Civilian peace-building, conflict prevention and resolution",1026586.0,0.0041
+PG,Papua New Guinea,DE,Germany,2020,15220,"Civilian peace-building, conflict prevention and resolution",939580.0,0.0039
+PG,Papua New Guinea,DE,Germany,2021,15220,"Civilian peace-building, conflict prevention and resolution",684800.0,0.0026
+PG,Papua New Guinea,DE,Germany,2022,15220,"Civilian peace-building, conflict prevention and resolution",746492.0,0.0024
+PG,Papua New Guinea,DE,Germany,2023,15220,"Civilian peace-building, conflict prevention and resolution",811997.0,0.0026
+PG,Papua New Guinea,DE,Germany,2024,15220,"Civilian peace-building, conflict prevention and resolution",126082.0,0.0004
+PG,Papua New Guinea,GB,United Kingdom,2022,15220,"Civilian peace-building, conflict prevention and resolution",284398.0,0.0009
+PG,Papua New Guinea,GB,United Kingdom,2023,15220,"Civilian peace-building, conflict prevention and resolution",1088842.0,0.0035
+PG,Papua New Guinea,GB,United Kingdom,2024,15220,"Civilian peace-building, conflict prevention and resolution",1499175.0,0.0047
+PG,Papua New Guinea,IE,Ireland,2019,15220,"Civilian peace-building, conflict prevention and resolution",309502.0,0.0013
+PG,Papua New Guinea,IE,Ireland,2020,15220,"Civilian peace-building, conflict prevention and resolution",129118.0,0.0005
+PG,Papua New Guinea,JP,Japan,2018,15230,Participation in international peacekeeping operations,364070.0,0.0015
+PG,Papua New Guinea,JP,Japan,2019,15210,Security system management and reform,8058.0,0.0
+PG,Papua New Guinea,JP,Japan,2020,15210,Security system management and reform,1057.0,0.0
+PG,Papua New Guinea,KR,South Korea,2021,15220,"Civilian peace-building, conflict prevention and resolution",833637.0,0.0032
+PG,Papua New Guinea,KR,South Korea,2022,15220,"Civilian peace-building, conflict prevention and resolution",957446.0,0.003
+PG,Papua New Guinea,KR,South Korea,2023,15220,"Civilian peace-building, conflict prevention and resolution",937828.0,0.003
+PG,Papua New Guinea,KR,South Korea,2024,15220,"Civilian peace-building, conflict prevention and resolution",178280.0,0.0006
+PG,Papua New Guinea,NZ,New Zealand,2010,15210,Security system management and reform,2176936.0,0.0153
+PG,Papua New Guinea,NZ,New Zealand,2010,15220,"Civilian peace-building, conflict prevention and resolution",262368.0,0.0018
+PG,Papua New Guinea,NZ,New Zealand,2011,15210,Security system management and reform,1855000.0,0.0103
+PG,Papua New Guinea,NZ,New Zealand,2011,15220,"Civilian peace-building, conflict prevention and resolution",245132.0,0.0014
+PG,Papua New Guinea,NZ,New Zealand,2012,15210,Security system management and reform,1972787.0,0.0093
+PG,Papua New Guinea,NZ,New Zealand,2013,15210,Security system management and reform,1856122.0,0.0087
+PG,Papua New Guinea,NZ,New Zealand,2014,15210,Security system management and reform,1404782.0,0.0061
+PG,Papua New Guinea,NZ,New Zealand,2015,15210,Security system management and reform,2546345.0,0.0117
+PG,Papua New Guinea,NZ,New Zealand,2016,15210,Security system management and reform,3241016.0,0.0156
+PG,Papua New Guinea,NZ,New Zealand,2017,15210,Security system management and reform,2568318.0,0.0113
+PG,Papua New Guinea,NZ,New Zealand,2024,15220,"Civilian peace-building, conflict prevention and resolution",5442671.0,0.0171
+PG,Papua New Guinea,US,United States,2013,15220,"Civilian peace-building, conflict prevention and resolution",80786.0,0.0004
+PG,Papua New Guinea,US,United States,2014,15220,"Civilian peace-building, conflict prevention and resolution",590397.0,0.0025
+PG,Papua New Guinea,US,United States,2015,15220,"Civilian peace-building, conflict prevention and resolution",1879057.0,0.0086
+PG,Papua New Guinea,US,United States,2016,15220,"Civilian peace-building, conflict prevention and resolution",507307.0,0.0024
+PG,Papua New Guinea,US,United States,2017,15220,"Civilian peace-building, conflict prevention and resolution",145195.0,0.0006
+PG,Papua New Guinea,US,United States,2021,15210,Security system management and reform,97954.0,0.0004
+PG,Papua New Guinea,US,United States,2024,15210,Security system management and reform,157010.0,0.0005
+PG,Papua New Guinea,US,United States,2024,15240,Reintegration and SALW control,267000.0,0.0008
+PW,Palau,AU,Australia,2012,15250,Removal of land mines and explosive remnants of war,1236713.0,0.5736
+PW,Palau,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",61165.0,0.0273
+PW,Palau,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,910586.0,0.4063
+PW,Palau,AU,Australia,2014,15250,Removal of land mines and explosive remnants of war,912962.0,0.3717
+PW,Palau,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",20484.0,0.0071
+PW,Palau,AU,Australia,2015,15250,Removal of land mines and explosive remnants of war,480432.0,0.1674
+PW,Palau,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",30453.0,0.01
+PW,Palau,AU,Australia,2016,15250,Removal of land mines and explosive remnants of war,443795.0,0.1454
+PW,Palau,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",58816.0,0.0201
+PW,Palau,AU,Australia,2017,15250,Removal of land mines and explosive remnants of war,12070.0,0.0041
+PW,Palau,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",19160.0,0.0067
+PW,Palau,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0036
+PW,Palau,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",37113.0,0.0132
+PW,Palau,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",36709.0,0.014
+PW,Palau,AU,Australia,2023,15250,Removal of land mines and explosive remnants of war,832865.0,0.301
+PW,Palau,AU,Australia,2024,15210,Security system management and reform,37556.0,0.0136
+PW,Palau,AU,Australia,2024,15250,Removal of land mines and explosive remnants of war,39969.0,0.0144
+PW,Palau,BE,Belgium,2017,15250,Removal of land mines and explosive remnants of war,174315.0,0.0597
+PW,Palau,BE,Belgium,2018,15250,Removal of land mines and explosive remnants of war,24163.0,0.0084
+PW,Palau,CA,Canada,2012,15250,Removal of land mines and explosive remnants of war,171254.0,0.0794
+PW,Palau,CA,Canada,2013,15250,Removal of land mines and explosive remnants of war,141.0,0.0001
+PW,Palau,CZ,Czechia,2017,15250,Removal of land mines and explosive remnants of war,18390.0,0.0063
+PW,Palau,DE,Germany,2010,15250,Removal of land mines and explosive remnants of war,107925.0,0.0574
+PW,Palau,DE,Germany,2011,15250,Removal of land mines and explosive remnants of war,207054.0,0.1042
+PW,Palau,DE,Germany,2012,15250,Removal of land mines and explosive remnants of war,199472.0,0.0925
+PW,Palau,GB,United Kingdom,2010,15250,Removal of land mines and explosive remnants of war,22057.0,0.0117
+PW,Palau,JP,Japan,2012,15250,Removal of land mines and explosive remnants of war,444370.0,0.2061
+PW,Palau,JP,Japan,2014,15250,Removal of land mines and explosive remnants of war,420684.0,0.1713
+PW,Palau,JP,Japan,2015,15250,Removal of land mines and explosive remnants of war,469275.0,0.1635
+PW,Palau,JP,Japan,2016,15250,Removal of land mines and explosive remnants of war,651150.0,0.2133
+PW,Palau,JP,Japan,2017,15250,Removal of land mines and explosive remnants of war,709043.0,0.2427
+PW,Palau,JP,Japan,2018,15250,Removal of land mines and explosive remnants of war,315584.0,0.1096
+PW,Palau,JP,Japan,2019,15210,Security system management and reform,1432767.0,0.508
+PW,Palau,JP,Japan,2019,15250,Removal of land mines and explosive remnants of war,357331.0,0.1267
+PW,Palau,JP,Japan,2020,15250,Removal of land mines and explosive remnants of war,346639.0,0.1325
+PW,Palau,JP,Japan,2021,15250,Removal of land mines and explosive remnants of war,706010.0,0.3052
+PW,Palau,JP,Japan,2022,15250,Removal of land mines and explosive remnants of war,670633.0,0.275
+PW,Palau,JP,Japan,2023,15250,Removal of land mines and explosive remnants of war,153697.0,0.0555
+PW,Palau,JP,Japan,2024,15250,Removal of land mines and explosive remnants of war,619190.0,0.2237
+PW,Palau,US,United States,2013,15240,Reintegration and SALW control,251318.0,0.1121
+PW,Palau,US,United States,2016,15240,Reintegration and SALW control,386853.0,0.1267
+PW,Palau,US,United States,2017,15240,Reintegration and SALW control,380047.0,0.1301
+PW,Palau,US,United States,2018,15250,Removal of land mines and explosive remnants of war,925773.0,0.3215
+PW,Palau,US,United States,2020,15250,Removal of land mines and explosive remnants of war,204201.0,0.078
+PW,Palau,US,United States,2021,15210,Security system management and reform,332393.0,0.1437
+PW,Palau,US,United States,2021,15250,Removal of land mines and explosive remnants of war,724618.0,0.3132
+PW,Palau,US,United States,2022,15250,Removal of land mines and explosive remnants of war,747694.0,0.3066
+PW,Palau,US,United States,2023,15240,Reintegration and SALW control,11806.0,0.0043
+PW,Palau,US,United States,2023,15250,Removal of land mines and explosive remnants of war,662907.0,0.2395
+PW,Palau,US,United States,2024,15240,Reintegration and SALW control,48480.0,0.0175
+PW,Palau,US,United States,2024,15250,Removal of land mines and explosive remnants of war,1157976.0,0.4184
+SB,Solomon Islands,AU,Australia,2010,15230,Participation in international peacekeeping operations,691.0,0.0001
+SB,Solomon Islands,AU,Australia,2011,15210,Security system management and reform,1388131.0,0.1305
+SB,Solomon Islands,AU,Australia,2011,15220,"Civilian peace-building, conflict prevention and resolution",8483.0,0.0008
+SB,Solomon Islands,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",498871.0,0.0388
+SB,Solomon Islands,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.0006
+SB,Solomon Islands,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",167067.0,0.0128
+SB,Solomon Islands,AU,Australia,2015,15250,Removal of land mines and explosive remnants of war,5374.0,0.0004
+SB,Solomon Islands,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",248348.0,0.018
+SB,Solomon Islands,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",499135.0,0.034
+SB,Solomon Islands,AU,Australia,2018,15210,Security system management and reform,301608.0,0.0187
+SB,Solomon Islands,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",156274.0,0.0097
+SB,Solomon Islands,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0006
+SB,Solomon Islands,AU,Australia,2019,15210,Security system management and reform,434878.0,0.0269
+SB,Solomon Islands,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",303942.0,0.0188
+SB,Solomon Islands,AU,Australia,2020,15210,Security system management and reform,53611.0,0.0035
+SB,Solomon Islands,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",299403.0,0.0195
+SB,Solomon Islands,AU,Australia,2021,15220,"Civilian peace-building, conflict prevention and resolution",29387.0,0.0019
+SB,Solomon Islands,AU,Australia,2022,15210,Security system management and reform,28212.0,0.0019
+SB,Solomon Islands,AU,Australia,2022,15220,"Civilian peace-building, conflict prevention and resolution",80413.0,0.0055
+SB,Solomon Islands,AU,Australia,2023,15210,Security system management and reform,115104.0,0.0076
+SB,Solomon Islands,AU,Australia,2023,15220,"Civilian peace-building, conflict prevention and resolution",32.0,0.0
+SB,Solomon Islands,AU,Australia,2024,15210,Security system management and reform,40292.0,0.0025
+SB,Solomon Islands,CRS_1UN0,United Nations,2012,15210,Security system management and reform,27012.0,0.0023
+SB,Solomon Islands,CRS_1UN0,United Nations,2013,15210,Security system management and reform,115694.0,0.009
+SB,Solomon Islands,CRS_1UN0,United Nations,2014,15210,Security system management and reform,201139.0,0.0151
+SB,Solomon Islands,CRS_1UN0,United Nations,2015,15210,Security system management and reform,208862.0,0.016
+SB,Solomon Islands,CRS_1UN0,United Nations,2017,15220,"Civilian peace-building, conflict prevention and resolution",2243312.0,0.1526
+SB,Solomon Islands,CRS_1UN0,United Nations,2018,15220,"Civilian peace-building, conflict prevention and resolution",2266786.0,0.1403
+SB,Solomon Islands,CRS_1UN0,United Nations,2019,15220,"Civilian peace-building, conflict prevention and resolution",1029847.0,0.0636
+SB,Solomon Islands,CRS_1UN0,United Nations,2020,15220,"Civilian peace-building, conflict prevention and resolution",604923.0,0.0394
+SB,Solomon Islands,CRS_1UN0,United Nations,2022,15220,"Civilian peace-building, conflict prevention and resolution",1128671.0,0.077
+SB,Solomon Islands,CRS_1UN0,United Nations,2023,15220,"Civilian peace-building, conflict prevention and resolution",460731.0,0.0306
+SB,Solomon Islands,CRS_1UN0,United Nations,2024,15220,"Civilian peace-building, conflict prevention and resolution",3145.0,0.0002
+SB,Solomon Islands,CRS_1UN011,UNDP,2017,15220,"Civilian peace-building, conflict prevention and resolution",2243312.0,0.1526
+SB,Solomon Islands,CRS_1UN011,UNDP,2018,15220,"Civilian peace-building, conflict prevention and resolution",2266786.0,0.1403
+SB,Solomon Islands,CRS_1UN011,UNDP,2019,15220,"Civilian peace-building, conflict prevention and resolution",1029847.0,0.0636
+SB,Solomon Islands,CRS_1UN011,UNDP,2020,15220,"Civilian peace-building, conflict prevention and resolution",604923.0,0.0394
+SB,Solomon Islands,CRS_1UN011,UNDP,2022,15220,"Civilian peace-building, conflict prevention and resolution",1128671.0,0.077
+SB,Solomon Islands,CRS_1UN011,UNDP,2023,15220,"Civilian peace-building, conflict prevention and resolution",460731.0,0.0306
+SB,Solomon Islands,CRS_1UN014,UNICEF,2012,15210,Security system management and reform,27012.0,0.0023
+SB,Solomon Islands,CRS_1UN014,UNICEF,2013,15210,Security system management and reform,115694.0,0.009
+SB,Solomon Islands,CRS_1UN014,UNICEF,2014,15210,Security system management and reform,201139.0,0.0151
+SB,Solomon Islands,CRS_1UN014,UNICEF,2015,15210,Security system management and reform,208862.0,0.016
+SB,Solomon Islands,CRS_1UN014,UNICEF,2024,15220,"Civilian peace-building, conflict prevention and resolution",3145.0,0.0002
+SB,Solomon Islands,CRS_4EU001,European Union institutions,2010,15220,"Civilian peace-building, conflict prevention and resolution",47703.0,0.0053
+SB,Solomon Islands,CRS_4EU001,European Union institutions,2011,15220,"Civilian peace-building, conflict prevention and resolution",734741.0,0.0691
+SB,Solomon Islands,CRS_4EU001,European Union institutions,2012,15220,"Civilian peace-building, conflict prevention and resolution",89382.0,0.0075
+SB,Solomon Islands,CRS_4EU001,European Union institutions,2013,15220,"Civilian peace-building, conflict prevention and resolution",153453.0,0.0119
+SB,Solomon Islands,CRS_4EU001,European Union institutions,2015,15220,"Civilian peace-building, conflict prevention and resolution",156298.0,0.012
+SB,Solomon Islands,DE,Germany,2023,15250,Removal of land mines and explosive remnants of war,55758.0,0.0037
+SB,Solomon Islands,JP,Japan,2022,15250,Removal of land mines and explosive remnants of war,602718.0,0.0411
+SB,Solomon Islands,JP,Japan,2023,15250,Removal of land mines and explosive remnants of war,816788.0,0.0542
+SB,Solomon Islands,JP,Japan,2024,15210,Security system management and reform,4546.0,0.0003
+SB,Solomon Islands,NZ,New Zealand,2010,15210,Security system management and reform,5105989.0,0.5685
+SB,Solomon Islands,NZ,New Zealand,2011,15210,Security system management and reform,3491041.0,0.3281
+SB,Solomon Islands,NZ,New Zealand,2012,15210,Security system management and reform,3766367.0,0.3178
+SB,Solomon Islands,NZ,New Zealand,2013,15210,Security system management and reform,2970708.0,0.231
+SB,Solomon Islands,NZ,New Zealand,2013,15250,Removal of land mines and explosive remnants of war,112147.0,0.0087
+SB,Solomon Islands,NZ,New Zealand,2014,15210,Security system management and reform,2694018.0,0.2017
+SB,Solomon Islands,NZ,New Zealand,2015,15210,Security system management and reform,2831553.0,0.2165
+SB,Solomon Islands,NZ,New Zealand,2016,15210,Security system management and reform,2817744.0,0.2043
+SB,Solomon Islands,NZ,New Zealand,2017,15210,Security system management and reform,1963289.0,0.1336
+SB,Solomon Islands,US,United States,2012,15240,Reintegration and SALW control,353087.0,0.0298
+SB,Solomon Islands,US,United States,2013,15240,Reintegration and SALW control,565793.0,0.044
+SB,Solomon Islands,US,United States,2016,15240,Reintegration and SALW control,341656.0,0.0248
+SB,Solomon Islands,US,United States,2017,15240,Reintegration and SALW control,335645.0,0.0228
+SB,Solomon Islands,US,United States,2018,15240,Reintegration and SALW control,858786.0,0.0532
+SB,Solomon Islands,US,United States,2021,15250,Removal of land mines and explosive remnants of war,561027.0,0.036
+SB,Solomon Islands,US,United States,2023,15250,Removal of land mines and explosive remnants of war,1024824.0,0.068
+SB,Solomon Islands,US,United States,2024,15250,Removal of land mines and explosive remnants of war,1066607.0,0.0673
+TO,Tonga,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",208422.0,0.0461
+TO,Tonga,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.0017
+TO,Tonga,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",69799.0,0.016
+TO,Tonga,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",103759.0,0.0247
+TO,Tonga,AU,Australia,2017,15210,Security system management and reform,162466.0,0.0353
+TO,Tonga,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",200416.0,0.0436
+TO,Tonga,AU,Australia,2018,15210,Security system management and reform,148553.0,0.0301
+TO,Tonga,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",65289.0,0.0132
+TO,Tonga,AU,Australia,2018,15240,Reintegration and SALW control,2671.0,0.0005
+TO,Tonga,AU,Australia,2019,15210,Security system management and reform,7923.0,0.0016
+TO,Tonga,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",126462.0,0.025
+TO,Tonga,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",125087.0,0.0247
+TO,Tonga,AU,Australia,2021,15220,"Civilian peace-building, conflict prevention and resolution",117.0,0.0
+TO,Tonga,AU,Australia,2022,15210,Security system management and reform,28106.0,0.0051
+TO,Tonga,AU,Australia,2023,15210,Security system management and reform,125265.0,0.0212
+TO,Tonga,AU,Australia,2023,15220,"Civilian peace-building, conflict prevention and resolution",31.0,0.0
+TO,Tonga,AU,Australia,2024,15210,Security system management and reform,262283.0,0.0444
+TO,Tonga,GB,United Kingdom,2010,15230,Participation in international peacekeeping operations,59551.0,0.0162
+TO,Tonga,NZ,New Zealand,2010,15210,Security system management and reform,1244371.0,0.3392
+TO,Tonga,NZ,New Zealand,2011,15210,Security system management and reform,1904699.0,0.4599
+TO,Tonga,NZ,New Zealand,2012,15210,Security system management and reform,1477107.0,0.3135
+TO,Tonga,NZ,New Zealand,2014,15210,Security system management and reform,2199904.0,0.4988
+TO,Tonga,NZ,New Zealand,2015,15210,Security system management and reform,2214780.0,0.5062
+TV,Tuvalu,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",49879.0,0.1292
+TV,Tuvalu,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.0202
+TV,Tuvalu,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",16704.0,0.0454
+TV,Tuvalu,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",24835.0,0.0597
+TV,Tuvalu,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",47963.0,0.1059
+TV,Tuvalu,AU,Australia,2018,15210,Security system management and reform,22599.0,0.0471
+TV,Tuvalu,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",15625.0,0.0325
+TV,Tuvalu,AU,Australia,2018,15240,Reintegration and SALW control,2671.0,0.0056
+TV,Tuvalu,AU,Australia,2019,15210,Security system management and reform,11117.0,0.0205
+TV,Tuvalu,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",30265.0,0.0559
+TV,Tuvalu,AU,Australia,2020,15210,Security system management and reform,704.0,0.0014
+TV,Tuvalu,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",29935.0,0.0578
+TV,Tuvalu,AU,Australia,2022,15210,Security system management and reform,28114.0,0.0476
+TV,Tuvalu,AU,Australia,2024,15210,Security system management and reform,4657.0,0.0075
+VU,Vanuatu,AU,Australia,2010,15230,Participation in international peacekeeping operations,694.0,0.0001
+VU,Vanuatu,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",344861.0,0.0455
+VU,Vanuatu,AU,Australia,2013,15250,Removal of land mines and explosive remnants of war,7801.0,0.001
+VU,Vanuatu,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",75844.0,0.01
+VU,Vanuatu,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",112742.0,0.014
+VU,Vanuatu,AU,Australia,2017,15210,Security system management and reform,57633.0,0.0065
+VU,Vanuatu,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",217775.0,0.0247
+VU,Vanuatu,AU,Australia,2018,15210,Security system management and reform,104683.0,0.0114
+VU,Vanuatu,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",70944.0,0.0078
+VU,Vanuatu,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0011
+VU,Vanuatu,AU,Australia,2019,15210,Security system management and reform,136283.0,0.0146
+VU,Vanuatu,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",137416.0,0.0147
+VU,Vanuatu,AU,Australia,2020,15210,Security system management and reform,5436.0,0.0006
+VU,Vanuatu,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",135921.0,0.0149
+VU,Vanuatu,AU,Australia,2021,15220,"Civilian peace-building, conflict prevention and resolution",41312.0,0.0043
+VU,Vanuatu,AU,Australia,2022,15210,Security system management and reform,28168.0,0.0027
+VU,Vanuatu,AU,Australia,2023,15210,Security system management and reform,115104.0,0.0103
+VU,Vanuatu,AU,Australia,2023,15220,"Civilian peace-building, conflict prevention and resolution",32.0,0.0
+VU,Vanuatu,AU,Australia,2024,15210,Security system management and reform,80114.0,0.0072
+VU,Vanuatu,CRS_1UN0,United Nations,2024,15220,"Civilian peace-building, conflict prevention and resolution",151792.0,0.0136
+VU,Vanuatu,CRS_1UN014,UNICEF,2024,15220,"Civilian peace-building, conflict prevention and resolution",151792.0,0.0136
+VU,Vanuatu,GB,United Kingdom,2011,15220,"Civilian peace-building, conflict prevention and resolution",17140.0,0.0022
+VU,Vanuatu,GB,United Kingdom,2012,15220,"Civilian peace-building, conflict prevention and resolution",10791.0,0.0014
+WS,Samoa,AU,Australia,2013,15220,"Civilian peace-building, conflict prevention and resolution",237253.0,0.0297
+WS,Samoa,AU,Australia,2015,15220,"Civilian peace-building, conflict prevention and resolution",79454.0,0.0096
+WS,Samoa,AU,Australia,2016,15220,"Civilian peace-building, conflict prevention and resolution",118112.0,0.014
+WS,Samoa,AU,Australia,2017,15210,Security system management and reform,5658.0,0.0006
+WS,Samoa,AU,Australia,2017,15220,"Civilian peace-building, conflict prevention and resolution",228140.0,0.0258
+WS,Samoa,AU,Australia,2018,15210,Security system management and reform,224951.0,0.0256
+WS,Samoa,AU,Australia,2018,15220,"Civilian peace-building, conflict prevention and resolution",74321.0,0.0085
+WS,Samoa,AU,Australia,2018,15240,Reintegration and SALW control,10287.0,0.0012
+WS,Samoa,AU,Australia,2019,15210,Security system management and reform,46507.0,0.0051
+WS,Samoa,AU,Australia,2019,15220,"Civilian peace-building, conflict prevention and resolution",143956.0,0.0158
+WS,Samoa,AU,Australia,2020,15220,"Civilian peace-building, conflict prevention and resolution",142390.0,0.0164
+WS,Samoa,AU,Australia,2021,15220,"Civilian peace-building, conflict prevention and resolution",117.0,0.0
+WS,Samoa,AU,Australia,2022,15210,Security system management and reform,28168.0,0.0032
+WS,Samoa,AU,Australia,2023,15210,Security system management and reform,115104.0,0.011
+WS,Samoa,AU,Australia,2023,15220,"Civilian peace-building, conflict prevention and resolution",25.0,0.0
+WS,Samoa,AU,Australia,2024,15210,Security system management and reform,218456.0,0.0186
+WS,Samoa,CRS_1UN0,United Nations,2016,15220,"Civilian peace-building, conflict prevention and resolution",234355.0,0.0278
+WS,Samoa,CRS_1UN0,United Nations,2017,15220,"Civilian peace-building, conflict prevention and resolution",38762.0,0.0044
+WS,Samoa,CRS_1UN0,United Nations,2018,15220,"Civilian peace-building, conflict prevention and resolution",2236.0,0.0003
+WS,Samoa,CRS_1UN0,United Nations,2024,15220,"Civilian peace-building, conflict prevention and resolution",3583.0,0.0003
+WS,Samoa,CRS_1UN014,UNICEF,2016,15220,"Civilian peace-building, conflict prevention and resolution",234355.0,0.0278
+WS,Samoa,CRS_1UN014,UNICEF,2017,15220,"Civilian peace-building, conflict prevention and resolution",38762.0,0.0044
+WS,Samoa,CRS_1UN014,UNICEF,2018,15220,"Civilian peace-building, conflict prevention and resolution",2236.0,0.0003
+WS,Samoa,CRS_1UN014,UNICEF,2024,15220,"Civilian peace-building, conflict prevention and resolution",3583.0,0.0003
+WS,Samoa,GB,United Kingdom,2017,15220,"Civilian peace-building, conflict prevention and resolution",11102.0,0.0013
