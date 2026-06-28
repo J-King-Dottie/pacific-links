@@ -1,14 +1,22 @@
 /* ---------------------------------------------------------------------------
-   Font tokens — change these two lines to restyle the whole app.
-   --font-display : headings, the wordmark, metric labels (editorial serif)
-   --font-body    : everything else — UI, tables, tooltips (clean sans)
+   Font system — the single source of truth. Change a value here and it flows
+   to the whole app; nothing should hardcode a font-family anywhere else.
+     --font-h1   : the main title / wordmark (display serif)
+     --font-h2   : subtitles and section headings (text serif)
+     --font-body : default for all body text, prose and UI chrome (text serif)
+     --font-data : tables and dense numeric data only (clean sans)
    --------------------------------------------------------------------------- */
 :root {
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-h1: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-h2: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-body: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-data: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Tables and dense numeric data render in the clean sans, never the body serif. */
+table { font-family: var(--font-data); }
 
 html, body, #root {
   height: 100%;
@@ -44,7 +52,7 @@ html, body, #root {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 16px;
+  padding: 1rem;
   background:
     linear-gradient(160deg, rgba(245, 239, 224, 0.88) 0%, rgba(237, 228, 206, 0.78) 58%, rgba(228, 215, 186, 0.72) 100%);
   color: #2c1f0a;
@@ -55,18 +63,18 @@ html, body, #root {
 .intro-content {
   position: relative;
   pointer-events: auto;
-  width: min(620px, calc(100vw - 32px));
-  height: calc(100vh - 32px);
+  width: min(38.75rem, calc(100vw - 2rem));
+  height: calc(100vh - 2rem);
   overflow-y: auto;
   margin: 0;
-  padding: 24px 24px 22px;
+  padding: 1.5rem 1.5rem 1.375rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 32px;
+  gap: 2.5rem;
   background: linear-gradient(160deg, #f5efe0 0%, #ede4ce 60%, #e8ddc4 100%);
   border: 1px solid #c4b090;
-  border-radius: 16px;
+  border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(80,60,20,0.18), inset 0 1px 0 rgba(255,255,255,0.6);
   overflow-x: hidden;
   animation: intro-rise 520ms ease both;
@@ -98,85 +106,79 @@ html, body, #root {
 .intro-hero {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.125rem;
 }
 
 .intro-block {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 1.125rem;
 }
 
-/* The "about / methodology" detail block is quieter and set apart with a rule. */
+/* The "about / methodology" detail block is quieter and set apart by the
+   centred divider heading (the rule now lives on .intro-divider, below). */
 .intro-about {
   display: flex;
   flex-direction: column;
-  gap: 11px;
-  margin-top: 16px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(180, 150, 100, 0.3);
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+
+/* Centred section divider: "Reading the data" sits on the line, with the
+   rule drawing out to both sides so it reads as a continuation. */
+.intro-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  text-align: center;
+}
+.intro-divider::before,
+.intro-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(180, 150, 100, 0.45);
 }
 
 .intro-creditbar {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  padding-top: 2px;
+  gap: 0.1875rem;
+  padding-top: 0.125rem;
 }
 
-.intro-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  width: fit-content;
-  padding: 3px 7px;
-  border: 1px solid rgba(180, 150, 100, 0.22);
-  border-radius: 999px;
-  background: rgba(255, 250, 240, 0.48);
-  font-size: clamp(0.46rem, 0.85vw, 0.56rem);
-  font-weight: 700;
-  color: #2a6b72;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 2px;
+.intro-creditbar-cta {
+  /* Pull the credits up tight under the CTA so they read as a caption of the
+     action group, not a line floating in the zone gap. */
+  margin-top: -1.75rem;
+  padding-top: 0;
+  gap: 0.25rem;
 }
 
-.intro-kicker-label {
-  color: #8a5c10;
-}
-
-.intro-kicker {
-  text-decoration: none;
-}
-
-.intro-kicker:hover {
-  color: #1f5a60;
-  border-color: rgba(180, 150, 100, 0.45);
-}
 
 .intro-star {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  width: clamp(40px, 5vw, 56px);
-  height: clamp(40px, 5vw, 56px);
+  top: 1.5rem;
+  right: 1.5rem;
+  width: clamp(2.5rem, 5vw, 3.5rem);
+  height: clamp(2.5rem, 5vw, 3.5rem);
   opacity: 0.95;
 }
 
 .intro-content h1 {
-  max-width: 520px;
-  font-family: var(--font-display);
+  max-width: 32.5rem;
+  font-family: var(--font-h1);
   font-size: clamp(1.7rem, 3.6vw, 2.8rem);
   line-height: 0.96;
   font-weight: 600;
   color: #2c1f0a;
   letter-spacing: -0.01em;
-  margin-bottom: 0;
+  margin-bottom: 0.625rem;
 }
 
 .intro-subtitle {
-  max-width: 460px;
-  font-family: var(--font-display);
+  max-width: 28.75rem;
+  font-family: var(--font-h2);
   font-size: clamp(1.15rem, 1.5vw, 1.4rem);
   line-height: 1.3;
   font-weight: 500;
@@ -187,8 +189,53 @@ html, body, #root {
 
 .intro-lead {
   margin-bottom: 0 !important;
-  margin-top: 2px;
+  margin-top: 0.125rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.94rem, 1.05vw, 1.05rem) !important;
+  line-height: 1.45 !important;
+  font-weight: 500;
+  color: #2c1f0a !important;
+  text-align: justify;
+  hyphens: auto;
 }
+
+/* KPI pills: keep each number and label together so the snapshot reads quickly. */
+.intro-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  font-variant-numeric: tabular-nums;
+}
+.intro-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  min-height: 2.25rem;
+  padding: 0.5rem 0.75rem 0.475rem;
+  border: 1px solid rgba(138, 92, 16, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.62);
+  box-shadow: 0 1px 3px rgba(80, 60, 20, 0.06);
+}
+.intro-stat dt {
+  font-family: var(--font-h1);
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #2c1f0a;
+}
+.intro-stat dd {
+  margin: 0;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #9a8060;
+}
+
 
 .intro-section-label {
   margin: 0;
@@ -202,14 +249,14 @@ html, body, #root {
 .intro-perspectives {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 0.875rem;
   margin-bottom: 0;
 }
 
 .intro-perspective {
-  padding: 12px 14px;
+  padding: 0.875rem 1rem;
   border: 1px solid rgba(180, 150, 100, 0.28);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background: rgba(255, 250, 240, 0.55);
   box-shadow: 0 2px 8px rgba(80,60,20,0.06);
 }
@@ -217,8 +264,8 @@ html, body, #root {
 .intro-perspective-title {
   display: flex;
   align-items: center;
-  gap: 7px;
-  margin-bottom: 5px;
+  gap: 0.4375rem;
+  margin-bottom: 0.3125rem;
   font-size: 0.8rem;
   font-weight: 700;
   color: #2c1f0a;
@@ -234,7 +281,7 @@ html, body, #root {
 }
 
 .intro-content p {
-  max-width: 600px;
+  max-width: 37.5rem;
   font-size: clamp(0.86rem, 0.96vw, 0.96rem);
   line-height: 1.52;
   color: #5a4030;
@@ -249,94 +296,67 @@ html, body, #root {
   margin-top: 0;
 }
 
-/* About block: smaller, softer than the hero lead so it reads as supporting detail. */
+/* About block, editorial: serif longform with generous leading and a narrow
+   measure so it reads like an article, not interface copy. */
 .intro-about .intro-methodology {
-  font-size: clamp(0.8rem, 0.9vw, 0.875rem);
-  line-height: 1.58;
-  color: #6f5634;
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1vw, 0.98rem);
+  line-height: 1.7;
+  color: #4a3826;
+  /* Justified: flush on both edges so the prose fills the full column width. */
+  text-align: justify;
+  hyphens: auto;
 }
 
-.intro-chart-title {
-  margin: 10px 0 -2px;
-  color: #5a3e1b;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-transform: uppercase;
-}
+
 
 .intro-about .coverage-matrix {
-  margin: 8px 0 6px;
+  margin: 0.5rem 0 0.375rem;
 }
 
-.intro-sources {
+/* Footer: just the credits — produced by, inspired by, refreshed. */
+.intro-fineprint {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   flex-wrap: wrap;
-  padding-top: 2px;
-}
-
-.intro-sources-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: #9a8060;
-  margin-right: 2px;
-}
-
-.intro-source-chip {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: #5a4030;
-  padding: 2px 8px;
-  border: 1px solid rgba(180,150,100,0.35);
-  border-radius: 999px;
-  background: rgba(255,250,240,0.6);
-}
-
-.intro-inspiration {
-  font-size: 0.72rem !important;
-  color: #c4a87a !important;
-  margin: 0 !important;
+  gap: 0.4375rem;
+  margin: 0.125rem 0 0 !important;
+  font-size: 0.68rem !important;
+  color: #c0a576 !important;
   letter-spacing: 0.01em;
 }
-.intro-inspiration a {
+.intro-fineprint a {
   color: #a08050;
   text-decoration: none;
+  border-bottom: 1px solid rgba(160, 128, 80, 0.4);
 }
-.intro-inspiration a:hover {
+.intro-fineprint a:hover {
   color: #7a5c30;
+  border-bottom-color: #7a5c30;
 }
-.intro-credits {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.intro-fineprint-dot {
+  color: #cbb389;
 }
-.intro-refreshed {
-  color: #c4a87a;
-}
-.intro-inspiration a:hover { color: #5a3e1b; }
 
 .intro-actions {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 0;
+  justify-content: center;
+  gap: 0.875rem;
+  margin-top: 0.25rem;
 }
 
 .intro-download-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
   font-size: 0.72rem;
   font-weight: 600;
   color: #7a6040;
   text-decoration: none;
-  padding: 4px 10px;
+  padding: 0.25rem 0.625rem;
   border: 1px solid rgba(180, 150, 100, 0.35);
   border-radius: 999px;
   background: rgba(255, 250, 240, 0.5);
@@ -351,8 +371,8 @@ html, body, #root {
 }
 
 .loading-bar {
-  width: 220px;
-  height: 4px;
+  width: 13.75rem;
+  height: 0.25rem;
   overflow: hidden;
   border-radius: 999px;
   background: rgba(196, 176, 144, 0.55);
@@ -371,14 +391,14 @@ html, body, #root {
 .intro-button {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 0.4375rem;
   width: auto;
-  align-self: flex-start;
+  align-self: center;
   min-width: 0;
-  height: 44px;
-  padding: 0 24px;
+  height: 2.75rem;
+  padding: 0 1.5rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background: linear-gradient(135deg, #2a6b72, #1f5a60);
   color: #fffaf0;
   font-size: 0.9rem;
@@ -414,42 +434,48 @@ html, body, #root {
 
 @media (max-width: 720px) {
   .intro-screen {
-    padding: 12px;
+    padding: 0.75rem;
   }
 
   .intro-content {
-    width: min(620px, calc(100vw - 24px));
-    height: calc(100vh - 24px);
-    padding: 18px 18px 16px;
-    gap: 26px;
-    border-radius: 12px;
+    width: min(38.75rem, calc(100vw - 1.5rem));
+    height: calc(100vh - 1.5rem);
+    padding: 1.125rem 1.125rem 1rem;
+    gap: 1.75rem;
+    border-radius: 0.75rem;
+  }
+
+  .intro-hero {
+    gap: 0.75rem;
   }
 
   .intro-about {
-    margin-top: 12px;
-    padding-top: 26px;
+    margin-top: 0.5rem;
   }
 }
 
 @media (max-height: 900px) {
   .intro-screen {
-    padding: 16px;
+    padding: 1rem;
   }
 
   .intro-content {
-    width: min(620px, calc(100vw - 32px));
-    height: calc(100vh - 32px);
-    padding: 18px 22px 16px;
-    gap: 22px;
+    width: min(38.75rem, calc(100vw - 2rem));
+    height: calc(100vh - 2rem);
+    padding: 1.125rem 1.375rem 1rem;
+    gap: 1.75rem;
+  }
+
+  .intro-hero {
+    gap: 0.75rem;
   }
 
   .intro-about {
-    margin-top: 10px;
-    padding-top: 24px;
+    margin-top: 0.75rem;
   }
 
   .intro-section-footer {
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   .intro-content h1 {
@@ -462,48 +488,40 @@ html, body, #root {
   }
 
   .intro-perspectives {
-    gap: 10px;
+    gap: 0.75rem;
   }
 
   .intro-perspective {
-    padding: 11px 12px 10px;
+    padding: 0.75rem 0.875rem;
   }
 
   .intro-cta-row {
     margin-top: 0;
   }
-
-  .intro-kicker {
-    font-size: clamp(0.42rem, 0.72vw, 0.5rem);
-    margin-bottom: 2px;
-  }
 }
 
 @media (max-height: 780px) {
   .intro-screen {
-    padding: 16px;
+    padding: 1rem;
   }
 
   .intro-content {
-    width: min(580px, calc(100vw - 32px));
-    height: calc(100vh - 32px);
-    padding: 18px 20px 16px;
-    gap: 22px;
-    border-radius: 16px;
+    width: min(36.25rem, calc(100vw - 2rem));
+    height: calc(100vh - 2rem);
+    padding: 1.125rem 1.25rem 1rem;
+    gap: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .intro-hero {
+    gap: 0.75rem;
   }
 
   .intro-about {
-    gap: 10px;
-    margin-top: 8px;
-    padding-top: 22px;
+    gap: 0.875rem;
+    margin-top: 0.75rem;
   }
 
-  .intro-kicker {
-    font-size: clamp(0.46rem, 0.8vw, 0.54rem);
-    gap: 6px;
-    padding: 4px 7px;
-    margin-bottom: 0;
-  }
 
   .intro-content h1 {
     font-size: clamp(1.45rem, 3.3vw, 2.45rem);
@@ -523,27 +541,27 @@ html, body, #root {
   .intro-section-label { font-size: 0.74rem; }
 
   .intro-perspectives {
-    gap: 8px;
+    gap: 0.625rem;
   }
 
   .intro-perspective {
-    padding: 9px 10px 8px;
+    padding: 0.625rem 0.75rem;
   }
 
   .intro-perspective-title {
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
     font-size: 0.78rem;
   }
 
-  .loading-bar { height: 3px; }
+  .loading-bar { height: 0.1875rem; }
 
   .intro-button {
-    height: 36px;
+    height: 2.25rem;
     font-size: 0.8rem;
   }
 
   .intro-cta-row {
-    gap: 10px;
+    gap: 0.625rem;
     margin-top: 0;
   }
 }
@@ -554,39 +572,33 @@ html, body, #root {
    without clipping or scrolling. clamp(min, preferred-in-dvh, max). */
 @media (max-width: 640px) {
   .intro-screen {
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   .intro-content {
-    width: calc(100vw - 16px);
-    height: calc(100dvh - 16px);
+    width: calc(100vw - 1rem);
+    height: calc(100dvh - 1rem);
     overflow-y: auto;
-    gap: clamp(12px, 2dvh, 18px);
-    padding: clamp(12px, 2dvh, 16px) 14px;
+    gap: clamp(0.75rem, 2dvh, 1.125rem);
+    padding: clamp(0.75rem, 2dvh, 1rem) 0.875rem;
   }
 
   .intro-about {
-    gap: clamp(7px, 1.2dvh, 10px);
-    margin-top: clamp(6px, 1.2dvh, 10px);
-    padding-top: clamp(16px, 2.6dvh, 22px);
+    gap: clamp(0.4375rem, 1.2dvh, 0.625rem);
+    margin-top: clamp(0.875rem, 2dvh, 1.125rem);
   }
 
   .intro-about .coverage-matrix {
-    margin: clamp(4px, 1dvh, 8px) 0;
+    margin: clamp(0.25rem, 1dvh, 0.5rem) 0;
   }
 
   .intro-star {
-    top: 12px;
-    right: 12px;
-    width: clamp(28px, 4.5dvh, 36px);
-    height: clamp(28px, 4.5dvh, 36px);
+    top: 0.75rem;
+    right: 0.75rem;
+    width: clamp(1.75rem, 4.5dvh, 2.25rem);
+    height: clamp(1.75rem, 4.5dvh, 2.25rem);
   }
 
-  .intro-kicker {
-    font-size: clamp(0.44rem, 1.3dvh, 0.52rem);
-    padding: 3px 7px;
-    margin-bottom: 0;
-  }
 
   .intro-content h1 {
     font-size: clamp(1.35rem, 4.6dvh, 1.9rem);
@@ -599,9 +611,26 @@ html, body, #root {
   }
 
   .intro-lead {
-    font-size: clamp(0.72rem, 2.1dvh, 0.86rem);
-    line-height: 1.3;
+    font-size: clamp(0.9rem, 2.4dvh, 1.05rem) !important;
+    line-height: 1.32 !important;
     margin-bottom: 0.5em !important;
+  }
+
+  .intro-stats {
+    gap: 0.5rem;
+  }
+
+  .intro-stat {
+    min-height: 2rem;
+    padding: 0.4rem 0.625rem 0.375rem;
+  }
+
+  .intro-stat dt {
+    font-size: 1.02rem;
+  }
+
+  .intro-stat dd {
+    font-size: 0.56rem;
   }
 
   .intro-section-label {
@@ -609,20 +638,20 @@ html, body, #root {
   }
 
   .intro-section-perspectives {
-    gap: clamp(6px, 1.4dvh, 12px);
+    gap: clamp(0.375rem, 1.4dvh, 0.75rem);
   }
 
   .intro-perspectives {
-    gap: clamp(6px, 1.3dvh, 10px);
+    gap: clamp(0.5rem, 1.3dvh, 0.75rem);
   }
 
   .intro-perspective {
-    padding: clamp(7px, 1.4dvh, 11px) 10px;
+    padding: clamp(0.5rem, 1.4dvh, 0.75rem) 0.75rem;
   }
 
   .intro-perspective-title {
     font-size: clamp(0.72rem, 2dvh, 0.82rem);
-    margin-bottom: 3px;
+    margin-bottom: 0.1875rem;
   }
 
   .intro-perspective p {
@@ -636,7 +665,7 @@ html, body, #root {
   }
 
   .intro-button {
-    height: clamp(32px, 5dvh, 40px);
+    height: clamp(2rem, 5dvh, 2.5rem);
     font-size: clamp(0.76rem, 2.1dvh, 0.85rem);
   }
 
@@ -649,6 +678,11 @@ html, body, #root {
   }
 
   .intro-cta-row {
+    margin-top: 0;
+  }
+
+  /* On phone the zone gap is already small, so don't pull credits up. */
+  .intro-creditbar-cta {
     margin-top: 0;
   }
 }

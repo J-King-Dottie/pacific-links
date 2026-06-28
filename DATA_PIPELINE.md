@@ -149,6 +149,8 @@ Aid dashboard rule: spent/disbursed aid is the default view; committed aid is a 
 - Values are year-end stocks (positions), not annual flows
 - Negative positions are valid (net liabilities-less-assets definition)
 - Most Pacific data is mirror/counterparty-derived, not officially reported
+- The IMF DIP extract used here does not include company, project, sector, asset, mine, bank, land, or infrastructure detail.
+- Counterparty-derived mirror rows can produce odd-looking repeated values across multiple Pacific recipients. For example, the raw IMF Canada series for Marshall Islands, Solomon Islands, and Vanuatu has identical 2022-2024 values in this pull. Treat these as broad statistical signals, not project-level evidence.
 - `investor_code` in raw output is ISO3 — normalised to ISO2 in the final harmonization step
 
 **To refresh:** Re-download the full DIP dataset from IMF and replace `data/raw/imf_dip.csv`. The IMF does not have a public REST API for this dataset — it requires a manual bulk export.
@@ -184,6 +186,7 @@ Negative positions are retained in the CSV/Excel download. The dashboard loader 
 - It is different from FDI: FDI is a business stake; portfolio investment usually does not mean owning or running the business.
 - Values are year-end amounts, not annual flows.
 - The data can be shaped by financial centres and legal structures, especially for small island economies.
+- The IMF PIP extract used here does not identify the issuer, company, security, sector, or project behind the holding.
 
 **Dashboard normalization adds:**
 - `counterpart_code` — holder ISO3 mapped to ISO2 where possible.
@@ -347,12 +350,13 @@ python3 scripts/build_remittance_timeseries.py
 
 **Key notes:**
 - SIPRI covers major conventional arms transfers. It usually does not capture assault rifles, ammunition, routine policing equipment, training, or day-to-day security cooperation.
-- Values are shown as arms transfer volume. The underlying SIPRI measure is trend-indicator value, which is a comparable measure of transfer size, not US dollars.
+- Dashboard arms rows show delivered unit counts first. SIPRI TIV is shown as the secondary measure.
+- TIV means trend-indicator value: SIPRI's points-style estimate of the military weight of the equipment, based on the type and capability of the weapon and adjusted for things like second-hand status. It is not dollars, not a sale price, and not an aid value.
 - Sparse rows are expected and meaningful: no row means SIPRI did not identify a delivered major conventional arms transfer for that country pair and year.
 
 **Dashboard normalization adds:**
 - Harmonized Pacific/counterpart columns.
-- `value_tiv` as arms transfer volume.
+- `deliveries` as delivered unit count and `value_tiv` as SIPRI trend-indicator value.
 - Final clipping to 2010-2024.
 
 ---

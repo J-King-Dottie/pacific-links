@@ -140,6 +140,7 @@
   font-weight: 600;
   color: #7a6040;
   white-space: nowrap;
+  font-family: var(--font-data);
   font-variant-numeric: tabular-nums;
 }
 

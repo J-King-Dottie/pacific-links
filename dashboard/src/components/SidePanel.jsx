@@ -46,13 +46,19 @@ const DENOMINATOR_SOURCES = {
   ],
 }
 
+// Trade and exports are the same dataset read in two directions, so they share
+// one explainer and one processing note covering both imports and exports.
+const TRADE_WHY = 'Trade is one of the most concrete economic ties a country has, so seeing which partners Pacific economies buy goods from and sell goods to shows where their everyday economic relationships actually run. Several sources report it. Pacific Data Hub IMTS shows reported Pacific trade, and UN Comtrade is the global source behind most reported goods trade. But importer and exporter reports often disagree on partner, value, freight, classification, re-exports, and timing. We use CEPII BACI because it starts from Comtrade and reconciles those reports into one country-to-country figure, which is what lets us compare relationships across many countries. These are recorded goods trade, not a measure of domestic consumption or production. The Marshall Islands is the clearest case to watch, where its ship registry and fuel activity can make recorded trade look enormous, even though much of it is tied to vessels and registration rather than goods used or produced on the islands.'
+
+const TRADE_CHANGED = 'From the BACI data we keep the country-to-country figures and group them by Pacific country, partner country, year, and broad product group. Services are not included. The values are reconciled goods trade in current US dollars.'
+
 const METRIC_INFO = {
   aid: {
     source: 'Lowy Institute Pacific Aid Map via Pacific Data Hub',
     sourceUrl: 'https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows aid money that donors actually spent in Pacific countries, in current US dollars. The most recent year is partial and rises as donors finish reporting.',
-    why: 'Lowy is the most complete public source for Pacific aid and development finance. We use it because this dashboard is trying to show who is funding Pacific countries. Lowy brings donor-by-donor aid data into one consistent public dataset, which makes it the best fit for comparing aid relationships across the region. For very small economies, a large project or commitment can look very large as a share of GDP.',
-    changed: 'The Aid table can be toggled between money spent and money promised. These are separate views and should not be added together. Aggregate donor categories are removed, so the table shows direct donor relationships only. The dollar figures are Lowy\'s.',
+    why: 'Aid is one of the biggest ways outside countries build a presence in the Pacific, so how much a partner funds a country, and how steadily, is a direct read on how invested they are in it. We use the Lowy Pacific Aid Map because it is the most complete public source for Pacific aid and development finance, bringing donor-by-donor data into one consistent dataset. Broader databases like the OECD reporting system cover aid globally, but Lowy is built for the Pacific and includes donors those datasets can miss, such as China. For a very small economy, a single large project can look huge as a share of GDP, so read big numbers in context.',
+    changed: 'From the Lowy data we keep direct donor-to-country aid and remove aggregate donor categories, so the table shows individual donor relationships only. The dollar figures are Lowy\'s. This metric can be toggled between money spent and money promised. These are separate views and should not be added together.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -60,8 +66,8 @@ const METRIC_INFO = {
     source: 'Lowy Institute Pacific Aid Map via Pacific Data Hub',
     sourceUrl: 'https://pacificdata.org/data/dataset/pacific-aid-and-development-finance-data-from-the-lowy-institute-df-pam',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows aid money that donors promised to Pacific countries, in current US dollars. Promised aid can be announced before money is actually spent.',
-    why: 'Lowy is the most complete public source for Pacific aid and development finance. We use it because this dashboard is trying to show both actual spending and aid that has been promised but not necessarily spent yet. Lowy brings donor-by-donor aid data into one consistent public dataset, which makes it the best fit for comparing aid relationships across the region. For very small economies, a large project or commitment can look very large as a share of GDP.',
-    changed: 'The Aid table can be toggled between money spent and money promised. These are separate views and should not be added together. Aggregate donor categories are removed, so the table shows direct donor relationships only. The dollar figures are Lowy\'s.',
+    why: 'Promised aid is money a partner has committed but not necessarily spent, so it shows where outside countries are signalling future intent in the Pacific before the money actually moves. We use the Lowy Pacific Aid Map because it is the most complete public source for Pacific aid and development finance, bringing donor-by-donor data into one consistent dataset. Broader databases like the OECD reporting system cover aid globally, but Lowy is built for the Pacific and includes donors those datasets can miss, such as China. A commitment can be announced well before anything is delivered, and for a small economy a single pledge can look huge as a share of GDP.',
+    changed: 'From the Lowy data we keep direct donor-to-country aid and remove aggregate donor categories, so the table shows individual donor relationships only. The dollar figures are Lowy\'s. This metric can be toggled between money spent and money promised. These are separate views and should not be added together.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -69,8 +75,8 @@ const METRIC_INFO = {
     source: 'CEPII BACI reconciled bilateral trade data',
     sourceUrl: 'https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows goods that Pacific countries buy from other countries each year, in current US dollars. Services are not included.',
-    why: 'Pacific Data Hub IMTS is useful for seeing reported Pacific trade, and UN Comtrade is the global source behind much of the world\'s reported goods trade data. But reported imports and reported exports often do not line up: countries can disagree on partner, destination, value, freight, product classification, re-exports, transshipment, and timing. This app is trying to show comparable relationships across many Pacific countries and partners, so we use BACI because it starts from Comtrade and turns importer and exporter reports into one country-to-country number. The trade figures can still look strange for small island economies. Marshall Islands is the clearest example: its ship registry and fuel-related activity can make recorded imports look enormous, even though much of that activity is tied to vessels, bunkering, transshipment, or registration rather than ordinary household and business consumption on the islands. Read these as recorded goods trade, not a perfect measure of domestic economic exposure.',
-    changed: 'We group the data by Pacific country, seller country, year, and broad product group.',
+    why: TRADE_WHY,
+    changed: TRADE_CHANGED,
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -78,8 +84,8 @@ const METRIC_INFO = {
     source: 'CEPII BACI reconciled bilateral trade data',
     sourceUrl: 'https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows goods that Pacific countries sell to other countries each year, in current US dollars. Services are not included.',
-    why: 'Pacific Data Hub IMTS is useful for seeing reported Pacific trade, and UN Comtrade is the global source behind much of the world\'s reported goods trade data. But reported imports and reported exports often do not line up: countries can disagree on partner, destination, value, freight, product classification, re-exports, and timing. This app is trying to show comparable relationships across many Pacific countries and partners, so we use BACI because it starts from Comtrade and turns importer and exporter reports into one country-to-country number. The trade figures can still look strange for small island economies. Marshall Islands is the clearest example: its ship registry and fuel-related activity can make recorded trade look enormous, even though much of that activity is tied to vessels, bunkering, or registration rather than goods produced or consumed on the islands. Read these as recorded goods trade, not a perfect measure of domestic production.',
-    changed: 'We group the data by Pacific country, buyer country, year, and broad product group.',
+    why: TRADE_WHY,
+    changed: TRADE_CHANGED,
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -93,8 +99,8 @@ const METRIC_INFO = {
       { text: '2010 matrix archive', url: 'https://web.archive.org/web/20160531235700id_/http://pubdocs.worldbank.org:80/pubdocs/publicdoc/2015/9/895701443117529385/Bilateral-Remittance-Matrix-2010.xlsx' },
     ],
     coverage: 'The dashboard covers 14 Pacific island countries. This view shows money sent home to Pacific countries from people overseas, in current US dollars, for benchmark years only: 2010, 2017, 2018 and 2021.',
-    why: 'We could not find any public country-to-country remittance data other than World Bank/KNOMAD. Most remittance data shows only how much money each country receives or sends in total; this dataset estimates the country-to-country links behind those totals, which is the relationship this dashboard needs. The latest country-to-country dataset we found is from 2021. Current public pages mainly show aggregate remittance data, so we link to the archived KNOMAD page that listed the matrix downloads.',
-    changed: 'We remove non-country aggregate rows where present. The source provides benchmark years only, and we leave it that way: we do not fill in missing years or re-estimate missing transfers. The estimates shown are the published modelled values.',
+    why: 'Remittances are money sent home by people living overseas, so they trace the living link between a Pacific country and its diaspora, one of the most personal relationships on the map. Most remittance data shows only national totals. The World Bank and KNOMAD matrices are the only public source we could find that estimates the country-to-country links behind those totals, which is the relationship this map needs. These are modelled estimates for benchmark years only, not a complete yearly record. Current public pages mostly show totals, so we link to the archived KNOMAD page that held the matrix downloads.',
+    changed: 'From the matrices we keep the country-to-country rows and remove non-country aggregates. The source provides benchmark years only, and we leave it that way. We do not fill in missing years or re-estimate transfers. The values are the published modelled estimates in current US dollars.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -102,17 +108,17 @@ const METRIC_INFO = {
     source: 'IMF Direct Investment Positions by Counterpart Economy',
     sourceUrl: 'https://data.imf.org/en/datasets/IMF.STA:DIP',
     coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows direct business investment from overseas into Pacific countries that is still recorded at the end of each year, in current US dollars.',
-    why: 'FDI is when someone in one country owns enough of a business in another country that it counts as a real business stake, not just a small passive investment. We show the year-end amount rather than new money during the year because this app is about relationships: the year-end amount shows what has built up and is still there. It tends to capture larger, more formal, or better-reported investments, but it can miss many real businesses on the ground. Missing data does not mean there are no businesses from that country. It means this source does not report a value for that country pair and year. Some figures can also be warped by legal and financial structures. Marshall Islands is the clearest example: its ship registry and corporate structures can create very large recorded investment values that are much bigger than the domestic economy, without meaning ordinary business activity on the islands is that large.',
-    changed: 'We keep country-to-country records of overseas direct business investment into the 14 Pacific countries, convert country codes to the app country codes, remove zero-value rows, calculate values as a share of GDP, and clip the data to 2010-2024. Negative values are retained in the CSV/Excel download, but the dashboard map and table rank positive values only.',
+    why: 'FDI is foreign ownership of real businesses, so it shows which outside countries actually own a piece of a Pacific economy. That kind of ownership is one of the most durable footprints a partner can have, because it means a lasting presence on the ground rather than a one-off payment. We use the IMF Direct Investment Positions, the standard public source for cross-border investment between counterpart economies, and show the year-end amount because the map is about what has built up and is still there. National figures exist but are not reported consistently country-to-country, which is why we rely on the IMF series. It tends to capture larger or better-reported investments and can miss smaller businesses, so a missing value means the source does not report that pair, not that no link exists. The Marshall Islands is the clearest case to watch, where its ship registry and corporate structures can create very large recorded values, far bigger than the domestic economy, without much real activity on the islands.',
+    changed: 'From the IMF data we keep investment into the 14 Pacific countries, convert country codes to the app codes, remove zero-value rows, calculate each value as a share of GDP, and keep only the years 2010 to 2024. The file does not say what the investment was for, so there is no company, project, or sector detail. Where a country does not report its own positions, the IMF uses partner-reported mirror data, which can repeat odd-looking values across countries, so read these as broad signals. The map and table rank positive values only. Negative values remain in the download.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
   portfolio: {
     source: 'IMF Portfolio Investment Positions by Counterpart Economy',
     sourceUrl: 'https://data.imf.org/en/datasets/IMF.STA:PIP',
-    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024 where the IMF reports overseas money invested in Pacific shares and bonds. The source has positive rows for 13 of the 14 countries in this pull.',
-    why: 'Portfolio investment is different from FDI. FDI is a business stake. Portfolio investment is money placed in shares or bonds, usually without owning or running the business. This view shows which countries report money invested in Pacific shares and bonds. It does not show where Pacific residents invest overseas, because that direction is mostly missing from the source. Some small-island figures, especially Marshall Islands, can be warped by ship registry, corporate, and financial structures. Read these as reported holdings of Pacific-linked shares and bonds, not a simple measure of ordinary local investment markets.',
-    changed: 'We keep annual records where another country reports money invested in shares or bonds from one of the 14 Pacific countries, convert country codes to the app country codes where possible, remove zero-value rows, calculate values as a share of Pacific GDP, and clip the data to 2010-2024. These are year-end amounts, not money newly invested during the year.',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows overseas money invested in Pacific shares and bonds, in current US dollars. The IMF reports positive values for 13 of the 14 countries in this pull.',
+    why: 'Portfolio investment is money held in a country\'s shares and bonds without running the business behind them. It is a more arms-length tie than direct ownership, but it still shows where outside money is exposed to a Pacific economy and which partners hold a financial stake in it. We use the IMF Portfolio Investment Positions, the standard public source between counterpart economies, which reports who holds Pacific-linked shares and bonds. As with FDI, national data is not reported consistently country-to-country, so the IMF series is the workable option, and it does not show where Pacific residents invest overseas because that direction is mostly missing. These are reported holdings rather than a measure of local investment markets, and Marshall Islands figures in particular can be distorted by its ship registry and corporate structures.',
+    changed: 'From the IMF data we keep records where another country reports holdings of shares or bonds from the 14 Pacific countries, convert country codes to the app codes, remove zero-value rows, calculate each value as a share of GDP, and keep only the years 2010 to 2024. The file does not identify the issuer, security, or sector behind a holding. These are year-end holdings, not money newly invested during the year.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -120,44 +126,44 @@ const METRIC_INFO = {
     source: 'UN International Migrant Stock 2024',
     sourceUrl: 'https://www.un.org/development/desa/pd/content/international-migrant-stock',
     coverage: 'The dashboard covers 14 Pacific island countries. This view shows people born in a Pacific country who live overseas, counted as people, not yearly moves, for benchmark years only: 2010, 2015, 2020 and 2024.',
-    why: 'The UN data is the standard public source for where people born in one country are living. We use people living overseas, not annual moves, because this dashboard is about long-running external connections: where Pacific communities have built up overseas over time, and where family, labour, education, and remittance links are likely to be strongest. In some small islands, more people can live overseas than currently live in the country, so percentages can be over 100%.',
-    changed: 'We remove regional and aggregate destination rows so the table shows country-to-country destinations only. Missing country-pair rows mean the UN matrix does not report a value, not that the true relationship is definitely zero. For example, the UN matrix is blank for Vanuatu-born people in New Zealand even though New Zealand census data records that community.',
+    why: 'Migration shows people born in a Pacific country who now live overseas, the human footprint of the region\'s connections and the root of family, labour, education, and remittance ties. We use the UN International Migrant Stock, the standard public source for where people born in one country are living, and count people living overseas rather than annual moves because the map is about long-running ties. National censuses record some of this, but only the UN matrix puts it into one consistent country-to-country form. In some small islands more people live overseas than at home, so shares can be over 100%, and a missing pair means the UN matrix has no value, not that the link does not exist.',
+    changed: 'From the UN data we keep the country-to-country rows and remove regional and aggregate destinations. The source provides benchmark years only, and we leave it that way. The figures are counts of people, not yearly moves. A blank can hide a real community. The UN matrix shows no Vanuatu-born people in New Zealand, even though New Zealand\'s census does.',
     denominator: 'Population uses [World Bank] where available; [UN SNAAMA] / implied resident population for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.population,
   },
   students: {
     source: 'UNESCO UIS Other Policy Relevant Indicators',
     sourceUrl: 'https://databrowser.uis.unesco.org/resources/bulk',
-    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024 where overseas higher-education student records are available. This view shows Pacific students recorded as studying in another country. They are not annual departures.',
-    why: 'Students shows where Pacific Islanders are recorded as studying overseas at university, college, or similar level. It points to education links between Pacific countries and the rest of the world, including relationships shaped by scholarships, family networks, migration pathways, and long-term professional connections. The figures can look lower than expected because this is not a count of every Pacific person studying overseas: it excludes school-level study and depends on what host-country education systems report to UIS by origin country.',
-    changed: 'We keep country-to-country overseas higher-education student rows for the 14 Pacific countries, remove self-country and aggregate rows, convert destination country codes to the app country codes, calculate values as a share of origin population, and clip the data to 2010-2024. The figures are recorded student counts, not dollar values, not scholarship counts, and not annual flows.',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows Pacific students recorded as studying overseas at university or college level, counted as students. They are not annual departures.',
+    why: 'Students shows Pacific Islanders studying overseas, which traces education ties shaped by scholarships, family networks, migration pathways, and the professional links that follow people through their careers. We use the UNESCO UIS data, the standard public source for tertiary students by country of origin. Individual host countries publish their own numbers, but UIS is the only place they are gathered into one comparable cross-country set. The counts can look low because they exclude school-level study and depend on what host-country systems report by origin country, so a missing value is often under-reporting rather than no students.',
+    changed: 'From the UIS data we keep the country-to-country higher-education student rows for the 14 Pacific countries, remove self-country and aggregate rows, convert destination codes to the app codes, calculate each value as a share of origin population, and keep only the years 2010 to 2024. The figures are recorded student counts, not dollars, scholarships, or annual departures.',
     denominator: 'Population uses [World Bank] where available; [UN SNAAMA] / implied resident population for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.population,
   },
   security: {
     source: 'OECD CRS security-related assistance records',
     sourceUrl: 'https://sdmx.oecd.org/dcd-public/rest/dataflow/OECD.DCD.FSD/DSD_CRS@DF_CRS/1.6',
-    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024 where OECD CRS reports security-related assistance spent in Pacific countries.',
-    why: 'Security assistance shows who funds security-related activities in Pacific countries. It captures support for things like security system management, civilian peacebuilding, reintegration, mine action and related purposes. It is broader than arms transfers, but it is not all defence cooperation and is narrower than all governance or justice work.',
-    changed: 'We keep only OECD rows tagged as security-related, remove aggregate donor groups, convert country donor codes to app country codes where possible, retain named UN/EU providers, calculate values as a share of recipient GDP, and clip the data to 2010-2024. These are reported amounts spent in current US dollars. They should not be added to SIPRI arms transfer values.',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows security-related assistance spent in Pacific countries, in current US dollars, as reported to the OECD.',
+    why: 'Security assistance shows who funds security-related work in Pacific countries, from security system management to civilian peacebuilding, reintegration, and mine action, which is one way outside partners build influence beyond money and trade. We use the OECD Creditor Reporting System, the standard public record of what donors report spending and the only consistent source that tags aid as security-related. This is broader than arms transfers but narrower than all defence cooperation or governance work, so read it as reported security-related spending, not the full picture of security ties.',
+    changed: 'From the OECD data we keep rows tagged as security-related, remove aggregate donor groups, convert donor codes to the app codes where possible, keep named UN and EU providers, calculate each value as a share of recipient GDP, and keep only the years 2010 to 2024. The figures are reported amounts spent in current US dollars. They should not be added to the SIPRI arms values.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
   security_arms: {
     source: 'SIPRI Arms Transfers Database',
     sourceUrl: 'https://armstransfers.sipri.org/ArmsTransfer/TransferRegister',
-    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024 where SIPRI records major conventional arms delivered to Pacific countries.',
-    why: 'Arms shows a narrower hard-security relationship: who supplied major conventional arms to Pacific countries. Sparse rows are meaningful because these transfers into the Pacific are uncommon. SIPRI usually does not capture small arms, ammunition, routine policing equipment, training, or day-to-day security cooperation.',
-    changed: 'We keep delivered arms transfer records by delivery year and show line-level equipment detail where available. If a delivery spans several years, we split the recorded volume evenly across those years for annual display. The dashboard labels SIPRI\'s trend-indicator value as arms transfer volume. It is a comparable measure of size, not US dollars, and should not be added to CRS security assistance.',
+    coverage: 'The dashboard covers 14 Pacific island countries from 2010 to 2024. This view shows major conventional arms delivered to Pacific countries, as recorded by SIPRI. Rows are sparse because such transfers are uncommon.',
+    why: 'Arms shows who supplied major conventional weapons to Pacific countries, the hardest and most direct edge of a security relationship. We use the SIPRI Arms Transfers Database, the standard public record of major weapons transfers. National arms-export reports exist but are patchy and inconsistent, so SIPRI\'s consolidated register is the workable source. Sparse rows are still meaningful, because transfers into the Pacific are uncommon, and SIPRI does not capture small arms, ammunition, routine policing equipment, training, or day-to-day cooperation, so this is only the heavy end.',
+    changed: 'From the SIPRI data we keep delivered transfers by delivery year and show line-level equipment where available. The first number is the delivered unit count. The second is SIPRI\'s trend-indicator value (TIV), a points-style estimate of the equipment\'s military weight, not a price or an aid value. For example, 14 second-hand Bushmaster vehicles carry a TIV of about 1.96, because SIPRI rates each at roughly 0.14 points. Where a delivery spans several years, we split the units and TIV evenly across them.',
     denominator: '',
     denominatorLinks: [],
   },
   debt: {
     source: 'World Bank International Debt Statistics',
     sourceUrl: 'https://databank.worldbank.org/source/international-debt-statistics',
-    coverage: 'World Bank IDS has seven Pacific debtor countries in scope (Fiji, FSM, PNG, Samoa, Solomon Islands, Tonga, Vanuatu). In this pull, the published positive creditor-level rows cover six: Fiji, PNG, Samoa, Solomon Islands, Tonga, and Vanuatu. This view shows how much public external debt each country owed at the end of each year, in current US dollars, by lender.',
-    why: 'World Bank IDS is the standard public source for who countries owe public debt to, where countries report it. We use money owed at year end, not new borrowing or promises, because this dashboard is trying to show who Pacific countries currently owe money to. That makes it closer to a relationship map of money still owed than a record of new loans announced in a given year.',
-    changed: 'We show the rows where IDS reports that a Pacific country owed money to a lender in that year, and keep the lender names IDS reports, including multilateral and institutional lenders. The amounts shown are the end-of-year debt values.',
+    coverage: 'The dashboard covers 14 Pacific island countries, but World Bank IDS reports public external debt for only seven (Fiji, FSM, PNG, Samoa, Solomon Islands, Tonga, Vanuatu). In this pull, positive creditor-level rows cover six: Fiji, PNG, Samoa, Solomon Islands, Tonga, and Vanuatu. This view shows public external debt owed at the end of each year, in current US dollars, by lender.',
+    why: 'Debt shows who Pacific countries owe public external money to, a relationship that can shape long-term influence, since a lender often keeps a say in a country\'s choices for years. We use the World Bank International Debt Statistics, the standard public source for reported public external debt, and show money owed at year end rather than new borrowing, so it reads as a map of money still owed. It is the most consistent place creditor-by-creditor debt is reported across countries. Only countries that report to IDS appear, and lenders include multilateral and institutional creditors, not just governments, so an absence can mean no reporting rather than no debt.',
+    changed: 'From the IDS data we keep the rows where a Pacific country owed money to a lender in a given year and keep the lender names IDS reports, including multilateral and institutional lenders. The amounts are end-of-year debt stocks in current US dollars, not new loans taken during the year.',
     denominator: 'GDP uses [World Bank] where available; [UN SNAAMA] for Cook Islands; [Niue Statistics Office National Accounts] for Niue.',
     denominatorLinks: DENOMINATOR_SOURCES.gdp,
   },
@@ -458,6 +464,18 @@ function fmtPct(pct, bare = false) {
   return bare ? pct.toFixed(1) : `${pct.toFixed(1)}%`
 }
 
+function armsItemTitle(item) {
+  return [
+    item.name,
+    item.numberOrdered ? `ordered: ${item.numberOrdered}` : null,
+    item.deliveries ? `delivered units: ${item.deliveries}` : null,
+    item.deliveryYears ? `delivery year(s): ${item.deliveryYears}` : null,
+    item.orderYear ? `order year: ${item.orderYear}` : null,
+    item.status ? `status: ${item.status}` : null,
+    item.comments,
+  ].filter(Boolean).join('\n')
+}
+
 function sortByValueThenPct(a, b) {
   const aPct = Number.isFinite(a.pct) ? a.pct : -Infinity
   const bPct = Number.isFinite(b.pct) ? b.pct : -Infinity
@@ -472,6 +490,21 @@ function metricTotal(rows) {
 
 function metricValueTotal(rows) {
   return rows.reduce((sum, r) => sum + (Number.isFinite(r.value) ? r.value : 0), 0)
+}
+
+function armsDeliveriesTotal(rows) {
+  return rows.reduce((sum, row) => {
+    const items = row.securityBreakdown ?? []
+    const delivered = items.reduce((itemSum, item) => {
+      const value = Number(item.deliveries)
+      return itemSum + (Number.isFinite(value) ? value : 0)
+    }, 0)
+    return sum + delivered
+  }, 0)
+}
+
+function fmtArmsDeliveries(value) {
+  return Number.isFinite(value) ? value.toFixed(value % 1 === 0 ? 0 : 1) : '-'
 }
 
 function metricLatestYear(rows) {
@@ -589,7 +622,7 @@ function HeaderCell({ top, bottom, className = '', style }) {
 function unitLabel(metric, kind) {
   if (kind === 'pctTotal') return '% total'
   if (metric === 'security_arms' && kind === 'exposure') return ''
-  if (metric === 'security_arms' && kind === 'value') return 'volume'
+  if (metric === 'security_arms' && kind === 'value') return 'units'
   if (kind === 'exposure') return isPeopleMetric(metric) ? '% pop' : '% GDP'
   if (kind === 'value') return isPeopleMetric(metric) ? 'people' : '$ USD'
   if (kind === 'year') return 'year'
@@ -626,14 +659,14 @@ function SecurityBreakdownRow({ row, metric }) {
           <span className="rank"></span>
           <span
             className="row-name trade-breakdown-name"
-            title={metric === 'security_arms' ? item.comments || item.name : item.name}
+            title={metric === 'security_arms' ? armsItemTitle(item) : item.name}
           >
             {metric === 'security_arms'
               ? `${item.name}${item.deliveryYears ? ` (${item.deliveryYears})` : ''}`
               : item.name}
           </span>
-          <span className="val-primary">{fmtValue(item.value, metric, true)}</span>
-          <span className="val-secondary">{metric === 'security_arms' ? (item.deliveries || '') : fmtPct(item.pct, true)}</span>
+          <span className="val-primary">{metric === 'security_arms' ? (item.deliveries || '') : fmtValue(item.value, metric, true)}</span>
+          <span className="val-secondary">{metric === 'security_arms' ? fmtValue(item.value, metric, true) : fmtPct(item.pct, true)}</span>
           <span className="year-tag"></span>
         </div>
       ))}
@@ -715,7 +748,11 @@ function SecurityComparisonBreakdownRow({ row, columns, metric }) {
           <span className="row-name trade-breakdown-name" title={item.name}>{item.name}</span>
           {columns.map((column, i) => (
             <span key={column.key} className={column.className} style={column.style} title={column.title}>
-              {item.vals[i] ? fmtValue(item.vals[i].value, metric, true) : '-'}
+              {item.vals[i]
+                ? metric === 'security_arms'
+                  ? fmtArmsDeliveries(Number(item.vals[i].deliveries))
+                  : fmtValue(item.vals[i].value, metric, true)
+                : '-'}
             </span>
           ))}
         </div>
@@ -824,14 +861,14 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalLabel, onMetricC
   const columns = [
     {
       key: 'value',
-      headerTop: isPeopleMetric(metric) || metric === 'security_arms' ? '' : '$',
-      headerBottom: metric === 'security_arms' ? 'volume' : isPeopleMetric(metric) ? 'people' : 'USD',
+      headerTop: metric === 'security_arms' ? 'units' : isPeopleMetric(metric) ? '' : '$',
+      headerBottom: metric === 'security_arms' ? 'delivered' : isPeopleMetric(metric) ? 'people' : 'USD',
       className: 'val-primary',
     },
     {
       key: 'pct',
-      headerTop: metric === 'security_arms' ? '' : '%',
-      headerBottom: metric === 'security_arms' ? 'deliveries' : pctLabel?.replace(/^%\s*/, '') || unitLabel(metric, 'exposure').replace(/^%\s*/, ''),
+      headerTop: metric === 'security_arms' ? 'SIPRI' : '%',
+      headerBottom: metric === 'security_arms' ? 'TIV' : pctLabel?.replace(/^%\s*/, '') || unitLabel(metric, 'exposure').replace(/^%\s*/, ''),
       className: 'val-secondary',
     },
     { key: 'year', headerTop: '', headerBottom: 'yr', className: 'year-tag' },
@@ -841,8 +878,8 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalLabel, onMetricC
     key: `${r.code}-${r.year ?? i}`,
     expandable: (isTradeMetric(metric) && (r.hs1Breakdown?.length ?? 0) > 0) || (isSecurityMetric(metric) && (r.securityBreakdown?.length ?? 0) > 0),
     cells: {
-      pct: metric === 'security_arms' ? '' : fmtPct(r.pct, true),
-      value: fmtValue(r.value, metric, true),
+      pct: metric === 'security_arms' ? fmtValue(r.value, metric, true) : fmtPct(r.pct, true),
+      value: metric === 'security_arms' ? fmtArmsDeliveries(armsDeliveriesTotal([r])) : fmtValue(r.value, metric, true),
       year: r.year ? `'${String(r.year).slice(2)}` : '',
     },
   }))
@@ -915,8 +952,8 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalLabel, onMetricC
         rows={tableRows}
         summaryLabel={totalLabel}
         summaryCells={{
-          pct: metric === 'security_arms' ? '' : fmtPct(totalPct, true),
-          value: fmtValue(totalValue, metric, true),
+          pct: metric === 'security_arms' ? fmtValue(totalValue, metric, true) : fmtPct(totalPct, true),
+          value: metric === 'security_arms' ? fmtArmsDeliveries(armsDeliveriesTotal(rows)) : fmtValue(totalValue, metric, true),
           year: '',
         }}
         limitRows={limitRows}
@@ -1182,6 +1219,7 @@ function CompareMetricTable({ metric, countries, dataIndex, onMetricCountryClick
   }))
   const cellValue = (v) => {
     if (!v) return '-'
+    if (metric === 'security_arms') return fmtArmsDeliveries(armsDeliveriesTotal([v]))
     return fmtValue(v.value, metric, true)
   }
   const tableRows = rows.map(row => ({
@@ -1195,11 +1233,11 @@ function CompareMetricTable({ metric, countries, dataIndex, onMetricCountryClick
       const vals = Object.values(dataIndex)
         .map(entry => entry[metric]?.[country.code])
         .filter(Boolean)
-      return [country.code, fmtValue(metricValueTotal(vals), metric, true)]
+      return [country.code, metric === 'security_arms' ? fmtArmsDeliveries(armsDeliveriesTotal(vals)) : fmtValue(metricValueTotal(vals), metric, true)]
     }
 
     const vals = rows.map(row => row.vals[i]).filter(Boolean)
-    return [country.code, fmtValue(metricValueTotal(vals), metric, true)]
+    return [country.code, metric === 'security_arms' ? fmtArmsDeliveries(armsDeliveriesTotal(vals)) : fmtValue(metricValueTotal(vals), metric, true)]
   }))
 
   return (

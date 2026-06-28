@@ -115,6 +115,24 @@ const INFLUENCER_COLORS = [
 
 const PACIFIC_CODES = new Set(PACIFIC_LIST.map(c => c.code))
 
+function tooltipHeaderParts(label) {
+  if (!label) return ['', '']
+  if (label === '$USD') return ['$', 'USD']
+  if (label === 'SIPRI TIV') return ['SIPRI', 'TIV']
+  const parts = label.split(' ')
+  return parts.length > 1 ? [parts[0], parts.slice(1).join(' ')] : ['', label]
+}
+
+function TooltipHeader({ label }) {
+  const [top, bottom] = tooltipHeaderParts(label)
+  return (
+    <span className="flow-tooltip-header-cell">
+      <span className="flow-tooltip-header-top">{top}</span>
+      <span className="flow-tooltip-header-bottom">{bottom}</span>
+    </span>
+  )
+}
+
 
 export default function MapView({ exposureScores, dataIndex, allRows, selectedCountries, activeMetrics, onCountryClick, onMapLoaded, interactive = true }) {
   const mapContainer = useRef(null)
@@ -208,13 +226,13 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
 
       // Territory EEZs — faint outline only, decorative acknowledgement
       const TERRITORY_INFO = {
-        AS: { name: 'American Samoa',   sovereign: 'United States' },
-        GU: { name: 'Guam',             sovereign: 'United States' },
-        MP: { name: 'N. Mariana Islands', sovereign: 'United States' },
-        PF: { name: 'French Polynesia', sovereign: 'France' },
-        WF: { name: 'Wallis & Futuna',  sovereign: 'France' },
-        NC: { name: 'New Caledonia',    sovereign: 'France' },
-        TK: { name: 'Tokelau',          sovereign: 'New Zealand' },
+        AS: { name: 'American Samoa' },
+        GU: { name: 'Guam' },
+        MP: { name: 'N. Mariana Islands' },
+        PF: { name: 'French Polynesia' },
+        WF: { name: 'Wallis & Futuna' },
+        NC: { name: 'New Caledonia' },
+        TK: { name: 'Tokelau' },
       }
       map.addSource('territory-eez', { type: 'geojson', data: '/geo/territory_eez.geojson' })
       // Invisible fill for hover detection
@@ -232,7 +250,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         setTooltip({
           x: e.point.x, y: e.point.y,
           name: info.name,
-          subtitle: `Territory of ${info.sovereign} — not included in analysis`,
+          subtitle: 'Not included in analysis',
         })
       })
       map.on('mouseleave', 'territory-eez-fill', () => {
@@ -1017,7 +1035,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     : isPeopleMetric
     ? (tooltipIsPacific ? '% of pop' : '% of total')
     : (tooltipIsPacific ? '% of GDP' : '% of total')
-  const tooltipValueHeader = selectedMetric === 'security_arms' ? 'volume' : isPeopleMetric ? 'people' : '$USD'
+  const tooltipValueHeader = selectedMetric === 'security_arms' ? 'SIPRI TIV' : isPeopleMetric ? 'people' : '$USD'
   const METRIC_LABELS = { aid: 'Aid', aid_committed: 'Aid committed', trade: 'Imports', exports: 'Exports', remittances: 'Remittances', migration: 'Migration', students: 'Students', security: 'Security assistance', security_arms: 'Security arms', debt: 'Debt', fdi: 'FDI', portfolio: 'Portfolio investment' }
   const tooltipMetricLabel = METRIC_LABELS[selectedMetric]
   const tooltipPctValue = tooltipIsPacific
@@ -1033,22 +1051,22 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
           {tooltip.subtitle
             ? <div style={{ fontStyle: 'italic', color: '#9a8060', marginTop: 2 }}>{tooltip.subtitle}</div>
             : tooltipScore && (
-              <table style={{ marginTop: 4, borderCollapse: 'collapse', width: '100%' }}>
+              <table className="flow-tooltip-table">
                 <thead>
                   <tr>
-                    <th style={{ textAlign: 'left', paddingRight: 8, color: '#6b5230', fontSize: '0.68rem', fontWeight: 600 }}>{'Metric'}</th>
-                    <th style={{ textAlign: 'right', paddingRight: 8, color: '#6b5230', fontSize: '0.68rem', fontWeight: 600 }}>{tooltipPctHeader}</th>
-                    <th style={{ textAlign: 'right', paddingRight: 8, color: '#6b5230', fontSize: '0.68rem', fontWeight: 600 }}>{tooltipValueHeader}</th>
-                    <th style={{ textAlign: 'right', color: '#6b5230', fontSize: '0.68rem', fontWeight: 600 }}>{'yr'}</th>
+                    <th><TooltipHeader label="Metric" /></th>
+                    <th><TooltipHeader label={tooltipPctHeader} /></th>
+                    <th><TooltipHeader label={tooltipValueHeader} /></th>
+                    <th><TooltipHeader label="yr" /></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style={{ paddingRight: 8, color: '#6b5230', fontSize: '0.78rem' }}>{tooltipMetricLabel}</td>
-                    <td style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontSize: '0.78rem', paddingRight: 8 }}>
+                    <td className="flow-tt-metric">{tooltipMetricLabel}</td>
+                    <td className="flow-tt-pct">
                       {tooltipPctValue != null ? tooltipPctValue.toFixed(1) : '-'}
                     </td>
-                    <td style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontSize: '0.78rem', paddingRight: 8 }}>
+                    <td className="flow-tt-value">
                       {tooltipMetricTotalValue > 0
                         ? selectedMetric === 'security_arms' ? tooltipMetricTotalValue.toFixed(tooltipMetricTotalValue < 10 ? 2 : 1)
                           : (tooltipMetricTotalValue >= 1e9 ? `${(tooltipMetricTotalValue / 1e9).toFixed(1)}B`
@@ -1057,7 +1075,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
                           : tooltipMetricTotalValue.toFixed(1))
                         : '-'}
                     </td>
-                    <td style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontSize: '0.78rem' }}>
+                    <td className="flow-tt-year">
                       {tooltipMetricLatestYear ?? '-'}
                     </td>
                   </tr>
@@ -1081,7 +1099,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
             const metricEntry = e.byMetric[selectedMetric] ?? { pct: null, value: null, year: null }
             const isPeopleMetric = selectedMetric === 'migration' || selectedMetric === 'students'
             const pctHeader = selectedMetric === 'security_arms' ? '' : isPeopleMetric ? '% of pop' : '% of GDP'
-            const valueHeader = selectedMetric === 'security_arms' ? 'volume' : isPeopleMetric ? 'people' : '$USD'
+            const valueHeader = selectedMetric === 'security_arms' ? 'SIPRI TIV' : isPeopleMetric ? 'people' : '$USD'
             const metricLabel = METRIC_LABELS[selectedMetric] ?? selectedMetric.charAt(0).toUpperCase() + selectedMetric.slice(1)
             return (
               <div key={i} className="flow-tooltip-entry">
@@ -1093,10 +1111,10 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
                 <table className="flow-tooltip-table">
                   <thead>
                     <tr>
-                      <th>Metric</th>
-                      <th>{pctHeader}</th>
-                      <th>{valueHeader}</th>
-                      <th>yr</th>
+                      <th><TooltipHeader label="Metric" /></th>
+                      <th><TooltipHeader label={pctHeader} /></th>
+                      <th><TooltipHeader label={valueHeader} /></th>
+                      <th><TooltipHeader label="yr" /></th>
                     </tr>
                   </thead>
                   <tbody>

@@ -1,13 +1,14 @@
 .coverage-matrix {
   --ch: 9px;
   --row: 10px;        /* cell height + 1px grid gap */
-  --head: 26px;
+  --head: 50px;       /* fits metric name + source caption (up to 2 lines) + year range */
   display: flex;
   flex-direction: column;
   gap: 14px;
   width: 100%;
   max-width: 600px;
   align-self: flex-start;
+  font-family: var(--font-data);
   font-variant-numeric: tabular-nums;
 }
 
@@ -52,6 +53,7 @@
   align-items: center;
   gap: 1px;
   padding-bottom: 2px;
+  overflow: hidden;
 }
 .cov-metric-name {
   font-size: 9px;
@@ -62,6 +64,29 @@
 .cov-metric-years {
   font-size: 8px;
   color: #a8906c;
+}
+/* Source sits directly under the metric name (the year range is the axis,
+   so it reads last). Kept readable: darker than the year label, semibold. */
+/* Inline content (links + separators) wraps naturally; labels are short
+   enough that the longest ("World Bank · KNOMAD") is at most two lines. */
+.cov-metric-source {
+  max-width: 100%;
+  font-size: 8.5px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
+.cov-metric-source a {
+  color: #6a4d22;
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(106, 77, 34, 0.35);
+}
+.cov-metric-source a:hover {
+  color: #3f2d12;
+  border-bottom-color: #3f2d12;
+}
+.cov-source-sep {
+  color: #b09a78;
 }
 
 .cov-grid {

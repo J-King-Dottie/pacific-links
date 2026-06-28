@@ -23,12 +23,17 @@
   color: #2c1f0a;
   pointer-events: none;
   z-index: 10;
-  max-width: 200px;
+  width: max-content;
+  min-width: 220px;
+  max-width: min(360px, calc(100vw - 32px));
   box-shadow: 0 4px 16px rgba(80,60,20,0.18);
 }
 .map-tooltip strong { display: block; margin-bottom: 2px; color: #2a6b72; }
 
-.flow-tooltip { max-width: 300px; }
+.flow-tooltip {
+  min-width: 280px;
+  max-width: min(380px, calc(100vw - 32px));
+}
 
 .flow-tooltip-entry {
   margin-top: 8px;
@@ -51,6 +56,7 @@
 .flow-tooltip-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
   font-size: 0.72rem;
 }
 .flow-tooltip-table th sup { font-size: 0.55rem; }
@@ -60,9 +66,39 @@
   text-align: right;
   padding: 0 6px 3px 0;
   border-bottom: 1px solid rgba(180,150,100,0.3);
-  white-space: nowrap;
+  white-space: normal;
+  vertical-align: bottom;
 }
 .flow-tooltip-table th:first-child { text-align: left; }
+.flow-tooltip-header-cell {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-height: 22px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.flow-tooltip-table th:first-child .flow-tooltip-header-cell {
+  align-items: flex-start;
+}
+.flow-tooltip-header-top {
+  display: block;
+  min-height: 0.62rem;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #9a8060;
+  letter-spacing: 0.04em;
+}
+.flow-tooltip-header-bottom {
+  display: block;
+  margin-top: 2px;
+  min-height: 0.54rem;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #9a8060;
+  letter-spacing: 0.04em;
+}
 .flow-tooltip-table td {
   padding: 3px 6px 3px 0;
   color: #3a2c1a;
@@ -70,7 +106,14 @@
   text-align: right;
 }
 .flow-tooltip-table td:first-child { text-align: left; }
-.flow-tt-metric { color: #2c1f0a; font-weight: 500; }
+.flow-tt-metric {
+  color: #2c1f0a;
+  font-weight: 500;
+  min-width: 92px;
+  max-width: 140px;
+  white-space: normal !important;
+  line-height: 1.15;
+}
 .flow-tt-value  { color: #6b5230; }
 .flow-tt-pct    { color: #2a6b72; }
 .flow-tt-year   { color: #b0987a; }

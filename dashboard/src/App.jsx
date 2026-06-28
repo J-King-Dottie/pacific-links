@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { Anchor, Globe, Download, ArrowRight } from 'lucide-react'
 import { loadAllData } from './data/loadData.js'
 import { getLatestData, getYearData, computeExposureScores } from './data/computeScores.js'
-import { isPacific } from './data/pacificCountries.js'
+import { isPacific, PACIFIC_LIST } from './data/pacificCountries.js'
 import MapView from './components/MapView.jsx'
 import SidePanel from './components/SidePanel.jsx'
 import TopBar from './components/TopBar.jsx'
@@ -196,15 +196,16 @@ export default function App() {
               <circle cx="32" cy="32" r="6" fill="#8a6030" />
             </svg>
             <header className="intro-hero">
-              <a className="intro-kicker" href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">
-                <span className="intro-kicker-label">Produced by</span>
-                <span>Dottie AI Studio</span>
-              </a>
               <h1>Pacific Links</h1>
-              <p className="intro-subtitle">Turning fragmented bilateral datasets into a relationship map.</p>
               <p className="intro-lead">
-                Pacific Links brings together aid, trade, debt, security, remittances, migration, students, and investment data for 14 Pacific Island Countries from 2010 to 2024 (where available).
+                We bring together aid, trade, debt, security, remittances, migration, students, and investment data for Pacific Island Countries, turning fragmented bilateral datasets into a relationship map.
               </p>
+              <dl className="intro-stats" aria-label="Coverage at a glance">
+                <div className="intro-stat"><dt>8</dt><dd>Metrics</dd></div>
+                <div className="intro-stat"><dt>{PACIFIC_LIST.length}</dt><dd>Countries</dd></div>
+                <div className="intro-stat"><dt>{YEAR_MIN}–{String(YEAR_MAX).slice(2)}</dt><dd>Years</dd></div>
+                <div className="intro-stat"><dt>10</dt><dd>Official sources</dd></div>
+              </dl>
             </header>
 
             <section className="intro-block intro-block-perspectives">
@@ -235,29 +236,40 @@ export default function App() {
               {!appReady && <div className="loading-bar"><span /></div>}
             </div>
 
+            <footer className="intro-creditbar intro-creditbar-cta">
+              <p className="intro-fineprint">
+                <span>Produced by <a href="https://dottieaistudio.com.au/" target="_blank" rel="noreferrer">Dottie AI Studio</a></span>
+                <span className="intro-fineprint-dot" aria-hidden="true">·</span>
+                <span>Inspired by the <a href="https://pacificaidmap.lowyinstitute.org" target="_blank" rel="noreferrer">Lowy Pacific Aid Map</a></span>
+                {dataMeta?.last_refreshed && <><span className="intro-fineprint-dot" aria-hidden="true">·</span><span>Refreshed {formatRefreshed(dataMeta.last_refreshed)}</span></>}
+              </p>
+            </footer>
+
             <section className="intro-block intro-about">
+              <h2 className="intro-section-label intro-divider">Reading the data</h2>
               <p className="intro-methodology">
-                This data all already existed. It was just scattered, with each source speaking a slightly different language of codes, units and years.
+                This map brings together public datasets about Pacific countries and their links with the rest of the world, to make the data easier to find, see, and compare.
               </p>
               <p className="intro-methodology">
-                The hard part was never finding it, it was cleaning it and bringing it together. That's what we've done, with an open methodology.
+                Pacific Island bilateral data is patchy, and some of it can look strange. That is not something we have done to it. It is how the original sources record it. Different sources count different things, define them in different ways, and report at different times. Some relationships are recorded clearly, some are estimated, and some are missing.
               </p>
               <p className="intro-methodology">
-                It isn't perfect. Gaps remain in Pacific bilateral data, and the most recent numbers may live in each country's official publications.
+                A big number does not always mean something big happened in the country. The Marshall Islands runs one of the world's largest ship registries. Owners around the world register their ships there for legal and tax reasons, even when the ship has no real tie to the country. When trade data counts those ships, their value lands in Marshall Islands figures. That does not mean anyone there bought billions of dollars of ordinary goods.
               </p>
-              <h3 className="intro-chart-title">Data coverage</h3>
+              <p className="intro-methodology">
+                Investment data can do the same. Many companies are registered in the Marshall Islands for those same legal and tax reasons, without ever operating there. Money put into one of these companies is recorded as investment into the country. That is why its investment figures look huge next to such a small economy, even with no office, factory, or project on the ground.
+              </p>
+              <p className="intro-methodology">
+                Missing data needs care too. If a link is missing here, it does not always mean it does not exist. It may only mean this source does not record it. People from Vanuatu live in New Zealand, for example, but the UN migration data used here does not show that link, even though New Zealand's census does.
+              </p>
+              <p className="intro-methodology">
+                These are just a few examples. There are many more like them in the data. This map makes data more accessible, but you still need to think about what the numbers are saying.
+              </p>
+              <p className="intro-methodology">
+                The grid below shows where this map has data. Each filled cell is a country, metric, and year where a bilateral figure exists. The blanks are where it does not.
+              </p>
               <CoverageMatrix rows={allRows} />
             </section>
-
-            <footer className="intro-creditbar">
-              <p className="intro-inspiration intro-goal">
-                We built this to make existing Pacific data more accessible.
-              </p>
-              <p className="intro-inspiration">
-                Inspired by the <a href="https://pacificaidmap.lowyinstitute.org" target="_blank" rel="noreferrer">Lowy Pacific Aid Map</a>.
-              </p>
-              {dataMeta?.last_refreshed && <p className="intro-inspiration intro-refreshed">Refreshed {formatRefreshed(dataMeta.last_refreshed)}.</p>}
-            </footer>
           </div>
         </div>
       )}

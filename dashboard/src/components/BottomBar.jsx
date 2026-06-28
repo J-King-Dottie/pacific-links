@@ -31,7 +31,7 @@ export default function BottomBar({ selectedYear, activeMetrics, metricYears }) 
       <div className="data-note">
         {mode}
         {!selectedYear && (
-          <span className="note-detail"> - latest row for each relationship</span>
+          <span className="note-detail"> - latest relationship row within each metric's latest three years</span>
         )}
       </div>
 

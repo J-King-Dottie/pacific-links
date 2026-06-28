@@ -1,13 +1,27 @@
 import { PACIFIC_LIST } from './pacificCountries.js'
 
 export const METRICS = ['aid', 'trade', 'debt', 'security', 'remittances', 'migration', 'students', 'investment']
+const LATEST_WINDOW_YEARS = 3
 
 function buildLatestDataIndex(rows, activeMetrics) {
+  const metricMaxYear = {}
   const latestYear = {}
+
   for (const r of rows) {
     if (!activeMetrics.includes(r.metric)) continue
+    if (!metricMaxYear[r.metric] || r.year > metricMaxYear[r.metric]) {
+      metricMaxYear[r.metric] = r.year
+    }
     const k = `${r.pacificCode}|${r.metric}|${r.counterpartCode}`
     if (!latestYear[k] || r.year > latestYear[k]) latestYear[k] = r.year
+  }
+
+  for (const [key, year] of Object.entries(latestYear)) {
+    const [, metric] = key.split('|')
+    const maxYear = metricMaxYear[metric]
+    if (maxYear && year < maxYear - (LATEST_WINDOW_YEARS - 1)) {
+      delete latestYear[key]
+    }
   }
 
   return buildIndexForLatestYears(rows, activeMetrics, latestYear)
@@ -46,10 +60,9 @@ function buildIndexForLatestYears(rows, activeMetrics, latestYear) {
 }
 
 // ---------------------------------------------------------------------------
-// Latest mode: each relationship uses its own latest available observation.
-// This keeps sparse event data, such as SIPRI arms transfers, visible even when
-// the latest recorded delivery for a country pair is older than the metric's
-// newest year.
+// Latest mode: each relationship uses its own latest available observation, but
+// only if that observation falls inside the metric's latest three-year window.
+// This avoids carrying old one-off relationships forward indefinitely.
 // Returns:
 //   { pacificCode -> { metric -> { counterpartCode -> { name, value, year } } } }
 // ---------------------------------------------------------------------------

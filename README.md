@@ -53,7 +53,7 @@ pacific_code, pacific_name, counterpart_code, counterpart_name, year, value_usd,
 
 - **Imports** also carries `hs1_code, hs1_name` (one row per HS1 product category).
 - **Migration** and **Students** use `value_people` and `pct_population` instead of `value_usd` / `pct_gdp`.
-- **Security assistance** carries `sector_code, sector_name`; **Security arms** uses `value_tiv` for arms transfer volume and carries equipment/delivery detail fields.
+- **Security assistance** carries `sector_code, sector_name`; **Security arms** shows delivered unit counts first and carries `value_tiv`, SIPRI's non-dollar trend-indicator value, as a secondary equipment-weight measure.
 - **Investment** has separate **FDI** and **Portfolio** tabs in the download. Portfolio means reported overseas money invested in Pacific shares and bonds.
 
 All datasets are clipped to the stated **2010–2024** scope. Values inside that window

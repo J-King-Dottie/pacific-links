@@ -16,13 +16,15 @@
   user-select: none;
 }
 
-/* Left container — width set via inline style based on selected country count */
+/* Left container — width set via inline style based on selected country count.
+   This is dense ranked data, so it uses the data sans, not the body serif. */
 .panel-tables {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   min-height: 0;
+  font-family: var(--font-data);
 }
 
 .panel-titlebar {
@@ -203,7 +205,7 @@
 }
 
 .country-name {
-  font-family: var(--font-display);
+  font-family: var(--font-h1);
   font-size: 1.12rem;
   font-weight: 600;
   color: #2c1f0a;
