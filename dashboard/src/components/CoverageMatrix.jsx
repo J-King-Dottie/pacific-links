@@ -25,7 +25,7 @@ const METRICS = [
     sources: [{ text: 'UN DESA', url: 'https://www.un.org/development/desa/pd/content/international-migrant-stock' }] },
   { key: 'students', label: 'Students', color: '#b45f06',
     sources: [{ text: 'UNESCO', url: 'https://databrowser.uis.unesco.org/resources/bulk' }] },
-  { key: 'investment', label: 'Investment', color: '#2f5fb3', includes: ['fdi', 'portfolio'],
+  { key: 'investment', label: 'Investment', color: '#45607e', includes: ['fdi', 'portfolio'],
     sources: [
       { text: 'IMF CDIS', title: 'IMF Direct Investment Positions (CDIS) — FDI', url: 'https://data.imf.org/en/datasets/IMF.STA:DIP' },
       { text: 'IMF CPIS', title: 'IMF Portfolio Investment Positions (CPIS) — portfolio', url: 'https://data.imf.org/en/datasets/IMF.STA:PIP' },

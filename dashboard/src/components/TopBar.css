@@ -1,42 +1,43 @@
 .topbar {
   position: absolute;
-  top: 16px;
-  /* Center within the band to the RIGHT of the left panel (~256px) rather than over
+  top: 1rem;
+  /* Center within the band to the RIGHT of the left panel (~16rem) rather than over
      the whole viewport, so the bar never slides under the panel. margin-inline:auto
      centers it in that band; max-width makes it shrink instead of overflowing. */
-  left: 264px;
-  right: 24px;
+  left: 16.5rem;
+  right: 1.5rem;
   transform: none;
   margin-inline: auto;
   width: max-content;
-  max-width: calc(100% - 288px);
+  max-width: calc(100% - 18rem);
   z-index: 1100;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
+  gap: 0.4375rem;
+  padding: 0.3125rem 0.4375rem;
   background: rgba(245, 239, 224, 0.9);
   border: 1px solid rgba(196, 176, 144, 0.92);
-  border-radius: 14px;
+  border-radius: 0.75rem;
   box-shadow: 0 8px 28px rgba(80, 60, 20, 0.16), inset 0 1px 0 rgba(255,255,255,0.55);
   backdrop-filter: blur(10px);
 }
 
 @keyframes metric-nudge {
   0%   { transform: translateY(0); }
-  14%  { transform: translateY(-4px); }
-  24%  { transform: translateY(1px); }
+  14%  { transform: translateY(-0.25rem); }
+  24%  { transform: translateY(0.0625rem); }
   32%  { transform: translateY(0); }
   68%  { transform: translateY(0); }
-  82%  { transform: translateY(-4px); }
-  92%  { transform: translateY(1px); }
+  82%  { transform: translateY(-0.25rem); }
+  92%  { transform: translateY(0.0625rem); }
   100% { transform: translateY(0); }
 }
 
+/* Two tightly packed rows of four, rather than one long row. */
 .topbar-metrics {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.125rem 0.1875rem;
   padding: 0;
 }
 
@@ -53,29 +54,41 @@
 .topbar-metrics.intro-animate .topbar-metric:nth-child(7) { animation-delay: 1800ms; }
 .topbar-metrics.intro-animate .topbar-metric:nth-child(8) { animation-delay: 2000ms; }
 
+/* Idle = a clearly tappable chip (faint fill + hairline border).
+   Selected = solid fill in the metric's colour with cream text. */
 .topbar-metric {
-  border: 1px solid transparent;
-  border-radius: 8px;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1875rem;
+  border: 1px solid rgba(180,150,100,0.34);
+  border-radius: 0.375rem;
+  background: rgba(255,250,238,0.55);
   color: #7a6040;
   cursor: pointer;
-  padding: 7px 12px;
-  font-size: 0.7rem;
+  padding: 0.1875rem 0.375rem;
+  font-size: 0.55rem;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s, box-shadow 0.12s;
+}
+
+.topbar-metric-icon {
+  flex-shrink: 0;
 }
 
 .topbar-metric:hover {
-  background: rgba(255,250,238,0.45);
+  background: rgba(255,250,238,0.95);
+  border-color: rgba(180,150,100,0.6);
 }
 
 .topbar-metric.active {
-  background: rgba(255,250,238,0.72);
-  border-color: rgba(180,150,100,0.35);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.42);
+  color: #fffaf0;
+  border-color: transparent;
+  box-shadow: 0 1px 4px rgba(80,60,20,0.22);
 }
 
 .topbar-metric-aid { color: #8a5c10; }
@@ -85,22 +98,50 @@
 .topbar-metric-students { color: #b45f06; }
 .topbar-metric-security { color: #3c6e71; }
 .topbar-metric-debt { color: #507840; }
-.topbar-metric-investment { color: #2f5fb3; }
-.topbar-metric-aid.active { color: #7a4e08; }
-.topbar-metric-trade.active { color: #1e5a60; }
-.topbar-metric-remittances.active { color: #8c3020; }
-.topbar-metric-migration.active { color: #6a4a5e; }
-.topbar-metric-students.active { color: #934b04; }
-.topbar-metric-security.active { color: #345f62; }
-.topbar-metric-debt.active { color: #476b35; }
-.topbar-metric-investment.active { color: #244b91; }
+.topbar-metric-investment { color: #45607e; }
+.topbar-metric-aid.active { background: #8a5c10; color: #fffaf0; }
+.topbar-metric-trade.active { background: #1e666d; color: #fffaf0; }
+.topbar-metric-remittances.active { background: #a0442c; color: #fffaf0; }
+.topbar-metric-migration.active { background: #76516a; color: #fffaf0; }
+.topbar-metric-students.active { background: #b45f06; color: #fffaf0; }
+.topbar-metric-security.active { background: #3c6e71; color: #fffaf0; }
+.topbar-metric-debt.active { background: #507840; color: #fffaf0; }
+.topbar-metric-investment.active { background: #45607e; color: #fffaf0; }
 
+/* Two-row module to match the metric grid: label + value on top, play +
+   slider below, wrapped in the same chip styling. */
 .topbar-time {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  align-self: stretch;
+  padding: 0.25rem 0.4375rem;
+  min-width: 6.5rem;
+  border: 1px solid rgba(180,150,100,0.34);
+  border-radius: 0.375rem;
+  background: rgba(255,250,238,0.55);
+}
+
+.topbar-time-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.375rem;
+}
+
+.topbar-time-label {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9a8060;
+}
+
+.topbar-time-controls {
+  display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 0 2px 0 6px;
-  min-width: 220px;
+  gap: 0.375rem;
 }
 
 .topbar .play-btn {
@@ -108,9 +149,9 @@
   border: 1px solid rgba(180,150,100,0.65);
   color: #6b5230;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  border-radius: 7px;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 0.3125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,35 +164,74 @@
 .topbar .play-btn.playing { color: #8a5c10; border-color: rgba(180,120,20,0.5); }
 .topbar .play-btn svg {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 0.625rem;
+  height: 0.625rem;
 }
-.topbar .play-btn .play-icon { transform: translateX(1px); }
+.topbar .play-btn .play-icon { transform: translateX(0.0625rem); }
 
-.topbar .year-slider {
-  flex: 1;
-  height: 3px;
-  accent-color: #8a6030;
+/* Year timeline: one notch per year. Filled up to the current year in the
+   active metric's colour (set via --metric); the current year is tallest. */
+.topbar .year-ticks {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.125rem;
+  height: 0.875rem;
+}
+
+.topbar .year-tick {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
   cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.topbar .year-tick::before {
+  content: "";
+  width: 0.125rem;
+  height: 0.4375rem;
+  border-radius: 1px;
+  background: #cdb791;
+  transition: height 0.1s ease, background 0.1s ease;
+}
+
+.topbar .year-tick.on::before {
+  background: var(--metric, #8a6030);
+  height: 0.625rem;
+}
+
+.topbar .year-tick.cur::before {
+  background: var(--metric, #8a6030);
+  height: 0.875rem;
+  width: 0.1875rem;
+}
+
+.topbar .year-tick:hover::before {
+  height: 0.875rem;
 }
 
 .topbar .year-display {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #7a6040;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: #5a4030;
   white-space: nowrap;
   font-family: var(--font-data);
   font-variant-numeric: tabular-nums;
 }
 
 .topbar .year-action {
-  width: 3.6em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
   flex-shrink: 0;
-  margin-left: 10px;
 }
 
 .topbar .reset-btn {
@@ -162,24 +242,24 @@
   font-size: 0.85rem;
   line-height: 1;
   padding: 0;
-  width: 10px;
+  width: 0.625rem;
 }
 
 .topbar .reset-btn:hover { color: #3a2810; }
 
 @media (max-width: 1100px) {
   .topbar {
-    gap: 8px;
-    padding: 7px 8px;
+    gap: 0.5rem;
+    padding: 0.4375rem 0.5rem;
   }
 
   .topbar-metric {
-    padding: 7px 10px;
+    padding: 0.4375rem 0.625rem;
     font-size: 0.64rem;
   }
 
   .topbar-time {
-    min-width: 190px;
+    min-width: 11.875rem;
   }
 }
 
@@ -195,27 +275,27 @@
     margin-inline: 0;
     flex-direction: column;
     align-items: stretch;
-    gap: 7px;
-    padding: 8px 10px;
-    border-radius: 12px;
+    gap: 0.4375rem;
+    padding: 0.5rem 0.625rem;
+    border-radius: 0.75rem;
   }
 
-  /* Wrap the metric buttons so all five are visible (none clipped off-edge). */
+  /* Wrap the metric buttons so all are visible (none clipped off-edge). */
   .topbar-metrics {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4px;
+    gap: 0.25rem;
   }
 
   .topbar-metric {
     flex: 0 0 auto;
-    padding: 7px 10px;
+    padding: 0.4375rem 0.625rem;
     font-size: 0.62rem;
   }
 
   .topbar-time {
     min-width: 0;
     width: 100%;
-    padding: 0 2px;
+    padding: 0 0.125rem;
   }
 }

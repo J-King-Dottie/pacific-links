@@ -173,7 +173,26 @@ const PAC_NAMES = Object.fromEntries(PACIFIC_LIST.map(c => [c.code, c.name]))
 const DEFAULT_ROW_LIMIT = 10
 
 // Colors matching MapView INFLUENCER_COLORS
-const COUNTRY_COLORS = ['#b47828', '#2a6b72', '#a0442c', '#7a5a6e', '#507840', '#a06432']
+// The only palette: the eight metric colours, in metric order (same as the map).
+const METRIC_PALETTE = ['#8a5c10', '#1e666d', '#507840', '#3c6e71', '#a0442c', '#76516a', '#b45f06', '#45607e']
+const METRIC_HEX = {
+  aid: '#8a5c10', aid_committed: '#8a5c10',
+  trade: '#1e666d', exports: '#1e666d',
+  debt: '#507840',
+  security: '#3c6e71', security_arms: '#3c6e71',
+  remittances: '#a0442c',
+  migration: '#76516a',
+  students: '#b45f06',
+  fdi: '#45607e', portfolio: '#45607e',
+}
+// First country = the active metric's colour (stable when others are added);
+// later countries take the remaining metric colours, in order.
+function selectionColor(metric, i) {
+  const active = METRIC_HEX[metric] ?? METRIC_PALETTE[0]
+  if (i === 0) return active
+  const others = METRIC_PALETTE.filter(c => c !== active)
+  return others[(i - 1) % others.length]
+}
 
 const INTERPRETATION_COPY = {
   default: {
@@ -337,9 +356,9 @@ function InterpretationNote({ metric, mode, countries = [] }) {
   return <p className="interpretation-note">{text}</p>
 }
 
-function SelectionPills({ countries, onRemoveCountry }) {
+function SelectionPills({ countries, onRemoveCountry, metric }) {
   if (!countries?.length) return null
-  return <CountryChips countries={countries} onRemoveCountry={onRemoveCountry} />
+  return <CountryChips countries={countries} onRemoveCountry={onRemoveCountry} metric={metric} />
 }
 
 function InfoIcon({ metric }) {
@@ -880,7 +899,7 @@ function MetricTable({ metric, rows, totalPct, totalValue, totalLabel, onMetricC
     cells: {
       pct: metric === 'security_arms' ? fmtValue(r.value, metric, true) : fmtPct(r.pct, true),
       value: metric === 'security_arms' ? fmtArmsDeliveries(armsDeliveriesTotal([r])) : fmtValue(r.value, metric, true),
-      year: r.year ? `'${String(r.year).slice(2)}` : '',
+      year: r.yearLabel ?? (r.year ? `'${String(r.year).slice(2)}` : ''),
     },
   }))
 
@@ -1017,7 +1036,7 @@ function PacificRankingView({ exposureScores, dataIndex, selectedMetric, onMetri
     <>
       <div className="sections">
         <InterpretationNote metric={metric} mode="default" />
-        <SelectionPills countries={[{ code: 'ALL_PACIFIC', name: 'All Pacific countries' }]} />
+        <SelectionPills countries={[{ code: 'ALL_PACIFIC', name: 'All Pacific countries' }]} metric={selectedMetric} />
         <MetricTable
           metric={metric}
           rows={rows}
@@ -1076,7 +1095,7 @@ return (
     <>
       <div className="sections sections-fixed-head">
         <InterpretationNote metric={selectedMetric} mode={isPacific ? 'pacific' : 'influencer'} countries={[country]} />
-        <SelectionPills countries={[country]} onRemoveCountry={onRemoveCountry} />
+        <SelectionPills countries={[country]} onRemoveCountry={onRemoveCountry} metric={selectedMetric} />
         <MetricTable
           metric={selectedMetric}
           rows={rows}
@@ -1105,7 +1124,7 @@ function ComparisonView({ countries, dataIndex, selectedMetric, onMetricCountryC
     <>
       <div className="sections">
         <InterpretationNote metric={selectedMetric} mode={isPacificComparison ? 'pacificComparison' : 'influencerComparison'} countries={countries} />
-        <SelectionPills countries={countries} onRemoveCountry={onRemoveCountry} />
+        <SelectionPills countries={countries} onRemoveCountry={onRemoveCountry} metric={selectedMetric} />
         <CompareMetricTable
           metric={selectedMetric}
           countries={countries}
@@ -1122,11 +1141,17 @@ function ComparisonView({ countries, dataIndex, selectedMetric, onMetricCountryC
   )
 }
 
-function CountryChips({ countries, onRemoveCountry }) {
+function CountryChips({ countries, onRemoveCountry, metric }) {
   return (
     <div className="comparison-chips">
-      {countries.map((c, i) => (
-        <span key={c.code} className="comparison-chip" style={{ borderColor: COUNTRY_COLORS[i % COUNTRY_COLORS.length], color: COUNTRY_COLORS[i % COUNTRY_COLORS.length] }}>
+      {countries.map((c, i) => {
+        const color = selectionColor(metric, i)
+        return (
+        <span
+          key={c.code}
+          className={`comparison-chip${!onRemoveCountry || c.code === 'ALL_PACIFIC' ? ' no-remove' : ''}`}
+          style={{ borderColor: color, color }}
+        >
           <span className="comparison-chip-label">{c.name}</span>
           {onRemoveCountry && c.code !== 'ALL_PACIFIC' && (
             <button
@@ -1142,7 +1167,8 @@ function CountryChips({ countries, onRemoveCountry }) {
             </button>
           )}
         </span>
-      ))}
+        )
+      })}
     </div>
   )
 }

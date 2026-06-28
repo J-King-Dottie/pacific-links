@@ -104,37 +104,53 @@ const SECURITY_PROVIDER_LABEL_OVERRIDES = {
 }
 
 // Distinct colors for multi-selected external countries
-const INFLUENCER_COLORS = [
-  [180, 120, 40],   // ochre
-  [42, 107, 114],   // deep teal
-  [160, 68, 44],    // terracotta
-  [122, 90, 110],   // dusty mauve
-  [80, 120, 60],    // olive green
-  [160, 100, 50],   // amber brown
+// The only palette: the eight metric colours, in metric order. Country
+// colours are drawn from these — no other colours are introduced.
+const METRIC_PALETTE = [
+  [138, 92, 16],   // aid
+  [30, 102, 109],  // trade
+  [80, 120, 64],   // debt
+  [60, 110, 113],  // security
+  [160, 68, 44],   // remittances
+  [118, 81, 106],  // migration
+  [180, 95, 6],    // students
+  [69, 96, 126],   // investment
 ]
+
+// Active metric (incl. sub-views) -> its palette colour.
+const METRIC_RGB = {
+  aid: [138, 92, 16], aid_committed: [138, 92, 16],
+  trade: [30, 102, 109], exports: [30, 102, 109],
+  debt: [80, 120, 64],
+  security: [60, 110, 113], security_arms: [60, 110, 113],
+  remittances: [160, 68, 44],
+  migration: [118, 81, 106],
+  students: [180, 95, 6],
+  fdi: [69, 96, 126], portfolio: [69, 96, 126],
+}
 
 const PACIFIC_CODES = new Set(PACIFIC_LIST.map(c => c.code))
 
 function tooltipHeaderParts(label) {
   if (!label) return ['', '']
-  if (label === '$USD') return ['$', 'USD']
+  if (label === '$USD' || label === '$ USD') return ['$', 'USD']
   if (label === 'SIPRI TIV') return ['SIPRI', 'TIV']
   const parts = label.split(' ')
   return parts.length > 1 ? [parts[0], parts.slice(1).join(' ')] : ['', label]
 }
 
-function TooltipHeader({ label }) {
-  const [top, bottom] = tooltipHeaderParts(label)
+function TooltipHeader({ label, top, bottom }) {
+  const parts = top != null || bottom != null ? [top ?? '', bottom ?? ''] : tooltipHeaderParts(label)
   return (
     <span className="flow-tooltip-header-cell">
-      <span className="flow-tooltip-header-top">{top}</span>
-      <span className="flow-tooltip-header-bottom">{bottom}</span>
+      <span className="flow-tooltip-header-top">{parts[0]}</span>
+      <span className="flow-tooltip-header-bottom">{parts[1]}</span>
     </span>
   )
 }
 
 
-export default function MapView({ exposureScores, dataIndex, allRows, selectedCountries, activeMetrics, onCountryClick, onMapLoaded, interactive = true }) {
+export default function MapView({ exposureScores, dataIndex, allRows, selectedCountries, activeMetrics, selectedYear, onCountryClick, onMapLoaded, interactive = true }) {
   const mapContainer = useRef(null)
   const mapRef = useRef(null)
   const deckRef = useRef(null)
@@ -146,10 +162,62 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
   const [tooltip, setTooltip] = useState(null)
   const [flowTooltip, setFlowTooltip] = useState(null)
   const selectedMetric = activeMetrics[0] ?? 'aid'
+  // First country = the active metric's colour (never changes when others are
+  // added). Later countries take the remaining metric colours, in order.
+  const colorForSelection = (i) => {
+    const active = METRIC_RGB[selectedMetric] ?? METRIC_PALETTE[0]
+    if (i === 0) return active
+    const others = METRIC_PALETTE.filter(c => c[0] !== active[0] || c[1] !== active[1] || c[2] !== active[2])
+    return others[(i - 1) % others.length]
+  }
 
   const valueSharePct = (value, total) => (
     total > 0 && Number.isFinite(value) ? (value / total) * 100 : null
   )
+
+  const valueTotal = (rows) => rows.reduce((sum, row) => sum + (Number.isFinite(row.value) ? row.value : 0), 0)
+
+  const latestYearLabel = (rows) => {
+    const years = rows.map(row => row.year).filter(Number.isFinite)
+    if (years.length) {
+      const minYear = Math.min(...years)
+      const maxYear = Math.max(...years)
+      return minYear === maxYear
+        ? `'${String(maxYear).slice(2)}`
+        : `'${String(minYear).slice(2)}-${String(maxYear).slice(2)}`
+    }
+    const labels = rows.map(row => row.yearLabel).filter(Boolean)
+    if (labels.length) return labels.sort((a, b) => b.localeCompare(a))[0]
+    const latest = rows.reduce((max, row) => Number.isFinite(row.year) ? Math.max(max, row.year) : max, 0)
+    return latest || null
+  }
+
+  function hoverMetricSummary(code) {
+    if (!code) return null
+    const isPacific = PACIFIC_CODES.has(code)
+    if (isPacific) {
+      const rows = Object.values(dataIndex[code]?.[selectedMetric] ?? {})
+      const value = valueTotal(rows)
+      return {
+        isPacific,
+        value,
+        pct: rows.reduce((sum, row) => sum + (Number.isFinite(row.pct) ? row.pct : 0), 0),
+        year: latestYearLabel(rows),
+        hasData: value > 0,
+      }
+    }
+
+    const footprint = getInfluencerFootprint(dataIndex, code, [selectedMetric])
+    const rows = footprint.map(item => item.byMetric[selectedMetric]).filter(Boolean)
+    const value = valueTotal(rows)
+    return {
+      isPacific,
+      value,
+      pct: value > 0 ? 100 : null,
+      year: latestYearLabel(rows),
+      hasData: value > 0,
+    }
+  }
 
   useEffect(() => {
     onCountryClickRef.current = onCountryClick
@@ -459,21 +527,16 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
       map.setFilter('selected-fill', ['in', 'ISO_A2', ''])
       return
     }
-    const colorExpr = ['match', ['get', 'ISO_A2']]
-    selectedCountries.forEach((c, i) => {
-      colorExpr.push(c.code, INFLUENCER_COLORS[i % INFLUENCER_COLORS.length].map((v, j) => j < 3 ? `${v}` : null).filter(Boolean).join(','))
-    })
-    colorExpr.push('#facc15')
     // Build as rgb strings
     const matchExpr = ['match', ['get', 'ISO_A2']]
     selectedCountries.forEach((c, i) => {
-      const [r, g, b] = INFLUENCER_COLORS[i % INFLUENCER_COLORS.length]
+      const [r, g, b] = colorForSelection(i)
       matchExpr.push(c.code, `rgb(${r},${g},${b})`)
     })
     matchExpr.push('#facc15')
     map.setFilter('selected-fill', ['in', 'ISO_A2', ...codes])
     map.setPaintProperty('selected-fill', 'fill-color', matchExpr)
-  }, [mapReady, selectedCountries])
+  }, [mapReady, selectedCountries, selectedMetric])
 
   // Flow lines — adapted from PowerBI Flowmap's MIT-licensed spiral-tree layout (Verbeek et al. 2011).
   // Destinations sorted furthest-first; greedy join picks the pair whose joint has max radius.
@@ -870,7 +933,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
 
     for (let i = 0; i < selectedCountries.length; i++) {
       const country = selectedCountries[i]
-      const color   = INFLUENCER_COLORS[i % INFLUENCER_COLORS.length]
+      const color   = colorForSelection(i)
       const src     = CENTROIDS[country.code]
       if (!src) continue
 
@@ -936,10 +999,16 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
         if (!dotMap.has(f.destCode)) {
           dotMap.set(f.destCode, { pos, name: f.destName, code: f.destCode, artificial: f.artificialDest, entries: [] })
         }
-        dotMap.get(f.destCode).entries.push({
-          label: country.name, color, byMetric: f.byMetric, totalPct: f.pct,
-        })
-      }
+	        dotMap.get(f.destCode).entries.push({
+	          label: country.name,
+	          color,
+	          byMetric: f.byMetric,
+	          totalPct: f.pct,
+	          pctHeaderBottom: country.isPacific
+	            ? (selectedMetric === 'migration' || selectedMetric === 'students' ? 'pop' : 'GDP')
+	            : 'of total',
+	        })
+	      }
     }
 
     const selectionWidthMax = Math.max(...selectedFlowSets.flatMap(set => set.flows.map(f => f.widthValue)), 0)
@@ -1023,24 +1092,21 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     deckRef.current.setProps({ layers })
   }, [mapReady, selectedCountries, dataIndex, allRows, activeMetrics, selectedMetric, flowEndpointFor])
 
-  const tooltipScore = tooltip?.code ? exposureScores[tooltip.code] : null
-  const tooltipIsPacific = tooltip?.code ? PACIFIC_CODES.has(tooltip.code) : false
-  const tooltipMetricEntry = tooltip?.code ? dataIndex[tooltip.code]?.[selectedMetric] ?? {} : {}
-  const tooltipMetricRows = Object.values(tooltipMetricEntry)
-  const tooltipMetricTotalValue = tooltipMetricRows.reduce((sum, row) => sum + (Number.isFinite(row.value) ? row.value : 0), 0)
-  const tooltipMetricLatestYear = tooltipMetricRows.reduce((latest, row) => Number.isFinite(row.year) ? Math.max(latest, row.year) : latest, 0) || null
+  const tooltipSummary = tooltip?.code ? hoverMetricSummary(tooltip.code) : null
+  const tooltipIsPacific = tooltipSummary?.isPacific ?? false
+  const tooltipMetricTotalValue = tooltipSummary?.value ?? 0
+  const tooltipMetricYear = selectedYear ?? tooltipSummary?.year ?? null
   const isPeopleMetric = selectedMetric === 'migration' || selectedMetric === 'students'
-  const tooltipPctHeader = selectedMetric === 'security_arms'
+  const tooltipPctHeaderBottom = selectedMetric === 'security_arms'
     ? ''
     : isPeopleMetric
-    ? (tooltipIsPacific ? '% of pop' : '% of total')
-    : (tooltipIsPacific ? '% of GDP' : '% of total')
-  const tooltipValueHeader = selectedMetric === 'security_arms' ? 'SIPRI TIV' : isPeopleMetric ? 'people' : '$USD'
+    ? (tooltipIsPacific ? 'pop' : 'of total')
+    : (tooltipIsPacific ? 'GDP' : 'of total')
+  const tooltipValueHeaderTop = selectedMetric === 'security_arms' ? 'SIPRI' : isPeopleMetric ? '' : '$'
+  const tooltipValueHeaderBottom = selectedMetric === 'security_arms' ? 'TIV' : isPeopleMetric ? 'people' : 'USD'
   const METRIC_LABELS = { aid: 'Aid', aid_committed: 'Aid committed', trade: 'Imports', exports: 'Exports', remittances: 'Remittances', migration: 'Migration', students: 'Students', security: 'Security assistance', security_arms: 'Security arms', debt: 'Debt', fdi: 'FDI', portfolio: 'Portfolio investment' }
   const tooltipMetricLabel = METRIC_LABELS[selectedMetric]
-  const tooltipPctValue = tooltipIsPacific
-    ? tooltipScore?.metricScores?.[selectedMetric] ?? null
-    : (tooltipMetricTotalValue > 0 ? 100 : null)
+  const tooltipPctValue = tooltipSummary?.pct ?? null
 
   return (
     <div className="mapview">
@@ -1050,34 +1116,34 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
           <strong>{tooltip.name}</strong>
           {tooltip.subtitle
             ? <div style={{ fontStyle: 'italic', color: '#9a8060', marginTop: 2 }}>{tooltip.subtitle}</div>
-            : tooltipScore && (
+            : (
               <table className="flow-tooltip-table">
                 <thead>
-                  <tr>
-                    <th><TooltipHeader label="Metric" /></th>
-                    <th><TooltipHeader label={tooltipPctHeader} /></th>
-                    <th><TooltipHeader label={tooltipValueHeader} /></th>
-                    <th><TooltipHeader label="yr" /></th>
-                  </tr>
+	                  <tr>
+	                    <th><TooltipHeader label="Metric" /></th>
+		                    <th><TooltipHeader top={tooltipValueHeaderTop} bottom={tooltipValueHeaderBottom} /></th>
+		                    <th><TooltipHeader top={selectedMetric === 'security_arms' ? '' : '%'} bottom={tooltipPctHeaderBottom} /></th>
+		                    <th><TooltipHeader top="" bottom="yr" /></th>
+	                  </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td className="flow-tt-metric">{tooltipMetricLabel}</td>
-                    <td className="flow-tt-pct">
-                      {tooltipPctValue != null ? tooltipPctValue.toFixed(1) : '-'}
-                    </td>
-                    <td className="flow-tt-value">
-                      {tooltipMetricTotalValue > 0
-                        ? selectedMetric === 'security_arms' ? tooltipMetricTotalValue.toFixed(tooltipMetricTotalValue < 10 ? 2 : 1)
-                          : (tooltipMetricTotalValue >= 1e9 ? `${(tooltipMetricTotalValue / 1e9).toFixed(1)}B`
-                          : tooltipMetricTotalValue >= 1e6 ? `${(tooltipMetricTotalValue / 1e6).toFixed(1)}M`
-                          : tooltipMetricTotalValue >= 1e3 ? `${(tooltipMetricTotalValue / 1e3).toFixed(1)}K`
-                          : tooltipMetricTotalValue.toFixed(1))
-                        : '-'}
-                    </td>
-                    <td className="flow-tt-year">
-                      {tooltipMetricLatestYear ?? '-'}
-                    </td>
+	                  <tr>
+	                    <td className="flow-tt-metric">{tooltipMetricLabel}</td>
+	                    <td className="flow-tt-value">
+	                      {tooltipSummary?.hasData
+	                        ? selectedMetric === 'security_arms' ? tooltipMetricTotalValue.toFixed(tooltipMetricTotalValue < 10 ? 2 : 1)
+	                          : (tooltipMetricTotalValue >= 1e9 ? `${(tooltipMetricTotalValue / 1e9).toFixed(1)}B`
+	                          : tooltipMetricTotalValue >= 1e6 ? `${(tooltipMetricTotalValue / 1e6).toFixed(1)}M`
+	                          : tooltipMetricTotalValue >= 1e3 ? `${(tooltipMetricTotalValue / 1e3).toFixed(1)}K`
+	                          : tooltipMetricTotalValue.toFixed(1))
+	                        : '-'}
+	                    </td>
+	                    <td className="flow-tt-pct">
+	                      {tooltipPctValue != null ? tooltipPctValue.toFixed(1) : '-'}
+	                    </td>
+	                    <td className="flow-tt-year">
+		                      {tooltipMetricYear ?? '-'}
+	                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -1098,8 +1164,8 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
             }
             const metricEntry = e.byMetric[selectedMetric] ?? { pct: null, value: null, year: null }
             const isPeopleMetric = selectedMetric === 'migration' || selectedMetric === 'students'
-            const pctHeader = selectedMetric === 'security_arms' ? '' : isPeopleMetric ? '% of pop' : '% of GDP'
-            const valueHeader = selectedMetric === 'security_arms' ? 'SIPRI TIV' : isPeopleMetric ? 'people' : '$USD'
+            const valueHeaderTop = selectedMetric === 'security_arms' ? 'SIPRI' : isPeopleMetric ? '' : '$'
+            const valueHeaderBottom = selectedMetric === 'security_arms' ? 'TIV' : isPeopleMetric ? 'people' : 'USD'
             const metricLabel = METRIC_LABELS[selectedMetric] ?? selectedMetric.charAt(0).toUpperCase() + selectedMetric.slice(1)
             return (
               <div key={i} className="flow-tooltip-entry">
@@ -1110,20 +1176,20 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
                 </div>
                 <table className="flow-tooltip-table">
                   <thead>
-                    <tr>
-                      <th><TooltipHeader label="Metric" /></th>
-                      <th><TooltipHeader label={pctHeader} /></th>
-                      <th><TooltipHeader label={valueHeader} /></th>
-                      <th><TooltipHeader label="yr" /></th>
-                    </tr>
+	                    <tr>
+	                      <th><TooltipHeader label="Metric" /></th>
+		                      <th><TooltipHeader top={valueHeaderTop} bottom={valueHeaderBottom} /></th>
+		                      <th><TooltipHeader top={selectedMetric === 'security_arms' ? '' : '%'} bottom={selectedMetric === 'security_arms' ? '' : e.pctHeaderBottom} /></th>
+		                      <th><TooltipHeader top="" bottom="yr" /></th>
+	                    </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td className="flow-tt-metric">{metricLabel}</td>
-                      <td className="flow-tt-pct">{metricEntry.pct != null ? metricEntry.pct.toFixed(1) : '-'}</td>
-                      <td className="flow-tt-value">{fmtVal(selectedMetric, metricEntry.value)}</td>
-                      <td className="flow-tt-year">{metricEntry.year}</td>
-                    </tr>
+	                    <tr>
+	                      <td className="flow-tt-metric">{metricLabel}</td>
+	                      <td className="flow-tt-value">{fmtVal(selectedMetric, metricEntry.value)}</td>
+	                      <td className="flow-tt-pct">{metricEntry.pct != null ? metricEntry.pct.toFixed(1) : '-'}</td>
+		                      <td className="flow-tt-year">{selectedYear ?? metricEntry.yearLabel ?? metricEntry.year}</td>
+	                    </tr>
                   </tbody>
                 </table>
               </div>

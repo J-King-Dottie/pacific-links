@@ -52,6 +52,7 @@ function buildIndexForLatestYears(rows, activeMetrics, latestYear) {
       value: r.value,
       pct:   r.pct,
       year:  r.year,
+      yearLabel: r.year ? `'${String(r.year).slice(2)}` : '',
       hs1Breakdown: r.hs1Breakdown ?? null,
       securityBreakdown: r.securityBreakdown ?? null,
     }
@@ -120,7 +121,14 @@ export function getTopCounterparts(dataIndex, pacificCode, activeMetrics, topN =
       if (!counterpartMap[code]) {
         counterpartMap[code] = { counterpartCode: code, counterpartName: data.name, byMetric: {} }
       }
-      counterpartMap[code].byMetric[metric] = { value: data.value, pct: data.pct, year: data.year }
+      counterpartMap[code].byMetric[metric] = {
+        value: data.value,
+        pct: data.pct,
+        year: data.year,
+        yearStart: data.yearStart,
+        yearEnd: data.yearEnd,
+        yearLabel: data.yearLabel,
+      }
     }
   }
 
@@ -144,7 +152,16 @@ export function getInfluencerFootprint(dataIndex, counterpartCode, activeMetrics
       const byMetric = {}
       for (const metric of activeMetrics) {
         const cp = dataIndex[pac.code]?.[metric]?.[counterpartCode]
-        if (cp) byMetric[metric] = { value: cp.value, pct: cp.pct, year: cp.year }
+        if (cp) {
+          byMetric[metric] = {
+            value: cp.value,
+            pct: cp.pct,
+            year: cp.year,
+            yearStart: cp.yearStart,
+            yearEnd: cp.yearEnd,
+            yearLabel: cp.yearLabel,
+          }
+        }
       }
       if (Object.keys(byMetric).length === 0) return null
       const totalPct = Object.values(byMetric).reduce((s, m) => s + (m.pct ?? 0), 0)

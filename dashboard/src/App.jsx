@@ -135,6 +135,7 @@ export default function App() {
             allRows={allRows}
             selectedCountries={selectedCountries}
             activeMetrics={activeMetrics}
+            selectedYear={selectedYear}
             onCountryClick={handleCountryClick}
             onMapLoaded={() => setMapLoaded(true)}
             interactive={introDismissed}

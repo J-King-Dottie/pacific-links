@@ -97,8 +97,21 @@ npm install
 npm run dev
 ```
 
-Then open the printed local URL. On Windows/WSL you can use `./start-dev.ps1` from the
-repo root, which launches the dev server and prints a URL that works from Windows.
+Then open the printed local URL.
+
+On Windows/WSL, the project path contains spaces, so the safest local launcher is:
+
+```bash
+bash "/home/projects/Pacific Exposure Map/dashboard/start-vite-dev.sh"
+```
+
+To leave it running in the background from Codex or a non-interactive shell:
+
+```bash
+setsid bash "/home/projects/Pacific Exposure Map/dashboard/start-vite-dev.sh" > "/home/projects/Pacific Exposure Map/dashboard/vite-dev.log" 2>&1 < /dev/null &
+```
+
+The default Vite URL is <http://localhost:5173>.
 
 ## Repository layout
 
