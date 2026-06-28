@@ -229,11 +229,16 @@ export default function App() {
             </section>
 
             <div className="intro-actions">
-              <button className="intro-button" disabled={!appReady} onClick={() => setIntroDismissed(true)}>
-                {appReady ? <>{`Explore the map`}<ArrowRight size={14} strokeWidth={2.5} /></> : loading ? 'Loading data…' : 'Preparing map…'}
-              </button>
+              {appReady ? (
+                <button className="intro-button" onClick={() => setIntroDismissed(true)}>
+                  Explore the map<ArrowRight size={14} strokeWidth={2.5} />
+                </button>
+              ) : (
+                <div className="intro-button intro-button-loading" role="status" aria-live="polite" aria-label={loading ? 'Loading data' : 'Preparing map'}>
+                  <div className="loading-bar"><span /></div>
+                </div>
+              )}
               <a className="intro-download-link" href="/data/pacific_links_data.xlsx" download><Download size={12} strokeWidth={2.5} />Download the data</a>
-              {!appReady && <div className="loading-bar"><span /></div>}
             </div>
 
             <footer className="intro-creditbar intro-creditbar-cta">
@@ -251,7 +256,7 @@ export default function App() {
                 This map brings together public datasets about Pacific countries and their links with the rest of the world, to make the data easier to find, see, and compare.
               </p>
               <p className="intro-methodology">
-                Pacific Island bilateral data is patchy, and some of it can look strange. That is not something we have done to it. It is how the original sources record it. Different sources count different things, define them in different ways, and report at different times. Some relationships are recorded clearly, some are estimated, and some are missing.
+                Pacific Island bilateral data is patchy, and some of it can look strange. That is not something we have done to it. It is how the original sources record it. Some relationships are recorded clearly, some are estimated, and some are missing.
               </p>
               <p className="intro-methodology">
                 A big number does not always mean something big happened in the country. The Marshall Islands runs one of the world's largest ship registries. Owners around the world register their ships there for legal and tax reasons, even when the ship has no real tie to the country. When trade data counts those ships, their value lands in Marshall Islands figures. That does not mean anyone there bought billions of dollars of ordinary goods.

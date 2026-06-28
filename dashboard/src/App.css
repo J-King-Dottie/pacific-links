@@ -371,11 +371,11 @@ html, body, #root {
 }
 
 .loading-bar {
-  width: 13.75rem;
+  width: 9.5rem;
   height: 0.25rem;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(196, 176, 144, 0.55);
+  background: rgba(196, 176, 144, 0.7);
   margin-bottom: 0;
 }
 
@@ -391,10 +391,11 @@ html, body, #root {
 .intro-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4375rem;
   width: auto;
   align-self: center;
-  min-width: 0;
+  min-width: 13.75rem;
   height: 2.75rem;
   padding: 0 1.5rem;
   border: none;
@@ -409,11 +410,10 @@ html, body, #root {
   transition: box-shadow 0.15s, transform 0.1s;
 }
 
-.intro-button:disabled {
+.intro-button-loading {
   cursor: wait;
-  color: #7a6040;
   background: rgba(255, 250, 238, 0.55);
-  border-color: rgba(180,150,100,0.4);
+  border: 1px solid rgba(180, 150, 100, 0.35);
   box-shadow: none;
 }
 
