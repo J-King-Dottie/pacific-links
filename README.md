@@ -50,7 +50,3 @@ python3 scripts/run_audits.py
 ```
 
 The refresh pulls automatable sources, including a large CEPII BACI trade download. Use `--skip-baci` to skip that download. Remittances, migration, and direct investment need occasional manual source files; see [`DATA_PIPELINE.md`](DATA_PIPELINE.md).
-
-## Use and attribution
-
-You may use the harmonised dataset with credit to Pacific Links / Dottie AI Studio and the original publishers. Their source data remains subject to their own terms. For country-level detail, check official national publications.
