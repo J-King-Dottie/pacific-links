@@ -693,7 +693,7 @@ function SecurityBreakdownRow({ row, metric }) {
   )
 }
 
-function TradeComparisonBreakdownRow({ row, columns, isPacificComparison, metric }) {
+export function TradeComparisonBreakdownRow({ row, columns, metric }) {
   const groups = new Map()
   row.vals.forEach((val, i) => {
     val?.hs1Breakdown?.forEach(item => {
@@ -707,7 +707,7 @@ function TradeComparisonBreakdownRow({ row, columns, isPacificComparison, metric
       }
       const group = groups.get(item.hs1Code)
       group.vals[i] = item
-      group.sortValue += isPacificComparison ? (item.pct ?? 0) : (item.value ?? 0)
+      group.sortValue += item.value ?? 0
     })
   })
 
@@ -723,9 +723,7 @@ function TradeComparisonBreakdownRow({ row, columns, isPacificComparison, metric
           {columns.map((column, i) => (
             <span key={column.key} className={column.className} style={column.style} title={column.title}>
               {item.vals[i]
-                ? isPacificComparison
-                  ? fmtPct(item.vals[i].pct, true)
-                  : fmtValue(item.vals[i].value, metric, true)
+                ? fmtValue(item.vals[i].value, metric, true)
                 : '-'}
             </span>
           ))}
@@ -1345,7 +1343,7 @@ function CompareMetricTable({ metric, countries, dataIndex, onMetricCountryClick
         renderRowExtra={(row) => {
           if (!row.expandable || expandedDetail !== row.key) return null
           if (isTradeMetric(metric)) {
-            return <TradeComparisonBreakdownRow row={row} columns={columns} isPacificComparison={isPacificComparison} metric={metric} />
+            return <TradeComparisonBreakdownRow row={row} columns={columns} metric={metric} />
           }
           if (isSecurityMetric(metric)) {
             return <SecurityComparisonBreakdownRow row={row} columns={columns} metric={metric} />
