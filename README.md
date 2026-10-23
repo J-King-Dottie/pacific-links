@@ -50,3 +50,26 @@ python3 scripts/run_audits.py
 ```
 
 The refresh pulls automatable sources, including a large CEPII BACI trade download. Use `--skip-baci` to skip that download. Remittances, migration, and direct investment need occasional manual source files; see [`DATA_PIPELINE.md`](DATA_PIPELINE.md).
+
+## Security release preparation — 24 October 2026
+
+Use Node 22.23.4, pinned in both the repository and dashboard `.node-version`
+files. On Render, verify any `NODE_VERSION` override also selects the patched
+runtime, build with `cd dashboard && npm ci && npm run build` (or run the npm
+commands directly when the service root is `dashboard`), and publish
+`dashboard/dist` relative to the repository root. Preserve the service's existing
+root directory and publish-path convention.
+
+The map uses MapLibre 6.15 with its bundled Vite worker. Keep the explicit
+`?worker&url` import and `setWorkerUrl` call; a successful bundle alone does not
+prove the map worker loads. The directly imported `@deck.gl/layers` and
+`@deck.gl/mapbox` replace the unused umbrella `deck.gl` package, preserving the
+map layers while excluding unused vulnerable tile/texture dependencies.
+Python refresh tooling requires Requests >=2.33.0 and Certifi >=2026.10.19.
+
+A clean install, production build, all five dashboard regressions and both npm
+and resolved Python audits pass. Edge checks cover map/worker loading, the deck
+overlay, switching Aid to Trade and selecting Fiji's counterpart data.
+No deployment, data refresh or push was performed. Clear the Render build cache
+on the security rebuild and verify its actual Node build version and certificate
+store after access is connected.

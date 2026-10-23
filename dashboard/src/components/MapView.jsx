@@ -1,12 +1,16 @@
 import { useRef, useEffect, useState, useCallback } from 'react'
-import maplibregl from 'maplibre-gl'
+import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
+import mapWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { PathLayer, ScatterplotLayer } from '@deck.gl/layers'
 import { MapboxOverlay } from '@deck.gl/mapbox'
 import { PACIFIC_LIST } from '../data/pacificCountries.js'
 import { getTopCounterparts, getInfluencerFootprint } from '../data/computeScores.js'
 import { layout as powerbiFlowLayout } from '../utils/powerbiFlowAlgo.ts'
 import './MapView.css'
+
+// MapLibre 6 requires a bundled worker URL when consumed through Vite.
+maplibregl.setWorkerUrl(mapWorkerUrl)
 
 const CENTROIDS = {
   AU: [133.7751, -25.2744], NZ: [172.9, -40.9], CN: [104.19, 35.86],
@@ -261,6 +265,7 @@ export default function MapView({ exposureScores, dataIndex, allRows, selectedCo
     // bottom sheet.
     const isMobileViewport = typeof window !== 'undefined' && window.innerWidth <= 640
     const map = new maplibregl.Map({
+      zoomLevelsToOverscale: undefined,
       container: mapContainer.current,
       style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
       center: [150, 3],

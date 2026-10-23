@@ -235,3 +235,28 @@ This file tracks substantial audits completed on Pacific Links so we do not repe
 **Follow-up:**
 
 - Run this command before release and after any new metric, source refresh, methodology edit, or UI table/map behavior change.
+
+## 2026-10-24 — Runtime and dependency security preparation
+
+**Status:** Source fixes verified; Render deployment and hosted verification pending.
+
+**Scope:** eMudhra trust compromise, October Node.js release, MapLibre sanitizer
+XSS, npm transitive advisories and Python HTTPS trust. The service is a static
+dashboard; no tracked PHP/composer application was found. Patched Node is pinned
+for builds, MapLibre is 6.15.0 with a bundled worker, focused deck.gl modules
+preserve the existing overlay, and Python certificate/Requests floors are explicit.
+
+**Evidence:** npm audit initially reported 23 affected dependency nodes in the
+older checkout. The release worktree is based on current origin/main e88361c,
+not that stale checkout. The final lockfile reports zero advisories. The Python
+requirements resolved for Python 3.11 also report zero known vulnerabilities.
+Clean npm ci, production build and five tests pass. An initial browser check
+caught the v6 worker URL requirement; after adding the documented Vite worker
+import, the map and overlay render, Trade changes the figures, and selecting Fiji
+shows its counterpart totals. Existing local edits in the older checkout remain
+untouched. No data refresh, deployment, push or cloud configuration change occurred.
+
+**Follow-up:** Verify Render root/build/publish settings and NODE_VERSION override,
+clear the build cache for the authorised deployment, then verify the live map,
+the exact release source and its build runtime. The older dashboard data-audit
+suite was not rerun because no source data or methodology changed.
